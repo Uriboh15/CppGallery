@@ -96,8 +96,11 @@
                     </Expander.Header>
                     <Expander.Content>
                         <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="13,0,23,0">
-                                <HyperlinkButton Content="アプリのOneDrive" NavigateUri="https://1drv.ms/u/s!ApOTRHlTVgQmgeEPRKtMzt6obzTkCg?e=HtHWkC" VerticalAlignment="Center"/>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="ソースコード" NavigateUri="https://github.com/Uriboh15/CppGallery" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="アプリのGitHub" NavigateUri="https://github.com/Uriboh15/CppGallery/releases" VerticalAlignment="Center"/>
                             </Grid>
                         </StackPanel>
                     </Expander.Content>
