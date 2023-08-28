@@ -1,0 +1,928 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.MathhPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="math.h/abs" CodeLanguage="C" >
+                    <local:TextBoxPane Message="整数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acos" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acosf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acosh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acoshf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acoshl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/acosl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asin" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asinf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asinh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asinhf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asinhl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/asinl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atan" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atanf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atanh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atanhf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atanhl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/atanl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="atan2() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="atan2f() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="atan2l() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/cbrt" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cbrtf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cbrtl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/ceil" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="11.2" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/ceilf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="11.2" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/ceill" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="11.2" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/copysign" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="2.5" Message2="実数yを入力" Text2="3.1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/copysignf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="2.5" Message2="実数yを入力" Text2="3.1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/copysignl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="2.5" Message2="実数yを入力" Text2="3.1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cos" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cosf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cosh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/coshf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/coshl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/cosl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/erf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0.01" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="erfc() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="erfcf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="erfcl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/erff" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0.01" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/erfl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0.01" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/exp" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/exp2" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/exp2f" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/exp2l" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/expf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/expl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/expm1" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/expm1f" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/expm1l" CodeLanguage="C" >
+                    <local:TextBoxPane Message="指数を入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fabs" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fabsf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fabsl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fdim" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fdimf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fdiml" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/floor" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/floorf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/floorl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fma" CodeLanguage="C" >
+                    <local:ResultsPanel Loaded="FmaOut_Loaded">
+                        <local:ControlGrid Message="実数xを入力" >
+                            <TextBox x:Name="FmaIn1" Text="2" TextChanging="FmaIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数yを入力" >
+                            <TextBox x:Name="FmaIn2" Text="3" TextChanging="FmaIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数zを入力" >
+                            <TextBox x:Name="FmaIn3" Text="4" TextChanging="FmaIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmaf" CodeLanguage="C" >
+                    <local:ResultsPanel x:Name="FmafOut" Loaded="FmafOut_Loaded">
+                        <local:ControlGrid Message="実数xを入力" >
+                            <TextBox x:Name="FmafIn1" Text="2" TextChanging="FmafIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数yを入力" >
+                            <TextBox x:Name="FmafIn2" Text="3" TextChanging="FmafIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数zを入力" >
+                            <TextBox x:Name="FmafIn3" Text="4" TextChanging="FmafIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmal" CodeLanguage="C" >
+                    <local:ResultsPanel x:Name="FmalOut" Loaded="FmalOut_Loaded">
+                        <local:ControlGrid Message="実数xを入力" >
+                            <TextBox x:Name="FmalIn1" Text="2" TextChanging="FmalIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数yを入力" >
+                            <TextBox x:Name="FmalIn2" Text="3" TextChanging="FmalIn_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="実数zを入力" >
+                            <TextBox x:Name="FmalIn3" Text="4" TextChanging="FmalIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmax" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmaxf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmaxl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmin" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fminf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fminl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="3.22" Message2="実数yを入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmod" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="割られる数を入力" Text1="3.22" Message2="割る数を入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmodf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="割られる数を入力" Text1="3.22" Message2="割る数を入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/fmodl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="割られる数を入力" Text1="3.22" Message2="割る数を入力" Text2="2.6" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="fpclassify() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="frexp() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="frexpf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="frexpl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/hypot" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数aを入力" Text1="0" Message2="実数bを入力" Text2="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/hypotf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数aを入力" Text1="0" Message2="実数bを入力" Text2="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/hypotl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数aを入力" Text1="0" Message2="実数bを入力" Text2="0" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ilogb() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ilogbf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ilogbl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isfinite() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isgreater() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isgreaterequal() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isinf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isless() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="islessequal() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="islessgreater() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isnan() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isnormal() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="isundered() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/labs" CodeLanguage="C" >
+                    <local:TextBoxPane Message="整数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ldexp() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ldexpf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ldexpl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="lgamma() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="lgammaf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="lgammal() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/llabs" CodeLanguage="C" >
+                    <local:TextBoxPane Message="整数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llrint" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llrintf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llrintl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llround" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llroundf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/llroundl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log10" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log10f" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log10l" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log1p" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1.7" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log1pf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1.7" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log1pl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1.7" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log2" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log2f" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/log2l" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="logb() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="logbf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="logbl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/logf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/logl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lrint" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lrintf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lrintl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lround" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lroundf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/lroundl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="54.5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/modf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/modff" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/modfl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nan() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nanf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nanl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/nearbyint" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/nearbyintf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/nearbyintl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nextafter() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nextafterf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nextafterl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nexttoward() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nexttowardf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="nexttowardl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/pow" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="1" Message2="実数yを入力" Text2="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/powf" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="1" Message2="実数yを入力" Text2="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/powl" CodeLanguage="C" >
+                    <local:MultiTextBoxPane Message1="実数xを入力" Text1="1" Message2="実数yを入力" Text2="1" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remainder() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remainderf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remainderl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remquo() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remquof() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="remquol() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/rint" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/rintf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/rintl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="2.6" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/round" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/roundf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/roundl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalbln() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalblnf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalblnl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalbn() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalbnf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="scalbnl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="signbit() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="math.h/sin" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sinf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sinh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sinhf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sinhl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sinl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sqrt" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sqrtf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/sqrtl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tan" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tanf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tanh" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tanhf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tanhl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tanl" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="0" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tgamma" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="8" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tgammaf" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="8" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="math.h/tgammal" CodeLanguage="C" >
+                    <local:TextBoxPane Message="実数xを入力" Text="8" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="trunc() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="truncf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="truncl() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="math.h" >
+                <local:ItemGrid Title="HUGE_VAL" Sentence="無限大"/>
+                <InfoBar IsOpen="True" IsIconVisible="True" Severity="Warning" IsClosable="False" Title="注意" Message="Visual Studioで以下に示す数学定数を使用するにはソースファイルの最上部に  #define _USE_MATH_DEFINES  を付け加えてください"/>
+                <local:ItemGrid Title="M_E" Sentence="オイラー数 e" />
+                <local:ItemGrid Title="M_LOG2E" Sentence="log2 (e)" />
+                <local:ItemGrid Title="M_LOG10E" Sentence="log10 (e)" />
+                <local:ItemGrid Title="M_LN2" Sentence="ln (2)" />
+                <local:ItemGrid Title="M_LN10" Sentence="ln (10)" />
+                <local:ItemGrid Title="M_PI" Sentence="円周率 π" />
+                <local:ItemGrid Title="M_PI_2" Sentence="π / 2" />
+                <local:ItemGrid Title="M_PI_4" Sentence="π / 4" />
+                <local:ItemGrid Title="M_1_PI" Sentence="1 / π" />
+                <local:ItemGrid Title="M_2_PI" Sentence="2 / π" />
+                <local:ItemGrid Title="M_2_SQRTPI" Sentence="2 / (π^(1 / 2))" />
+                <local:ItemGrid Title="M_SQRT2" Sentence="2^(1 / 2)" />
+                <local:ItemGrid Title="M_SQRT1_2" Sentence="1 / (2^(1 / 2))" />
+            </local:MacroPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

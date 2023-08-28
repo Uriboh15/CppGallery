@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Columns.Column21.Column21Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="C++/WinRT で UserControl を作成する" Style="{StaticResource ColumnTitle}" />
+                <TextBlock>
+                    UWP や WinUI 3 では複数の UI コントロールを組み合わせて独自のコントロールを作成することができる。
+                    C# ならその方法がネットに転がっているが、C++ で解説してるサイトがなんと見つからなかったので気合で作る (ふぁ！？っく)。
+                </TextBlock>
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="作るもの" Style="{StaticResource ColumnSubTitle}" />
+                <TextBlock>
+                    このアプリでよく見かける↓を作ってみる。
+                </TextBlock>
+                <local:ItemGrid Title="工業数学" Sentence="超天才の先生が行う講義 期末テストで全問正解したはずなのに AA がもらえない" Value="A" Height="70"/>
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="実際に作ってみる" Style="{StaticResource ColumnSubTitle}" />
+                <TextBlock>
+                    まずは Visual Studio で UserControl を新しく追加する。
+                </TextBlock>
+                <Image Source="../../../Pages/Data/Columns/Column21/image1.png" MaxWidth="941"/>
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    すると勝手にボタンとクリックイベントが生成されて ふぁ！？っく なので手動でこれらを消す。
+                </TextBlock>
+                <local:XamlCodeButton Path="Pages/Data/Columns/Column21/source1.txt" FileName="ItemGrid.xaml" />
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    ふぁ！？っく なボタンとクリックイベントを消したら Xaml にコントロールの組み合わせを記述していく。
+                </TextBlock>
+                <local:XamlCodeButton Path="Pages/Data/Columns/Column21/source2.txt" FileName="ItemGrid.xaml" />
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="独自のプロパティを作る" Style="{StaticResource ColumnSubTitle}" />
+                <TextBlock>
+                    このままでは作成したコントロールを使うときにテキストを変更できない。
+                    使うときにテキストを任意に変更するには UserControl を作成したときに一緒に生成された idl ファイルを編集する。
+                    idl の詳細はよくわからないがコントロールやページの基となるインターフェイスである。
+                    これに書いたプロパティは Xaml でも認識することができる。
+                    idl は Visual Studio でも色がつかない (ふぁ！？っく) のでだいぶ見づらいが気合で編集していく。
+                    ここでは idl に以下の 4 つのプロパティを追加する。
+                </TextBlock>
+                <local:IdlCodeButton Path="Pages/Data/Columns/Column21/source3.txt" FileName="ItemGrid.idl" />
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    次に C++ コードでプロパティ 1 つ 1 つに対し、ゲッターとセッターを作る (ふぁ！？っく)。
+                    プロパティの本体に先に値を入れておくことでプロパティの初期値を設定できる。
+                </TextBlock>
+                <local:WinRTCodeButton Path="Pages/Data/Columns/Column21/source4.txt" FileName="ItemGrid.xaml.h" />
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    これができたら、次は作ったプロパティを Xaml でコントロールに紐づける。
+                    紐づけは x:Bind で行う。
+                </TextBlock>
+                <local:XamlCodeButton Path="Pages/Data/Columns/Column21/source5.txt" FileName="ItemGrid.xaml.h" />
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="作成したコントロールを使用する" Style="{StaticResource ColumnSubTitle}" />
+                <TextBlock>
+                    作ったコントロールは標準のものではないのでコントロールが属する名前空間を記述する必要がある。
+                    この場合は Xaml ソースの上部に xmlns:local="using:(アプリ名)" が自動で作られているので local を使えばよい。
+                </TextBlock>
+                <local:XamlCodeButton Path="Pages/Data/Columns/Column21/source6.txt" SaveButtonVisibilty="Collapsed" />
+            </local:ColumnContentPanel>
+
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}" />
+                <StackPanel Spacing="4">
+                    <local:ItemGrid Title="工業数学 I" Sentence="実は結構簡単な科目 だが 2022 年度の期末テストはかなりの高威力であった" Value="A" Height="70" />
+                    <local:ItemGrid Title="工業数学 II" Sentence="工業数学の中では中くらいの威力を持つ科目 なお開発者は履修中なので正しいかどうかはわからない" Value="-" Height="70" />
+                    <local:ItemGrid Title="工業数学 III" Sentence="工業数学の中で最も高威力で学生を苦しめる科目" Value="A" Height="70" />
+                </StackPanel>
+            </local:ResultsPanel>
+            
+
+            <TextBlock HorizontalAlignment="Right">
+                    2023年5月26日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

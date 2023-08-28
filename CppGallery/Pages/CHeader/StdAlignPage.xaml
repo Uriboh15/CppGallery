@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.StdAlignPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel >
+            <local:MacroPanel Folder="stdalign.h">
+                <local:ItemGrid Title="alignas" Sentence="変数のアラインメントを指定します" />
+                <local:ItemGrid Title="alignof" Sentence="変数のアラインメントを取得します" />
+                <local:ItemGrid Title="__alignas_is_defined" Sentence="alignas が定義されていることを指定" />
+                <local:ItemGrid Title="__alignof_is_defined" Sentence="alignof が定義されていることを指定" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Queue.QueueClassPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor" >
+                <local:FunctionExpander Folder="queue__queue/queue" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs" >
+                <local:ItemGrid Title="container_type" Sentence="コンテナの型" />
+                <local:ItemGrid Title="size_type" Sentence="queue の要素番号を表す型" />
+                <local:ItemGrid Title="value_type" Sentence="queue の要素の型" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method" >
+                <local:FunctionExpander Folder="queue__queue/back" />
+                <local:CustomExpander Title="emplace() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="queue__queue/empty" />
+                <local:FunctionExpander Folder="queue__queue/front" />
+                <local:FunctionExpander Folder="queue__queue/pop" />
+                <local:FunctionExpander Folder="queue__queue/push" />
+                <local:FunctionExpander Folder="queue__queue/size" />
+            </local:BlockPanel>
+            
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

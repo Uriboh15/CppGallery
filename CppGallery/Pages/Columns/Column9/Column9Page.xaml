@@ -1,0 +1,39 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column9.Column9Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="標準入力から安全に文字列入力する関数を自作" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    文字列入力は標準ライブラリ関数だけでもできるが scanf は空白文字を入れることができないし fgets は文字列に改行文字が入ってしまう。
+                    そこで getchar を使って文字列を安全に入力できる関数を自作してみた。
+                    実装は簡単で改行文字が現れるか文字列の要素数の限界 - 1まで文字を読み取り最後にヌル文字を付け足すというものだ。
+                </TextBlock>
+                <local:CCodeButton Path="Pages/Data/Columns/Column9/main1.cpp" FileName="main1.c"/>
+                
+            </local:ColumnContentPanel>
+            <TextBlock HorizontalAlignment="Right">
+                    2023年4月29日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,45 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Random.LinearCongruentialEnginePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor">
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="linear_congruential_engine()" Sentence="linear_congruential_engine 型のオブジェクトを構築します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="minstd_rand0" Sentence="1988 年の最小標準エンジン" Value="linear_congruential_engine&lt;unsigned int, 16807, 0, 2147483647>"/>
+                <local:ItemGrid Title="minstd_rand" Sentence="minstd_rand0 を改良したエンジン" Value="linear_congruential_engine&lt;unsigned int, 48271, 0, 2147483647>"/>
+                <local:ItemGrid Title="result_type" Sentence="乱数の型" Value="unsigned int"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander x:Name="OpeKAKKOOut" Folder="random/linear_congruential_engine/operatorKAKKO" AutoFunc="False" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}" />
+                    </local:FunctionExpander.Info>
+                    <local:ControlGrid Message="乱数を生成" Loaded="OpeKAKKOOut_Loaded">
+                        <Button x:Name="OpeKAKKOButton" Content="生成" Click="OpeKAKKOButton_Click" Width="65"/>
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method" >
+                
+            </local:BlockPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

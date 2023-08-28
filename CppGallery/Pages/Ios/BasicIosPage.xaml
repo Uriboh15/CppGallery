@@ -1,0 +1,145 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Ios.BasicIosPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+
+            <local:BlockPanel Header="BaseClass">
+                <local:ToRightButton Style="{StaticResource IosBaseClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constructor">
+                <local:FunctionExpander Folder="ios__basic_ios/basic_ios">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource ProtectedConstructor}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="char_type" Sentence="テンプレートパラメーター Elem のシノニム"/>
+                <local:ItemGrid Title="int_type" Sentence="Traits::int_type と同義"/>
+                <local:ItemGrid Title="off_type" Sentence="Traits::off_type と同義"/>
+                <local:ItemGrid Title="pos_type" Sentence="Traits::pos_type と同義"/>
+                <local:ItemGrid Title="traits_type" Sentence="テンプレートパラメーター Traits のシノニム"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Operator">
+                <local:CustomExpander Title="explicit operator bool" Icon="&#xE710;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="ios__basic_ios/operatorvoid" Icon="Operator" AutoFunc="False" />
+                <local:FunctionExpander Folder="ios__basic_ios/operatorN" Icon="Operator" AutoFunc="False" />
+                <local:FunctionExpander Folder="ios__basic_ios/operatorE" Icon="Operator">
+                    
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Method">
+                <local:FunctionExpander Folder="ios__basic_ios/bad"/>
+
+                <local:FunctionExpander Folder="ios__basic_ios/clear" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ios__basic_ios/copyfmt" />
+                <local:FunctionExpander Folder="ios__basic_ios/eof" AutoFunc="False" />
+                <local:FunctionExpander Folder="ios__basic_ios/exceptions" />
+
+                <local:FunctionExpander Folder="ios__basic_ios/fail" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ios__basic_ios/fill" />
+
+                <local:FunctionExpander Folder="ios__basic_ios/good" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ios__basic_ios/imbue" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="move() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="narrow() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="rdbuf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="rdstate() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="set_rdbuf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="setstate() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="swap() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="tie() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="widen() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="DerivedClass">
+                <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
+                <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ios-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/basic_ios.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

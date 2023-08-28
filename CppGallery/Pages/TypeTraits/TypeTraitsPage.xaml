@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.TypeTraits.TypeTraitsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Typedefs" >
+                <local:ItemGrid Title="false_type" Sentence="false の bool 定数値" Value="integral_constant&lt;bool, false>" />
+                <local:ItemGrid Title="true_type" Sentence="true の bool 定数値" Value="integral_constant&lt;bool, true>" />
+            </local:BlockPanel>
+            
+            <local:BasicBlockPanel HeadText="構造体・クラス">
+                
+                <local:FunctionExpander Folder="type_traits/integral_constant" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_arithmetic" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_array" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_class" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_compound" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_const" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_enum" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_floating_point" Icon="Object" />
+                <local:CustomExpander Title="is_function 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_fundamental" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_integral" Icon="Object" />
+                <local:CustomExpander Title="is_lvalue_reference 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="is_member_function_pointer 構造体" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:CustomExpander Title="is_member_object_pointer 構造体" Icon="&#xEA86;" IsEnabled="False"  />
+                <local:CustomExpander Title="is_member_pointer 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_null_pointer" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_object" Icon="Object" />
+                
+                <local:FunctionExpander Folder="type_traits/is_pointer" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_reference" Icon="Object" />
+                <local:CustomExpander Title="is_rvalue_reference 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_scalar" Icon="Object" />
+                <local:CustomExpander Title="is_standard_layout 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_trivial" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_trivially_copyable" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_union" Icon="Object" />
+                <local:FunctionExpander Folder="type_traits/is_void" Icon="Object" />
+                <local:CustomExpander Title="is_volatile 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                
+            </local:BasicBlockPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

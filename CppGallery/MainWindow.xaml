@@ -1,0 +1,82 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="CppGallery.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Closed="Window_Closed">
+
+    <Grid x:Name="Dodai" ActualThemeChanged="ContentFrame_ActualThemeChanged" BorderBrush="#404040" Loaded="Dodai_Loaded">
+
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Dark">
+                        <SolidColorBrush x:Key="MainFrameBackground">#1Bffffff</SolidColorBrush>
+                        <StaticResource x:Key="TabViewItemHeaderBackgroundSelected" ResourceKey="MainFrameBackground" />
+                    </ResourceDictionary>
+
+                    <ResourceDictionary x:Key="Light">
+                        <SolidColorBrush x:Key="MainFrameBackground">#A0ffffff</SolidColorBrush>
+                        <SolidColorBrush x:Key="TabViewItemHeaderBackgroundSelected" >#A0fffffft</SolidColorBrush>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+            
+        </Grid.Resources>
+        
+        <Image x:Name="NanttyateMicaLite" Stretch="Fill" Source="/Pages/Assets/NantyatteMica-Lite.png" Visibility="Collapsed"/>
+        <Image x:Name="NanttyateMicaDark" Stretch="Fill" Source="/Pages/Assets/NantyatteMica-Dark.png" Visibility="Collapsed"/>
+        <Grid x:Name="TmpGrid" Visibility="Collapsed" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="AppTitleBar" Grid.Column ="0" Grid.Row ="0" VerticalAlignment="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                    <ColumnDefinition x:Name="LeftDragColumn" Width="0"/>
+                    <ColumnDefinition x:Name="TabColumn" Width="auto" />
+                    <ColumnDefinition x:Name="RightDragColumn" Width="*" />
+                    <ColumnDefinition x:Name="RightSettingColumn" Width="auto"/>
+                    <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                </Grid.ColumnDefinitions>
+
+                <TabView x:Name="Tab" Grid.Column="2" AddTabButtonClick="Tab_AddTabButtonClick" TabCloseRequested="Tab_TabCloseRequested" SelectionChanged="Tab_SelectionChanged" ActualThemeChanged="ContentFrame_ActualThemeChanged" >
+                    <TabView.TabStripHeader>
+                        <Image x:Name="TitleBarIcon" Source="/Pages/Assets/StoreLogo.png" HorizontalAlignment="Left" Margin="14,4,8,0" VerticalAlignment="Center"
+                    Width="16" Height="16" />
+                    </TabView.TabStripHeader>
+                </TabView>
+
+                <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="3" SizeChanged="AppTitleBar_SizeChanged" />
+                <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="4" />
+                <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="5" />
+
+                <local:TitleBarSettingsButton x:Name="SettingButton" Grid.Column="4" Click="SettingButton_Click" Padding="0" VerticalAlignment="Center" Height="28"  >
+                    <local:TitleBarSettingsButton.Resources>
+                        <TeachingTip x:Name="CSampleTeaching"
+                                     Target="{x:Bind SettingButton}"
+                                     Title="サンプルを C 言語で実行しますか？"
+                                     Subtitle="C ヘッダーのサンプルを C 言語で動作させる必要がある場合は設定を変更してください">
+                        </TeachingTip>
+                    </local:TitleBarSettingsButton.Resources>
+                </local:TitleBarSettingsButton>
+            </Grid>
+            <Grid x:Name="Back" Grid.Row="1" />
+            <Grid x:Name="MainFrame" Grid.Row="1"  />
+        </Grid>
+
+        
+
+
+    </Grid>
+    
+</Window>

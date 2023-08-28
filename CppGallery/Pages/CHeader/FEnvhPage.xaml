@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.FEnvhPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+
+            <local:BlockPanel Header="Typedefs" >
+                <local:ItemGrid Title="fexcept_t" Sentence="浮動小数点数状態フラグのビット和を表す型" Value="unsigned int" />
+            </local:BlockPanel>
+            
+            <local:BlockPanel Header="Struct">
+                <local:CustomExpander Title="fenv_t 構造体" Sentence="浮動小数点数環境全体を表す型" Icon="&#xEA86;">
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="unsigned long _Fe_ctl" Sentence="aaa" />
+                        <local:ItemGrid Title="unsigned long _Fe_stat" Sentence="aaa" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function">
+                
+                <local:CustomExpander Title="feclearexcept() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="feholdexcept() 関数" IsEnabled="False" />
+
+                <local:CustomExpander Title="fegetenv() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="fegetexceptflag() 関数" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="fenv.h/fegetround" CodeLanguage="C" />
+
+                <local:CustomExpander Title="feraiseexcept() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="fesetenv() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="fesetexceptflag() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fenv.h/fesetround" CodeLanguage="C" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="方法を指定">
+                            <ComboBox x:Name="FsetRoundBox" Loaded="FsetRoundBox_Loaded" SelectionChanged="FsetRoundBox_SelectionChanged" Width="163">
+                                <x:String>最も近い値への丸め</x:String>
+                                <x:String>正の方向への丸め</x:String>
+                                <x:String>負の方向への丸め</x:String>
+                                <x:String>ゼロの方向への丸め</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+
+                        <local:ControlGrid Message="値を入力">
+                            <TextBox x:Name="FsetRoundIn" Text="1.2" TextChanging="FsetRoundIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="fetestexcept() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="feupdateenv() 関数" IsEnabled="False" />
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="fenv.h">
+                <local:ItemGrid Title="FE_TONEAREST" Sentence="最も近い値への丸め" />
+                <local:ItemGrid Title="FE_UPWARD" Sentence="正の方向への丸め" />
+                <local:ItemGrid Title="FE_DOWNWARD" Sentence="負の方向への丸め" />
+                <local:ItemGrid Title="FE_TOWARDZERO" Sentence="ゼロの方向への丸め" />
+                <local:ItemGrid Title="FE_ROUND_MASK" Sentence="aaa" />
+                <local:ItemGrid Title="FE_INEXACT" Sentence="不正確な計算" />
+                <local:ItemGrid Title="FE_UNDERFLOW" Sentence="値のアンダーフロー" />
+                <local:ItemGrid Title="FE_OVERFLOW" Sentence="値のオーバーフロー" />
+                <local:ItemGrid Title="FE_DIVBYZERO" Sentence="ゼロによる除算" />
+                <local:ItemGrid Title="FE_INVALID" Sentence="無効な演算" />
+                <local:ItemGrid Title="FE_ALL_EXCEPT" Sentence="すべてのエラー" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,47 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.StrStream.StrStreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <InfoBar Style="{StaticResource NotRecommended}" Message="代わりに &lt;sstream> の使用を検討してください"/>
+
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource Istream}"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Function" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="swap() 関数" Sentence="2つの ストリーム の中身を入れ替えます"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Class" >
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="strstreambuf クラス" Sentence="aaa"/>
+                </Button>
+
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="istrstream クラス" Sentence="入力元に char 配列を用いるストリームクラス"/>
+                </Button>
+                <local:ToRightButton Style="{StaticResource OStrStreamClass}" />
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="strstream クラス" Sentence="入出力先に char 配列を用いるストリームクラス"/>
+                </Button>
+            </local:BlockPanel>
+            
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

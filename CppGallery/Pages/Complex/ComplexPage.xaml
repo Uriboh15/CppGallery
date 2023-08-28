@@ -1,0 +1,172 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Complex.ComplexPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource Limits}"/>
+                <local:ToRightButton Style="{StaticResource SStream}"/>
+                <local:ToRightButton Style="{StaticResource TypeTraits}"/>
+                <local:ToRightButton Style="{StaticResource Utility}"/>
+            </local:BlockPanel>
+            
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="complex/operatorNE" Icon="Operator" AutoFunc="False" />
+
+                <local:FunctionExpander Folder="complex/operatorKAKERU" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="z1" Text1="(1,1)" Message2="z2" Text2="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/operatorPlus" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="z1" Text1="(1,1)" Message2="z2" Text2="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/operatorMinus" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="z1" Text1="(1,1)" Message2="z2" Text2="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/operatorWARU" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="z1" Text1="(1,1)" Message2="z2" Text2="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/operatorLL" Icon="Operator" AutoFunc="False" />
+                <local:FunctionExpander Folder="complex/operatorEE" Icon="Operator" AutoFunc="False" />
+
+                <local:FunctionExpander Folder="complex/operatorRR" Icon="Operator" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Literal" >
+                <local:FunctionExpander Folder="complex/operatorI" Icon="Literal" />
+                <local:FunctionExpander Folder="complex/operatorIF" Icon="Literal" />
+                <local:FunctionExpander Folder="complex/operatorIL" Icon="Literal" />
+            </local:BlockPanel>
+
+            
+            <local:BlockPanel Header="Function">
+                <local:FunctionExpander Folder="complex/abs" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/acos" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/acosh" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/arg" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/asin" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/asinh" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/atan" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/atanh" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/conj" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/cos" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/cosh" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/exp" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/imag" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/log" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/log10" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/norm" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/polar" >
+                    <local:MultiTextBoxPane Message1="radius" Text1="4" Message2="theta" Text2="5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/pow" >
+                    <local:MultiTextBoxPane Message1="z1" Text1="4" Message2="z2" Text2="5" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/proj" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/real" >
+                    <local:TextBoxPane Message="z" Text="(2,3)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/sin" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/sinh" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/sqrt" >
+                    <local:TextBoxPane Message="z" Text="(1,1)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/tan" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="complex/tanh" >
+                    <local:TextBoxPane Message="z" Text="(1,0)" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Class">
+                <local:ToRightButton Style="{StaticResource ComplexClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Specialization">
+                <local:ItemGrid Title="complex&lt;double>" Sentence="テンプレートクラス complex を double に特殊化したクラス"/>
+                <local:ItemGrid Title="complex&lt;float>" Sentence="テンプレートクラス complex を float に特殊化したクラス"/>
+                <local:ItemGrid Title="complex&lt;long double>" Sentence="テンプレートクラス complex を long double に特殊化したクラス"/>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/complex?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/complex.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

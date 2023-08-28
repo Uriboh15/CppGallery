@@ -1,0 +1,46 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column4.Column4Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="実数型の精度ってどれくらい？" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    floatでは精度が足りないからdoubleを使え！なんてことを耳にすることがあるが、実際これらの型の精度はどのくらいなのか気になったので確認プログラムを作ってみた。
+                    意外とfloatでも精度足りるかも？
+                </TextBlock>
+                <local:CodeButton Path="Pages/Data/Columns/Column4/main1.cpp" FileName="main1.cpp"/>
+            </local:ColumnContentPanel>
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}"/>
+                <local:ControlGrid Message="実数を入力">
+                    <TextBox x:Name="In1" Text="11.2" TextChanging="In1_TextChanging"/>
+                </local:ControlGrid>
+                <local:OutPuts x:Name="Out1" Loaded="Out1_Loaded"/>
+            </local:ResultsPanel>
+            
+
+            <TextBlock HorizontalAlignment="Right">
+                    2023年3月24日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

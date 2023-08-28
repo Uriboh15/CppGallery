@@ -1,0 +1,31 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.Iso646hPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:MacroPanel Folder="iso646.h">
+                <local:ItemGrid Title="and" Sentence="論理AND演算子の代替つづり" />
+                <local:ItemGrid Title="and_eq" Sentence="ビット積の代入演算子の代替つづり" />
+                <local:ItemGrid Title="bitand" Sentence="ビット積を表す演算子の代替つづり" />
+                <local:ItemGrid Title="bitor" Sentence="ビット和を表す演算子の代替つづり" />
+                <local:ItemGrid Title="compl" Sentence="ビットをすべて反転させる演算子の代替つづり" />
+                <local:ItemGrid Title="not" Sentence="否定を表す演算子の代替つづり" />
+                <local:ItemGrid Title="not_eq" Sentence="不等号の代替つづり" />
+                <local:ItemGrid Title="or" Sentence="論理OR演算子の代替つづり" />
+                <local:ItemGrid Title="or_eq" Sentence="ビット和の代入演算子の代替つづり" />
+                <local:ItemGrid Title="xor" Sentence="ビット差を表す演算子の代替つづり" />
+                <local:ItemGrid Title="xor_eq" Sentence="ビット差の代入演算子の代替つづり" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+        
+    </ScrollViewer>
+</Page>

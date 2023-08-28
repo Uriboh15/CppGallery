@@ -1,0 +1,201 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Ios.IosBasePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor">
+                <local:FunctionExpander Folder="ios__ios_base/ios_base">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource ProtectedConstructor}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="event_callback" Sentence="register_call に渡す関数を記述します"/>
+                <local:ItemGrid Title="fmtflags" Sentence="出力の外観を指定する定数の型"/>
+                <local:ItemGrid Title="iostate" Sentence="ストリームの状態を表す定数の型"/>
+                <local:ItemGrid Title="openmode" Sentence="ファイルのオープンモードを指定する型"/>
+                <local:ItemGrid Title="seekdir" Sentence="オフセット演算の開始位置を指定する型"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constant">
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="fmtflags 型定数" Sentence="出力の外観を指定する型の定数値" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <local:EnumPanel>
+                            <local:ItemGrid Title="adjustfield" Sentence="aaa"/>
+                            <local:ItemGrid Title="basefield" Sentence="aaa"/>
+                            <local:ItemGrid Title="boolalpha" Sentence="bool 型のオブジェクトを数値ではなくtrue, falseで挿入もしくは抽出します"/>
+                            <local:ItemGrid Title="dec" Sentence="10 進形式で整数値を挿入または抽出します"/>
+                            <local:ItemGrid Title="fixed" Sentence="固定小数点形式で浮動小数点値を挿入します"/>
+                            <local:ItemGrid Title="floatfield" Sentence="aaa"/>
+                            <local:ItemGrid Title="hex" Sentence="16 進数形式で整数値を挿入または抽出します"/>
+                            <local:ItemGrid Title="internal" Sentence="生成された数値フィールドの内部ポイントに必要に応じて充填文字を挿入することによってフィールド幅を埋めます"/>
+                            <local:ItemGrid Title="left" Sentence="左揃えの場合に生成されたフィールドの最後に必要に応じて充填文字を挿入することによってフィールド幅を埋めます"/>
+                            <local:ItemGrid Title="oct" Sentence="8 進数形式で整数値を挿入または抽出します"/>
+                            <local:ItemGrid Title="right" Sentence="右揃えの場合に生成されたフィールドの最後に必要に応じて充填文字を挿入することによってフィールド幅を埋めます"/>
+                            <local:ItemGrid Title="scientific" Sentence="指数形式で浮動小数点値を挿入します"/>
+                            <local:ItemGrid Title="showbase" Sentence="生成された整数フィールドのベースを示すプレフィックスを挿入します"/>
+                            <local:ItemGrid Title="showpoint" Sentence="生成された浮動小数点フィールドに無条件で小数点を挿入します"/>
+                            <local:ItemGrid Title="showpos" Sentence="生成されたゼロ以上の数値フィールドにプラス記号を挿入します"/>
+                            <local:ItemGrid Title="skipws" Sentence="特定の抽出の前にある先頭の空白文字をスキップします"/>
+                            <local:ItemGrid Title="unitbuf" Sentence="各挿入後に出力をフラッシュします"/>
+                            <local:ItemGrid Title="uppercase" Sentence="特定の挿入で小文字に対応する大文字を挿入します"/>
+                        </local:EnumPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="iostate 型定数" Sentence="ストリームの状態を表す型の定数値" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <local:EnumPanel>
+                            <local:ItemGrid Title="badbit" Sentence="ストリーム バッファーの整合性の損失を記録します"/>
+                            <local:ItemGrid Title="eofbit" Sentence="ストリームからの抽出中にファイルの終わりを記録します"/>
+                            <local:ItemGrid Title="failbit" Sentence="ストリームからの有効フィールドの抽出エラーを記録します"/>
+                            <local:ItemGrid Title="goodbit" Sentence="いずれの不具合も発生していないことを記録します"/>
+                        </local:EnumPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="openmode 型定数" Sentence="ファイルのオープンモードを指定する型の定数値" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <local:EnumPanel>
+                            <local:ItemGrid Title="app" Sentence="各書き込みの前にストリームの末尾にシークします"/>
+                            <local:ItemGrid Title="ate" Sentence="開いた直後にストリームの末尾にシークします"/>
+                            <local:ItemGrid Title="binary" Sentence="バイナリ モードで開きます"/>
+                            <local:ItemGrid Title="in" Sentence="読み取り用として開きます"/>
+                            <local:ItemGrid Title="out" Sentence="書き込み用として開きます"/>
+                            <local:ItemGrid Title="trunk" Sentence="ファイルの内容を削除してから開きます"/>
+                        </local:EnumPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="seekdir 型定数" Sentence="オフセット演算の開始位置を指定する型の定数値" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <local:EnumPanel>
+                            <local:ItemGrid Title="beg" Sentence="シーケンスの開始位置を基準にしてシークします"/>
+                            <local:ItemGrid Title="cur" Sentence="シーケンス内の現在位置を基準にしてシークします"/>
+                            <local:ItemGrid Title="end" Sentence="シーケンスの終了位置を基準にしてシークします"/>
+                        </local:EnumPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Enum">
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="enum event" Sentence="オフセット演算の開始位置を指定する型" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="merase_event" Sentence="copyfmt への呼び出しの終了付近の例外マスクがコピーされる直前に発生するコールバックを識別します"/>
+                        <local:ItemGrid Title="imbue_event" Sentence="copyfmt への呼び出しの開始時または *this のデストラクターへの呼び出しの開始時に発生するコールバックを識別します"/>
+                        <local:ItemGrid Title="copyfmt_event" Sentence="imbue への呼び出しの終了時の関数が返す直前に発生するコールバックを識別します"/>
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="ios__ios_base/operator=" Icon="Operator">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="StaticMethod" >
+                <local:FunctionExpander Folder="ios__ios_base/sync_with_stdio" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="xalloc() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method">
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="flags() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ios__ios_base/getloc" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="imbue() 関数" Sentence="ストリームのロケールを変更します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="iword() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ios__ios_base/precision" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="pword() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="register_callback() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="self() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="unself() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ios__ios_base/width" />
+
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Class" >
+                <local:ItemGrid Title="failure クラス" Sentence="ストリームからスローされる例外クラス" />
+                <local:ItemGrid Title="Init クラス" Sentence="iostream オブジェクトを適切に構築するためのクラス" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="DerivedClass">
+                <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ios-base-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/ios_base.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

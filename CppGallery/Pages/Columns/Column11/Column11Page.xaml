@@ -1,0 +1,48 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column11.Column11Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="ファイルのサイズを取得する" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    C++ のファイルストリームには C# の StreamReader, StreamWriter と違って Length プロパティがないので自分でファイルサイズを取得するコードを書く必要がある。
+                    実装はそこまで難しいものではなく、ファイルを開いたら位置指定子をファイルの終端まで移動させてそこで位置指定子の現在位置を取得するだけである。
+                    ただ、ファイルストリームの種類によって使用する関数が異なるのでそこだけ注意。
+                </TextBlock>
+                <local:CodeButton Path="Pages/Data/Columns/Column11/main1.cpp" FileName="main1.cpp" AutoFunc="False"/>
+                
+            </local:ColumnContentPanel>
+
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}"/>
+                <local:ControlGrid Message="ファイルを開く">
+                    <Button x:Name="OpenButton" Content="開く" Width="65" Click="OpenButton_Click"/>
+                </local:ControlGrid>
+                <local:OutPuts x:Name="OutPut1"/>
+            </local:ResultsPanel>
+
+                <TextBlock HorizontalAlignment="Right">
+                    2023年5月1日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

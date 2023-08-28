@@ -1,0 +1,911 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:Double x:Key="BreadcrumbBarChevronFontSize">16</x:Double>
+                    <x:Double x:Key="BreadcrumbBarItemThemeFontSize">28</x:Double>
+                    <FontWeight x:Key="BreadcrumbBarItemFontWeight">Bold</FontWeight>
+                    <Thickness x:Key="BreadcrumbBarChevronPadding">10,0,12,0</Thickness>
+                    <SolidColorBrush x:Key="NavigationViewContentBackground">#08ffffff</SolidColorBrush>
+                    <Thickness x:Key="NavigationViewContentGridBorderThickness" >1,0,0,0</Thickness>
+                    <StaticResource x:Key="BreadcrumbBarNormalForegroundBrush" ResourceKey="TextFillColorSecondaryBrush" />
+                    <StaticResource x:Key="BreadcrumbBarHoverForegroundBrush" ResourceKey="TextFillColorPrimaryBrush" />
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="Light">
+                    <x:Double x:Key="BreadcrumbBarChevronFontSize">16</x:Double>
+                    <x:Double x:Key="BreadcrumbBarItemThemeFontSize">28</x:Double>
+                    <FontWeight x:Key="BreadcrumbBarItemFontWeight">Bold</FontWeight>
+                    <Thickness x:Key="BreadcrumbBarChevronPadding">10,0,12,0</Thickness>
+                    <SolidColorBrush x:Key="NavigationViewContentBackground">#78ffffff</SolidColorBrush>
+                    <Thickness x:Key="NavigationViewContentGridBorderThickness" >1,0,0,0</Thickness>
+                    <StaticResource x:Key="BreadcrumbBarNormalForegroundBrush" ResourceKey="TextFillColorSecondaryBrush" />
+                    <StaticResource x:Key="BreadcrumbBarHoverForegroundBrush" ResourceKey="TextFillColorPrimaryBrush" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <NavigationView x:Name="NavView"
+                        Loaded="NavView_Loaded"
+                        ItemInvoked="NavView_ItemInvoked"
+                        BackRequested="NavView_BackRequested"
+                        PointerPressed="NavView_PointerPressed"
+                    IsSettingsVisible="False">
+        <NavigationView.Header>
+            <BreadcrumbBar x:Name="HeadBar" ItemClicked="HeadBar_ItemClicked"/>
+        </NavigationView.Header>
+
+
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Uid="NavViewItem_Home" Tag="home">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE80F;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="基本型" Tag="BaseType">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE70B;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="基本演算子" Tag="BaseOperator">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE710;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="GCC コマンド生成" Tag="GCCCommand">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="ColumnsPage" x:Uid="NavViewItem_Columns" Tag="Column" Visibility="Collapsed">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF000;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            
+            <NavigationViewItem x:Uid="NavViewItem_New" Tag="New">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE896;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem x:Uid="NavViewItem_Updated" Tag="Updated">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE895;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+
+            <NavigationViewItemSeparator/>
+            <NavigationViewItemHeader Content="C++ Library" FontSize="18"/>
+
+            <NavigationViewItem x:Name="any" Content="&lt;any>" Tag="rany">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE9CE;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="any" Tag="rany0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="array" Content="&lt;array>" Tag="7array">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE76F;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="array" Tag="7array0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;bit>" Tag="2bit">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE964;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="bitset" Content="&lt;bitset>" Tag="5bitset">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE964;"/>
+                </NavigationViewItem.Icon>
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="bitset" Tag="5bitset0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="charconv" Content="&lt;charconv>" Tag="zcharconv">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF093;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="complex" Content="&lt;complex>" Tag="ocomplex">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE94D;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="complex" Tag="ocomplex0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="concepts" Content="&lt;concepts>" Tag="Fconcepts">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xECC8;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+
+            <NavigationViewItem x:Name="deque" Content="&lt;deque>" Tag="ydeque">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF156;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="dueue" Tag="ydeque0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="filesystem" Content="&lt;filesystem>" Tag="wfilesystem">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8B7;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    
+
+                    <NavigationViewItem Content="directory_iterator" Tag="wdirectory_iterator0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="file_status" Tag="wfile_status0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="path" Tag="wpath0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="forward_list" Content="&lt;forward_list>" Tag="xforward_list">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE71D;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="forward_list" Tag="xforward_list0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+
+            <NavigationViewItem x:Name="fstream" Content="&lt;fstream>" Tag="ifstream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7C3;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="basic_filebuf" Tag="ibasic_filebuf0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_fstream" Tag="ibasic_fstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_ifstream" Tag="ibasic_ifstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_ofstream" Tag="ibasic_ofstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="initializer_list" Content="&lt;initializer_list>" Tag="kinitializer_list">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE71D;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="initializer_list" Tag="kinitializer_list0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="iomanip" Content="&lt;iomanip>" Tag="biomanip">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE90A;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="ios" Content="&lt;ios>" Tag="aios">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE90A;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="basic_ios" Tag="abasic_ios0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="ios_base" Tag="aios_base0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="iosfwd" Content="&lt;iosfwd>" Tag="8iosfwd">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF000;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="fpos" Tag="8fpos0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="iostream" Content="&lt;iostream>" Tag="9iostream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="istream" Content="&lt;istream>" Tag="distream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xEC31;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="basic_iostream" Tag="dbasic_iostream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_istream" Tag="dbasic_istream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="limits" Content="&lt;limits>" Tag="3limits">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE81B;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="numeric_limits" Tag="3numeric_limits0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="list" Content="&lt;list>" Tag="clist">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE71D;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="list" Tag="clist0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="map" Content="&lt;map>" Tag="emap">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE80A;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="map" Tag="emap0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="New" Content="&lt;new>" Tag="mnew">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE895;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="Numbers" Content="&lt;numbers>" Tag="Dnumbers">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF14D;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="Numeric" Content="&lt;numeric>" Tag="Bnumeric">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF14F;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="ostream" Content="&lt;ostream>" Tag="fostream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7F4;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="basic_ostream" Tag="fbasic_ostream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="queue" Content="&lt;queue>" Tag="qqueue">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8B5;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="queue" Tag="qqueue0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="random" Content="&lt;random>" Tag="nrandom">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8B1;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="linear_congruential_engine" Tag="nlinear_congruential_engine0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="set" Content="&lt;set>" Tag="Aset">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE712;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="set" Tag="Aset0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="SourceLocation" Content="&lt;source_location>" Tag="Esource_location">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF000;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="source_location" Tag="Esource_location0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="span" Content="&lt;span>" Tag="vspan">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE94E;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="span" Tag="vspan0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="sstream" Content="&lt;sstream>" Tag="lsstream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="basic_stringbuf" Tag="lbasic_stringbuf0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_istringstream" Tag="lbasic_istringstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_ostringstream" Tag="lbasic_ostringstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="basic_stringstream" Tag="lbasic_stringstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="stack" Content="&lt;stack>" Tag="pstack">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8B5;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="stack" Tag="pstack0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="stdExcept" Content="&lt;stdexcept>" Tag="sstdexcept">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xEA39;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="streambuf" Content="&lt;streambuf>" Tag="gstreambuf">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE74C;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="basic_streambuf" Tag="gbasic_streambuf0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="stringc" Content="&lt;string>" Tag="1stringc">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="basic_string" Tag="1basic_string0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="char_traits" Tag="1char_traits0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="string_view" Content="&lt;string_view>" Tag="tstring_view">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="basic_string_view" Tag="tbasic_string_view0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="strstream" Content="&lt;strstream>" Tag="6strstream">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="ostrstream" Tag="6ostrstream0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="typeinfo" Content="&lt;typeinfo>" Tag="Gtypeinfo">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE946;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="type_info" Tag="Gtype_info0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="type_traits" Content="&lt;type_traits>" Tag="utype_traits">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE97C;"/>
+                </NavigationViewItem.Icon>
+
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="valarray" Content="&lt;valarray>" Tag="jvalarray">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE700;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="slice" Tag="jslice0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="valarray" Tag="jvalarray0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="vector" Content="&lt;vector>" Tag="hvector">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE76F;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="vector" Tag="hvector0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItemSeparator/>
+            <NavigationViewItemHeader Content="C Library" FontSize="18"/>
+
+            <NavigationViewItem Content="&lt;assert.h>" Tag="0asserth">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE9D9;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;complex.h>" Tag="0complexh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE94D;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;ctype.h>" Tag="0ctypeh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE97E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;errno.h>" Tag="0errnoh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xEB90;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;fenv.h>" Tag="0fenvh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF16E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;float.h>" Tag="0floath">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF155;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;inttypes.h>" Tag="0inttypesh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF155;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;iso646.h>" Tag="0iso646h">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE710;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;limits.h>" Tag="0limitsh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE81B;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;locale.h>" Tag="0localeh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE81D;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;math.h>" Tag="0mathh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE94D;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;stdalign.h>" Tag="0stdalignh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF156;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;stdbool.h>" Tag="0stdboolh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF19E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;stdint.h>" Tag="0stdinth">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF155;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+
+            <NavigationViewItem Content="&lt;stdio.h>" Tag="0stdioh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;stdlib.h>" Tag="0stdlibh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE950;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;stdnoreturn.h>" Tag="0stdnoreturnh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE943;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;string.h>" Tag="0stringh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;tgmath.h>" Tag="0tgmathh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE94D;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;time.h>" Tag="0timeh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xED5A;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;uchar.h>" Tag="0ucharh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE97E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;wchar.h>" Tag="0wcharh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE97F;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;wctype.h>" Tag="0wctypeh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE97F;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+
+            <NavigationViewItemSeparator/>
+            <NavigationViewItemHeader Content="Windows Library" FontSize="18"/>
+
+            <NavigationViewItem Content="&lt;conio.h>" Tag="4conioh">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;dwmapi.h>" Tag="Hdwmapi">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF7ED;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+        </NavigationView.MenuItems>
+
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox x:Name="Suggest" QueryIcon="Find" AutomationProperties.Name="Search" PlaceholderText="ライブラリを検索" TextChanged="Suggest_TextChanged" SuggestionChosen="Suggest_SuggestionChosen" QuerySubmitted="Suggest_QuerySubmitted"/>
+        </NavigationView.AutoSuggestBox>
+
+
+        <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated"/>
+    </NavigationView>
+</Page>

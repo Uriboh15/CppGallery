@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.TgMathhPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <local:ResultsPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Text="このヘッダーは &lt;complex.h> と &lt;math.h> をインクルードしています" HorizontalAlignment="Center" />
+        <TextBlock Text="&lt;complex.h> の使用は推奨しません" HorizontalAlignment="Center" />
+        <TextBlock Text="代わりに C++ の &lt;complex> と C言語の &lt;math.h> を個別にインクルードしてください" HorizontalAlignment="Center" />
+        <Button x:Name="ToComplexButton" Content="&lt;complex> へ移動" HorizontalAlignment="Center" Click="ToComplexButton_Click" />
+        <Button x:Name="ToMathhButton" Content="&lt;math.h> へ移動" HorizontalAlignment="Center" Click="ToMathhButton_Click" />
+    </local:ResultsPanel>
+</Page>

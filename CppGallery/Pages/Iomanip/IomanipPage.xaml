@@ -1,0 +1,80 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Iomanip.IomanipPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer>
+            <local:OuterPanel>
+                <local:BlockPanel Header="Including">
+                    <local:ToRightButton Style="{StaticResource Istream}"/>
+                    <local:ToRightButton Style="{StaticResource Iterator}"/>
+                    <local:ToRightButton Style="{StaticResource TypeTraits}"/>
+                </local:BlockPanel>
+
+
+                <local:BlockPanel Header="Manipulator">
+                    <local:FunctionExpander Folder="iomanip/get_money" >
+                        <local:ControlGrid Message="金額">
+                            <TextBox Text="200" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                        </local:ControlGrid>
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iomanip/get_time" >
+                        <local:ControlGrid Message="時刻">
+                            <TextBox Text="16:45" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                        </local:ControlGrid>
+                    </local:FunctionExpander>
+
+                    <local:CustomExpander IsEnabled="False">
+                        <Expander.Header>
+                            <local:EHeader Title="put_money" Sentence="aaa"/>
+                        </Expander.Header>
+                    </local:CustomExpander>
+
+                    <local:FunctionExpander Folder="iomanip/put_time"  Expanding="FunctionExpander_Expanding" Unloaded="FunctionExpander_Unloaded" />
+
+                    <local:CustomExpander IsEnabled="False">
+                        <Expander.Header>
+                            <local:EHeader Title="quoted" Sentence="aaa"/>
+                        </Expander.Header>
+                    </local:CustomExpander>
+
+                    <local:CustomExpander IsEnabled="False">
+                        <Expander.Header>
+                            <local:EHeader Title="resetiosflags" Sentence="aaa"/>
+                        </Expander.Header>
+                    </local:CustomExpander>
+
+                    <local:CustomExpander IsEnabled="False">
+                        <Expander.Header>
+                            <local:EHeader Title="setbase" Sentence="aaa"/>
+                        </Expander.Header>
+                    </local:CustomExpander>
+
+                    <local:FunctionExpander Folder="iomanip/setfill" />
+
+                    <local:CustomExpander IsEnabled="False">
+                        <Expander.Header>
+                            <local:EHeader Title="setiosflags" Sentence="aaa"/>
+                        </Expander.Header>
+                    </local:CustomExpander>
+
+                    <local:FunctionExpander Folder="iomanip/setprecision" />
+                    <local:FunctionExpander Folder="iomanip/setw" />
+                </local:BlockPanel>
+
+                <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iomanip?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/iomanip.html" />
+
+
+            </local:OuterPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

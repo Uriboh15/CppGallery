@@ -1,0 +1,139 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls">
+
+    <Style x:Key="ErrorInfo" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Error"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+    </Style>
+
+    <Style x:Key="WarningInfo" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+    </Style>
+
+    <Style x:Key="DeletedFunctionByHeader" TargetType="InfoBar" BasedOn="{StaticResource ErrorInfo}">
+        <Setter Property="Title" Value="削除された関数"/>
+    </Style>
+
+    <Style x:Key="CppOnly" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="C++の関数"/>
+        <Setter Property="Message" Value="この関数はC++でのみ使用できます"/>
+    </Style>
+
+    <Style x:Key="NotRecommended" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="非推奨のヘッダー"/>
+    </Style>
+
+    <Style x:Key="NotRecommendedClass" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="非推奨のクラス"/>
+        <Setter Property="Message" Value="このクラスを Visual Studio で使用するにはソースファイルの最上部に #pragma warning(disable:4996) を付け加えてください"/>
+    </Style>
+
+    <Style x:Key="NotRecommendedClassGCC" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="非推奨のクラス"/>
+        <Setter Property="Message" Value="このクラスを GCC で使用するにはコンパイルオプションに -Wno-deprecated を付け加えてください" />
+    </Style>
+    
+    <Style x:Key="VisualWarning" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="安全でない関数"/>
+        <Setter Property="Message" Value="この関数をVisual Studioで使用するにはソースファイルの最上部に #pragma warning(disable:4996) を付け加えてください"/>
+    </Style>
+
+    <Style x:Key="VisualCppX64OnlyNow" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="マルチプラットフォーム非対応項目"/>
+        <Setter Property="Message" Value="この項目の実行結果は Visual C++ x64 のものです"/>
+    </Style>
+
+    <Style x:Key="VisualOnly" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="Visual C++ 独自拡張機能"/>
+        <Setter Property="Message" Value="この関数はVisual Studioでのみ使用できます"/>
+    </Style>
+
+    <Style x:Key="ProtectedConstructor" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="protected メンバー"/>
+        <Setter Property="Message" Value="外部からはこのコンストラクターにアクセスできません"/>
+    </Style>
+
+    <Style x:Key="ProtectedMethod" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="protected メンバー"/>
+        <Setter Property="Message" Value="外部からはこのメンバー関数にアクセスできません"/>
+    </Style>
+
+    <Style x:Key="NonStandardHeader" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Warning"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="非標準ヘッダー"/>
+        <Setter Property="Message" Value="このヘッダーが使用している環境に存在するかを確認してください"/>
+    </Style>
+
+    <Style x:Key="DeletedFunction" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Error"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="削除された関数"/>
+        <Setter Property="Message" Value="この関数は delete 宣言されているため使用できません"/>
+    </Style>
+
+    <Style x:Key="DeletedOperator" TargetType="InfoBar">
+        <Setter Property="IsOpen" Value="True"/>
+        <Setter Property="Severity" Value="Error"/>
+        <Setter Property="IsIconVisible" Value="True"/>
+        <Setter Property="IsClosable" Value="False"/>
+        <Setter Property="Title" Value="削除された演算子"/>
+        <Setter Property="Message" Value="この演算子は delete 宣言されているため使用できません"/>
+    </Style>
+
+    <Style x:Key="NotDefinedFunction" BasedOn="{StaticResource ErrorInfo}" TargetType="InfoBar">
+        <Setter Property="Title" Value="未実装の関数" />
+        <Setter Property="Message" Value="この関数は実装されていません" />
+    </Style>
+
+</ResourceDictionary>

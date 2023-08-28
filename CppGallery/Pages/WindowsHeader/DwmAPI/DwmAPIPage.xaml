@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.DwmAPI.DwmAPIPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel HeaderType="Windows">
+            <local:BlockPanel Header="Function" >
+                <local:ItemGrid Title="DwmAttachMilContent() 関数" Style="{StaticResource NotDefinedFuntionItemGrid}" />
+                <local:CustomExpander Title="DwmDefWindowProc() 関数" IsEnabled="False" />
+                
+                <local:ItemGrid Title="DwmDetachMilContent() 関数" Style="{StaticResource NotDefinedFuntionItemGrid}" />
+
+                <local:CustomExpander Title="DwmEnableBlurBehindWindow() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="dwmapi.h/DwmEnableComposition" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource ErrorInfo}" Message="この関数は Windows 8 以降では機能しません" />
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+                
+                <local:CustomExpander Title="DwmEnableMMCSS() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="dwmapi.h/DwmExtendFrameIntoClientArea" CodeLanguage="CppWin32" SampleType="GUIApp" />
+                <local:CustomExpander Title="DwmFlush() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmGetColorizationColor() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmGetCompositionTimingInfo() 関数" IsEnabled="False" />
+                
+                <local:ItemGrid Title="DwmGetGraphicsStreamClient() 関数" Style="{StaticResource NotDefinedFuntionItemGrid}" />
+                <local:ItemGrid Title="DwmGetGraphicsStreamTransformHint() 関数" Style="{StaticResource NotDefinedFuntionItemGrid}" />
+
+                <local:CustomExpander Title="DwmGetTransportAttributes() 関数" IsEnabled="False" />
+                
+                <local:ItemGrid Title="DwmGetUnmetTabRequirements() 関数" Style="{StaticResource NoEffectFunctionItemGrid}" />
+                
+                <local:CustomExpander Title="DwmGetWindowAttribute() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmInvalidateIconicBitmaps() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmIsCompositionEnabled() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmModifyPreviousDxFrameDuration() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmQueryThumbnailSourceSize() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmRegisterThumbnail() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmRenderGesture() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmSetDxFrameDuration() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmSetIconicLivePreviewBitmap() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmSetIconicThumbnail() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmSetPresentParameters() 関数" IsEnabled="False" />
+
+                <local:ToRightButton Style="{StaticResource DwmSetWindowAttributeFunc}" />
+
+                <local:CustomExpander Title="DwmShowContact() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmTetherContact() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmTransitionOwnedWindow() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmUnregisterThumbnail() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="DwmUpdateThumbnailProperties() 関数" IsEnabled="False" />
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

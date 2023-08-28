@@ -1,0 +1,105 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.StdintPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Typedefs" >
+                <local:ItemGrid Title="int8_t" Sentence="8bit の符号付き整数型"/>
+                <local:ItemGrid Title="int16_t" Sentence="16bit の符号付き整数型"/>
+                <local:ItemGrid Title="int32_t" Sentence="32bit の符号付き整数型"/>
+                <local:ItemGrid Title="int64_t" Sentence="64bit の符号付き整数型"/>
+                <local:ItemGrid Title="uint8_t" Sentence="8bit の符号なし整数型"/>
+                <local:ItemGrid Title="uint16_t" Sentence="16bit の符号なし整数型"/>
+                <local:ItemGrid Title="uint32_t" Sentence="32bit の符号なし整数型"/>
+                <local:ItemGrid Title="uint64_t" Sentence="64bit の符号なし整数型"/>
+                <local:ItemGrid Title="int_least8_t" Sentence="8bit 以上の符号付き整数型"/>
+                <local:ItemGrid Title="int_least16_t" Sentence="16bit 以上の符号付き整数型"/>
+                <local:ItemGrid Title="int_least32_t" Sentence="32bit 以上の符号付き整数型"/>
+                <local:ItemGrid Title="int_least64_t" Sentence="64bit 以上の符号付き整数型"/>
+                <local:ItemGrid Title="uint_least8_t" Sentence="8bit 以上の符号なし整数型"/>
+                <local:ItemGrid Title="uint_least16_t" Sentence="16bit 以上の符号なし整数型"/>
+                <local:ItemGrid Title="uint_least32_t" Sentence="32bit 以上の符号なし整数型"/>
+                <local:ItemGrid Title="uint_least64_t" Sentence="64bit 以上の符号なし整数型"/>
+                <local:ItemGrid Title="int_fast8_t" Sentence="8bit 以上の最速符号付き整数型"/>
+                <local:ItemGrid Title="int_fast16_t" Sentence="16bit 以上の最速符号付き整数型"/>
+                <local:ItemGrid Title="int_fast32_t" Sentence="32bit 以上の最速符号付き整数型"/>
+                <local:ItemGrid Title="int_fast64_t" Sentence="64bit 以上の最速符号付き整数型"/>
+                <local:ItemGrid Title="uint_fast8_t" Sentence="8bit 以上の最速符号なし整数型"/>
+                <local:ItemGrid Title="uint_fast16_t" Sentence="16bit 以上の最速符号なし整数型"/>
+                <local:ItemGrid Title="uint_fast32_t" Sentence="32bit 以上の最速符号なし整数型"/>
+                <local:ItemGrid Title="uint_fast64_t" Sentence="64bit 以上の最速符号なし整数型"/>
+                <local:ItemGrid Title="intmax_t" Sentence="最も範囲の広い符号付き整数型"/>
+                <local:ItemGrid Title="uintmax_t" Sentence="最も範囲の広い符号なし整数型"/>
+                <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型"/>
+                <local:ItemGrid Title="intptr_t" Sentence="メモリ領域を表しきれる大きさを持つ符号付き整数型"/>
+                <local:ItemGrid Title="uintptr_t" Sentence="メモリ領域を表しきれる大きさを持つ符号なし整数型"/>
+                <local:ItemGrid Title="ptrdiff_t" Sentence="2つのポインターの差を表す符号付き整数型"/>
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="stdint.h" >
+                <local:ItemGrid Title="INT8_MIN" Sentence="int8_t の最小値" />
+                <local:ItemGrid Title="INT16_MIN" Sentence="int16_t の最小値" />
+                <local:ItemGrid Title="INT32_MIN" Sentence="int32_t の最小値" />
+                <local:ItemGrid Title="INT64_MIN" Sentence="int64_t の最小値" />
+                <local:ItemGrid Title="INT8_MAX" Sentence="int8_t の最大値" />
+                <local:ItemGrid Title="INT16_MAX" Sentence="int16_t の最大値" />
+                <local:ItemGrid Title="INT32_MAX" Sentence="int32_t の最大値" />
+                <local:ItemGrid Title="INT64_MAX" Sentence="int64_t の最大値" />
+                <local:ItemGrid Title="UINT8_MAX" Sentence="uint8_t の最大値" />
+                <local:ItemGrid Title="UINT16_MAX" Sentence="uint16_t の最大値" />
+                <local:ItemGrid Title="UINT32_MAX" Sentence="uint32_t の最大値" />
+                <local:ItemGrid Title="UINT64_MAX" Sentence="uint64_t の最大値" />
+                <local:ItemGrid Title="INT_LEAST8_MIN" Sentence="int_least8_t の最小値" />
+                <local:ItemGrid Title="INT_LEAST16_MIN" Sentence="int_least16_t の最小値" />
+                <local:ItemGrid Title="INT_LEAST32_MIN" Sentence="int_least32_t の最小値" />
+                <local:ItemGrid Title="INT_LEAST64_MIN" Sentence="int_least64_t の最小値" />
+                <local:ItemGrid Title="INT_LEAST8_MAX" Sentence="int_least8_t の最大値" />
+                <local:ItemGrid Title="INT_LEAST16_MAX" Sentence="int_least16_t の最大値" />
+                <local:ItemGrid Title="INT_LEAST32_MAX" Sentence="int_least32_t の最大値" />
+                <local:ItemGrid Title="INT_LEAST64_MAX" Sentence="int_least64_t の最大値" />
+                <local:ItemGrid Title="UINT_LEAST8_MAX" Sentence="uint_least8_t の最大値" />
+                <local:ItemGrid Title="UINT_LEAST16_MAX" Sentence="uint_least16_t の最大値" />
+                <local:ItemGrid Title="UINT_LEAST32_MAX" Sentence="uint_least32_t の最大値" />
+                <local:ItemGrid Title="UINT_LEAST64_MAX" Sentence="uint_least64_t の最大値" />
+                <local:ItemGrid Title="INT_FAST8_MIN" Sentence="int_fast8_t の最小値" />
+                <local:ItemGrid Title="INT_FAST16_MIN" Sentence="int_fast16_t の最小値" />
+                <local:ItemGrid Title="INT_FAST32_MIN" Sentence="int_fast32_t の最小値" />
+                <local:ItemGrid Title="INT_FAST64_MIN" Sentence="int_fast64_t の最小値" />
+                <local:ItemGrid Title="INT_FAST8_MAX" Sentence="int_fast8_t の最大値" />
+                <local:ItemGrid Title="INT_FAST16_MAX" Sentence="int_fast16_t の最大値" />
+                <local:ItemGrid Title="INT_FAST32_MAX" Sentence="int_fast32_t の最大値" />
+                <local:ItemGrid Title="INT_FAST64_MAX" Sentence="int_fast64_t の最大値" />
+                <local:ItemGrid Title="UINT_FAST8_MAX" Sentence="uint_fast8_t の最大値" />
+                <local:ItemGrid Title="UINT_FAST16_MAX" Sentence="uint_fast16_t の最大値" />
+                <local:ItemGrid Title="UINT_FAST32_MAX" Sentence="uint_fast32_t の最大値" />
+                <local:ItemGrid Title="UINT_FAST64_MAX" Sentence="uint_fast64_t の最大値" />
+                <local:ItemGrid Title="INTPTR_MIN" Sentence="intptr_t の最小値" />
+                <local:ItemGrid Title="INTPTR_MAX" Sentence="intptr_t の最大値" />
+                <local:ItemGrid Title="UINTPTR_MAX" Sentence="uintptr_t の最大値" />
+                <local:ItemGrid Title="INTMAX_MIN" Sentence="intmax_t の最小値" />
+                <local:ItemGrid Title="INTMAX_MAX" Sentence="intmax_t の最大値" />
+                <local:ItemGrid Title="UINTMAX_MAX" Sentence="uintmax_t の最大値" />
+                <local:ItemGrid Title="PTRDIFF_MIN" Sentence="ptrdiff_t の最小値" />
+                <local:ItemGrid Title="PTRDIFF_MAX" Sentence="intdiff_t の最大値" />
+                <local:ItemGrid Title="SIZE_MAX" Sentence="size_t の最大値" />
+                <local:ItemGrid Title="SIG_ATOMIC_MIN" Sentence="sig_atomic_t の最小値" />
+                <local:ItemGrid Title="SIG_ATOMIC_MAX" Sentence="sig_atomic_t の最大値" />
+                <local:ItemGrid Title="WCHAR_MIN" Sentence="wchar_t の最小値" />
+                <local:ItemGrid Title="WCHAR_MAX" Sentence="wchar_t の最大値" />
+                <local:ItemGrid Title="WINT_MIN" Sentence="wint_t の最小値" />
+                <local:ItemGrid Title="WINT_MAX" Sentence="wint_t の最大値" />
+            </local:MacroPanel>
+                
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

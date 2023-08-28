@@ -1,0 +1,115 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Istream.BasicIstreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="BaseClass">
+                <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Constructor">
+                <local:FunctionExpander Folder="istream__basic_istream/basic_istream"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="istream__basic_istream/operatorRR" Icon="Operator" >
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/operatorE" Icon="Operator">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Method">
+                <local:FunctionExpander Folder="istream__basic_istream/gcount" >
+                    <local:TextBoxPane Message="文字列を入力" Text="abc" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/get" >
+                    <local:TextBoxPane Message="文字列を入力" Text="abc" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/getline" >
+                    <local:TextBoxPane Message="文字列を入力" Text="abc" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/ignore" SampleType="ConsoleOnly" />
+
+                <local:FunctionExpander Folder="istream__basic_istream/peek" >
+                    <local:TextBoxPane Message="文字列を入力" Text="abc" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/putback" >
+                    <local:TextBoxPane Message="文字列を入力" Text="abc" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="read() 関数" Sentence="標準入力から指定された文字数だけ取り込みます"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="readsome() 関数" Sentence="標準入力から指定された文字数だけ取り込みます"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/seekg" AutoFunc="False"  ConsoleButtonVisibility="Collapsed">
+                    <local:OpenButtonPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="sentry() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="swap() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="sync() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="istream__basic_istream/tellg" AutoFunc="False"  ConsoleButtonVisibility="Collapsed">
+                    <local:OpenButtonPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="unget() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="DerivedClass">
+                <local:ToRightButton Style="{StaticResource BasicIFStreamClass}"/>
+                <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
+                <local:ToRightButton Style="{StaticResource BasicIStringStreamClass}" />
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

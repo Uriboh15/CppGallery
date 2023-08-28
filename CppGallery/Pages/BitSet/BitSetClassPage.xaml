@@ -1,0 +1,118 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.BitSet.BitSetClassPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+
+            <local:BlockPanel Header="Constructor">
+                <local:CustomExpander Title="bitset()" Sentence="bitset オブジェクトを構築します" IsEnabled="False" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="element_type" Sentence="bitset の要素の参照に使われる型" Value="bool"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="bitset__bitset/operatorNE" Icon="Operator" AutoFunc="False" />
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorAndE" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="bs1を入力" Text1="111" Message2="bs2を入力" Text2="010" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorLL" AutoFunc="False" Icon="Operator">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorLLE" AutoFunc="False" Icon="Operator">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorEE" Icon="Operator" AutoFunc="False" />
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorRR" AutoFunc="False" Icon="Operator">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorRRE" AutoFunc="False" Icon="Operator">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorKAKKO" Icon="Operator" >
+                    <local:TextBoxPane Message="値を入力" Text="11100011" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorKURIE" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="bs1を入力" Text1="111" Message2="bs2を入力" Text2="010" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorOrE" Icon="Operator" >
+                    <local:MultiTextBoxPane Message1="bs1を入力" Text1="111" Message2="bs2を入力" Text2="010" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/operatorNYORO" Icon="Operator" >
+                    <local:TextBoxPane Message="値を入力" Text="11100011" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method">
+                <local:FunctionExpander Folder="bitset__bitset/all" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="27" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/any" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="56" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/count" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="43" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/flip" >
+                    <local:TextBoxPane Message="ビットを入力" Text="111" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/none" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="87" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="ResetOut" Folder="bitset__bitset/reset" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="43" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="SetOut" Folder="bitset__bitset/set" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="76" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/size" />
+
+                <local:FunctionExpander Folder="bitset__bitset/test" AutoFunc="False">
+                    <local:NumberBoxPane Message="インデックスを入力" Value="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/to_string" AutoFunc="False">
+                    <local:TextBoxPane Message="整数を入力" Text="1703" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/to_ullong" >
+                    <local:TextBoxPane Message="ビットを入力" Text="111" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="bitset__bitset/to_ulong" >
+                    <local:TextBoxPane Message="ビットを入力" Text="111" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/bitset-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/bitset/bitset.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

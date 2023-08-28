@@ -1,0 +1,139 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Fstream.BasicOfstreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="BaseClass">
+                <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constructor">
+                <local:FunctionExpander Folder="fstream__basic_ofstream/basic_ofstream" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="文字列を入力">
+                            <TextBox x:Name="BasicOfstreamIn"/>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="ファイルを保存">
+                            <Button x:Name="BasicOfstreamButton" Click="BasicOfstreamButton_Click" Content="保存" Width="65"/>
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Operator">
+                <local:CustomExpander Title="explicit operator bool" Icon="&#xE710;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/operatorvoid" AutoFunc="False" Icon="Operator"  />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/operatorN" AutoFunc="False" Icon="Operator"  />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/operatorLL" AutoFunc="False" Icon="Operator" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/operatorE" Icon="Operator">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Method">
+                <local:FunctionExpander Folder="ios__basic_ios/bad"/>
+                <local:FunctionExpander Folder="fstream__basic_ofstream/clear" AutoFunc="False" />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/close" AutoFunc="False" SampleType="None" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/copyfmt" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+                
+                <local:FunctionExpander Folder="fstream__basic_ofstream/eof" />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/exceptions" />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/fail" AutoFunc="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/fill" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="flags() 関数" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="fstream__basic_ofstream/flush" />
+
+                <local:CustomExpander Title="getloc() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/good" AutoFunc="False" />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/imbue" AutoFunc="False" SampleType="None" />
+                <local:FunctionExpander Folder="fstream__basic_ofstream/is_open" AutoFunc="False" SampleType="None" />
+
+                <local:CustomExpander Title="iword() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="move() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="narrow() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/open" SampleType="None" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/precision" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/put" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="pword() 関数" IsEnabled="False" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="rdbuf() 関数" Sentence="pointer 型の格納されたストリームバッファーのアドレスを basic_filebuf&lt;Elem, Tr> として返します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander Title="rdstate() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="register_callback() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/seekp" />
+
+                <local:CustomExpander Title="self() 関数" IsEnabled="False" />
+                
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="sentry() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander Title="set_rdbuf() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="setstate() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/swap" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/tellp" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="tie() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="unself() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="widen() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/width" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="fstream__basic_ofstream/write" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ofstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_ofstream.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Any.AnyClassPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel >
+            <local:BlockPanel Header="Constructor" >
+                <local:FunctionExpander Folder="any__any/any" AutoFunc="False" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="any__any/operatorE" Icon="Operator" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method" >
+                <local:FunctionExpander Folder="any__any/emplace" />
+                <local:FunctionExpander Folder="any__any/has_value" />
+                <local:FunctionExpander Folder="any__any/reset" />
+                <local:FunctionExpander Folder="any__any/swap" />
+                <local:FunctionExpander Folder="any__any/type" />
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/any-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/any/any.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

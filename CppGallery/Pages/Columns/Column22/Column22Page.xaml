@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Columns.Column22.Column22Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="Windows 11 22H2 でタイトルバーの視覚効果を変更する" Style="{StaticResource ColumnTitle}" />
+                <TextBlock>
+                    Windows 11 22H2 では DWM レベルで Mica やアクリルのサポートが入った。
+                    そのため、22H2 では既定でタイトルバーに Mica 効果が入る。
+                    Win32 アプリではデスクトップウィンドウマネージャーの関数でこの視覚効果を指定することができる。
+                    以下の例のように DwmSetWindowAttribute 関数の第 2 引数に DWMWINDOWATTRIBUTE::DWMWA_SYSTEMBACKDROP_TYPE (= 38) を入れて第 3 引数に設定したいモードを入れる。
+                </TextBlock>
+                <local:Win32CodeButton Path="Pages/Data/Columns/Column22/source1.txt" SaveButtonVisibilty="Collapsed"/>
+                <TextBlock>
+                    第 3 引数には以下の 5 種類に値を指定できる。
+                </TextBlock>
+                <local:ResultsPanel>
+                    <local:ItemGrid Title="DWMSBT_AUTO" Sentence="自動" Value="0" Icon="&#xE71A;" />
+                    <local:ItemGrid Title="DWMSBT_NONE" Sentence="背景なし" Value="1" Icon="&#xE71A;" />
+                    <local:ItemGrid Title="DWMSBT_MAINWINDOW" Sentence="Mica" Value="2" Icon="&#xE71A;" />
+                    <local:ItemGrid Title="DWMSBT_TRANSIENTWINDOW" Sentence="アクリル" Value="3" Icon="&#xE71A;" />
+                    <local:ItemGrid Title="DWMSBT_TABBEDWINDOW" Sentence="MicaAlt" Value="4" Icon="&#xE71A;" />
+                </local:ResultsPanel>
+
+            </local:ColumnContentPanel>
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}" />
+                <local:BlockOldSystemPane MinimumVersion="Win11_22H2">
+                    <local:ControlGrid Message="サンプリアプリを起動" >
+                        <Button x:Name="LaunchButton" Content="起動" Width="65" Click="LaunchButton_Click"  />
+                    </local:ControlGrid>
+                </local:BlockOldSystemPane>
+            </local:ResultsPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="参考ページ" Style="{StaticResource ColumnTitle}"/>
+                <HyperlinkButton Content="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/ne-dwmapi-dwm_systembackdrop_type" NavigateUri="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/ne-dwmapi-dwm_systembackdrop_type" />
+            </local:ColumnContentPanel>
+
+            <TextBlock HorizontalAlignment="Right">
+                    2023年6月10日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+
+        </local:ColumnOuterPanel>
+        
+    </ScrollViewer>
+</Page>

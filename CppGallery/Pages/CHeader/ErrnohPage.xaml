@@ -1,0 +1,101 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.ErrnohPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Macro">
+                <local:ItemGrid Title="errno" Sentence="エラー状態" Value="(*_errno())" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EPERM" Sentence="" Value="1" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOENT" Sentence="" Value="2" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ESRCH" Sentence="" Value="3" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EINTR" Sentence="" Value="4" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EIO" Sentence="" Value="5" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENXIO" Sentence="" Value="6" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="E2BIG" Sentence="" Value="7" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOEXEC" Sentence="" Value="8" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EBADF" Sentence="" Value="9" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ECHILD" Sentence="" Value="10" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EAGAIN" Sentence="" Value="11" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOMEM" Sentence="" Value="12" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EACCES" Sentence="" Value="13" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EFAULT" Sentence="" Value="14" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EBUSY" Sentence="" Value="16" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EEXIST" Sentence="" Value="17" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EXDEV" Sentence="" Value="18" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENODEV" Sentence="" Value="19" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTDIR" Sentence="" Value="20" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EISDIR" Sentence="" Value="21" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EINVAL" Sentence="" Value="22" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENFILE" Sentence="" Value="23" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EMFILE" Sentence="" Value="24" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTTY" Sentence="" Value="25" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EFBIG" Sentence="" Value="27" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOSPC" Sentence="" Value="28" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ESPIPE" Sentence="" Value="29" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EROFS" Sentence="" Value="30" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EMLINK" Sentence="" Value="31" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EPIPE" Sentence="" Value="32" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EDOM" Sentence="" Value="33" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ERANGE" Sentence="" Value="34" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EDEADLK" Sentence="" Value="36" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENAMETOOLONG" Sentence="" Value="38" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOLCK" Sentence="" Value="39" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOSYS" Sentence="" Value="40" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTEMPTY" Sentence="" Value="41" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EILSEQ" Sentence="" Value="42" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="STRUNCATE" Sentence="" Value="80" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EADDRINUSE" Sentence="" Value="100" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EADDRNOTAVAIL" Sentence="" Value="101" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EAFNOSUPPORT" Sentence="" Value="102" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EALREADY" Sentence="" Value="103" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EBADMSG" Sentence="" Value="104" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ECANCELED" Sentence="" Value="105" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ECONNABORTED" Sentence="" Value="106" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ECONNREFUSED" Sentence="" Value="107" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ECONNRESET" Sentence="" Value="108" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EDESTADDRREQ" Sentence="" Value="109" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EHOSTUNREACH" Sentence="" Value="110" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EIDRM" Sentence="" Value="111" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EINPROGRESS" Sentence="" Value="112" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EISCONN" Sentence="" Value="113" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ELOOP" Sentence="" Value="114" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EMSGSIZE" Sentence="" Value="115" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENETDOWN" Sentence="" Value="116" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENETRESET" Sentence="" Value="117" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENETUNREACH" Sentence="" Value="118" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOBUFS" Sentence="" Value="119" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENODATA" Sentence="" Value="120" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOLINK" Sentence="" Value="121" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOMSG" Sentence="" Value="122" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOPROTOOPT" Sentence="" Value="123" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOSR" Sentence="" Value="124" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOSTR" Sentence="" Value="125" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTCONN" Sentence="" Value="126" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTRECOVERABLE" Sentence="" Value="127" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTSOCK" Sentence="" Value="128" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ENOTSUP" Sentence="" Value="129" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EOPNOTSUPP" Sentence="" Value="130" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EOTHER" Sentence="" Value="131" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EOVERFLOW" Sentence="" Value="132" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EOWNERDEAD" Sentence="" Value="133" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EPROTO" Sentence="" Value="134" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EPROTONOSUPPORT" Sentence="" Value="135" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EPROTOTYPE" Sentence="" Value="136" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ETIME" Sentence="" Value="137" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ETIMEDOUT" Sentence="" Value="138" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="ETXTBSY" Sentence="" Value="139" Icon="&#xE71A;"/>
+                <local:ItemGrid Title="EWOULDBLOCK" Sentence="" Value="140" Icon="&#xE71A;"/>
+            </local:BlockPanel>
+        </local:OuterPanel>
+        
+    </ScrollViewer>
+</Page>

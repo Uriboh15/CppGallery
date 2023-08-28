@@ -1,0 +1,90 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column10.Column10Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="vector で動的 2 次元配列" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    C++ の vector クラスを使えば動的 2 次元配列を作ることができる。vector クラスのコンストラクターは複数用意されているがここでは以下の 2 つを使用する。
+                </TextBlock>
+                <local:InnerPanel>
+                    <TextBlock Text="オーバーロード" FontWeight="Bold"/>
+                    <TextBlock Text="vector(size_type count, const Type&amp; value)"/>
+                    <TextBlock Text="vector(size_type count)"/>
+                    <TextBlock Text="パラメーター" Margin="0,25,0,0" FontWeight="Bold"/>
+                    <TextBlock Text="count: vector の要素数"/>
+                    <TextBlock Text="value: 初期化子"/>
+                    <TextBlock Text="戻り値" Margin="0,25,0,0" FontWeight="Bold"/>
+                    <TextBlock Text="vector(*this)"/>
+                </local:InnerPanel>
+
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    2 次元配列の定義にはテンプレートに vector を入れ子にして上の 1 つめのコンストラクターを呼ぶ。
+                    引数 count には最上位の要素数を指定し、引数 value には 上の 2番目のコンストラクターを呼んでさらに最下位の要素数を指定する。
+                    少々ややこしいがこれで 2 次元配列ができた。
+                </TextBlock>
+                <local:CodeButton Path="Pages/Data/Columns/Column10/source1.txt" SaveButtonVisibilty="Collapsed" AutoFunc="False"/>
+
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                    配列の定義ができたらあとは普通の 2 次元配列と同様に扱うことができる。
+                    以下の例では array[3][4] を動的に生成し、そこにテキトーな値を代入して表示している。
+                </TextBlock>
+                <local:CodeButton Path="Pages/Data/Columns/Column10/main1.cpp" FileName="main1.cpp" AutoFunc="False"/>
+            </local:ColumnContentPanel>
+
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}"/>
+                <local:InnerGrid>
+                    <TextBlock>
+                        array2[0][0] = 41<LineBreak/>
+                        array2[0][1] = 18467<LineBreak/>
+                        array2[0][2] = 6334<LineBreak/>
+                        array2[0][3] = 26500<LineBreak/>
+                        array2[1][0] = 19169<LineBreak/>
+                        array2[1][1] = 15724<LineBreak/>
+                        array2[1][2] = 11478<LineBreak/>
+                        array2[1][3] = 29358<LineBreak/>
+                        array2[2][0] = 26962<LineBreak/>
+                        array2[2][1] = 24464<LineBreak/>
+                        array2[2][2] = 5705<LineBreak/>
+                        array2[2][3] = 28145
+                    </TextBlock>
+                </local:InnerGrid>
+            </local:ResultsPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="要素数の変更" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    要素数を変更するときはメンバー関数の resize を使用する。以下の例では最上位の要素数を 25 に、最下位の要素数を 21 に変更している。
+                </TextBlock>
+                <local:CodeButton Path="Pages/Data/Columns/Column10/source2.txt" SaveButtonVisibilty="Collapsed"/>
+            </local:ColumnContentPanel>
+            <TextBlock HorizontalAlignment="Right">
+                    2023年4月29日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

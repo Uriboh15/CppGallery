@@ -1,0 +1,58 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.LimitsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Included" >
+                <local:ToRightButton Style="{StaticResource StdLibh}"/>
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="limits.h" >
+                <local:ItemGrid Title="CHAR_BIT" Sentence="char 型のビット数" />
+                <local:ItemGrid Title="CHAR_MAX" Sentence="char の最大値" />
+                <local:ItemGrid Title="CHAR_MIN" Sentence="char の最小値"  />
+                <local:ItemGrid Title="SHRT_MAX" Sentence="short int の最大値" />
+                <local:ItemGrid Title="SHRT_MIN" Sentence="short int の最小値" />
+                <local:ItemGrid Title="INT_MAX" Sentence="int の最大値" />
+                <local:ItemGrid Title="INT_MIN" Sentence="int の最小値" />
+                <local:ItemGrid Title="LONG_MAX" Sentence="long int の最大値" />
+                <local:ItemGrid Title="LONG_MIN" Sentence="long int の最小値" />
+                <local:ItemGrid Title="LLONG_MAX" Sentence="long long int の最大値" />
+                <local:ItemGrid Title="LLONG_MIN" Sentence="long long int の最小値" />
+                <local:ItemGrid Title="MB_LEN_MAX" Sentence="サポートするロケールに対するマルチバイト文字1文字の最大バイト数" />
+                <local:ItemGrid Title="SIZE_MAX" Sentence="size_t の最大値" />
+                <local:ItemGrid Title="SCHAR_MAX" Sentence="signed char の最大値" />
+                <local:ItemGrid Title="SCHAR_MIN" Sentence="signed char の最小値" />
+               
+                <local:ItemGrid Title="UCHAR_MAX" Sentence="unsigned char の最大値" />
+                <local:ItemGrid Title="USHRT_MAX" Sentence="unsigned short int の最大値" />
+                <local:ItemGrid Title="UINT_MAX" Sentence="unsigned int の最大値"  />
+                <local:ItemGrid Title="ULONG_MAX" Sentence="unsigned long int の最大値"  />
+                <local:ItemGrid Title="ULLONG_MAX" Sentence="unsigned long long int の最大値" />
+                <local:ItemGrid Title="_I8_MAX" Sentence="8bit 整数の最大値" />
+                <local:ItemGrid Title="_I8_MIN" Sentence="8bit 整数の最小値" />
+                <local:ItemGrid Title="_UI8_MAX" Sentence="8bit 符号なし整数の最大値" />
+                <local:ItemGrid Title="_I16_MAX" Sentence="16bit 整数の最大値" />
+                <local:ItemGrid Title="_I16_MIN" Sentence="16bit 整数の最小値" />
+                <local:ItemGrid Title="_UI16_MAX" Sentence="16bit 符号なし整数の最大値" />
+                <local:ItemGrid Title="_I32_MAX" Sentence="32bit 整数の最大値"  />
+                <local:ItemGrid Title="_I32_MIN" Sentence="32bit 整数の最小値"  />
+                <local:ItemGrid Title="_UI32_MAX" Sentence="32bit 符号なし整数の最大値"  />
+                <local:ItemGrid Title="_I64_MAX" Sentence="64bit 整数の最大値"  />
+                <local:ItemGrid Title="_I64_MIN" Sentence="64bit 整数の最小値"  />
+                <local:ItemGrid Title="_UI64_MAX" Sentence="64bit 符号なし整数の最大値" />
+            </local:MacroPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

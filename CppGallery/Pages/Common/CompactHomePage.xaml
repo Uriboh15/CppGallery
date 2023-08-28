@@ -1,0 +1,112 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CompactHomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <Grid Loaded="Grid_Loaded">
+            <local:OuterPanel x:Name="ListStylePanel">
+                <local:ResultsPanel x:Name="CppLibraryList">
+                    <TextBlock Text="C++ ライブラリ"/>
+                    <local:ToRightButton Style="{StaticResource Any}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Array}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Bit}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource BitSet}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource CharConv}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Complex}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Concepts}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Deque}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource FileSystem}" InLibraryPage="True" />
+                    <local:ToRightButton Style="{StaticResource ForwardList}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Fstream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource InitializerList}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource IoManip}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Ios}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource IosFwd}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Iostream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Istream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Limits}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource List}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Map}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource New}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Numbers}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Numeric}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Ostream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Queue}" InLibraryPage="True" />
+                    <local:ToRightButton Style="{StaticResource Random}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Set}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource SourceLocation}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Span}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource SStream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Stack}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdExcept}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StreamBuf}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource String}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StringView}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StrStream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource TypeInfo}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource TypeTraits}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Valarray}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Vector}" InLibraryPage="True"/>
+                </local:ResultsPanel>
+
+                <local:ResultsPanel x:Name="CLibraryList">
+                    <TextBlock Text="C ライブラリ"/>
+                    <local:ToRightButton Style="{StaticResource Asserth}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Complexh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Ctypeh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Errnoh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource FEnvh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Floath}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource IntTypesh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Iso646h}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Limitsh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Localeh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Mathh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdAlignh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdBoolh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdInth}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdIoh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdLibh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource StdNoReturnh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Stringh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource TgMathh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Timeh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Ucharh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Wcharh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Wctypeh}" InLibraryPage="True"/>
+                </local:ResultsPanel>
+
+
+                <local:ResultsPanel x:Name="WindowsLibraryList">
+                    <TextBlock Text="Windows ライブラリ"/>
+                    <local:ToRightButton Style="{StaticResource ConIoh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource DwmAPI}" InLibraryPage="True"/>
+                </local:ResultsPanel>
+            </local:OuterPanel>
+
+            <StackPanel x:Name="BlockStylePanel" Visibility="Collapsed" >
+                <StackPanel x:Name="CppLibraryBlock" Spacing="0">
+                    <TextBlock Text="C++ ライブラリ"/>
+                </StackPanel>
+
+                <StackPanel x:Name="CLibraryBlock" Spacing="0">
+                    <TextBlock Text="C ライブラリ"/>
+                </StackPanel>
+
+                <StackPanel x:Name="WindowsLibraryBlock" Spacing="0">
+                    <TextBlock Text="Windows ライブラリ"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        
+    </ScrollViewer>
+</Page>

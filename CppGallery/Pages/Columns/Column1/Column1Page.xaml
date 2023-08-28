@@ -1,0 +1,59 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column1.Column1Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="scanf で文字列入力は危険" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    scanfを使って以下のようなコードを実行すると、100文字以上入力したときにバッファオーバーランが発生してしまい、データ破壊ができてしまう。
+                    目的の文字列の次に格納されているデータがパスワードなどの機密データの場合は、そのデータも破壊できるため、セキュリティ上の問題も発生しかねない。
+                </TextBlock>
+                <local:CCodeButton Path="Pages/Data/Columns/Column1/main1.cpp" FileName="main1.c"/>
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="安全に文字列入力する方法" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    ではscanfでは安全に文字列入力できないかといわれるとそういうわけでもない。
+                    実装方法は簡単で先ほどのコードの scanf("%s", str) の部分を scanf("%99s", str) に書き換えるだけでよい。
+                    この %(数字)s はprintfでよく使う手法でprintfなら最大(数字)文字表示、scanfなら最大(数字)文字取り込みという意味になる。
+                    これで安全に文字列入力が可能となった。
+                </TextBlock>
+                <local:CCodeButton Path="Pages/Data/Columns/Column1/main2.cpp" FileName="main2.c"/>
+            </local:ColumnContentPanel>
+
+            <local:ColumnContentPanel>
+                <TextBlock Text="文字列のオーバーフローを検知" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                    先ほどの例で安全に文字列を入力できるようになったが、このままでは文字列のオーバーフローを検知できない。
+                    文字列がオーバーフローした場合は入力ストリームに余った文字列が残るのでそれをgetcharで取り込んで確認すればよい。
+                    scanfは空白文字と改行文字を読み飛ばすという性質があるのでストリームに残った文字が空白もしくは改行文字の場合は正常に入力できたと判断する。
+                </TextBlock>
+                <local:CCodeButton Path="Pages/Data/Columns/Column1/main3.cpp" FileName="main3.c"/>
+            </local:ColumnContentPanel>
+            
+            <TextBlock HorizontalAlignment="Right">
+                    2023年3月23日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+    </ScrollViewer>
+</Page>

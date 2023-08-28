@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.FileSystem.FileSystemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel >
+
+            <local:BlockPanel Header="Function" >
+                <local:CustomExpander Title="absolute() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="begin() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="canonical() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="copy() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="copy_file() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="copy_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="create_directories() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="create_directory() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="create_directory_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="create_hard_link() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="create_symlink() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/current_path" SampleType="ConsoleOnly" />
+
+                <local:CustomExpander Title="end() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="equivalent() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/exists" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+                
+                <local:FunctionExpander Folder="filesystem/file_size" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="hard_link_count() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="hash_value() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/is_block_file" />
+                <local:FunctionExpander Folder="filesystem/is_character_file" />
+
+                <local:FunctionExpander Folder="filesystem/is_directory" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem/is_empty" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem/is_fifo" />
+
+                <local:CustomExpander Title="is_other() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/is_regular_file" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem/is_socket" />
+                <local:FunctionExpander Folder="filesystem/is_symlink" />
+
+                <local:CustomExpander Title="last_write_time() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="permissons() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="proximate() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="read_symlink() 関数" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="filesystem/relative" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+                
+                <local:CustomExpander Title="remove() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="remove_all() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="rename() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="resize_file() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/space" />
+
+                <local:FunctionExpander Folder="filesystem/status" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="status_known() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="swap() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="symlink_status() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="system_complete() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="temp_directory_path() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="u8path() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="weakly_canonical() 関数" IsEnabled="False" />
+            </local:BlockPanel>
+            
+            <local:BlockPanel Header="Class" >
+                <local:ToRightButton Style="{StaticResource DirectoryIteratorClass}" />
+                <local:ItemGrid Title="directory_error クラス" Sentence="フォルダ操作に失敗したときにスローされる例外クラス" />
+                <local:ToRightButton Style="{StaticResource FileStatusClass}" />
+                <local:ToRightButton Style="{StaticResource PathClass}" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Struct">
+                <local:CustomExpander Title="space_info 構造体" Sentence="ボリュームの情報を格納します" Icon="&#xEA86;">
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="uintmax_t capacity" Sentence="ボリュームの容量" />
+                        <local:ItemGrid Title="uintmax_t free" Sentence="ボリュームの空き容量" />
+                        <local:ItemGrid Title="uintmax_t available" Sentence="ボリュームの利用可能な領域" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/filesystem?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.DwmAPI.DwmSetWindowAttributePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel HeaderType="Windows" >
+
+            <local:DefinePane >
+                <local:DefinePane.Definision>HRESULT DwmSetWindowAttribute(HWND hwnd, DWORD dwAttribute, LPCVOID pvAttribute, DWORD cbAttribute)</local:DefinePane.Definision>
+                <local:DefinePane.Parameter>
+                    hwnd: ウィンドウハンドル'\r\n'
+                    dwAttribute: モード指定'\r\n'
+                    pvAttribute: 適用する値のポインタ'\r\n'
+                    cbAttribute: 適用する値のサイズ
+                </local:DefinePane.Parameter>
+                <local:DefinePane.Returns>
+                    関数が正常に動作した場合は S_OK'\r\n'
+                    正しく動作しなかった場合は HRESULT エラー
+                </local:DefinePane.Returns>
+            </local:DefinePane>
+            
+            <local:BasicBlockPanel HeadText="用法" >
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/background" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinVersion="Win11_22H2" />
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/bordercolor" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinVersion="Win11_21H2" />
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/cornerround" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinVersion="Win11_21H2" />
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/titlebarcolor" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinVersion="Win11_21H2" />
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/titlebartextcolor" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinVersion="Win11_21H2" />
+                <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/theme" CodeLanguage="CppWin32" SampleType="GUIApp" />
+                
+            </local:BasicBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

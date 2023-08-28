@@ -1,0 +1,154 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Limits.NumericLimitsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constant">
+                <local:FunctionExpander Folder="limits__numeric_limits/digits" Icon="Object" />
+                <local:FunctionExpander Folder="limits__numeric_limits/digits10" Icon="Object" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="has_denorm" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="has_denorm_loss" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="limits__numeric_limits/has_infinity" Icon="Object" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="has_quiet_NaN" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="has_signaling_NaN" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="is_bounded" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="is_exact" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="limits__numeric_limits/is_iec559" Icon="Object" />
+                <local:FunctionExpander Folder="limits__numeric_limits/is_integer" Icon="Object" />
+                <local:FunctionExpander Folder="limits__numeric_limits/is_modulo" Icon="Object" />
+                <local:FunctionExpander Folder="limits__numeric_limits/is_signed" Icon="Object" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="is_specialized" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="max_digits10" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="max_exponent" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="max_exponent10" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="min_exponent" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="min_exponent10" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="radix" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="round_style" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="tinyness_before" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="traps" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="StaticMethod">
+                <local:FunctionExpander Folder="limits__numeric_limits/denorm_min" />
+                <local:FunctionExpander Folder="limits__numeric_limits/epsilon" />
+                <local:FunctionExpander Folder="limits__numeric_limits/infinity" />
+                <local:FunctionExpander Folder="limits__numeric_limits/lowest" />
+                <local:FunctionExpander Folder="limits__numeric_limits/max" />
+                <local:FunctionExpander Folder="limits__numeric_limits/min" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="quiet_NaN() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="round_error() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="signaling_NaN() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+            
+
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

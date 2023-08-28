@@ -1,0 +1,65 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.WctypehPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="wchar_t" Sentence="ワイド文字を表す型"/>
+                <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="wctype.h/iswalnum" CodeLanguage="C">
+                    <local:ControlGrid Message="文字列を入力">
+                        <TextBox Text="123abc" TextChanging="In_TextChanging" Loaded="Out_Loaded"/>
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="iswalpha() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswblank() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswcntrl() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="wctype.h/iswdigit" CodeLanguage="C">
+                    <local:TextBoxPane Message="文字列を入力" Text="123abc" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="iswgraph() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswlower() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswprint() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswunct() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswspace() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="iswupper() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="wctype.h/iswxdigit" CodeLanguage="C">
+                    <local:TextBoxPane Message="文字列を入力" Text="123abc" />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="iswctype() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="towcrans() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="wctype.h/towlower" CodeLanguage="C" />
+                <local:FunctionExpander Folder="wctype.h/towupper" CodeLanguage="C" />
+
+                <local:CustomExpander Title="wctrans() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="wctype() 関数" IsEnabled="False" />
+            </local:BlockPanel>
+
+
+            <local:MacroPanel Folder="wctype.h" >
+                <local:ItemGrid Title="NULL" Sentence="空ポインタ" />
+                <local:ItemGrid Title="WEOF" Sentence="ファイルの終端を示す値" />
+            </local:MacroPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

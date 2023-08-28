@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.LocalehPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel>
+            <local:BlockPanel Header="Struct">
+                <local:CustomExpander Title="lconv 構造体" IsEnabled="False" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function" >
+                <local:CustomExpander Title="localeconv" IsEnabled="False"/>
+                <local:FunctionExpander Folder="locale.h/setlocale" CodeLanguage="C" />
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="locale.h" >
+                <local:ItemGrid Title="LC_ALL" Sentence="すべてのカテゴリー"/>
+                <local:ItemGrid Title="LC_COLLATE" Sentence="文字列の比較や変換に関するカテゴリー" />
+                <local:ItemGrid Title="LC_CTYPE" Sentence="文字列捜査に関するカテゴリー" />
+                <local:ItemGrid Title="LC_MONETARY" Sentence="金額の書式化のカテゴリー" />
+                <local:ItemGrid Title="LC_NUMERIC" Sentence="数値の形式のカテゴリー" />
+                <local:ItemGrid Title="LC_TIME" Sentence="日付と時刻のカテゴリー" />
+                <local:ItemGrid Title="LC_MAX" Sentence="LC マクロの最大値" />
+                <local:ItemGrid Title="LC_MIN" Sentence="LC マクロの最小値" />
+                <local:ItemGrid Title="NULL" Sentence="空ポインター" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

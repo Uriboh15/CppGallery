@@ -1,0 +1,19 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<UserControl
+    x:Class="CppGallery.Pages.UserControls.OutPuts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <local:InnerGrid>
+        <ScrollViewer>
+            <TextBlock x:Name="OutPut" VerticalAlignment="Center" FontFamily="MS Gothic"/>
+        </ScrollViewer>
+    </local:InnerGrid>
+    
+</UserControl>

@@ -1,0 +1,109 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.TimehPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Typedefs" >
+                <local:ItemGrid Title="clock_t" Sentence="プログラムの実行時間を表す型" Value="long"/>
+                <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
+                <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" Value="unsigned long long"/>
+                <local:ItemGrid Title="time_t" Sentence="時刻を表す型" Value="long long"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Struct" >
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="tm 構造体" Sentence="暦時刻を表す構造体" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="int tm_year" Sentence="1900年からの経過年数"/>
+                        <local:ItemGrid Title="int tm_yday" Sentence="1月1日からの経過日数"/>
+                        <local:ItemGrid Title="int tm_mon" Sentence="1月からの経過月数"/>
+                        <local:ItemGrid Title="int tm_mday" Sentence="日"/>
+                        <local:ItemGrid Title="int tm_wday" Sentence="日曜日からの経過日数"/>
+                        <local:ItemGrid Title="int tm_hour" Sentence="時"/>
+                        <local:ItemGrid Title="int tm_min" Sentence="分"/>
+                        <local:ItemGrid Title="int tm_sec" Sentence="秒"/>
+                        <local:ItemGrid Title="int tm_isdst" Sentence="サマータイム"/>
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+
+
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander x:Name="Asctime" Folder="time.h/asctime" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="Asctime_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="ClockOut" Folder="time.h/clock" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="ClockOut_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="CtimeOut" Folder="time.h/ctime" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="CtimeOut_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="time.h/difftime" CodeLanguage="C" SampleType="None" />
+
+                <local:FunctionExpander x:Name="GmtimeOut" Folder="time.h/gmtime" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="GmtimeOut_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="LocaltimeOut" Folder="time.h/localtime" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="LocaltimeOut_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="time.h/mktime" CodeLanguage="C" />
+
+                <local:FunctionExpander x:Name="StrftimeOut" Folder="time.h/strftime" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="StrftimeOut_Loaded"/>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander x:Name="TimeOut" Folder="time.h/time" CodeLanguage="C" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
+                    </local:FunctionExpander.Info>
+                    <Grid Loaded="TimeOut_Loaded"/>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+
+            <local:MacroPanel Folder="time.h" >
+                <local:ItemGrid Title="CLOCKS_PER_SEC" Sentence="1秒あたりのプロセッサ時間" />
+                <local:ItemGrid Title="NULL" Sentence="空ポインタ" />
+                <local:ItemGrid Title="TIME_UTC" Sentence="時刻がUTC基準であるかどうか" />
+            </local:MacroPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

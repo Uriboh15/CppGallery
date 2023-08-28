@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Deque.DequePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="deque/operatorNE" Icon="Operator" />
+                <local:FunctionExpander Folder="deque/operatorL" Icon="Operator" />
+                <local:FunctionExpander Folder="deque/operatorLE" Icon="Operator" />
+                <local:FunctionExpander Folder="deque/operatorEE" Icon="Operator" />
+                <local:FunctionExpander Folder="deque/operatorR" Icon="Operator" />
+                <local:FunctionExpander Folder="deque/operatorRE" Icon="Operator" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="deque/swap" />
+            </local:BlockPanel>
+            
+            <local:BlockPanel Header="Class" >
+                <local:ToRightButton Style="{StaticResource DequeClass}" />
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/deque?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/deque.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

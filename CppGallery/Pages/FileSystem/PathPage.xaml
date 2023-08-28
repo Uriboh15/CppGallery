@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.FileSystem.PathPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor" >
+                <local:FunctionExpander Folder="filesystem__path/path" AutoFunc="False" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="const_iterator" Sentence="path オブジェクト内の cosnt 要素にアクセス可能なイテレータ" />
+                <local:ItemGrid Title="iterator" Sentence="path オブジェクト内の要素にアクセス可能なイテレータ" />
+                <local:ItemGrid Title="string_type" Sentence="OS ネイティブのパスを表せる文字列型" Value="wstring" />
+                <local:ItemGrid Title="value_type" Sentence="OS が使用する文字コードの型" Value="whar_t" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constant">
+                <local:ItemGrid Title="preferred_separator" Sentence="OS 推奨の区切り文字" Value="\" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="filesystem__path/operatorE" Icon="Operator" />
+                <local:FunctionExpander Folder="filesystem__path/operatorLL" AutoFunc="False" Icon="Operator" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/operatorRR" Icon="Operator" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/operatorPlusE" Icon="Operator" />
+                <local:FunctionExpander Folder="filesystem__path/operatorWARUE" Icon="Operator" />
+                <local:FunctionExpander Folder="filesystem__path/operator_string_type" Icon="Operator" IsEnabled="False" />
+            </local:BlockPanel>
+
+            
+
+            <local:BlockPanel Header="Method" >
+                <local:FunctionExpander Folder="filesystem__path/append" />
+                <local:FunctionExpander Folder="filesystem__path/assign" />
+                <local:FunctionExpander Folder="filesystem__path/begin" />
+                <local:FunctionExpander Folder="filesystem__path/c_str" />
+                <local:FunctionExpander Folder="filesystem__path/clear" />
+                
+                <local:CustomExpander Title="compare() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem__path/concat" />
+                <local:FunctionExpander Folder="filesystem__path/empty" />
+                <local:FunctionExpander Folder="filesystem__path/end" />
+
+                <local:FunctionExpander Folder="filesystem__path/extension" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/filename" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/generic_string" />
+
+                <local:FunctionExpander Folder="filesystem__path/generic_u8string" />
+                <local:FunctionExpander Folder="filesystem__path/generic_u16string" />
+                <local:FunctionExpander Folder="filesystem__path/generic_u32string" />
+                <local:FunctionExpander Folder="filesystem__path/generic_wstring" />
+
+                <local:FunctionExpander Folder="filesystem__path/has_extension" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_filename" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_parent_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_relative_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_root_directory" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_root_name" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_root_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/has_stem" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+                
+                <local:FunctionExpander Folder="filesystem__path/is_absolute" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/is_relative" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/make_preferred" />
+                <local:FunctionExpander Folder="filesystem__path/native" />
+
+                <local:FunctionExpander Folder="filesystem__path/parent_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/relative_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/remove_filename" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/replace_extension" >
+                    <local:MultiTextBoxPane Message1="パスを入力" Text1="folder/subfolder/abc.txt" Message2="変更後の拡張子を入力" Text2="cpp" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/replace_filename" >
+                    <local:MultiTextBoxPane Message1="パスを入力" Text1="folder/subfolder/abc.txt" Message2="変更後のファイル名を入力" Text2="CppGallery.exe" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/root_directory" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/root_name" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/root_path" >
+                    <local:TextBoxPane Message="パスを入力" Text="C:/folder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/stem" >
+                    <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__path/string" />
+                <local:FunctionExpander Folder="filesystem__path/swap" />
+
+                <local:FunctionExpander Folder="filesystem__path/u8string" SampleType="None" />
+                <local:FunctionExpander Folder="filesystem__path/u16string" SampleType="None" />
+                <local:FunctionExpander Folder="filesystem__path/u32string" SampleType="None" />
+                <local:FunctionExpander Folder="filesystem__path/wstring" SampleType="None" />
+
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/path-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem/path.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,103 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.ValArray.ValArrayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource InitializerList}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="valarray/operatorNE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorPAR" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorAND" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorAA" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorR" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorRE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorRR" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorL" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorLE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorLL" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorKAKERU" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorPlus" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorMinus" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorWARU" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorEE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorKAKU" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorBO" Icon="Operator" />
+                <local:FunctionExpander Folder="valarray/operatorMATAHA" AutoFunc="False" Icon="Operator" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="valarray/abs" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/acos" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/asin" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/atan" AutoFunc="False" />
+
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="atan2() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="valarray/begin" />
+                <local:FunctionExpander Folder="valarray/cos" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/cosh" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/end" />
+                <local:FunctionExpander Folder="valarray/exp" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/log" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/log10" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/pow" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/sin" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/sinh" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/sqrt" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/swap" />
+                <local:FunctionExpander Folder="valarray/tan" AutoFunc="False" />
+                <local:FunctionExpander Folder="valarray/tanh" AutoFunc="False" />
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Class" >
+                <Button x:Name="ClassButton1" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="gslice クラス" Sentence="aaa"/>
+                </Button>
+
+                <Button x:Name="ClassButton2" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="gslice_array クラス" Sentence="aaa"/>
+                </Button>
+
+                <Button x:Name="ClassButton3" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="indirect_array クラス" Sentence="aaa"/>
+                </Button>
+
+                <Button x:Name="ClassButton4" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="mask_array クラス" Sentence="aaa"/>
+                </Button>
+
+                <local:ToRightButton Style="{StaticResource SliceClass}" />
+
+                <Button x:Name="ClassButton6" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                    <local:ButtonGrid Title="slice_array クラス" Sentence="aaa"/>
+                </Button>
+
+                <local:ToRightButton Style="{StaticResource ValarrayClass}" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Specialization" >
+                <local:ItemGrid Title="valarray&lt;bool> クラス" Sentence="valarray を bool に特殊化したクラス"/>
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

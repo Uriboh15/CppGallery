@@ -1,0 +1,74 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Limits.LimitsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Included">
+                <local:ToRightButton Style="{StaticResource Bit}"/>
+                <local:ToRightButton Style="{StaticResource BitSet}"/>
+                <local:ToRightButton Style="{StaticResource Complex}"/>
+                <local:ToRightButton Style="{StaticResource String}"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Enum">
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="float_denorm_style" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="float_round_style" Sentence="aaa" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </Expander.Content>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Class">
+                <local:ToRightButton Style="{StaticResource NumericLimitsClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Specialization">
+                <local:ItemGrid Title="numeric_limits&lt;bool>" Sentence="numeric_limits を bool に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;char>" Sentence="numeric_limits を char に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;short>" Sentence="numeric_limits を short に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;int>" Sentence="numeric_limits を int に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;long>" Sentence="numeric_limits を long に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;long long>" Sentence="numeric_limits を long long に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;unsigned char>" Sentence="numeric_limits を unsigned char に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;unsigned short>" Sentence="numeric_limits を unsigned short に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;unsigned int>" Sentence="numeric_limits を unsigned int に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;unsigned long>" Sentence="numeric_limits を unsigned long に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;unsigned long long>" Sentence="numeric_limits を unsigned long long に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;float>" Sentence="numeric_limits を float に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;double>" Sentence="numeric_limits を double に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;long double>" Sentence="numeric_limits を long double に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;wchar_t>" Sentence="numeric_limits を wchar_t に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;char8_t>" Sentence="numeric_limits を char8_t に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;char16_t>" Sentence="numeric_limits を char16_t に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;char32_t>" Sentence="numeric_limits を char32_t に特殊化した型"/>
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

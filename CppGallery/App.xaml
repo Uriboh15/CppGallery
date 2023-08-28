@@ -1,0 +1,98 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Application
+    x:Class="CppGallery.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+                <!-- Other merged dictionaries here -->
+                <ResourceDictionary Source="/Pages/Resources/InfoBarStyle.xaml"/>
+                <ResourceDictionary Source="/Pages/Resources/TextBlockStyle.xaml"/>
+                <ResourceDictionary Source="/Pages/Resources/ToRightButtonStyle.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Other app resources here -->
+
+            
+
+            
+
+            <Style TargetType="TextBox" BasedOn="{StaticResource DefaultTextBoxStyle}">
+                <Setter Property="IsSpellCheckEnabled" Value="False"/>
+            </Style>
+
+            <Style TargetType="ScrollViewer" BasedOn="{StaticResource DefaultScrollViewerStyle}">
+                <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            </Style>
+
+            <Style TargetType="local:ColumnButton" BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+            </Style>
+
+            <Style x:Key="EGrid" TargetType="Grid">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+
+            <Style TargetType="local:InnerGrid">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+
+            <Style TargetType="local:InnerPanel">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Spacing" Value="4"/>
+            </Style>
+
+            <Style x:Key="EPanel" TargetType="StackPanel">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+
+            <Style x:Key="ToRightButton" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="70"/>
+            </Style>
+
+            <Style x:Key="BasicStringstreamClass" TargetType="local:ButtonGrid">
+                <Setter Property="Title" Value="basic_stringstream クラス"/>
+                <Setter Property="Sentence" Value=""/>
+            </Style>
+
+            <Style x:Key="NotDefinedFuntionItemGrid" TargetType="local:ItemGrid">
+                <Setter Property="Icon" Value="&#xF158;" />
+                <Setter Property="Sentence" Value="この関数は実装されていません" />
+            </Style>
+
+            <Style x:Key="NoEffectFunctionItemGrid" TargetType="local:ItemGrid">
+                <Setter Property="Icon" Value="&#xF158;" />
+                <Setter Property="Sentence" Value="この関数は効果がありません" />
+            </Style>
+
+        </ResourceDictionary>
+
+        
+        
+    </Application.Resources>
+    
+    
+    
+</Application>

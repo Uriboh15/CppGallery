@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.FloathPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel>
+            <local:MacroPanel Folder="float.h">
+                <local:ItemGrid Title="DBL_DECIMAL_DIG" Sentence="aaa" />
+                <local:ItemGrid Title="DBL_DIG" Sentence="double の有効桁数" />
+                <local:ItemGrid Title="DBL_EPSILON" Sentence="double の計算機イプシロン" />
+                <local:ItemGrid Title="DBL_HAS_SUBNORM" Sentence="double が非正規化数を表現できるかを示す値" />
+                <local:ItemGrid Title="DBL_MANT_DIG" Sentence="double の仮数部のビット数" />
+                <local:ItemGrid Title="DBL_MAX" Sentence="double の最大値" />
+                <local:ItemGrid Title="DBL_MAX_10_EXP" Sentence="double の指数部の最大値(10進数)" />
+                <local:ItemGrid Title="DBL_MAX_EXP" Sentence="double の指数部の最大値(2進数)" />
+                <local:ItemGrid Title="DBL_MIN" Sentence="double の正の最小値" />
+                <local:ItemGrid Title="DBL_MIN_10_EXP" Sentence="double の指数部の最小値(10進数)" />
+                <local:ItemGrid Title="DBL_MIN_EXP" Sentence="double の指数部の最小値(2進数)" />
+                <local:ItemGrid Title="DBL_TURE_MIN" Sentence="double のゼロでない最小の非正規化数" />
+                
+                <local:ItemGrid Title="FLT_DECIMAL_DIG" Sentence="aaa" />
+                <local:ItemGrid Title="FLT_DIG" Sentence="float の有効桁数" />
+                <local:ItemGrid Title="FLT_EPSILON" Sentence="float の計算機イプシロン" />
+                <local:ItemGrid Title="FLT_HAS_SUBNORM" Sentence="float が非正規化数を表現できるかを示す値" />
+                <local:ItemGrid Title="FLT_MANT_DIG" Sentence="float の仮数部のビット数" />
+                <local:ItemGrid Title="FLT_MAX" Sentence="float の最大値" />
+                <local:ItemGrid Title="FLT_MAX_10_EXP" Sentence="float の指数部の最大値(10進数)" />
+                <local:ItemGrid Title="FLT_MAX_EXP" Sentence="float の指数部の最大値(2進数)" />
+                <local:ItemGrid Title="FLT_MIN" Sentence="float の正の最小値" />
+                <local:ItemGrid Title="FLT_MIN_10_EXP" Sentence="float の指数部の最小値(10進数)" />
+                <local:ItemGrid Title="FLT_MIN_EXP" Sentence="float の指数部の最小値(2進数)" />
+                <local:ItemGrid Title="FLT_NORMALIZE" Sentence="aaa" />
+                <local:ItemGrid Title="FLT_RADIX" Sentence="aaa" />
+                <local:ItemGrid Title="FLT_TURE_MIN" Sentence="float のゼロでない最小の非正規化数" />
+                
+                <local:ItemGrid Title="LDBL_DIG" Sentence="long double の有効桁数" />
+                <local:ItemGrid Title="LDBL_EPSILON" Sentence="long double の計算機イプシロン" />
+                <local:ItemGrid Title="LDBL_HAS_SUBNORM" Sentence="long double が非正規化数を表現できるかを示す値" />
+                <local:ItemGrid Title="LDBL_MANT_DIG" Sentence="long double の仮数部のビット数" />
+                <local:ItemGrid Title="LDBL_MAX" Sentence="long double の最大値" />
+                <local:ItemGrid Title="LDBL_MAX_10_EXP" Sentence="long double の指数部の最大値(10進数)" />
+                <local:ItemGrid Title="LDBL_MAX_EXP" Sentence="long double の指数部の最大値(2進数)" />
+                <local:ItemGrid Title="LDBL_MIN" Sentence="long double の正の最小値" />
+                <local:ItemGrid Title="LDBL_MIN_10_EXP" Sentence="long double の指数部の最小値(10進数)" />
+                <local:ItemGrid Title="LDBL_MIN_EXP" Sentence="long double の指数部の最小値(2進数)" />
+                <local:ItemGrid Title="LDBL_TURE_MIN" Sentence="long double のゼロでない最小の非正規化数" />
+
+                <local:ItemGrid Title="DECIMAL_DIG" Sentence="aaa" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

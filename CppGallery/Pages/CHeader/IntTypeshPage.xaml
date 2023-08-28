@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CHeader.IntTypeshPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Struct">
+                <local:CustomExpander>
+                    <Expander.Header>
+                        <local:EHeader Title="imaxdiv_t 構造体" Sentence="intmax_t 型の割り算の商と余りを扱う構造体" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="intmax_t quot" Sentence="商"/>
+                        <local:ItemGrid Title="intmax_t rem" Sentence="余り"/>
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+            
+            <local:BlockPanel Header="Function" >
+
+                <local:FunctionExpander Folder="inttypes.h/imaxabs" CodeLanguage="C" >
+                    <local:TextBoxPane Message="整数を入力" Text="-12" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="inttypes.h/imaxdiv" CodeLanguage="C" >
+                    <local:ResultsPanel Loaded="ImaxDivOut_Loaded">
+                        <local:ControlGrid Message="割られる数を入力">
+                            <TextBox x:Name="ImaxDivIn1" Text="12" TextChanging="ImaxDivIn1_TextChanging" />
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="割る数を入力">
+                            <TextBox x:Name="ImaxDivIn2" Text="3" TextChanging="ImaxDivIn1_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                    
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="inttypes.h/strtoimax" CodeLanguage="C" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="基数を入力">
+                            <ComboBox x:Name="StrtoImaxKisu" SelectionChanged="StrtoImaxKisu_SelectionChanged" Loaded="StrtoImaxKisu_Loaded">
+                                <x:String>0 (自動)</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                                <x:String>20</x:String>
+                                <x:String>21</x:String>
+                                <x:String>22</x:String>
+                                <x:String>23</x:String>
+                                <x:String>24</x:String>
+                                <x:String>25</x:String>
+                                <x:String>26</x:String>
+                                <x:String>27</x:String>
+                                <x:String>28</x:String>
+                                <x:String>29</x:String>
+                                <x:String>30</x:String>
+                                <x:String>31</x:String>
+                                <x:String>32</x:String>
+                                <x:String>33</x:String>
+                                <x:String>34</x:String>
+                                <x:String>35</x:String>
+                                <x:String>36</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="値を入力" >
+                            <TextBox x:Name="StrtoImaxIn" Text="11" TextChanging="StrtoImaxIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="inttypes.h/strtoumax" CodeLanguage="C" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="基数を入力">
+                            <ComboBox x:Name="StrtoUmaxKisu" SelectionChanged="StrtoUmaxKisu_SelectionChanged" Loaded="StrtoImaxKisu_Loaded">
+                                <x:String>0 (自動)</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                                <x:String>20</x:String>
+                                <x:String>21</x:String>
+                                <x:String>22</x:String>
+                                <x:String>23</x:String>
+                                <x:String>24</x:String>
+                                <x:String>25</x:String>
+                                <x:String>26</x:String>
+                                <x:String>27</x:String>
+                                <x:String>28</x:String>
+                                <x:String>29</x:String>
+                                <x:String>30</x:String>
+                                <x:String>31</x:String>
+                                <x:String>32</x:String>
+                                <x:String>33</x:String>
+                                <x:String>34</x:String>
+                                <x:String>35</x:String>
+                                <x:String>36</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="値を入力" >
+                            <TextBox x:Name="StrtoUmaxIn" Text="11" TextChanging="StrtoUmaxIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="inttypes.h/wcstoimax" CodeLanguage="C" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="基数を入力">
+                            <ComboBox x:Name="WcstoImaxKisu" SelectionChanged="WcstoImaxKisu_SelectionChanged" Loaded="StrtoImaxKisu_Loaded">
+                                <x:String>0 (自動)</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                                <x:String>20</x:String>
+                                <x:String>21</x:String>
+                                <x:String>22</x:String>
+                                <x:String>23</x:String>
+                                <x:String>24</x:String>
+                                <x:String>25</x:String>
+                                <x:String>26</x:String>
+                                <x:String>27</x:String>
+                                <x:String>28</x:String>
+                                <x:String>29</x:String>
+                                <x:String>30</x:String>
+                                <x:String>31</x:String>
+                                <x:String>32</x:String>
+                                <x:String>33</x:String>
+                                <x:String>34</x:String>
+                                <x:String>35</x:String>
+                                <x:String>36</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="値を入力" >
+                            <TextBox x:Name="WcstoImaxIn" Text="11" TextChanging="WcstoImaxIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="inttypes.h/wcstoumax" CodeLanguage="C" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="基数を入力">
+                            <ComboBox x:Name="WcstoUmaxKisu" SelectionChanged="WcstoUmaxKisu_SelectionChanged" Loaded="StrtoImaxKisu_Loaded">
+                                <x:String>0 (自動)</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                                <x:String>20</x:String>
+                                <x:String>21</x:String>
+                                <x:String>22</x:String>
+                                <x:String>23</x:String>
+                                <x:String>24</x:String>
+                                <x:String>25</x:String>
+                                <x:String>26</x:String>
+                                <x:String>27</x:String>
+                                <x:String>28</x:String>
+                                <x:String>29</x:String>
+                                <x:String>30</x:String>
+                                <x:String>31</x:String>
+                                <x:String>32</x:String>
+                                <x:String>33</x:String>
+                                <x:String>34</x:String>
+                                <x:String>35</x:String>
+                                <x:String>36</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="値を入力" >
+                            <TextBox x:Name="WcstoUmaxIn" Text="11" TextChanging="WcstoUmaxIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="inttypes.h" >
+                <local:ItemGrid Title="PRId8" Sentence="printf で 8bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRId16" Sentence="printf で 16bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRId32" Sentence="printf で 32bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRId64" Sentence="printf で 64bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIdLEAST8" Sentence="printf で int_least8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdLEAST16" Sentence="printf で int_least16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdLEAST32" Sentence="printf で int_least32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdLEAST64" Sentence="printf で int_least64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdFAST8" Sentence="printf で int_fast8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdFAST16" Sentence="printf で int_fast16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdFAST32" Sentence="printf で int_fast32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdFAST64" Sentence="printf で int_fast64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdMAX" Sentence="printf で intmax_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIdPTR" Sentence="printf で intptr_t を出力するときの書式" />
+
+                <local:ItemGrid Title="PRIi8" Sentence="printf で 8bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIi16" Sentence="printf で 16bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIi32" Sentence="printf で 32bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIi64" Sentence="printf で 64bit 符号付き整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIiLEAST8" Sentence="printf で int_least8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiLEAST16" Sentence="printf で int_least16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiLEAST32" Sentence="printf で int_least32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiLEAST64" Sentence="printf で int_least64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiFAST8" Sentence="printf で int_fast8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiFAST16" Sentence="printf で int_fast16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiFAST32" Sentence="printf で int_fast32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiFAST64" Sentence="printf で int_fast64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiMAX" Sentence="printf で intmax_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIiPTR" Sentence="printf で intptr_t を出力するときの書式" />
+
+                <local:ItemGrid Title="PRIo8" Sentence="printf で 8bit 符号付き整数を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIo16" Sentence="printf で 16bit 符号付き整数を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIo32" Sentence="printf で 32bit 符号付き整数を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIo64" Sentence="printf で 64bit 符号付き整数を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoLEAST8" Sentence="printf で int_least8_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoLEAST16" Sentence="printf で int_least16_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoLEAST32" Sentence="printf で int_least32_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoLEAST64" Sentence="printf で int_least64_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoFAST8" Sentence="printf で int_fast8_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoFAST16" Sentence="printf で int_fast16_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoFAST32" Sentence="printf で int_fast32_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoFAST64" Sentence="printf で int_fast64_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoMAX" Sentence="printf で intmax_t を 8 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIoPTR" Sentence="printf で intptr_t を 8 進数で出力するときの書式" />
+
+                <local:ItemGrid Title="PRIu8" Sentence="printf で 8bit 符号なし整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIu16" Sentence="printf で 16bit 符号なし整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIu32" Sentence="printf で 32bit 符号なし整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIu64" Sentence="printf で 64bit 符号なし整数を出力するときの書式" />
+                <local:ItemGrid Title="PRIuLEAST8" Sentence="printf で uint_least8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuLEAST16" Sentence="printf で uint_least16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuLEAST32" Sentence="printf で uint_least32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuLEAST64" Sentence="printf で uint_least64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuFAST8" Sentence="printf で uint_fast8_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuFAST16" Sentence="printf で uint_fast16_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuFAST32" Sentence="printf で uint_fast32_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuFAST64" Sentence="printf で uint_fast64_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuMAX" Sentence="printf で uintmax_t を出力するときの書式" />
+                <local:ItemGrid Title="PRIuPTR" Sentence="printf で uintptr_t を出力するときの書式" />
+
+                <local:ItemGrid Title="PRIx8" Sentence="printf で 8bit 符号付き整数を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIx16" Sentence="printf で 16bit 符号付き整数を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIx32" Sentence="printf で 32bit 符号付き整数を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIx64" Sentence="printf で 64bit 符号付き整数を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxLEAST8" Sentence="printf で int_least8_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxLEAST16" Sentence="printf で int_least16_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxLEAST32" Sentence="printf で int_least32_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxLEAST64" Sentence="printf で int_least64_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxFAST8" Sentence="printf で int_fast8_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxFAST16" Sentence="printf で int_fast16_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxFAST32" Sentence="printf で int_fast32_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxFAST64" Sentence="printf で int_fast64_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxMAX" Sentence="printf で intmax_t を 英小文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIxPTR" Sentence="printf で intptr_t を 英小文字の 16 進数で出力するときの書式" />
+
+                <local:ItemGrid Title="PRIX8" Sentence="printf で 8bit 符号付き整数を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIX16" Sentence="printf で 16bit 符号付き整数を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIX32" Sentence="printf で 32bit 符号付き整数を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIX64" Sentence="printf で 64bit 符号付き整数を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXLEAST8" Sentence="printf で int_least8_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXLEAST16" Sentence="printf で int_least16_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXLEAST32" Sentence="printf で int_least32_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXLEAST64" Sentence="printf で int_least64_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXFAST8" Sentence="printf で int_fast8_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXFAST16" Sentence="printf で int_fast16_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXFAST32" Sentence="printf で int_fast32_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXFAST64" Sentence="printf で int_fast64_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXMAX" Sentence="printf で intmax_t を 英大文字の 16 進数で出力するときの書式" />
+                <local:ItemGrid Title="PRIXPTR" Sentence="printf で intptr_t を 英大文字の 16 進数で出力するときの書式" />
+
+                
+                <local:ItemGrid Title="SCNd8" Sentence="scanf で 8bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNd16" Sentence="scanf で 16bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNd32" Sentence="scanf で 32bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNd64" Sentence="scanf で 64bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdLEAST8" Sentence="scanf で int_least8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdLEAST16" Sentence="scanf で int_least16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdLEAST32" Sentence="scanf で int_least32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdLEAST64" Sentence="scanf で int_least64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdFAST8" Sentence="scanf で int_fast8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdFAST16" Sentence="scanf で int_fast16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdFAST32" Sentence="scanf で int_fast32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdFAST64" Sentence="scanf で int_fast64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdMAX" Sentence="scanf で intmax_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNdPTR" Sentence="scanf で intptr_t を取り込むときの書式" />
+
+                <local:ItemGrid Title="SCNi8" Sentence="scanf で 8bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNi16" Sentence="scanf で 16bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNi32" Sentence="scanf で 32bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNi64" Sentence="scanf で 64bit 符号付き整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiLEAST8" Sentence="scanf で int_least8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiLEAST16" Sentence="scanf で int_least16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiLEAST32" Sentence="scanf で int_least32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiLEAST64" Sentence="scanf で int_least64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiFAST8" Sentence="scanf で int_fast8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiFAST16" Sentence="scanf で int_fast16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiFAST32" Sentence="scanf で int_fast32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiFAST64" Sentence="scanf で int_fast64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiMAX" Sentence="scanf で intmax_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNiPTR" Sentence="scanf で intptr_t を取り込むときの書式" />
+
+                <local:ItemGrid Title="SCNo8" Sentence="scanf で 8bit 符号付き整数を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNo16" Sentence="scanf で 16bit 符号付き整数を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNo32" Sentence="scanf で 32bit 符号付き整数を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNo64" Sentence="scanf で 64bit 符号付き整数を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoLEAST8" Sentence="scanf で int_least8_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoLEAST16" Sentence="scanf で int_least16_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoLEAST32" Sentence="scanf で int_least32_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoLEAST64" Sentence="scanf で int_least64_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoFAST8" Sentence="scanf で int_fast8_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoFAST16" Sentence="scanf で int_fast16_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoFAST32" Sentence="scanf で int_fast32_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoFAST64" Sentence="scanf で int_fast64_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoMAX" Sentence="scanf で intmax_t を 8 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNoPTR" Sentence="scanf で intptr_t を 8 進数で取り込むときの書式" />
+
+                <local:ItemGrid Title="SCNu8" Sentence="scanf で 8bit 符号なし整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNu16" Sentence="scanf で 16bit 符号なし整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNu32" Sentence="scanf で 32bit 符号なし整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNu64" Sentence="scanf で 64bit 符号なし整数を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuLEAST8" Sentence="scanf で uint_least8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuLEAST16" Sentence="scanf で uint_least16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuLEAST32" Sentence="scanf で uint_least32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuLEAST64" Sentence="scanf で uint_least64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuFAST8" Sentence="scanf で uint_fast8_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuFAST16" Sentence="scanf で uint_fast16_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuFAST32" Sentence="scanf で uint_fast32_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuFAST64" Sentence="scanf で uint_fast64_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuMAX" Sentence="scanf で uintmax_t を取り込むときの書式" />
+                <local:ItemGrid Title="SCNuPTR" Sentence="scanf で uintptr_t を取り込むときの書式" />
+
+                <local:ItemGrid Title="SCNx8" Sentence="scanf で 8bit 符号付き整数を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNx16" Sentence="scanf で 16bit 符号付き整数を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNx32" Sentence="scanf で 32bit 符号付き整数を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNx64" Sentence="scanf で 64bit 符号付き整数を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxLEAST8" Sentence="scanf で int_least8_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxLEAST16" Sentence="scanf で int_least16_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxLEAST32" Sentence="scanf で int_least32_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxLEAST64" Sentence="scanf で int_least64_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxFAST8" Sentence="scanf で int_fast8_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxFAST16" Sentence="scanf で int_fast16_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxFAST32" Sentence="scanf で int_fast32_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxFAST64" Sentence="scanf で int_fast64_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxMAX" Sentence="scanf で intmax_t を 16 進数で取り込むときの書式" />
+                <local:ItemGrid Title="SCNxPTR" Sentence="scanf で intptr_t を 16 進数で取り込むときの書式" />
+
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

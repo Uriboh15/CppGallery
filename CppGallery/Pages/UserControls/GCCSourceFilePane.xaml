@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Grid
+    x:Class="CppGallery.Pages.UserControls.GCCSourceFilePane"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Style="{StaticResource EGrid}"
+    CornerRadius="0"
+    BorderThickness="1,0,1,1"
+    Height="48">
+
+    <Button x:Name="DeleteButton" Click="DeleteButton_Click" HorizontalAlignment="Right" >
+        <FontIcon Glyph="&#xE74D;" FontSize="14" />
+    </Button>
+
+</Grid>

@@ -1,0 +1,43 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.ValArray.SlicePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:CustomPanel>
+            <TextBlock Text="コンストラクター" Style="{StaticResource Title}"/>
+            <local:CustomExpander IsEnabled="False">
+                <Expander.Header>
+                    <local:EHeader Title="slice()" Sentence="slice を構築します"/>
+                </Expander.Header>
+            </local:CustomExpander>
+
+            <TextBlock Text="メンバー関数" Style="{StaticResource Title}" Margin="0,56,0,0"/>
+            <local:CustomExpander IsEnabled="False">
+                <Expander.Header>
+                    <local:EHeader Title="size() 関数" Sentence="aaa"/>
+                </Expander.Header>
+            </local:CustomExpander>
+
+            <local:CustomExpander IsEnabled="False">
+                <Expander.Header>
+                    <local:EHeader Title="start() 関数" Sentence="aaa"/>
+                </Expander.Header>
+            </local:CustomExpander>
+
+            <local:CustomExpander IsEnabled="False">
+                <Expander.Header>
+                    <local:EHeader Title="stride() 関数" Sentence="aaa"/>
+                </Expander.Header>
+            </local:CustomExpander>
+
+        </local:CustomPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>CppGallery (Unpackaged)</ActiveDebugProfile>
+    <_LastSelectedProfileId>C:\Projects\VisualStudio2022\CppGallery\CppGallery\Properties\PublishProfiles\win10-x86.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="Pages\TypeInfo\TypeInfoClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TypeInfo\TypeInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Common\OperatorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\AsserthPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Format\FormatPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Concepts\ConceptsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SourceLocation\SourceLocationClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SourceLocation\SourceLocationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Numbers\NumbersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Numeric\NumericPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CharConv\CharConvPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\TitleBarSettingsButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\AboutAppPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Settings\SettingsParentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\IntTypeshPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\StdNoReturnhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\TgMathhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\ComplexhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\FEnvhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Deque\DequeClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Deque\DequePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\StdAlignPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FileSystem\FileStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FileSystem\DirectoryIteratorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Set\SetClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Set\SetPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ForwardList\ForwardListClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ForwardList\ForwardListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FileSystem\PathPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\FileSystem\FileSystemPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Span\SpanClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Span\SpanPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\FloathPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TypeTraits\TypeTraitsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StringView\BasicStringViewClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StringView\StringViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\LocalehPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StdExcept\StdExceptPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Any\AnyClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Any\AnyPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Queue\QueueClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Queue\QueuePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Stack\StackClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Stack\StackPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\GCCSourceFilePane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Common\GCCCommandPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Common\BaseTypePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\BlockOldSystemPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column22\Column22Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column22\Column22Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column21\Column21Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column20\Column20Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column20\Column20Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column19\Column19Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column18\Column18.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column17\CoenerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column17\Column17Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column16\Column16Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ColumnBlockPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column15\Column15Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\CodeButtonBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column14\Column14Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column14\Column14Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column13\Column13Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column12\Column12Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column11\Column11Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column10\Column10Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column9\Column9Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column8\Column8Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column7\Column7Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Columns\Column6\Column6.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\IosFwd\IosFwdPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\SentenceTextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\OutPuts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Array\ArrayClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Array\ArrayPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Resources\InfoBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Resources\ToRightButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Resources\TextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StrStream\OstrStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StrStream\StrStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BitSet\BitSetClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BitSet\BitSetPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\WcharhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\UcharhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\TimehPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\StringhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\StdiohPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\MathhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CHeader\StdlibhPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Vector\VectorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Vector\VectorClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ValArray\ValArrayPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ValArray\ValArrayClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ValArray\SlicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SStream\SStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SStream\BasicStringStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SStream\BasicStringBufPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SStream\BasicOstringStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SStream\BasicIstringStreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Random\LinearCongruentialEnginePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Random\RandomPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Ostream\OstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Ostream\BasicOstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\New\NewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Map\MapPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Map\MapClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\List\ListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\List\ListClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Limits\LimitsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Limits\NumericLimitsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Istream\IstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Istream\BasicIstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Istream\BasicIostreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Iostream\IostreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Ios\IosPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Ios\BasicIosPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Iomanip\IomanipPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Fstream\FstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Fstream\BasicOfstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Fstream\BasicIfstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Fstream\BasicFstreamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Complex\ComplexPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Complex\ComplexCalssPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Bit\BitPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ItemGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\HomeButtonGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\EHeader.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ControlGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ColumnsDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ButtonGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <None Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>

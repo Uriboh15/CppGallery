@@ -1,0 +1,86 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Columns.Column14.Column14Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../UserControls/ColumnsDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <local:ColumnOuterPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="WinUI 3 でダークモード時にタイトルバーを黒くする" Style="{StaticResource ColumnTitle}"/>
+                <TextBlock>
+                Microsoft の公式ページに WinUI 3 では追加のコードなしにダークモードに対応できると書いてあった（気がする）が、
+                実際にダークモードでアプリを実行すると以下の画像 (C++ Library Gallery Version 0.8.0) のようにタイトルバーだけ白いままになってしまう。
+                </TextBlock>
+                <Image Source="../../../Pages/Data/Columns/Column14/image1.png" MaxWidth="1426"/>
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                これを解消するために Win32 API の DwmSetWindowAttribute() 関数を使用する。
+                その準備としてまず MainWindow.cpp のグローバル領域に以下のものを定義する。
+                </TextBlock>
+                <local:WinRTCodeButton Path="Pages/Data/Columns/Column14/source1.txt" SaveButtonVisibilty="Collapsed" AutoFunc="False"/>
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                定義出来たら MainWindow のコンストラクタ内で MainWindow のハンドルと DwmSetWindowAttribute の関数ポインタを取得する。
+                </TextBlock>
+                <local:WinRTCodeButton Path="Pages/Data/Columns/Column14/source2.txt" SaveButtonVisibilty="Collapsed"/>
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                関数ポインタを取得出来たら MainWindow にある何かしらのコントロール (この場合は Frame) に 2 つのイベントハンドラー Loaded, ActualThemeChanged を追加する。
+                WinUI のコントロールはアプリのテーマが変わったときに発生するイベントがあるのでこれを利用する。
+                </TextBlock>
+                <local:XamlCodeButton Path="Pages/Data/Columns/Column14/source3.txt" SaveButtonVisibilty="Collapsed"/>
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                イベントハンドラーを追加出来たら、MainWindow.cpp に以下のコードを追加する。
+                </TextBlock>
+                <local:WinRTCodeButton Path="Pages/Data/Columns/Column14/source4.txt" SaveButtonVisibilty="Collapsed" AutoFunc="False"/>
+            </local:ColumnContentPanel>
+            <local:ColumnContentPanel>
+                <TextBlock>
+                これで WinUI 3 アプリを完全にダークモードに対応させることができる。以下の画像は C++ Library Gallery Version 0.9.1
+                </TextBlock>
+                <Image Source="../../../Pages/Data/Columns/Column14/image2.png" MaxWidth="1426"/>
+            </local:ColumnContentPanel>
+            <local:ResultsPanel>
+                <TextBlock Style="{StaticResource Result}"/>
+                <local:ControlGrid Message="システムの既定">
+                    <Button x:Name="DefaultButton" Content="起動" Width="65" Click="DefaultButton_Click" />
+                </local:ControlGrid>
+                <local:ControlGrid Message="ライトモード">
+                    <Button x:Name="LightButton" Content="起動" Width="65" Click="LightButton_Click" />
+                </local:ControlGrid>
+                <local:ControlGrid Message="ダークモード">
+                    <Button x:Name="DarkButton" Content="起動" Width="65" Click="DarkButton_Click" />
+                </local:ControlGrid>
+            </local:ResultsPanel>
+            <local:ColumnContentPanel>
+                <TextBlock Text="参考ページ" Style="{StaticResource ColumnTitle}"/>
+                <HyperlinkButton Content="https://learn.microsoft.com/ja-jp/windows/apps/desktop/modernize/apply-windows-themes" NavigateUri="https://learn.microsoft.com/ja-jp/windows/apps/desktop/modernize/apply-windows-themes" />
+            </local:ColumnContentPanel>
+            <TextBlock HorizontalAlignment="Right">
+                    2023年5月12日<LineBreak/>
+                    うりぼう
+            </TextBlock>
+        </local:ColumnOuterPanel>
+        
+    </ScrollViewer>
+</Page>

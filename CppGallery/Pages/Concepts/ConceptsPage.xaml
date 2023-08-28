@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Concepts.ConceptsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel >
+            <local:BlockPanel Header="Concepts" >
+                <local:FunctionExpander Folder="concepts/assignable_from" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/common_reference_with" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/common_with" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/constructible_from" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/convertible_to" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/copyable" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/copy_constructible" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/default_initializable" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/derived_from" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/destructible" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/equality_comparable" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/equality_comparable_with" Icon="Object" />
+
+                <local:CustomExpander Title="equivalence_relation" Icon="&#xEA86;"  IsEnabled="False"/>
+
+                <local:FunctionExpander Folder="concepts/floating_point" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/integral" Icon="Object" />
+
+                <local:CustomExpander Title="invocable" Icon="&#xEA86;"  IsEnabled="False"/>
+
+                <local:FunctionExpander Folder="concepts/movable" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/move_constructible" Icon="Object" />
+
+                <local:CustomExpander Title="predicate" Icon="&#xEA86;"  IsEnabled="False"/>
+
+                <local:FunctionExpander Folder="concepts/regular" Icon="Object" />
+
+                <local:CustomExpander Title="regular_invocable" Icon="&#xEA86;"  IsEnabled="False"/>
+                <local:CustomExpander Title="relation" Icon="&#xEA86;"  IsEnabled="False"/>
+
+                <local:FunctionExpander Folder="concepts/same_as" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/semiregular" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/signed_integral" Icon="Object" />
+
+                <local:CustomExpander Title="strict_weak_order" Icon="&#xEA86;"  IsEnabled="False"/>
+
+                <local:FunctionExpander Folder="concepts/swappable" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/swappable_with" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/totally_ordered" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/totally_ordered_with" Icon="Object" />
+                <local:FunctionExpander Folder="concepts/unsigned_integral" Icon="Object" />
+
+            </local:BlockPanel>
+
+            <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/concepts.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

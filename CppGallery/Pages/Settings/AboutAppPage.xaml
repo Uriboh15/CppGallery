@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Settings.AboutAppPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:ResultsPanel>
+                <StackPanel Style="{StaticResource EPanel}" Orientation="Horizontal" Height="68" >
+                    <Image Source="../Assets/Square150x150Logo.scale-200.png" Height="23" Margin="21,0,0,0"/>
+                    <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" >
+                        <TextBlock Text="C++ Library Gallery" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="Version 2.3.0  Preview  2023年8月28日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" MinHeight="60" Padding="0">
+                    <Expander.Header>
+                        <TextBlock Text="Visual C++ コンパイラ" Padding="9,0,0,0"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="C++言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="C++20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="C言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="C17" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="Windows SDK" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="Windows 11 SDK (22621.0)" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" MinHeight="60" Padding="0">
+                    <Expander.Header>
+                        <TextBlock Text="GCC コンパイラ" Padding="9,0,0,0"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="C++言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="C++20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="C言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="C17" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                
+                                <TextBlock Text="GCC バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="13.1.0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="文字エンコード" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="CP932" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" MinHeight="60" Padding="0">
+                    <Expander.Header>
+                        <TextBlock Text="参考" Padding="9,0,0,0"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="C++ 標準ライブラリ リファレンス (STL)" NavigateUri="https://learn.microsoft.com/ja-jp/cpp/standard-library/cpp-standard-library-reference?view=msvc-170" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="cpprefjp - C++日本語リファレンス" NavigateUri="https://cpprefjp.github.io/" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="Wikibooks - C言語" NavigateUri="https://ja.wikibooks.org/wiki/C%E8%A8%80%E8%AA%9E" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="48" Padding="13,0,23,0">
+                                <HyperlinkButton Content="C言語の標準ヘッダ一覧" NavigateUri="http://www.c-lang.org/detail/lib_header.html" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" MinHeight="60" Padding="0">
+                    <Expander.Header>
+                        <TextBlock Text="リンク集" Padding="9,0,0,0"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="13,0,23,0">
+                                <HyperlinkButton Content="アプリのOneDrive" NavigateUri="https://1drv.ms/u/s!ApOTRHlTVgQmgeEPRKtMzt6obzTkCg?e=HtHWkC" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+            </local:ResultsPanel>
+
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,60 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Ostream.BasicOstreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="BaseClass" >
+                <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constructor">
+                <local:FunctionExpander Folder="ostream__basic_ostream/basic_ostream" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="ostream__basic_ostream/operatorE" Icon="Operator" >
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ostream/operatorLL" AutoFunc="False" Icon="Operator" />
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Method" >
+                <local:FunctionExpander Folder="ostream__basic_ostream/flush" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="ostream__basic_ostream/put" />
+                <local:FunctionExpander Folder="ostream__basic_ostream/seekp" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="sentry() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ostream__basic_ostream/swap" />
+                <local:FunctionExpander Folder="ostream__basic_ostream/tellp" />
+                <local:FunctionExpander Folder="ostream__basic_ostream/write" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="DerivedClass" >
+                <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
+                <local:ToRightButton Style="{StaticResource BasicOFStreamClass}"/>
+                <local:ToRightButton Style="{StaticResource BasicOStringStreamClass}" />
+                <local:ToRightButton Style="{StaticResource OStrStreamClass}" />
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

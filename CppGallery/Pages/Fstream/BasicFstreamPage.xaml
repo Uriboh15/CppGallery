@@ -1,0 +1,59 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Fstream.BasicFstreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="BaseClass">
+                <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Constructor">
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="basic_fstream()" Sentence="basic_fstream 型のオブジェクトを構築します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="fstream__basic_fstream/operatorE" Icon="Operator">
+                    <local:FunctionExpander.Info>
+                        <InfoBar Style="{StaticResource DeletedOperator}"/>
+                    </local:FunctionExpander.Info>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method">
+                <local:FunctionExpander Folder="fstream__basic_fstream/close" AutoFunc="False" SampleType="None" />
+                <local:FunctionExpander Folder="fstream__basic_fstream/is_open" AutoFunc="False" SampleType="None" />
+                <local:FunctionExpander Folder="fstream__basic_fstream/open" SampleType="None" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="rdbuf() 関数" Sentence="pointer 型の格納されたストリームバッファーのアドレスを basic_filebuf&lt;Elem, Tr> として返します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="swap() 関数" Sentence="2つの basic_fstream オブジェクトの内容を入れ替えます"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-fstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_fstream.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,87 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Bit.BitPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource Limits}"/>
+                <local:ToRightButton Style="{StaticResource TypeTraits}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function">
+                <local:FunctionExpander Folder="bit/bit_cast" >
+                    <local:TextBoxPane Message="実数を入力" Text="56" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/bit_ceil">
+                    <local:TextBoxPane Message="整数を入力" Text="38" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/bit_floor">
+                    <local:TextBoxPane Message="整数を入力" Text="34" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/bit_width">
+                    <local:TextBoxPane Message="整数を入力" Text="11" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/countl_one">
+                    <local:TextBoxPane Message="整数を入力" Text="18446744073709551615" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/countl_zero">
+                    <local:TextBoxPane Message="整数を入力" Text="28" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/countr_one">
+                    <local:TextBoxPane Message="整数を入力" Text="33" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/countr_zero">
+                    <local:TextBoxPane Message="整数を入力" Text="28" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/has_single_bit">
+                    <local:TextBoxPane Message="整数を入力" Text="11" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/popcount">
+                    <local:TextBoxPane Message="整数を入力" Text="11" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/rotl">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="2" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander  Folder="bit/rotr">
+                    <local:NumberBoxPane Message="シフトするビット数を入力" Value="2" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Enum">
+                <local:CustomExpander >
+                    <Expander.Header>
+                        <local:EHeader Title="endian" Sentence="スカラー型のエンディアン" Icon="&#xEA86;"/>
+                    </Expander.Header>
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="little" Sentence="リトルエンディアン" />
+                        <local:ItemGrid Title="big" Sentence="ビッグエンディアン" />
+                        <local:ItemGrid Title="native" Sentence="プラットフォームのエンディアン" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/bit?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/bit.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

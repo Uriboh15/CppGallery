@@ -1,0 +1,54 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.StrStream.OstrStreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:ResultsPanel>
+                <InfoBar Style="{StaticResource NotRecommendedClass}"/>
+                <InfoBar Style="{StaticResource NotRecommendedClassGCC}" />
+            </local:ResultsPanel>
+            
+            <local:BlockPanel Header="BaseClass" >
+                <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Constructor" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="ostrstream()" Sentence="ostrstream を構築します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="freeze() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="strstream__ostrstream/pcount" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="rdbuf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="strstream__ostrstream/str" />
+                <local:FunctionExpander Folder="strstream__ostrstream/swap" />
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

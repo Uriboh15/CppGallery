@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Settings.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:ResultsPanel >
+                <TextBlock Text="構成"/>
+                <local:ControlGrid Message="コンパイラ">
+                    <ComboBox x:Name="ComC" SelectionChanged="ComC_SelectionChanged" Loaded="ComC_Loaded" Width="119">
+                        <x:String>GCC</x:String>
+                        <x:String>Visual C++</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
+
+                <local:ControlGrid Message="プラットフォームオプション" >
+                    <ComboBox x:Name="PlatC" SelectionChanged="PlatC_SelectionChanged" Loaded="PlatC_Loaded" Width="81" >
+                        <x:String>x86</x:String>
+                        <x:String>x64</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
+
+                <local:ControlGrid Message="C言語の項目を C++ で実行する" >
+                    <Grid>
+                        <ToggleSwitch x:Name="UseCppT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="UseCppT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="UseCppT_Loaded"/>
+                        <TextBlock x:Name="UseCppText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
+                    </Grid>
+                </local:ControlGrid>
+
+                <local:ControlGrid Message="プログラムの終了コードを表示する" >
+                    <Grid>
+                        <ToggleSwitch x:Name="IsShowReturnCodeT" HorizontalAlignment="Right"  OffContent="" OnContent="" Margin="0,0,-10,0" Toggled="IsShowReturnCodeT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="IsShowReturnCodeT_Loaded"/>
+                        <TextBlock x:Name="IsShowReturnCodeText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
+                    </Grid>
+                </local:ControlGrid>
+            </local:ResultsPanel>
+
+
+            <local:ResultsPanel>
+                <TextBlock Text="外観" />
+
+                <Grid Style="{StaticResource EGrid}" Loaded="Grid_Loaded">
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" >
+                        <TextBlock Text="コンパクトモード (再起動が必要)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="アプリのレイアウトを小さいウィンドウサイズに最適化します" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                    </StackPanel>
+
+                    <ToggleSwitch x:Name="CompactT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="CompactT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="CompactT_Loaded"/>
+                    <TextBlock x:Name="SText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
+                </Grid>
+
+                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" Padding="0" Loaded="Expander_Loaded">
+                    <Expander.Header>
+                        <TextBlock Text="テーマ" Padding="9,0,0,0" />
+                    </Expander.Header>
+                    <Expander.Content>
+                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="アプリのテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="ThemeC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeC_SelectionChanged" Loaded="ThemeC_Loaded" Width="133">
+                                    <x:String>システムの既定</x:String>
+                                    <x:String>ライト</x:String>
+                                    <x:String>ダーク</x:String>
+                                </ComboBox>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="ソースコードのテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="ThemeSC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeSC_SelectionChanged" Loaded="ThemeSC_Loaded" Width="161">
+                                    <x:String>アプリのテーマと同期</x:String>
+                                    <x:String>ライト</x:String>
+                                    <x:String>ダーク</x:String>
+                                </ComboBox>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="実行結果のテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <ComboBox x:Name="ThemeRC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeRC_SelectionChanged" Loaded="ThemeRC_Loaded" Width="161">
+                                    <x:String>アプリのテーマと同期</x:String>
+                                    <x:String>ライト</x:String>
+                                    <x:String>ダーク</x:String>
+                                </ComboBox>
+                            </Grid>
+                        </StackPanel>
+                    </Expander.Content>
+                </Expander>
+
+                <local:ControlGrid Message="透明効果">
+                    <ComboBox x:Name="BackC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="BackC_SelectionChanged" Loaded="BackC_Loaded" Width="148">
+                        <x:String>アプリ内すりガラス</x:String>
+                        <x:String>Mica</x:String>
+                        <x:String>アクリル</x:String>
+                        <x:String>オフ</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
+
+                <local:ControlGrid Message="ライブラリ 一覧の表示スタイル">
+                    <ComboBox x:Name="LibraryC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="LibraryC_SelectionChanged" Loaded="LibraryC_Loaded" Width="90">
+                        <x:String>ブロック</x:String>
+                        <x:String>リスト</x:String>
+                    </ComboBox>
+
+                </local:ControlGrid>
+            </local:ResultsPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

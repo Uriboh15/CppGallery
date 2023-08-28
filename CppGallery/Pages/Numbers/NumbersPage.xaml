@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Numbers.NumbersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constant" >
+                <local:FunctionExpander Folder="numbers/e" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/log2e" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/log10e" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/pi" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/inv_pi" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/inv_sqrtpi" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/ln2" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/ln10" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/sqrt2" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/sqrt3" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/inv_sqrt3" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/egamma" Icon="Object" />
+                <local:FunctionExpander Folder="numbers/phi" Icon="Object" />
+            </local:BlockPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

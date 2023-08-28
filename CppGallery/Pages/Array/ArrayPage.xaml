@@ -1,0 +1,41 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Array.ArrayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource Utility}"/>
+            </local:BlockPanel>
+            <local:BlockPanel Header="Operator">
+                <local:FunctionExpander Folder="array/operatorEE" Icon="Operator"  />
+                <local:FunctionExpander Folder="array/operatorNE" Icon="Operator"/>
+                <local:FunctionExpander Folder="array/operatorL" Icon="Operator"/>
+                <local:FunctionExpander Folder="array/operatorLE" Icon="Operator"/>
+                <local:FunctionExpander Folder="array/operatorR" Icon="Operator" />
+                <local:FunctionExpander Folder="array/operatorRE" Icon="Operator" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function">
+                <local:FunctionExpander Folder="array/get" />
+                <local:FunctionExpander Folder="array/swap" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Class">
+                <local:ToRightButton Style="{StaticResource ArrayClass}"/>
+
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/array?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/array.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

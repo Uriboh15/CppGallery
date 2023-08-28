@@ -1,0 +1,42 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Map.MapPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including" >
+                <local:ToRightButton Style="{StaticResource InitializerList}"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="map/operatorNE" Icon="Operator" />
+                <local:FunctionExpander Folder="map/operatorL" Icon="Operator" />
+                <local:FunctionExpander Folder="map/operatorLE" Icon="Operator" />
+                <local:FunctionExpander Folder="map/operatorEE" Icon="Operator" />
+                <local:FunctionExpander Folder="map/operatorR" Icon="Operator" />
+                <local:FunctionExpander Folder="map/operatorRE" Icon="Operator" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function">
+                <local:FunctionExpander Folder="map/erase_if" />
+                <local:FunctionExpander Folder="map/swap" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Class" >
+                <local:ToRightButton Style="{StaticResource ValueCompareClass}" />
+                <local:ToRightButton Style="{StaticResource MapClass}" />
+                <local:ToRightButton Style="{StaticResource MultiMapClass}" />
+            </local:BlockPanel>
+            
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

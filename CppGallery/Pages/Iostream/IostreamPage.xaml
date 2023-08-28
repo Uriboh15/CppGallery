@@ -1,0 +1,65 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.Iostream.IostreamPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Including">
+                <local:ToRightButton Style="{StaticResource Istream}"/>
+            </local:BlockPanel>
+
+
+            <local:BlockPanel Header="GlobalstreamOjbect">
+                <local:FunctionExpander Folder="iostream/cerr" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/cin" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/clog" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/cout" Icon="Object" />
+
+                <local:FunctionExpander Folder="iostream/wcerr" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/wcin" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/wclog" Icon="Object" >
+                    <local:ControlGrid Message="整数を入力">
+                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
+                    </local:ControlGrid>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="iostream/wcout" Icon="Object" />
+            </local:BlockPanel>
+
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

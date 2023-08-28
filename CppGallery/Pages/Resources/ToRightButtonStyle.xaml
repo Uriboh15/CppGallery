@@ -1,0 +1,1012 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls">
+
+    <Style TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Any" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;any>" />
+        <Setter Property="Sentence" Value="すべての型の値を格納可能なクラス" />
+        <Setter Property="PageTag" Value="rany"/>
+        <Setter Property="Icon" Value="&#xE9CE;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="AnyClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="any クラス" />
+        <Setter Property="Sentence" Value="すべての型の値を格納可能なクラス" />
+        <Setter Property="PageTag" Value="rany0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Array" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;array>" />
+        <Setter Property="Sentence" Value="配列クラス" />
+        <Setter Property="PageTag" Value="7array"/>
+        <Setter Property="Icon" Value="&#xE76F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ArrayClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="array クラス" />
+        <Setter Property="Sentence" Value="固定長配列クラス" />
+        <Setter Property="PageTag" Value="7array0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Asserth" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;assert.h>" />
+        <Setter Property="Sentence" Value="デバッグ時エラー診断" />
+        <Setter Property="PageTag" Value="0asserth"/>
+        <Setter Property="Icon" Value="&#xE9D9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicFileBufClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_filebuf クラス" />
+        <Setter Property="PageTag" Value="ibasic_filebuf0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicFStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_fstream クラス" />
+        <Setter Property="Sentence" Value="ファイルの読み書きを行うファイルストリームクラステンプレート"/>
+        <Setter Property="PageTag" Value="ibasic_fstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicIFStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_ifstream クラス" />
+        <Setter Property="Sentence" Value="ファイルからの読み取りを行うファイルストリームクラステンプレート"/>
+        <Setter Property="PageTag" Value="ibasic_ifstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicIosClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_ios クラス" />
+        <Setter Property="Sentence" Value="入出力ストリーム共通で使用されるメンバー関数を定義するクラス" />
+        <Setter Property="PageTag" Value="abasic_ios0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicIostreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_iostream クラス" />
+        <Setter Property="Sentence" Value="入力と出力の両方を行うことができるストリームクラステンプレート" />
+        <Setter Property="PageTag" Value="dbasic_iostream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicIstreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_istream クラス" />
+        <Setter Property="Sentence" Value="入力を行うストリームクラステンプレート" />
+        <Setter Property="PageTag" Value="dbasic_istream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicIStringStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_istringstream クラス" />
+        <Setter Property="Sentence" Value="入力元に string を用いるストリームクラス" />
+        <Setter Property="PageTag" Value="lbasic_istringstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicOFStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_ofstream クラス" />
+        <Setter Property="Sentence" Value="ファイルへの書き込みを行うファイルストリームクラステンプレート"/>
+        <Setter Property="PageTag" Value="ibasic_ofstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicOstreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_ostream クラス" />
+        <Setter Property="Sentence" Value="要素とエンコードされたオブジェクトをストリームバッファーに挿入する操作を制御するオブジェクトを記述するクラステンプレート" />
+        <Setter Property="PageTag" Value="fbasic_ostream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicOStringStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_ostringstream クラス" />
+        <Setter Property="Sentence" Value="出力先に string を用いるストリームクラス" />
+        <Setter Property="PageTag" Value="lbasic_ostringstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicStreamBufClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_streambuf クラス" />
+        <Setter Property="Sentence" Value="ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラステンプレート" />
+        <Setter Property="PageTag" Value="gbasic_streambuf0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicStringClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_string クラス" />
+        <Setter Property="Sentence" Value="文字型に類する任意のオブジェクトのシーケンスを格納できるオブジェクトを記述するクラステンプレート" />
+        <Setter Property="PageTag" Value="1basic_string0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicStringBufClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_stringbuf クラス" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value="lbasic_stringbuf0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicStringStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_stringstream クラス" />
+        <Setter Property="Sentence" Value="入出力先に string を用いるストリームクラス" />
+        <Setter Property="PageTag" Value="lbasic_stringstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BasicStringViewClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_string_view クラス" />
+        <Setter Property="Sentence" Value="文字配列の所有権を持たない読み取り専用文字列のクラステンプレート" />
+        <Setter Property="PageTag" Value="tbasic_string_view0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Bit" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;bit>" />
+        <Setter Property="Sentence" Value="ビットレベルの操作を行う関数" />
+        <Setter Property="PageTag" Value="2bit"/>
+        <Setter Property="Icon" Value="&#xE964;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BitSet" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;bitset>" />
+        <Setter Property="Sentence" Value="固定長のビット配列" />
+        <Setter Property="PageTag" Value="5bitset"/>
+        <Setter Property="Icon" Value="&#xE964;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="BitSetClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="bitset クラス" />
+        <Setter Property="Sentence" Value="固定長のビット配列を提供するクラステンプレート" />
+        <Setter Property="PageTag" Value="5bitset0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="CharConv" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;charconv>" />
+        <Setter Property="Sentence" Value="C 文字列と数値型の変換" />
+        <Setter Property="PageTag" Value="zcharconv"/>
+        <Setter Property="Icon" Value="&#xF093;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="CharTraitsClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="char_traits 構造体" />
+        <Setter Property="Sentence" Value="CharType 型の文字に関連付けられている属性を記述するクラステンプレート" />
+        <Setter Property="PageTag" Value="1char_traits0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Complex" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;complex>" />
+        <Setter Property="Sentence" Value="複素数クラス" />
+        <Setter Property="PageTag" Value="ocomplex"/>
+        <Setter Property="Icon" Value="&#xE94D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ComplexClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="complex クラス" />
+        <Setter Property="Sentence" Value="複素数の算術演算に使用する複素数系を表すオブジェクトを定義するクラステンプレート" />
+        <Setter Property="PageTag" Value="ocomplex0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Complexh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;complex.h>" />
+        <Setter Property="Sentence" Value="複素数演算" />
+        <Setter Property="PageTag" Value="0complexh"/>
+        <Setter Property="Icon" Value="&#xE94D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Concepts" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;concepts>" />
+        <Setter Property="Sentence" Value="型の制限" />
+        <Setter Property="PageTag" Value="Fconcepts"/>
+        <Setter Property="Icon" Value="&#xECC8;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ConIoh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;conio.h>" />
+        <Setter Property="Sentence" Value="コンソール入出力に特化した機能" />
+        <Setter Property="PageTag" Value="4conioh"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Ctypeh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ctype.h>" />
+        <Setter Property="Sentence" Value="文字の種類に関する機能" />
+        <Setter Property="PageTag" Value="0ctypeh"/>
+        <Setter Property="Icon" Value="&#xE97E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Deque" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;deque>" />
+        <Setter Property="Sentence" Value="vector に似たコンテナクラス" />
+        <Setter Property="PageTag" Value="ydeque"/>
+        <Setter Property="Icon" Value="&#xF156;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="DequeClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;deque>" />
+        <Setter Property="Sentence" Value="vector に似た先頭と末尾の両方から値を挿入・削除可能なコンテナクラス" />
+        <Setter Property="PageTag" Value="ydeque0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="DirectoryIteratorClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="directory_iterator クラス" />
+        <Setter Property="Sentence" Value="ディレクトリ内の要素を詮索するイテレータクラス" />
+        <Setter Property="PageTag" Value="wdirectory_iterator0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="DwmAPI" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;dwmapi.h>" />
+        <Setter Property="Sentence" Value="デスクトップウィンドウマネージャー関数" />
+        <Setter Property="PageTag" Value="Hdwmapi"/>
+        <Setter Property="Icon" Value="&#xF7ED;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="DwmSetWindowAttributeFunc" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="DwmSetWindowAttribute() 関数" />
+        <Setter Property="Sentence" Value="ウィンドウの非クライアント領域のレンダリングを行います" />
+        <Setter Property="PageTag" Value="HDwmSetWindowAttribute0"/>
+        <Setter Property="Icon" Value="&#xF158;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Errnoh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;errno.h>" />
+        <Setter Property="Sentence" Value="エラー番号を定義" />
+        <Setter Property="PageTag" Value="0errnoh"/>
+        <Setter Property="Icon" Value="&#xEB90;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FEnvh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;fenv.h>" />
+        <Setter Property="Sentence" Value="浮動小数点数の環境設定" />
+        <Setter Property="PageTag" Value="0fenvh"/>
+        <Setter Property="Icon" Value="&#xF16E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FileStatusClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="file_status クラス" />
+        <Setter Property="Sentence" Value="file_type と perm のラッパークラス" />
+        <Setter Property="PageTag" Value="wfile_status0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FileSystem" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;filesystem>" />
+        <Setter Property="Sentence" Value="ディレクトリ操作" />
+        <Setter Property="PageTag" Value="wfilesystem"/>
+        <Setter Property="Icon" Value="&#xE8B7;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Floath" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;float.h>" />
+        <Setter Property="Sentence" Value="浮動小数点数の最大値や最小値などを表すマクロを定義" />
+        <Setter Property="PageTag" Value="0floath"/>
+        <Setter Property="Icon" Value="&#xF155;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Format" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;format>" />
+        <Setter Property="Sentence" Value="文字列フォーマット" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="Icon" Value="&#xE943;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ForwardList" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;forward_list>" />
+        <Setter Property="Sentence" Value="単方向リスト" />
+        <Setter Property="PageTag" Value="xforward_list"/>
+        <Setter Property="Icon" Value="&#xE71D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ForwardListClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="forward_list クラス" />
+        <Setter Property="Sentence" Value="単方向リストクラス" />
+        <Setter Property="PageTag" Value="xforward_list0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FposClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="fpos クラス" />
+        <Setter Property="Sentence" Value="システム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納可能なオブジェクトを表すクラステンプレート" />
+        <Setter Property="PageTag" Value="8fpos0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Fstream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;fstream>" />
+        <Setter Property="Sentence" Value="ファイルストリーム" />
+        <Setter Property="PageTag" Value="ifstream"/>
+        <Setter Property="Icon" Value="&#xE7C3;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="InitializerList" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;Initializer_list>" />
+        <Setter Property="Sentence" Value="初期化リスト" />
+        <Setter Property="PageTag" Value="kinitializer_list"/>
+        <Setter Property="Icon" Value="&#xE71D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="InitializerListClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="initializer_list クラス" />
+        <Setter Property="Sentence" Value="初期化リスト" />
+        <Setter Property="PageTag" Value="kinitializer_list0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="IntTypesh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;inttypes.h>" />
+        <Setter Property="Sentence" Value="整数の書式を表すマクロなどを定義" />
+        <Setter Property="PageTag" Value="0inttypesh"/>
+        <Setter Property="Icon" Value="&#xF155;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="IoManip" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;iomanip>" />
+        <Setter Property="Sentence" Value="ストリームのマニピュレーター" />
+        <Setter Property="PageTag" Value="biomanip"/>
+        <Setter Property="Icon" Value="&#xE90A;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Ios" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ios>" />
+        <Setter Property="Sentence" Value="ストリームの基底クラスとマニピュレーター" />
+        <Setter Property="PageTag" Value="aios"/>
+        <Setter Property="Icon" Value="&#xE90A;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="IosFwd" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;iosfwd>" />
+        <Setter Property="Sentence" Value="入出力ストリームの宣言" />
+        <Setter Property="PageTag" Value="8iosfwd"/>
+        <Setter Property="Icon" Value="&#xF000;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Iostream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;iostream>" />
+        <Setter Property="Sentence" Value="標準入出力ストリーム" />
+        <Setter Property="PageTag" Value="9iostream"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="IosBaseClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="ios_base クラス" />
+        <Setter Property="Sentence" Value="テンプレート パラメーターに依存しない入力ストリームと出力ストリームの両方に共通するストレージ関数とメンバー関数を定義するクラス" />
+        <Setter Property="PageTag" Value="aios_base0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Iso646h" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;iso646.h>" />
+        <Setter Property="Sentence" Value="特定の演算子の代替つづりを表すマクロを定義" />
+        <Setter Property="PageTag" Value="0iso646h"/>
+        <Setter Property="Icon" Value="&#xE710;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Istream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;istream>" />
+        <Setter Property="Sentence" Value="入力を行うストリーム" />
+        <Setter Property="PageTag" Value="distream"/>
+        <Setter Property="Icon" Value="&#xEC31;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Iterator" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;iterator>" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="Icon" Value="&#xE74C;"/>
+        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Limits" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;limits>" />
+        <Setter Property="Sentence" Value="算術型の実装プロパティ" />
+        <Setter Property="PageTag" Value="3limits"/>
+        <Setter Property="Icon" Value="&#xE81B;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Limitsh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;limits.h>" />
+        <Setter Property="Sentence" Value="整数型の最大値と最小値を表すマクロを定義" />
+        <Setter Property="PageTag" Value="0limitsh"/>
+        <Setter Property="Icon" Value="&#xE81B;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="LinearCongruentialEngineClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="linear_congruential_engine クラス" />
+        <Setter Property="Sentence" Value="線形合同法アルゴリズムでランダムな値を生成します" />
+        <Setter Property="PageTag" Value="nlinear_congruential_engine0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="List" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;list>" />
+        <Setter Property="Sentence" Value="list" />
+        <Setter Property="PageTag" Value="clist"/>
+        <Setter Property="Icon" Value="&#xE71D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ListClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="list クラス" />
+        <Setter Property="Sentence" Value="ノードベースのコンテナクラス" />
+        <Setter Property="PageTag" Value="clist0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Localeh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;locale.h>" />
+        <Setter Property="Sentence" Value="ロケールの設定" />
+        <Setter Property="PageTag" Value="0localeh"/>
+        <Setter Property="Icon" Value="&#xE81D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Map" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;map>" />
+        <Setter Property="Sentence" Value="連想配列クラス" />
+        <Setter Property="PageTag" Value="emap"/>
+        <Setter Property="Icon" Value="&#xE80A;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="MapClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="map クラス" />
+        <Setter Property="Sentence" Value="一意のキーを持つ連想配列クラス" />
+        <Setter Property="PageTag" Value="emap0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Mathh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;math.h>" />
+        <Setter Property="Sentence" Value="数学関連の機能" />
+        <Setter Property="PageTag" Value="0mathh"/>
+        <Setter Property="Icon" Value="&#xE94D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="MultiMapClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="multimap クラス" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="New" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;new>" />
+        <Setter Property="Sentence" Value="メモリを動的確保" />
+        <Setter Property="PageTag" Value="mnew"/>
+        <Setter Property="Icon" Value="&#xE895;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Numbers" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;numbers>" />
+        <Setter Property="Sentence" Value="数学定数の定義" />
+        <Setter Property="PageTag" Value="Dnumbers"/>
+        <Setter Property="Icon" Value="&#xF14D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Numeric" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;numeric>" />
+        <Setter Property="Sentence" Value="コンテナの数値処理" />
+        <Setter Property="PageTag" Value="Bnumeric"/>
+        <Setter Property="Icon" Value="&#xF14F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="NumericLimitsClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="numeric_limits クラス" />
+        <Setter Property="Sentence" Value="数値型の算術プロパティを提供するクラス" />
+        <Setter Property="PageTag" Value="3numeric_limits0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Ostream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ostream>" />
+        <Setter Property="Sentence" Value="出力を行うストリーム" />
+        <Setter Property="PageTag" Value="fostream"/>
+        <Setter Property="Icon" Value="&#xE7F4;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="OStrStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="ostrstream クラス" />
+        <Setter Property="Sentence" Value="出力先に char 配列を用いるストリームクラス" />
+        <Setter Property="PageTag" Value="6ostrstream0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="PathClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="path クラス" />
+        <Setter Property="Sentence" Value="パスの操作に適した文字列クラス" />
+        <Setter Property="PageTag" Value="wpath0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Queue" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;queue>" />
+        <Setter Property="Sentence" Value="コンテナクラスのキュー" />
+        <Setter Property="PageTag" Value="qqueue"/>
+        <Setter Property="Icon" Value="&#xE8B5;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="QueueClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="queue クラス" />
+        <Setter Property="Sentence" Value="最初に挿入した値のみ取り出し可能なコンテナクラス" />
+        <Setter Property="PageTag" Value="qqueue0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Random" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;random>" />
+        <Setter Property="Sentence" Value="様々な乱数" />
+        <Setter Property="PageTag" Value="nrandom"/>
+        <Setter Property="Icon" Value="&#xE8B1;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SliceClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="slice クラス" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value="jslice0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Span" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;span>" />
+        <Setter Property="Sentence" Value="所有権を持たない配列クラス" />
+        <Setter Property="PageTag" Value="vspan"/>
+        <Setter Property="Icon" Value="&#xE94E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SpanClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;span>" />
+        <Setter Property="Sentence" Value="要素の所有権を持たない配列クラス" />
+        <Setter Property="PageTag" Value="vspan0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SStream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;sstream>" />
+        <Setter Property="Sentence" Value="string を用いたストリーム" />
+        <Setter Property="PageTag" Value="lsstream"/>
+        <Setter Property="Icon" Value="&#xE8E9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Set" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;set>" />
+        <Setter Property="Sentence" Value="要素をキーとするコンテナ" />
+        <Setter Property="PageTag" Value="Aset"/>
+        <Setter Property="Icon" Value="&#xE712;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SetClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="set クラス" />
+        <Setter Property="Sentence" Value="要素をキーとするコンテナクラス" />
+        <Setter Property="PageTag" Value="Aset0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SourceLocation" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;source_location>" />
+        <Setter Property="Sentence" Value="ソースコードの位置" />
+        <Setter Property="PageTag" Value="Esource_location"/>
+        <Setter Property="Icon" Value="&#xF000;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SourceLocationClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="source_location クラス" />
+        <Setter Property="Sentence" Value="ソースコードの位置を取得するクラス" />
+        <Setter Property="PageTag" Value="Esource_location0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Stack" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stack>" />
+        <Setter Property="Sentence" Value="コンテナクラスのスタック" />
+        <Setter Property="PageTag" Value="pstack"/>
+        <Setter Property="Icon" Value="&#xE8B5;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StackClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="stack クラス" />
+        <Setter Property="Sentence" Value="最後に挿入した値のみ取り出し可能なコンテナクラス" />
+        <Setter Property="PageTag" Value="pstack0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdAlignh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdalign.h>" />
+        <Setter Property="Sentence" Value="変数のアラインメントを指定するマクロを定義" />
+        <Setter Property="PageTag" Value="0stdalignh"/>
+        <Setter Property="Icon" Value="&#xF156;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdBoolh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdbool.h>" />
+        <Setter Property="Sentence" Value="真偽値型を定義" />
+        <Setter Property="PageTag" Value="0stdboolh"/>
+        <Setter Property="Icon" Value="&#xF19E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdExcept" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdexcept>" />
+        <Setter Property="Sentence" Value="標準ライブラリが用いる例外クラス" />
+        <Setter Property="PageTag" Value="sstdexcept"/>
+        <Setter Property="Icon" Value="&#xEA39;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdInth" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdint.h>" />
+        <Setter Property="Sentence" Value="環境に影響されない整数型を定義" />
+        <Setter Property="PageTag" Value="0stdinth"/>
+        <Setter Property="Icon" Value="&#xF155;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdIoh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdio.h>" />
+        <Setter Property="Sentence" Value="標準入出力関連の機能" />
+        <Setter Property="PageTag" Value="0stdioh"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdLibh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdlib.h>" />
+        <Setter Property="Sentence" Value="多種多様な機能" />
+        <Setter Property="PageTag" Value="0stdlibh"/>
+        <Setter Property="Icon" Value="&#xE950;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StdNoReturnh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;stdnoreturn.h>" />
+        <Setter Property="Sentence" Value="noreturn 属性を指すマクロを定義" />
+        <Setter Property="PageTag" Value="0stdnoreturnh"/>
+        <Setter Property="Icon" Value="&#xE943;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StreamBuf" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;streambuf>" />
+        <Setter Property="Sentence" Value="&lt;iostream>で使用されるライブラリ" />
+        <Setter Property="PageTag" Value="gstreambuf"/>
+        <Setter Property="Icon" Value="&#xE74C;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="String" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;string>" />
+        <Setter Property="Sentence" Value="文字列クラス" />
+        <Setter Property="PageTag" Value="1stringc"/>
+        <Setter Property="Icon" Value="&#xE8E9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Stringh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;string.h>" />
+        <Setter Property="Sentence" Value="文字列関連の機能" />
+        <Setter Property="PageTag" Value="0stringh"/>
+        <Setter Property="Icon" Value="&#xE8E9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="StringView" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;string_view>" />
+        <Setter Property="Sentence" Value="文字配列の所有権を持たない文字列クラス" />
+        <Setter Property="PageTag" Value="tstring_view"/>
+        <Setter Property="Icon" Value="&#xE8E9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    
+
+    <Style x:Key="StrStream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;strstream>" />
+        <Setter Property="Sentence" Value="char 配列を用いたストリーム" />
+        <Setter Property="PageTag" Value="6strstream"/>
+        <Setter Property="Icon" Value="&#xE8E9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="SystemError" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;system_error>" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="Icon" Value="&#xE74C;"/>
+        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TgMathh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;tgmath.h>" />
+        <Setter Property="Sentence" Value="&lt;complex.h> と &lt;math.h> の関数を呼び分けるマクロを定義" />
+        <Setter Property="PageTag" Value="0tgmathh"/>
+        <Setter Property="Icon" Value="&#xE94D;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Timeh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;time.h>" />
+        <Setter Property="Sentence" Value="時刻関連の機能" />
+        <Setter Property="PageTag" Value="0timeh"/>
+        <Setter Property="Icon" Value="&#xED5A;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Tuple" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;tuple>" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="Icon" Value="&#xE74C;"/>
+        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TypeInfo" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;typeinfo>" />
+        <Setter Property="Sentence" Value="型の情報" />
+        <Setter Property="PageTag" Value="Gtypeinfo"/>
+        <Setter Property="Icon" Value="&#xE946;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TypeInfoClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="type_info クラス" />
+        <Setter Property="Sentence" Value="型の情報を保持するクラス" />
+        <Setter Property="PageTag" Value="Gtype_info0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TypeTraits" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;type_traits>" />
+        <Setter Property="Sentence" Value="型の種類" />
+        <Setter Property="PageTag" Value="utype_traits"/>
+        <Setter Property="Icon" Value="&#xE97C;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Ucharh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;uchar.h>" />
+        <Setter Property="Sentence" Value="Unicode 文字関連の機能" />
+        <Setter Property="PageTag" Value="0ucharh"/>
+        <Setter Property="Icon" Value="&#xE97E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Utility" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;utility>" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="Icon" Value="&#xE74C;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Valarray" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;valarray>" />
+        <Setter Property="Sentence" Value="数値演算に特化した配列クラス" />
+        <Setter Property="PageTag" Value="jvalarray"/>
+        <Setter Property="Icon" Value="&#xE700;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ValarrayClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="valarray クラス" />
+        <Setter Property="Sentence" Value="高速な数値演算が可能なコンテナクラステンプレート" />
+        <Setter Property="PageTag" Value="jvalarray0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ValueCompareClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="value_compare クラス" />
+        <Setter Property="Sentence" Value="aaa" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Vector" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;vector>" />
+        <Setter Property="Sentence" Value="可変長配列" />
+        <Setter Property="PageTag" Value="hvector"/>
+        <Setter Property="Icon" Value="&#xE76F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="VectorClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="vector クラス" />
+        <Setter Property="Sentence" Value="指定された型の要素を直線上に配置し、任意の要素に対する高速なランダムアクセスを可能にするコンテナーのクラステンプレート" />
+        <Setter Property="PageTag" Value="hvector0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Wcharh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;wchar.h>" />
+        <Setter Property="Sentence" Value="ワイド文字関連の機能" />
+        <Setter Property="PageTag" Value="0wcharh"/>
+        <Setter Property="Icon" Value="&#xE97F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Wctypeh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;wctype.h>" />
+        <Setter Property="Sentence" Value="ワイド文字の種類に関する機能" />
+        <Setter Property="PageTag" Value="0wctypeh"/>
+        <Setter Property="Icon" Value="&#xE97F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+
+</ResourceDictionary>

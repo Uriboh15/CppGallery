@@ -1,0 +1,56 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.CHeader.CtypehPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+
+            <local:BlockPanel Header="Typedefs">
+                <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型" Value="unsigned short"/>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Function">
+                <local:FunctionExpander Folder="ctype.h/isalnum" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isalpha" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isblank" CodeLanguage="C" />
+                
+                <local:CustomExpander IsEnabled="False">
+                    <local:CustomExpander.Header>
+                        <local:EHeader Title="iscntrl() 関数" Sentence="aaa"/>
+                    </local:CustomExpander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ctype.h/isdigit" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isgraph" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/islower" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isprint" CodeLanguage="C" />
+                
+                <local:CustomExpander IsEnabled="False">
+                    <local:CustomExpander.Header>
+                        <local:EHeader Title="ispunct() 関数" Sentence="aaa"/>
+                    </local:CustomExpander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="ctype.h/isspace" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isupper" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/isxdigit" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/tolower" CodeLanguage="C" />
+                <local:FunctionExpander Folder="ctype.h/toupper" CodeLanguage="C" />
+            </local:BlockPanel>
+
+            <local:MacroPanel Folder="ctype.h">
+                <local:ItemGrid Title="NULL" Sentence="空ポインタ" />
+            </local:MacroPanel>
+
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

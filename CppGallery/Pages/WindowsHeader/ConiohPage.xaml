@@ -1,0 +1,41 @@
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.ConiohPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel HeaderType="Windows">
+            <InfoBar Style="{StaticResource NonStandardHeader}"/>
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="conio.h/cgets" CodeLanguage="C" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="conio.h/cprintf" CodeLanguage="C" AutoFunc="False" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="conio.h/cputs" CodeLanguage="C" SampleType="ConsoleOnly" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="_cscanf() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+
+                <local:FunctionExpander Folder="conio.h/getch" CodeLanguage="C" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="conio.h/getche" CodeLanguage="C" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="conio.h/kbhit" CodeLanguage="C" SampleType="ConsoleOnly" />
+                <local:FunctionExpander Folder="conio.h/putch" CodeLanguage="C" SampleType="ConsoleOnly" />
+
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="_ungetch() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+            
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

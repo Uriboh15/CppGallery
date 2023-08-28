@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    x:Class="CppGallery.Pages.UserControls.TitleBarSettingsButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent"
+    BorderThickness="0"
+    PointerReleased="Button_PointerReleased"
+    PointerPressed="Button_PointerPressed"
+    GotFocus="Button_GotFocus"
+    LostFocus="Button_LostFocus"
+    PointerCaptureLost="Button_PointerCaptureLost"
+    Width="48"
+    CornerRadius="4"
+    Style="{StaticResource DefaultButtonStyle}">
+
+    <FontIcon Glyph="&#xE713;" FontSize="16"  />
+</Button>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.FileSystem.DirectoryIteratorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor" >
+                <local:FunctionExpander Folder="filesystem__directory_iterator/directory_iterator" ConsoleButtonVisibility="Collapsed" >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Operator" >
+                <local:FunctionExpander Folder="filesystem__directory_iterator/operatorNE" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem__directory_iterator/operatorE" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="operator==" IsEnabled="False" Icon="&#xE710;" />
+
+                <local:FunctionExpander Folder="filesystem__directory_iterator/operatorKAKERU" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="operator->" IsEnabled="False" Icon="&#xE710;" />
+
+                <local:FunctionExpander Folder="filesystem__directory_iterator/operatorPlusPlus" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Method" >
+                <local:FunctionExpander Folder="filesystem__directory_iterator/increment" ConsoleButtonVisibility="Collapsed"  >
+                    <local:OpenFolderPane />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/directory-iterator-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem/directory_iterator.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

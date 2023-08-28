@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CharConv.CharConvPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="charconv/from_chars" >
+                    <local:ResultsPanel >
+                        <local:ControlGrid Message="基数を入力">
+                            <ComboBox x:Name="FromCharsKisu" SelectionChanged="FromCharsKisu_SelectionChanged" Loaded="FromCharsKisu_Loaded">
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                                <x:String>13</x:String>
+                                <x:String>14</x:String>
+                                <x:String>15</x:String>
+                                <x:String>16</x:String>
+                                <x:String>17</x:String>
+                                <x:String>18</x:String>
+                                <x:String>19</x:String>
+                                <x:String>20</x:String>
+                                <x:String>21</x:String>
+                                <x:String>22</x:String>
+                                <x:String>23</x:String>
+                                <x:String>24</x:String>
+                                <x:String>25</x:String>
+                                <x:String>26</x:String>
+                                <x:String>27</x:String>
+                                <x:String>28</x:String>
+                                <x:String>29</x:String>
+                                <x:String>30</x:String>
+                                <x:String>31</x:String>
+                                <x:String>32</x:String>
+                                <x:String>33</x:String>
+                                <x:String>34</x:String>
+                                <x:String>35</x:String>
+                                <x:String>36</x:String>
+                            </ComboBox>
+                        </local:ControlGrid>
+                        <local:ControlGrid Message="値を入力" >
+                            <TextBox x:Name="FromCharsIn" Text="11" TextChanging="FromCharsIn_TextChanging" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="charconv/to_chars" >
+                    <local:TextBoxPane Message="値を入力" Text="12.345" />
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Enum" >
+                <local:CustomExpander Title="enum chars_format" Sentence="浮動小数点数の表記フォーマット" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="scientific" Sentence="指数表記" />
+                        <local:ItemGrid Title="fixed" Sentence="10進数表記" />
+                        <local:ItemGrid Title="hex" Sentence="16進数表記" />
+                        <local:ItemGrid Title="general" Sentence="scientific と fixed を自動で切り替え" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Struct" >
+                <local:CustomExpander Title="from_chars_result 構造体" Sentence="from_chars() で返される構造体" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="char* ptr" Sentence="読み取った文字列の数値を表さない初めの位置へのポインター" />
+                        <local:ItemGrid Title="errc ec" Sentence="エラーコード" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+                
+                <local:CustomExpander Title="to_chars_result 構造体" Sentence="to_chars() で返される構造体" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="char* ptr" Sentence="書き込んだ文字配列の末尾の次を指すポインター" />
+                        <local:ItemGrid Title="errc ec" Sentence="エラーコード" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/charconv?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/charconv.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

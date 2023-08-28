@@ -1,0 +1,758 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+		<RootNamespace>CppGallery</RootNamespace>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Platforms>x86;x64;ARM64</Platforms>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+		<UseWinUI>true</UseWinUI>
+		<EnableMsixTooling>true</EnableMsixTooling>
+		<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+		<WindowsPackageType>None</WindowsPackageType>
+		<AssemblyVersion>2.1.2</AssemblyVersion>
+		<FileVersion>2.1.1</FileVersion>
+		<PackageIcon>Square150x150Logo.scale-200.ico</PackageIcon>
+		<PlatformTarget>x64</PlatformTarget>
+		<IsPublishable>True</IsPublishable>
+		<AssemblyName>Gallery</AssemblyName>
+		<!-- <WindowsPackageType>None</WindowsPackageType> -->
+		<!-- <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained> -->
+
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Columns\Column1\Column1Page.xaml" />
+		<None Remove="Columns\Column2\Column2Page.xaml" />
+		<None Remove="Columns\Column3\Column3Page.xaml" />
+		<None Remove="Columns\Column4\Column4Page.xaml" />
+		<None Remove="Columns\Column5\Column5Page.xaml" />
+		<None Remove="Columns\ColumnsPage.xaml" />
+		<None Remove="CompactHomePage.xaml" />
+		<None Remove="HomePage.xaml" />
+		<None Remove="MainPage.xaml" />
+		<None Remove="NewContentPage.xaml" />
+		<None Remove="Pages\Any\AnyClassPage.xaml" />
+		<None Remove="Pages\Any\AnyPage.xaml" />
+		<None Remove="Pages\Array\ArrayClassPage.xaml" />
+		<None Remove="Pages\Array\ArrayPage.xaml" />
+		<None Remove="Pages\BitSet\BitSetClassPage.xaml" />
+		<None Remove="Pages\BitSet\BitSetPage.xaml" />
+		<None Remove="Pages\Bit\BitPage.xaml" />
+		<None Remove="Pages\CharConv\CharConvPage.xaml" />
+		<None Remove="Pages\CHeader\AsserthPage.xaml" />
+		<None Remove="Pages\CHeader\ComplexhPage.xaml" />
+		<None Remove="Pages\CHeader\FEnvhPage.xaml" />
+		<None Remove="Pages\CHeader\FloathPage.xaml" />
+		<None Remove="Pages\CHeader\IntTypeshPage.xaml" />
+		<None Remove="Pages\CHeader\LocalehPage.xaml" />
+		<None Remove="Pages\CHeader\MathhPage.xaml" />
+		<None Remove="Pages\CHeader\StdAlignPage.xaml" />
+		<None Remove="Pages\CHeader\StdiohPage.xaml" />
+		<None Remove="Pages\CHeader\StdlibhPage.xaml" />
+		<None Remove="Pages\CHeader\StdNoReturnhPage.xaml" />
+		<None Remove="Pages\CHeader\StringhPage.xaml" />
+		<None Remove="Pages\CHeader\TgMathhPage.xaml" />
+		<None Remove="Pages\CHeader\TimehPage.xaml" />
+		<None Remove="Pages\CHeader\UcharhPage.xaml" />
+		<None Remove="Pages\CHeader\WcharhPage.xaml" />
+		<None Remove="Pages\Columns\Column10\Column10Page.xaml" />
+		<None Remove="Pages\Columns\Column11\Column11Page.xaml" />
+		<None Remove="Pages\Columns\Column12\Column12Page.xaml" />
+		<None Remove="Pages\Columns\Column13\Column13Page.xaml" />
+		<None Remove="Pages\Columns\Column14\Column14Page.xaml" />
+		<None Remove="Pages\Columns\Column14\Column14Window.xaml" />
+		<None Remove="Pages\Columns\Column15\Column15Page.xaml" />
+		<None Remove="Pages\Columns\Column16\Column16Page.xaml" />
+		<None Remove="Pages\Columns\Column17\CoenerWindow.xaml" />
+		<None Remove="Pages\Columns\Column17\Column17Page.xaml" />
+		<None Remove="Pages\Columns\Column18\Column18.xaml" />
+		<None Remove="Pages\Columns\Column19\Column19Page.xaml" />
+		<None Remove="Pages\Columns\Column20\Column20Page.xaml" />
+		<None Remove="Pages\Columns\Column20\Column20Window.xaml" />
+		<None Remove="Pages\Columns\Column21\Column21Page.xaml" />
+		<None Remove="Pages\Columns\Column22\Column22Page.xaml" />
+		<None Remove="Pages\Columns\Column22\Column22Window.xaml" />
+		<None Remove="Pages\Columns\Column6\Column6.xaml" />
+		<None Remove="Pages\Columns\Column7\Column7Page.xaml" />
+		<None Remove="Pages\Columns\Column8\Column8Page.xaml" />
+		<None Remove="Pages\Columns\Column9\Column9Page.xaml" />
+		<None Remove="Pages\Common\BaseTypePage.xaml" />
+		<None Remove="Pages\Common\GCCCommandPage.xaml" />
+		<None Remove="Pages\Common\OperatorPage.xaml" />
+		<None Remove="Pages\Complex\ComplexCalssPage.xaml" />
+		<None Remove="Pages\Complex\ComplexPage.xaml" />
+		<None Remove="Pages\Concepts\ConceptsPage.xaml" />
+		<None Remove="Pages\Deque\DequeClassPage.xaml" />
+		<None Remove="Pages\Deque\DequePage.xaml" />
+		<None Remove="Pages\WindowsHeader\DwmAPI\DwmAPIPage.xaml" />
+		<None Remove="Pages\WindowsHeader\DwmAPI\DwmSetWindowAttributePage.xaml" />
+		<None Remove="Pages\FileSystem\DirectoryIteratorPage.xaml" />
+		<None Remove="Pages\FileSystem\FileStatusPage.xaml" />
+		<None Remove="Pages\FileSystem\FileSystemPage.xaml" />
+		<None Remove="Pages\FileSystem\PathPage.xaml" />
+		<None Remove="Pages\Format\FormatPage.xaml" />
+		<None Remove="Pages\ForwardList\ForwardListClassPage.xaml" />
+		<None Remove="Pages\ForwardList\ForwardListPage.xaml" />
+		<None Remove="Pages\Fstream\BasicFilebufPage.xaml" />
+		<None Remove="Pages\Fstream\BasicFstreamPage.xaml" />
+		<None Remove="Pages\Fstream\BasicIfstreamPage.xaml" />
+		<None Remove="Pages\Fstream\BasicOfstreamPage.xaml" />
+		<None Remove="Pages\Fstream\FstreamPage.xaml" />
+		<None Remove="Pages\InitializerList\InitializerListClassPage.xaml" />
+		<None Remove="Pages\InitializerList\InitializerListPage.xaml" />
+		<None Remove="Pages\Iomanip\IomanipPage.xaml" />
+		<None Remove="Pages\IosFwd\IosFwdPage.xaml" />
+		<None Remove="Pages\Iostream\IostreamPage.xaml" />
+		<None Remove="Pages\Ios\BasicIosPage.xaml" />
+		<None Remove="Pages\Ios\FposPage.xaml" />
+		<None Remove="Pages\Ios\IosPage.xaml" />
+		<None Remove="Pages\Istream\BasicIostreamPage.xaml" />
+		<None Remove="Pages\Istream\BasicIstreamPage.xaml" />
+		<None Remove="Pages\Istream\IstreamPage.xaml" />
+		<None Remove="Pages\Limits\LimitsPage.xaml" />
+		<None Remove="Pages\Limits\NumericLimitsPage.xaml" />
+		<None Remove="Pages\List\ListClassPage.xaml" />
+		<None Remove="Pages\List\ListPage.xaml" />
+		<None Remove="Pages\Map\MapClassPage.xaml" />
+		<None Remove="Pages\Map\MapPage.xaml" />
+		<None Remove="Pages\New\NewPage.xaml" />
+		<None Remove="Pages\Numbers\NumbersPage.xaml" />
+		<None Remove="Pages\Numeric\NumericPage.xaml" />
+		<None Remove="Pages\Settings\AboutAppPage.xaml" />
+		<None Remove="Pages\Settings\SettingPage.xaml" />
+		<None Remove="Pages\Settings\SettingsParentPage.xaml" />
+		<None Remove="Pages\SourceLocation\SourceLocationClassPage.xaml" />
+		<None Remove="Pages\SourceLocation\SourceLocationPage.xaml" />
+		<None Remove="Pages\TypeInfo\TypeInfoClassPage.xaml" />
+		<None Remove="Pages\TypeInfo\TypeInfoPage.xaml" />
+		<None Remove="Pages\UserControls\TitleBarSettingsButton.xaml" />
+		<None Remove="Pages\WindowsHeader\ConiohPage.xaml" />
+		<None Remove="Pages\Ostream\BasicOstreamPage.xaml" />
+		<None Remove="Pages\Ostream\OstreamPage.xaml" />
+		<None Remove="Pages\Queue\QueueClassPage.xaml" />
+		<None Remove="Pages\Queue\QueuePage.xaml" />
+		<None Remove="Pages\Random\LinearCongruentialEnginePage.xaml" />
+		<None Remove="Pages\Random\RandomPage.xaml" />
+		<None Remove="Pages\Resources\InfoBarStyle.xaml" />
+		<None Remove="Pages\Resources\TextBlockStyle.xaml" />
+		<None Remove="Pages\Resources\ToRightButtonStyle.xaml" />
+		<None Remove="Pages\Set\SetClassPage.xaml" />
+		<None Remove="Pages\Set\SetPage.xaml" />
+		<None Remove="Pages\Span\SpanClassPage.xaml" />
+		<None Remove="Pages\Span\SpanPage.xaml" />
+		<None Remove="Pages\SStream\BasicIstringStreamPage.xaml" />
+		<None Remove="Pages\SStream\BasicOstringStreamPage.xaml" />
+		<None Remove="Pages\SStream\BasicStringBufPage.xaml" />
+		<None Remove="Pages\SStream\BasicStringStreamPage.xaml" />
+		<None Remove="Pages\SStream\SStreamPage.xaml" />
+		<None Remove="Pages\Stack\StackClassPage.xaml" />
+		<None Remove="Pages\Stack\StackPage.xaml" />
+		<None Remove="Pages\StdExcept\StdExceptPage.xaml" />
+		<None Remove="Pages\StreamBuf\BasicStreamBufPage.xaml" />
+		<None Remove="Pages\StreamBuf\StreamBufPage.xaml" />
+		<None Remove="Pages\StringView\BasicStringViewClassPage.xaml" />
+		<None Remove="Pages\StringView\StringViewPage.xaml" />
+		<None Remove="Pages\String\BasicStringPage.xaml" />
+		<None Remove="Pages\String\CharTraitsPage.xaml" />
+		<None Remove="Pages\String\StringPage.xaml" />
+		<None Remove="Pages\StrStream\OstrStreamPage.xaml" />
+		<None Remove="Pages\StrStream\StrStreamPage.xaml" />
+		<None Remove="Pages\TypeTraits\TypeTraitsPage.xaml" />
+		<None Remove="Pages\UserControls\BlockOldSystemPane.xaml" />
+		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
+		<None Remove="Pages\UserControls\CodeButtonBase.xaml" />
+		<None Remove="Pages\UserControls\ColumnBlockPane.xaml" />
+		<None Remove="Pages\UserControls\ColumnsDictionary.xaml" />
+		<None Remove="Pages\UserControls\ControlGrid.xaml" />
+		<None Remove="Pages\UserControls\EHeader.xaml" />
+		<None Remove="Pages\UserControls\GCCSourceFilePane.xaml" />
+		<None Remove="Pages\UserControls\HomeButtonGrid.xaml" />
+		<None Remove="Pages\UserControls\ItemGrid.xaml" />
+		<None Remove="Pages\UserControls\OutPuts.xaml" />
+		<None Remove="Pages\UserControls\SentenceTextBlock.xaml" />
+		<None Remove="Pages\ValArray\SlicePage.xaml" />
+		<None Remove="Pages\ValArray\ValArrayClassPage.xaml" />
+		<None Remove="Pages\ValArray\ValArrayPage.xaml" />
+		<None Remove="Pages\Vector\VectorClassPage.xaml" />
+		<None Remove="Pages\Vector\VectorPage.xaml" />
+		<None Remove="ReleaseNote.xaml" />
+		<None Remove="SettingsPage.xaml" />
+		<None Remove="UpdatedPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Pages\Assets\LockScreenLogo.scale-200.png" />
+		<Content Include="Pages\Assets\LockScreenLogo.scale-200.png" />
+		<Content Include="Pages\Assets\SplashScreen.scale-200.png" />
+		<Content Include="Pages\Assets\SplashScreen.scale-200.png" />
+		<Content Include="Pages\Assets\Square150x150Logo.scale-200.ico" />
+		<Content Include="Pages\Assets\Square150x150Logo.scale-200.png" />
+		<Content Include="Pages\Assets\Square150x150Logo.scale-200.png" />
+		<Content Include="Pages\Assets\Square44x44Logo.scale-200.png" />
+		<Content Include="Pages\Assets\Square44x44Logo.scale-200.png" />
+		<Content Include="Pages\Assets\Square44x44Logo.targetsize-24_altform-unplated.ico" />
+		<Content Include="Pages\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+		<Content Include="Pages\Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+		<Content Include="Pages\Assets\StoreLogo.png" />
+		<Content Include="Pages\Assets\StoreLogo.png" />
+		<Content Include="Pages\Assets\Wide310x150Logo.scale-200.png" />
+		<Content Include="Pages\Assets\Wide310x150Logo.scale-200.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.3.230724000" />
+		<Manifest Remove="app.manifest" />
+		<Manifest Include="$(ApplicationManifest)" />
+	</ItemGroup>
+
+	<!-- 
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+		<ProjectCapability Include="Msix" />
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="Pages\Array\ArrayPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Array\ArrayClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Any\AnyPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Any\AnyClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<None Update="Pages\Assets\Square150x150Logo.scale-200.ico">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<Page Update="Pages\DwmAPI\DwmSetWindowAttributePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\DwmAPI\DwmAPIPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\TypeInfo\TypeInfoClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\TypeInfo\TypeInfoPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Common\OperatorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\AsserthPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Format\FormatPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Concepts\ConceptsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SourceLocation\SourceLocationClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SourceLocation\SourceLocationPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Numbers\NumbersPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Numeric\NumericPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CharConv\CharConvPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\TitleBarSettingsButton.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Settings\AboutAppPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Settings\SettingPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Settings\SettingsParentPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\IntTypeshPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\StdNoReturnhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\TgMathhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\ComplexhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\FEnvhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Deque\DequeClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Deque\DequePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\StdAlignPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\FileSystem\FileStatusPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\FileSystem\DirectoryIteratorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Set\SetClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Set\SetPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\ForwardList\ForwardListClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\ForwardList\ForwardListPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\FileSystem\PathPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\FileSystem\FileSystemPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Span\SpanClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Span\SpanPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\FloathPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\TypeTraits\TypeTraitsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StringView\BasicStringViewClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StringView\StringViewPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\LocalehPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StdExcept\StdExceptPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Queue\QueueClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Queue\QueuePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Stack\StackClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Stack\StackPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\GCCSourceFilePane.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Common\GCCCommandPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Common\BaseTypePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\BlockOldSystemPane.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column22\Column22Window.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column22\Column22Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column21\Column21Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column20\Column20Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column20\Column20Window.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column19\Column19Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column18\Column18.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column17\CoenerWindow.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column17\Column17Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column16\Column16Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ColumnBlockPane.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column15\Column15Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\CodeButtonBase.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column14\Column14Window.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column14\Column14Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column13\Column13Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column12\Column12Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column11\Column11Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column10\Column10Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column9\Column9Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column8\Column8Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column7\Column7Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Columns\Column6\Column6.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\IosFwd\IosFwdPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\SentenceTextBlock.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\OutPuts.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Resources\InfoBarStyle.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Resources\ToRightButtonStyle.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Resources\TextBlockStyle.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StrStream\OstrStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StrStream\StrStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\BitSet\BitSetClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\BitSet\BitSetPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\WcharhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\UcharhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\TimehPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\StringhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\StdiohPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\MathhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CHeader\StdlibhPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Vector\VectorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Vector\VectorClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\ValArray\ValArrayPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\ValArray\ValArrayClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\ValArray\SlicePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\String\StringPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\String\CharTraitsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\String\BasicStringPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StreamBuf\StreamBufPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\StreamBuf\BasicStreamBufPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SStream\SStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SStream\BasicStringStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SStream\BasicStringBufPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SStream\BasicOstringStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\SStream\BasicIstringStreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Random\LinearCongruentialEnginePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Random\RandomPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ostream\OstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ostream\BasicOstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\NonStandard\ConiohPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\New\NewPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Map\MapPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Map\MapClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\List\ListPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\List\ListClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Limits\LimitsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Limits\NumericLimitsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Istream\IstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Istream\BasicIstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Istream\BasicIostreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Iostream\IostreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ios\IosPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ios\IosBasePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ios\FposPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Ios\BasicIosPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Iomanip\IomanipPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Initializer_list\Initializer_listPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Initializer_list\Initializer_listClass.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Fstream\FstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Fstream\BasicOfstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Fstream\BasicIfstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Fstream\BasicFstreamPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Fstream\BasicFilebufPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Complex\ComplexPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Complex\ComplexCalssPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Bit\BitPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ItemGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\HomeButtonGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\EHeader.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ControlGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ColumnsDictionary.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ButtonGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="UpdatedPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="ReleaseNote.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\Column5\Column5Page.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\Column4\Column4Page.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\Column3\Column3Page.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\Column2\Column2Page.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\Column1\Column1Page.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Columns\ColumnsPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="NewContentPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="CompactHomePage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="String\Char_traitsPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="String\Basic_stringPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="MainPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="SettingsPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="String\StringPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+		<Page Update="HomePage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Pages\Columns\Column1\" />
+	  <Folder Include="Pages\Columns\Column2\" />
+	  <Folder Include="Pages\Columns\Column3\" />
+	  <Folder Include="Pages\Columns\Column4\" />
+	  <Folder Include="Pages\Columns\Column5\" />
+	</ItemGroup>
+
+	<!-- 
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if 
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+		<DebugType>portable</DebugType>
+		<Optimize>False</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+		<DebugType>portable</DebugType>
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<DebugType>portable</DebugType>
+		<Optimize>False</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<DebugType>portable</DebugType>
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+		<DebugType>portable</DebugType>
+		<Optimize>False</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+		<DebugType>portable</DebugType>
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+</Project>
