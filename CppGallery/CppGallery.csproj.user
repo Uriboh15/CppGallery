@@ -17,6 +17,30 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WindowsHeader\WinUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\WindowshPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\ProcessEnvPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\ConsoleApi3Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\ConsoleApi2Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\ConsoleApiPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TypeIndex\TypeIndexClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TypeIndex\TypeInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\TypeInfo\TypeInfoClassPage.xaml">
       <SubType>Designer</SubType>
     </Page>

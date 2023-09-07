@@ -893,9 +893,45 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
+            <NavigationViewItem Content="&lt;ConsoleApi.h>" Tag="4ConsoleApi">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;ConsoleApi2.h>" Tag="4ConsoleApi2h">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;ConsoleApi3.h>" Tag="4ConsoleApi3h">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE756;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
             <NavigationViewItem Content="&lt;dwmapi.h>" Tag="Hdwmapi">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xF7ED;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;ProcessEnv.h>" Tag="4ProcessEnv">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF16E;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;Windows.h>" Tag="4Windows">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8A9;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem Content="&lt;WinUser.h>" Tag="4WinUser">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8F1;"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 

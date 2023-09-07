@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.WindowshPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="Windows" >
+            <local:BasicBlockPanel HeadText="一般ユーティリティ" >
+                <local:ToRightButton Style="{StaticResource WinUserh}" />
+            </local:BasicBlockPanel>
+
+            <local:BasicBlockPanel HeadText="環境設定" >
+                <local:ToRightButton Style="{StaticResource ProcessEnv}" />
+            </local:BasicBlockPanel>
+
+            <local:BasicBlockPanel HeadText="コンソール操作" >
+                <local:ToRightButton Style="{StaticResource ConsoleApi}" />
+                <local:ToRightButton Style="{StaticResource ConsoleApi2}" />
+                <local:ToRightButton Style="{StaticResource ConsoleApi3}" />
+            </local:BasicBlockPanel>
+            
+            
+            
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

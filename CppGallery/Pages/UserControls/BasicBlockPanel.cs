@@ -9,26 +9,26 @@ namespace CppGallery.Pages.UserControls
 {
     public class BasicBlockPanel : ResultsPanel
     {
-        protected TextBlock _headText = new TextBlock();
+        private TextBlock HeadTextBlock { get; } = new TextBlock();
 
         public string HeadText
         {
-            get { return _headText.Text; }
-            set { _headText.Text = value; }
+            get { return HeadTextBlock.Text; }
+            set { HeadTextBlock.Text = value; }
         }
 
         public BasicBlockPanel()
         {
             ApplyIsCompact();
-            this.Children.Add(_headText);
+            this.Children.Add(HeadTextBlock);
         }
 
         private void ApplyIsCompact()
         {
-            _headText.FontWeight = new Windows.UI.Text.FontWeight(700);
+            HeadTextBlock.FontWeight = new Windows.UI.Text.FontWeight(700);
 
             this.Spacing = Data.ResultPanelSpacing;
-            _headText.FontSize = Data.TitleTextSize;
+            HeadTextBlock.FontSize = Data.TitleTextSize;
         }
     }
 }

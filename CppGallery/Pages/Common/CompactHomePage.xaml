@@ -88,7 +88,13 @@
                 <local:ResultsPanel x:Name="WindowsLibraryList">
                     <TextBlock Text="Windows ライブラリ"/>
                     <local:ToRightButton Style="{StaticResource ConIoh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource ConsoleApi}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource ConsoleApi2}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource ConsoleApi3}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource DwmAPI}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource ProcessEnv}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Windowsh}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinUserh}" InLibraryPage="True"/>
                 </local:ResultsPanel>
             </local:OuterPanel>
 

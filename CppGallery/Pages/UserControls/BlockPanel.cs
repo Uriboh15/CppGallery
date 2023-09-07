@@ -21,6 +21,7 @@ namespace CppGallery.Pages.UserControls
         ErrorReporting,
         Exception,
         Function,
+        FunctionAndMacro,
         GlobalstreamOjbect,
         Included,
         Including,
@@ -84,7 +85,7 @@ namespace CppGallery.Pages.UserControls
 
             if (this.IsDeclarationOnly)
             {
-                this._headText.Text += " (宣言のみ)";
+                this.HeadText += " (宣言のみ)";
             }
         }
 
@@ -95,99 +96,103 @@ namespace CppGallery.Pages.UserControls
             switch (this.Header)
             {
                 case PanelHeader.BaseClass:
-                    _headText.Text = "基底クラス";
+                    HeadText = "基底クラス";
                     break;
 
                 case PanelHeader.Class:
-                    _headText.Text = "クラス";
+                    HeadText = "クラス";
                     break;
 
                 case PanelHeader.Concepts:
-                    _headText.Text = "Concepts";
+                    HeadText = "Concepts";
                     break;
 
                 case PanelHeader.Constant:
-                    _headText.Text = "定数値";
+                    HeadText = "定数値";
                     break;
 
                 case PanelHeader.Constructor:
-                    _headText.Text = "コンストラクター";
+                    HeadText = "コンストラクター";
                     break;
 
                 case PanelHeader.DerivedClass:
-                    _headText.Text = "派生クラス";
+                    HeadText = "派生クラス";
                     break;
 
                 case PanelHeader.Enum:
-                    _headText.Text = "列挙型";
+                    HeadText = "列挙型";
                     break;
 
                 case PanelHeader.ErrorReporting:
-                    _headText.Text = "エラー報告";
+                    HeadText = "エラー報告";
                     break;
 
                 case PanelHeader.Exception:
-                    _headText.Text = "例外クラス";
+                    HeadText = "例外クラス";
                     break;
 
                 case PanelHeader.Function:
-                    _headText.Text = "関数";
+                    HeadText = "関数";
+                    break;
+
+                case PanelHeader.FunctionAndMacro:
+                    HeadText = "関数 ・ 関数マクロ";
                     break;
 
                 case PanelHeader.GlobalstreamOjbect:
-                    _headText.Text = "グローバルストリームオブジェクト";
+                    HeadText = "グローバルストリームオブジェクト";
                     break;
 
                 case PanelHeader.Included:
-                    _headText.Text = "このヘッダーを include しているライブラリ";
+                    HeadText = "このヘッダーを include しているライブラリ";
                     break;
 
                 case PanelHeader.Including:
-                    _headText.Text = "このヘッダーに含まれるライブラリ";
+                    HeadText = "このヘッダーに含まれるライブラリ";
                     break;
 
                 case PanelHeader.Literal:
-                    _headText.Text = "リテラル";
+                    HeadText = "リテラル";
                     break;
 
                 case PanelHeader.Macro:
-                    _headText.Text = "マクロ";
+                    HeadText = "マクロ";
                     break;
 
                 case PanelHeader.Manipulator:
-                    _headText.Text = "マニピュレーター";
+                    HeadText = "マニピュレーター";
                     break;
 
                 case PanelHeader.Method:
-                    _headText.Text = "メンバー関数";
+                    HeadText = "メンバー関数";
                     break;
 
                 case PanelHeader.Object:
-                    _headText.Text = "オブジェクト";
+                    HeadText = "オブジェクト";
                     break;
 
                 case PanelHeader.Operator:
-                    _headText.Text = "演算子";
+                    HeadText = "演算子";
                     break;
 
                 case PanelHeader.ReferenceURL:
-                    _headText.Text = "リファレンス";
+                    HeadText = "リファレンス";
                     break;
 
                 case PanelHeader.Specialization:
-                    _headText.Text = "特殊化";
+                    HeadText = "特殊化";
                     break;
 
                 case PanelHeader.StaticMethod:
-                    _headText.Text = "static メンバー関数";
+                    HeadText = "static メンバー関数";
                     break;
 
                 case PanelHeader.Struct:
-                    _headText.Text = "構造体";
+                    HeadText = "構造体";
                     break;
 
                 case PanelHeader.Typedefs:
-                    _headText.Text = "型名";
+                    HeadText = "型名";
                     break;
             }
 

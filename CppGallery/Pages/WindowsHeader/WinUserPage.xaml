@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.WinUserPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel HeaderType="Windows">
+            <local:BlockPanel Header="FunctionAndMacro" >
+                <local:FunctionExpander Folder="WinUser/CharLower" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/CharNext" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/CharPrev" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/CharUpper" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/CloseWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/EnableWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/GetCapture" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/GetClassName" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/GetDpiForSystem" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/GetDpiForWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/GetWindowRect" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/GetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/IsZoomed" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/MessageBeep" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/MessageBox" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="WinUser/MoveWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="WinUser/SetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -59,6 +59,7 @@
                 <local:FunctionExpander Folder="iostream/wcout" Icon="Object" />
             </local:BlockPanel>
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iostream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/iostream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

@@ -595,7 +595,7 @@ namespace CppGallery.Pages.UserControls
             GetOutput(fexpander, "一時的なエラーのため、結果を表示できません", rc);
         }
 
-        public static async void Execute(object element, string cmd, string errorMessage = "結果を表示するには何か入力してください...")
+        public static async void Execute(object element, string cmd, string errorMessage = "接続がタイムアウトしました")
         {
             if (Working)
             {
@@ -627,7 +627,7 @@ namespace CppGallery.Pages.UserControls
             Working = false;
         }
 
-        public async static void Execute(object element, string[] cmd, string errorMessage = "結果を表示するには何か入力してください...")
+        public async static void Execute(object element, string[] cmd, string errorMessage = "接続がタイムアウトしました")
         {
             if (Working)
             {

@@ -15,77 +15,92 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                <local:BasicBlockPanel HeadText="basic_string_view クラス" >
-                    <local:FunctionExpander Folder="string_view__basic_string_view/ends_with" />
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/find" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/find_first_not_of" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/find_first_of" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/find_last_not_of" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/find_last_of" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/remove_prefix" />
-                    <local:FunctionExpander Folder="string_view__basic_string_view/remove_suffix" />
-
-                    <local:FunctionExpander Folder="string_view__basic_string_view/rfind" >
-                        <local:TextBoxPane Message="文字列を検索" Text="6" />
-                    </local:FunctionExpander>
-
+                <local:BasicBlockPanel HeadText="ヘッダー" >
+                    <local:ToRightButton Style="{StaticResource ConsoleApi}" />
+                    <local:ToRightButton Style="{StaticResource ConsoleApi2}" />
+                    <local:ToRightButton Style="{StaticResource ConsoleApi3}" />
+                    <local:ToRightButton Style="{StaticResource ProcessEnv}" />
+                    <local:ToRightButton Style="{StaticResource Windowsh}" />
+                    <local:ToRightButton Style="{StaticResource WinUserh}" />
                 </local:BasicBlockPanel>
 
-                <local:BasicBlockPanel HeadText="&lt;dwmapi.h>" >
-                    <local:FunctionExpander Folder="dwmapi.h/DwmEnableComposition" >
-                        <local:FunctionExpander.Info>
-                            <InfoBar Style="{StaticResource ErrorInfo}" Message="この関数は Windows 8 以降では機能しません" />
-                        </local:FunctionExpander.Info>
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="dwmapi.h/DwmExtendFrameIntoClientArea" CodeLanguage="CppWin32" SampleType="GUIApp" />
+                <local:BasicBlockPanel HeadText="&lt;ConsoleApi.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi/ReadConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ConsoleApi/WriteConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                 </local:BasicBlockPanel>
 
-                <local:BasicBlockPanel HeadText="&lt;numeric>" >
-                    <local:FunctionExpander Folder="numeric/gcd" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="12" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
+                <local:BasicBlockPanel HeadText="&lt;ConsoleApi2.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi2/GetConsoleOriginalTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ConsoleApi2/GetConsoleTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ConsoleApi2/GetLargestConsoleWindowSize" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi2/SetConsoleCursorPosition" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi2/SetConsoleTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                     
+                    <local:FunctionExpander Folder="ConsoleApi2/SetConsoleTextAttribute" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                </local:BasicBlockPanel>
 
-                    <local:FunctionExpander Folder="numeric/inner_product" >
-                        <local:ResultsPanel Loaded="InnerProductOut_Loaded" >
-                            <local:ControlGrid Message="u.x" >
-                                <TextBox x:Name="InnerProductIn1" Text="2" TextChanging="InnerProductIn_TextChanging" />
+                <local:BasicBlockPanel HeadText="&lt;ConsoleApi3.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleProcessList" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleWindow" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi3/GetCurrentConsoleFont" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi3/GetNumberOfConsoleMouseButtons" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="path クラス" >
+                    <local:FunctionExpander Folder="filesystem__path/operator_string_type" Icon="Operator" />
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="&lt;ProcessEnv.h>" >
+                    <local:FunctionExpander Folder="ProcessEnv/FreeEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ProcessEnv/GetCommandLine" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentVariable" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ProcessEnv/GetStdHandle" CodeLanguage="CppWin32" SampleType="None" />
+
+                    <local:FunctionExpander Folder="ProcessEnv/SearchPath" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:ResultsPanel>
+                            <local:ControlGrid Message="フォルダを選択" >
+                                <StackPanel Spacing="16" Orientation="Horizontal">
+                                    <TextBlock x:Name="SearchPathTextBlock" Text="フォルダを選択してください" FontSize="12" Foreground="#808080" />
+                                    <Button x:Name="SearchPathButton" Content="選択" Width="65" Click="SearchPathButton_Click" />
+                                </StackPanel>
+
                             </local:ControlGrid>
-                            <local:ControlGrid Message="u.y" >
-                                <TextBox x:Name="InnerProductIn2" Text="3" TextChanging="InnerProductIn_TextChanging" />
+
+                            <local:ControlGrid Message="検索するファイル名" >
+                                <TextBox x:Name="SearchPathFileNameTextBox" Text="notepad" />
                             </local:ControlGrid>
-                            <local:ControlGrid Message="y.x" >
-                                <TextBox x:Name="InnerProductIn3" Text="4" TextChanging="InnerProductIn_TextChanging" />
+
+                            <local:ControlGrid Message="ファイル名拡張子(任意)" >
+                                <TextBox x:Name="SearchPathExtensionTextBox" Text=".exe" />
                             </local:ControlGrid>
-                            <local:ControlGrid Message="y.u" >
-                                <TextBox x:Name="InnerProductIn4" Text="5" TextChanging="InnerProductIn_TextChanging" />
+
+                            <local:ControlGrid Message="検索開始" >
+                                <Button x:Name="GetEnvironmentVariableStartButton" Content="検索" Width="65" Click="GetEnvironmentVariableStartButton_Click" />
                             </local:ControlGrid>
                         </local:ResultsPanel>
                     </local:FunctionExpander>
+                </local:BasicBlockPanel>
 
-                    <local:FunctionExpander Folder="numeric/iota" AutoFunc="False" />
 
-                    <local:FunctionExpander Folder="numeric/lcm" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="13" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
+                <local:BasicBlockPanel HeadText="&lt;WinUser.h>" >
+                    <local:FunctionExpander Folder="WinUser/CharLower" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/CharNext" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/CharPrev" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/CharUpper" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/CloseWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/EnableWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/GetCapture" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/GetClassName" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/GetDpiForSystem" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/GetDpiForWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/GetWindowRect" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/GetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/IsZoomed" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/MessageBeep" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/MessageBox" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/MoveWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/SetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
                 </local:BasicBlockPanel>
 
             </local:OuterPanel>

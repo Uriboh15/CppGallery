@@ -58,6 +58,8 @@
                 
             </local:BlockPanel>
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iosfwd?view=msvc-170" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

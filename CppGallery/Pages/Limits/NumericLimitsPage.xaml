@@ -146,8 +146,8 @@
                     </Expander.Header>
                 </local:CustomExpander>
             </local:BlockPanel>
-            
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/numeric-limits-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/limits/numeric_limits.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

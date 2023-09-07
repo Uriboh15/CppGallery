@@ -260,6 +260,33 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="ConsoleApi" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ConsoleApi.h>" />
+        <Setter Property="Sentence" Value="コンソール画面の操作" />
+        <Setter Property="PageTag" Value="4ConsoleApi"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ConsoleApi2" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ConsoleApi2.h>" />
+        <Setter Property="Sentence" Value="コンソール画面の操作" />
+        <Setter Property="PageTag" Value="4ConsoleApi2h"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="ConsoleApi3" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ConsoleApi3.h>" />
+        <Setter Property="Sentence" Value="コンソール画面の操作" />
+        <Setter Property="PageTag" Value="4ConsoleApi3h"/>
+        <Setter Property="Icon" Value="&#xE756;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="Ctypeh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;ctype.h>" />
         <Setter Property="Sentence" Value="文字の種類に関する機能" />
@@ -644,6 +671,15 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="ProcessEnv" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ProcessEnv.h>" />
+        <Setter Property="Sentence" Value="環境設定" />
+        <Setter Property="PageTag" Value="4ProcessEnv"/>
+        <Setter Property="Icon" Value="&#xF16E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="Queue" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;queue>" />
         <Setter Property="Sentence" Value="コンテナクラスのキュー" />
@@ -1008,5 +1044,22 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="Windowsh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;Windows.h>" />
+        <Setter Property="Sentence" Value="Windows API" />
+        <Setter Property="PageTag" Value="4Windows"/>
+        <Setter Property="Icon" Value="&#xE8A9;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinUserh" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;WinUser.h>" />
+        <Setter Property="Sentence" Value="様々な Windows API" />
+        <Setter Property="PageTag" Value="4WinUser"/>
+        <Setter Property="Icon" Value="&#xE8F1;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
 
 </ResourceDictionary>

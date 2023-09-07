@@ -39,7 +39,7 @@
 
                 <local:FunctionExpander Folder="filesystem__path/operatorPlusE" Icon="Operator" />
                 <local:FunctionExpander Folder="filesystem__path/operatorWARUE" Icon="Operator" />
-                <local:FunctionExpander Folder="filesystem__path/operator_string_type" Icon="Operator" IsEnabled="False" />
+                <local:FunctionExpander Folder="filesystem__path/operator_string_type" Icon="Operator" />
             </local:BlockPanel>
 
             

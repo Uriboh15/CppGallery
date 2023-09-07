@@ -86,6 +86,11 @@
 		<None Remove="Pages\Concepts\ConceptsPage.xaml" />
 		<None Remove="Pages\Deque\DequeClassPage.xaml" />
 		<None Remove="Pages\Deque\DequePage.xaml" />
+		<None Remove="Pages\TypeIndex\TypeIndexClassPage.xaml" />
+		<None Remove="Pages\TypeIndex\TypeInfoPage.xaml" />
+		<None Remove="Pages\WindowsHeader\ConsoleApi2Page.xaml" />
+		<None Remove="Pages\WindowsHeader\ConsoleApi3Page.xaml" />
+		<None Remove="Pages\WindowsHeader\ConsoleApiPage.xaml" />
 		<None Remove="Pages\WindowsHeader\DwmAPI\DwmAPIPage.xaml" />
 		<None Remove="Pages\WindowsHeader\DwmAPI\DwmSetWindowAttributePage.xaml" />
 		<None Remove="Pages\FileSystem\DirectoryIteratorPage.xaml" />
@@ -177,6 +182,9 @@
 		<None Remove="Pages\ValArray\ValArrayPage.xaml" />
 		<None Remove="Pages\Vector\VectorClassPage.xaml" />
 		<None Remove="Pages\Vector\VectorPage.xaml" />
+		<None Remove="Pages\WindowsHeader\ProcessEnvPage.xaml" />
+		<None Remove="Pages\WindowsHeader\WindowshPage.xaml" />
+		<None Remove="Pages\WindowsHeader\WinUserPage.xaml" />
 		<None Remove="ReleaseNote.xaml" />
 		<None Remove="SettingsPage.xaml" />
 		<None Remove="UpdatedPage.xaml" />
@@ -203,7 +211,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.3.230724000" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230822000" />
 		<Manifest Remove="app.manifest" />
 		<Manifest Include="$(ApplicationManifest)" />
 	</ItemGroup>
@@ -233,6 +241,30 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WindowsHeader\WinUserPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\WindowshPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\ProcessEnvPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\ConsoleApi3Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\ConsoleApi2Page.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\ConsoleApiPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\TypeIndex\TypeIndexClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\TypeIndex\TypeInfoPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\DwmAPI\DwmSetWindowAttributePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

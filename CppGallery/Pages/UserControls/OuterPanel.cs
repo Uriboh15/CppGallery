@@ -18,6 +18,7 @@ namespace CppGallery.Pages.UserControls
         WinRT,
         NonStandardC,
         NonStandardCpp,
+        WindowsFunction,
     }
 
     public class OuterPanel : StackPanel

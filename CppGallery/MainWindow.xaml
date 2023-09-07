@@ -56,7 +56,7 @@
                     </TabView.TabStripHeader>
                 </TabView>
 
-                <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="3" SizeChanged="AppTitleBar_SizeChanged" />
+                <Border x:Name="DraggableArea" BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="3" SizeChanged="DraggableArea_SizeChanged" />
                 <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="4" />
                 <Border BorderBrush="{StaticResource TabViewBorderBrush}" BorderThickness="0,0,0,1" Grid.Column="5" />
 

@@ -65,7 +65,8 @@
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/istream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/istream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

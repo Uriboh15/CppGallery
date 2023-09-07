@@ -104,6 +104,12 @@ namespace CppGallery.Pages
             {typeof(Limits.LimitsPage), "3limits"},    //未完成
             {typeof(Limits.NumericLimitsPage), "3numeric_limits0"},    //未完成
             {typeof(WindowsHeader.ConiohPage), "4conioh"},    //未完成
+            {typeof(WindowsHeader.ConsoleApiPage), "4ConsoleApi" },
+            {typeof(WindowsHeader.ConsoleApi2Page), "4ConsoleApi2h" },
+            {typeof(WindowsHeader.ConsoleApi3Page), "4ConsoleApi3h" },
+            {typeof(WindowsHeader.ProcessEnvPage), "4ProcessEnv" },
+            {typeof(WindowsHeader.WindowshPage), "4Windows" },
+            {typeof(WindowsHeader.WinUserPage), "4WinUser" },
             {typeof(BitSet.BitSetPage), "5bitset"},    //未完成
             {typeof(BitSet.BitSetClassPage), "5bitset0"},    //未完成
             {typeof(StrStream.StrStreamPage), "6strstream"},    //未完成
@@ -246,6 +252,12 @@ namespace CppGallery.Pages
             {"3limits", "<limits>"},
             {"3numeric_limits0", "numeric_limits クラス"},
             {"4conioh", "<conio.h>"},
+            {"4ConsoleApi", "<ConsoleApi.h>"},
+            {"4ConsoleApi2h", "<ConsoleApi2.h>"},
+            {"4ConsoleApi3h", "<ConsoleApi3.h>"},
+            {"4ProcessEnv", "<ProcessEnv.h>" },
+            {"4Windows", "<Windows.h>" },
+            {"4WinUser", "<WinUser.h>" },
             {"5bitset", "<bitset>"},
             {"5bitset0", "bitset クラス"},
             {"6strstream", "<strstream>"},
@@ -900,6 +912,47 @@ namespace CppGallery.Pages
             { "_kbhit()  <conio.h>", "4conioh"},
             { "_putch()  <conio.h>", "4conioh"},
             { "_ungetch()  <conio.h>", "4conioh"},
+            { "<ConsoleApi.h>", "4ConsoleApi"},
+            { "ReadConsole()  <ConsoleApi.h>", "4ConsoleApi"},
+            { "WriteConsole()  <ConsoleApi.h>", "4ConsoleApi"},
+            { "<ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "GetConsoleTitle()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "GetConsoleOriginalTitle()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "GetLargestConsoleWindowSize()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "SetConsoleCursorPosition()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "SetConsoleTextAttribute()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "SetConsoleTitle()  <ConsoleApi2.h>", "4ConsoleApi2h"},
+            { "<ConsoleApi3.h>", "4ConsoleApi3h"},
+            { "GetConsoleProcessList()  <ConsoleApi3.h>", "4ConsoleApi3h"},
+            { "GetConsoleWindow()  <ConsoleApi3.h>", "4ConsoleApi3h"},
+            {"GetCurrentConsoleFont()  <ConsoleApi3.h>", "4ConsoleApi3h" },
+            {"GetNumberOfConsoleMouseButtons()  <ConsoleApi3.h>", "4ConsoleApi3h" },
+            {"<ProcessEnv.h>", "4ProcessEnv" },
+            {"FreeEnvironmentStrings()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"GetCommandLine()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"GetEnvironmentStrings()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"GetEnvironmentVariable()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"GetStdHandle()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"SearchPath()  <ProcessEnv.h>", "4ProcessEnv" },
+            {"<Windows.h>", "4Windows" },
+            { "<WinUser.h>", "4WinUser" },
+            { "CharLower()  <WinUser.h>", "4WinUser" },
+            { "CharNext()  <WinUser.h>", "4WinUser" },
+            { "CharPrev()  <WinUser.h>", "4WinUser" },
+            { "CharUpper()  <WinUser.h>", "4WinUser" },
+            { "CloseWindow()  <WinUser.h>", "4WinUser" },
+            { "EnableWindow()  <WinUser.h>", "4WinUser" },
+            { "GetCapture()  <WinUser.h>", "4WinUser" },
+            { "GetClassName()  <WinUser.h>", "4WinUser" },
+            { "GetDpiForSystem()  <WinUser.h>", "4WinUser" },
+            { "GetDpiForWindow()  <WinUser.h>", "4WinUser" },
+            { "GetWindowRect()  <WinUser.h>", "4WinUser" },
+            { "GetWindowText()  <WinUser.h>", "4WinUser" },
+            { "IsZoomed()  <WinUser.h>", "4WinUser" },
+            { "MessageBeep()  <WinUser.h>", "4WinUser" },
+            { "MessageBox()  <WinUser.h>", "4WinUser" },
+            { "MoveWindow()  <WinUser.h>", "4WinUser" },
+            { "SetWindowText()  <WinUser.h>", "4WinUser" },
             { "<bitset>", "5bitset"},
             { "operator&amp;  <bitset>", "5bitset"},
             { "operator&lt;&lt;  <bitset>", "5bitset"},
@@ -2212,20 +2265,21 @@ namespace CppGallery.Pages
                 var splitText = sender.Text.ToLower();
                 foreach (var cat in dictionary)
                 {
-                    if (cat.Key.StartsWith(splitText))
+                    if (cat.Key.ToLower().StartsWith(splitText))
                     {
                         suitableItems.Add(cat.Key);
                     }
                 }
                 foreach (var cat in dictionary)
                 {
-                    if (cat.Key.Contains(splitText))
+                    if (cat.Key.ToLower().Contains(splitText))
                     {
                         if (!suitableItems.Contains(cat.Key))
                         {
                             suitableItems.Add(cat.Key);
+                            
                         }
-                        
+                        continue;
                     }
                 }
                 if (suitableItems.Count == 0)

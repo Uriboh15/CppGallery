@@ -53,11 +53,12 @@ namespace CppGallery
         private int CreateTabCount = 0;
         public static MainWindow Handle { get; private set; }
         private IntPtr _hWnd { get; set; }
+        public IntPtr HWnd => _hWnd;
         public static bool WindowClosed { get; set; } = false;
         public IList<object> TabChildren => Tab.TabItems;
         public UIElementCollection Children => MainFrame.Children;
         double Scaling;
-        private new AppWindow AppWindow { get; set; }
+        private AppWindow OldAppWindow { get; set; }
 
         [DllImport("User32.dll")]
         private static extern int IsZoomed(IntPtr hWnd);
@@ -75,7 +76,7 @@ namespace CppGallery
         [DllImport("dwmapi.dll")]
         public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
-        
+
 
         //mica
         WindowsSystemDispatcherQueueHelper wsdqHelper;
@@ -102,12 +103,12 @@ namespace CppGallery
             //int value = 1;
             //_ = DwmSetWindowAttribute(_hWnd, 20, ref value , sizeof(int));
             SetIsCompact();
-            AppWindow = AppWindow.GetFromWindowId(Win32Interop.GetWindowIdFromWindow(_hWnd));
+            OldAppWindow = AppWindow.GetFromWindowId(Win32Interop.GetWindowIdFromWindow(_hWnd));
             Handle = this;
-            AppWindow.Title = "C++ Library Gallery";
+            OldAppWindow.Title = "C++ Library Gallery";
             SetTitleBarColors(App.Theme);
             InitializeTheme();
-            AppWindow.SetIcon("Pages/Assets/Square150x150Logo.scale-200.ico");
+            OldAppWindow.SetIcon("Pages/Assets/Square150x150Logo.scale-200.ico");
             AddTab();
             this.SizeChanged += Window_SizeChanged;
             //_ = SetWindowLongPtrW(_hWnd, -16, 0x00040000L | 0x00020000L | 0x00C00000L | 0x00800000L | 0x00080000L | 0x00010000L);
@@ -203,7 +204,7 @@ namespace CppGallery
         public void InitializeTheme()
         {
 
-            var titleBar = AppWindow.TitleBar;
+            var titleBar = OldAppWindow.TitleBar;
             titleBar.ExtendsContentIntoTitleBar = true;
 
 
@@ -269,7 +270,7 @@ namespace CppGallery
         private void ContentFrame_ActualThemeChanged(FrameworkElement sender, object args)
         {
 
-            var titleBar = AppWindow.TitleBar;
+            var titleBar = OldAppWindow.TitleBar;
             switch (Dodai.ActualTheme)
             {
                 case ElementTheme.Light:
@@ -583,7 +584,7 @@ namespace CppGallery
             }
         }
 
-        
+
 
 
         private void SetDragRegionForCustomTitleBar(AppWindow appWindow)
@@ -628,9 +629,9 @@ namespace CppGallery
 
         }
 
-        private void AppTitleBar_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void DraggableArea_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            SetDragRegionForCustomTitleBar(AppWindow);
+            SetDragRegionForCustomTitleBar(OldAppWindow);
         }
 
         public void OpenSettings()

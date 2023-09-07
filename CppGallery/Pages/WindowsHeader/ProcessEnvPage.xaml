@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.ProcessEnvPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="Windows" >
+            <local:BlockPanel Header="FunctionAndMacro">
+                <local:FunctionExpander Folder="ProcessEnv/FreeEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="ProcessEnv/GetCommandLine" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentVariable" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="ProcessEnv/GetStdHandle" CodeLanguage="CppWin32" SampleType="None" />
+
+                <local:FunctionExpander Folder="ProcessEnv/SearchPath" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:ResultsPanel>
+                        <local:ControlGrid Message="フォルダを選択" >
+                            <StackPanel Spacing="16" Orientation="Horizontal">
+                                <TextBlock x:Name="SearchPathTextBlock" Text="フォルダを選択してください" FontSize="12" Foreground="#808080" />
+                                <Button x:Name="SearchPathButton" Content="選択" Width="65" Click="SearchPathButton_Click" />
+                            </StackPanel>
+                            
+                        </local:ControlGrid>
+
+                        <local:ControlGrid Message="検索するファイル名" >
+                            <TextBox x:Name="SearchPathFileNameTextBox" Text="notepad" />
+                        </local:ControlGrid>
+
+                        <local:ControlGrid Message="ファイル名拡張子(任意)" >
+                            <TextBox x:Name="SearchPathExtensionTextBox" Text=".exe" />
+                        </local:ControlGrid>
+                        
+                        <local:ControlGrid Message="検索開始" >
+                            <Button x:Name="GetEnvironmentVariableStartButton" Content="検索" Width="65" Click="GetEnvironmentVariableStartButton_Click" />
+                        </local:ControlGrid>
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/processenv/" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

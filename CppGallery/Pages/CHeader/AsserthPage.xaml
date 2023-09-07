@@ -10,9 +10,13 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Macro" >
+            <local:BasicBlockPanel HeadText="関数マクロ" >
                 <local:FunctionExpander Folder="assert.h/assert" SampleType="None" CodeLanguage="C" Icon="Macro" />
-            </local:BlockPanel>
+            </local:BasicBlockPanel>
+
+            <local:MacroPanel Folder="assert.h" >
+                <local:ItemGrid Title="static_assert" Sentence="コンパイル時診断" />
+            </local:MacroPanel>
 
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/cassert.html" />
         </local:OuterPanel>

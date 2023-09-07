@@ -27,7 +27,7 @@ namespace CppGallery.Pages.Columns.Column22
     /// </summary>
     public sealed partial class Column22Window : Window
     {
-        AppWindow AppWindow { get; set; }
+        private new AppWindow AppWindow { get; set; }
         IntPtr hWnd { get; set; }
         private int Count = 0;
 

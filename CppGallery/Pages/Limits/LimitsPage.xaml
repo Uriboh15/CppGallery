@@ -25,21 +25,13 @@
                     <Expander.Header>
                         <local:EHeader Title="float_denorm_style" Sentence="aaa" Icon="&#xEA86;"/>
                     </Expander.Header>
-                    <Expander.Content>
-                        <StackPanel>
-
-                        </StackPanel>
-                    </Expander.Content>
+                    
                 </local:CustomExpander>
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="float_round_style" Sentence="aaa" Icon="&#xEA86;"/>
                     </Expander.Header>
-                    <Expander.Content>
-                        <StackPanel>
-
-                        </StackPanel>
-                    </Expander.Content>
+                    
                 </local:CustomExpander>
             </local:BlockPanel>
 
@@ -67,7 +59,8 @@
                 <local:ItemGrid Title="numeric_limits&lt;char16_t>" Sentence="numeric_limits を char16_t に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;char32_t>" Sentence="numeric_limits を char32_t に特殊化した型"/>
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/limits?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/limits.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

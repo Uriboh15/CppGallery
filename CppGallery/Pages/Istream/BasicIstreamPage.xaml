@@ -108,7 +108,8 @@
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicIStringStreamClass}" />
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-istream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/istream/basic_istream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>
