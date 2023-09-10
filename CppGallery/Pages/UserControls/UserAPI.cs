@@ -18,6 +18,11 @@ namespace CppGallery.Pages.UserControls
         [DllImport("Shcore.dll", SetLastError = true)]
         internal static extern int GetDpiForMonitor(IntPtr hmonitor, Monitor_DPI_Type dpiType, out uint dpiX, out uint dpiY);
 
+        public static CppVersion MaxCppVersion => CppVersion.Cpp23;
+        public static CppVersion MinCppVersion => CppVersion.Cpp14;
+        public static CVersion MaxCVersion => CVersion.C23;
+        public static CVersion MinCVersion => CVersion.C11;
+
         public static void ToCompactForResources(Page page, NavigationView navView, FrameworkElement frame)
         {
             if (App.IsCompact)
@@ -60,9 +65,10 @@ namespace CppGallery.Pages.UserControls
 
         public static string GetExeName(string exeName, bool isCSample)
         {
+            if (!isCSample || App.UseCppInCSample) exeName += "-Cpp" + ((int)App.CppVersion).ToString();
+            else exeName += "-C" + ((int)App.CVersion).ToString();
             if (App.Compiler == Compiler.GCC) exeName += "-GCC";
             if (App.ProcesserType == ProcesserType.x86) exeName += "-x86";
-            if (!isCSample || App.UseCppInCSample) exeName += "-Cpp";
 
             return exeName;
         }

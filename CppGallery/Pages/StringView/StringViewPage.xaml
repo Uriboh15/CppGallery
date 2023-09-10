@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel >
+        <local:OuterPanel TargetMinCppVersion="Cpp17" >
             <local:BlockPanel Header="Typedefs" >
                 <local:ItemGrid Title="string_view" Sentence="basic_string_view を char に特殊化した型" />
                 <local:ItemGrid Title="wstring_view" Sentence="basic_string_view を wchar_t に特殊化した型" />

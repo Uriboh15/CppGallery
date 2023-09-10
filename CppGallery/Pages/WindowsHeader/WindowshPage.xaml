@@ -10,6 +10,8 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="Windows" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BasicBlockPanel HeadText="一般ユーティリティ" >
                 <local:ToRightButton Style="{StaticResource WinUserh}" />
             </local:BasicBlockPanel>

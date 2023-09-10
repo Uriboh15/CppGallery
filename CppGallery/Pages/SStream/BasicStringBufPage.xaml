@@ -12,7 +12,9 @@
 
     <ScrollViewer>
         <local:CustomPanel>
-            <TextBlock Style="{StaticResource Extend}"/>
+            <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
+            
+            <TextBlock Style="{StaticResource Extend}" Margin="0,56,0,0"/>
             <local:ToRightButton Style="{StaticResource BasicStreamBufClass}" />
 
             <TextBlock Text="コンストラクター" Style="{StaticResource Title}" Margin="0,56,0,0"/>
@@ -20,18 +22,6 @@
                 <Expander.Header>
                     <local:EHeader Title="basic_stringbuf()" Sentence="basic_stringbuf 型のオブジェクトを構築します"/>
                 </Expander.Header>
-                <Expander.Content>
-                    <StackPanel>
-                        <local:CodeButton/>
-                        <TextBlock Text="出力" Margin="0,30,0,0"/>
-                        <local:InnerGrid>
-                            <TextBlock>
-                                    工業数学の理解度は0です<LineBreak/>
-                                    1cmは0.01mです
-                            </TextBlock>
-                        </local:InnerGrid>
-                    </StackPanel>
-                </Expander.Content>
             </local:CustomExpander>
 
             <TextBlock Text="Typedefs" Style="{StaticResource Title}" Margin="0,56,0,0"/>

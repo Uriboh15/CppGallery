@@ -48,30 +48,6 @@ namespace CppGallery.Pages
         }
 
 
-        bool SearchPathWorking = false;
-
-        private async void SearchPathButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (SearchPathWorking) return;
-            SearchPathWorking = true;
-
-            Windows.Storage.Pickers.FolderPicker Picker = new Windows.Storage.Pickers.FolderPicker();
-            Picker.FileTypeFilter.Add("*");
-            InitializeWithWindow.Initialize(Picker, WindowNative.GetWindowHandle(MainWindow.Handle));
-
-            Windows.Storage.StorageFolder folder = await Picker.PickSingleFolderAsync();
-
-            if (folder != null)
-            {
-                SearchPathTextBlock.Text = folder.Path;
-            }
-
-            SearchPathWorking = false;
-        }
-
-        private void GetEnvironmentVariableStartButton_Click(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, new string[] { SearchPathTextBlock.Text, SearchPathFileNameTextBox.Text, SearchPathExtensionTextBox.Text });
-        }
+        
     }
 }

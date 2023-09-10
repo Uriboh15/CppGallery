@@ -906,7 +906,7 @@
 
             <local:MacroPanel Folder="math.h" >
                 <local:ItemGrid Title="HUGE_VAL" Sentence="無限大"/>
-                <InfoBar IsOpen="True" IsIconVisible="True" Severity="Warning" IsClosable="False" Title="注意" Message="Visual Studioで以下に示す数学定数を使用するにはソースファイルの最上部に  #define _USE_MATH_DEFINES  を付け加えてください"/>
+                <InfoBar IsOpen="True" IsIconVisible="True" Severity="Warning" IsClosable="False" Title="注意" Message="C++ で以下に示す数学定数を使用するにはソースファイルの最上部に  #define _USE_MATH_DEFINES  を付け加えてください"/>
                 <local:ItemGrid Title="M_E" Sentence="オイラー数 e" />
                 <local:ItemGrid Title="M_LOG2E" Sentence="log2 (e)" />
                 <local:ItemGrid Title="M_LOG10E" Sentence="log10 (e)" />

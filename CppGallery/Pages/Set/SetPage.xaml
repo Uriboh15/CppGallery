@@ -10,6 +10,7 @@
 
     <ScrollViewer >
         <local:OuterPanel >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:BlockPanel Header="Operator">
                 <local:FunctionExpander Folder="set/operatorNE" Icon="Operator" />
@@ -26,7 +27,10 @@
             
             <local:BlockPanel Header="Class" >
                 <local:ToRightButton Style="{StaticResource SetClass}" />
+                <local:ToRightButton Style="{StaticResource MultiSetClass}" />
             </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/set?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/set.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

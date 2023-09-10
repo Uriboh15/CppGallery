@@ -10,6 +10,8 @@
 
     <ScrollViewer>
         <local:OuterPanel HeaderType="Windows">
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="FunctionAndMacro" >
                 <local:FunctionExpander Folder="WinUser/CharLower" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="WinUser/CharNext" CodeLanguage="CppWin32" Icon="Macro" />

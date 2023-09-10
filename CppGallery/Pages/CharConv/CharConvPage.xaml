@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp17">
             <local:BlockPanel Header="Function" >
                 <local:FunctionExpander Folder="charconv/from_chars" >
                     <local:ResultsPanel >

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Globalization;
 using System.Reflection.PortableExecutable;
 using Windows.Devices.Enumeration;
+using Microsoft.VisualBasic;
 
 namespace CppGallery.Pages.UserControls
 {
@@ -131,7 +132,10 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(InfoProperty, value); }
         }
 
-        public WinVer TargetMinVersion { get; set; } = WinVer.Win10;
+        public WinVer TargetMinWinVersion { get; set; } = WinVer.Win10;
+
+        public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
+        public CVersion TargetMinCVersion { get; set; } = UserAPI.MinCVersion;
 
         private string _text;
 
@@ -217,10 +221,52 @@ namespace CppGallery.Pages.UserControls
             }
         }
 
+        private static InfoBar GetVersionErrorInfoBar(string language, int MinVersion = -1)
+        {
+            var infoBar = new InfoBar
+            {
+                IsClosable = false,
+                IsOpen = true,
+                Severity = InfoBarSeverity.Error,
+                Message = "このサンプルを使用するには " + language + MinVersion.ToString() + (MinVersion < (int)UserAPI.MaxCppVersion ? " 以降" : " ") + "が必要です",
+            };
+
+
+            return infoBar;
+        }
+
         private void FunctionExpander_Expanding(Expander sender, ExpanderExpandingEventArgs args)
         {
             if (!IsContentLoaded)
             {
+                InfoBar infoBar = null;
+                switch (CodeLanguage)
+                {
+                    //言語バージョン確認
+                    case CodeLanguage.C:
+                        if (App.UseCppInCSample)
+                        {
+                            if ((int)App.CppVersion < (int)TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCVersion);
+                        }
+                        else
+                        {
+                            if(App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
+                        }
+
+                        break;
+
+                    case CodeLanguage.Cpp:
+                        if (App.CppVersion < TargetMinCppVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCppVersion);
+                        break;
+                }
+
+                if(infoBar != null)
+                {
+                    base.Content = infoBar;
+                    IsContentLoaded = true;
+                    return;
+                }
+
                 ResultsPanel panel1 = new ResultsPanel();
                 TextBlock title1 = new TextBlock();
                 var defpanel = SetDefinition();
@@ -284,7 +330,7 @@ namespace CppGallery.Pages.UserControls
                         launchButton.Click += ExeButton_Click;
                         ControlGrid cgrid = new ControlGrid { Content = launchButton };
                         cgrid.Message = LaunchAppMessage;
-                        BlockOldSystemPane pane = new BlockOldSystemPane { MinimumVersion = this.TargetMinVersion };
+                        BlockOldSystemPane pane = new BlockOldSystemPane { MinimumVersion = this.TargetMinWinVersion };
                         pane.Content = cgrid;
 
                         panel1.Children.Add(pane);
@@ -448,20 +494,60 @@ namespace CppGallery.Pages.UserControls
 
         private void FunctionExpander_Loaded(object sender, RoutedEventArgs e)
         {
-            SampleName = UserAPI.GetExeName(CodeLanguage == CodeLanguage.C);
-            CodeName = App.UseCppInCSample && this.CodeLanguage == CodeLanguage.C ? "/CodeCpp.txt" : "/Code.txt";
 
-            //すべての項目がC++に対応したら消す
-#if true
-            if(CodeName == "/CodeCpp.txt")
+            SampleName = UserAPI.GetExeName(CodeLanguage == CodeLanguage.C);
+            CodeName = App.UseCppInCSample && this.CodeLanguage == CodeLanguage.C ? "/CodeCpp.txt" : "/Code" + ((int)App.CVersion).ToString() + ".txt";
+
+            if(CodeLanguage == CodeLanguage.C)
             {
-                if(!File.Exists(Data.DefaultSamplePath + Folder + CodeName))
-                {
-                    CodeName = "/Code.txt";
-                }
+                if (App.UseCppInCSample) CodeName = "/CodeCpp" + ((int)App.CppVersion).ToString() + ".txt";
+                else CodeName = "/Code" + ((int)App.CVersion).ToString() + ".txt";
+            }
+            else
+            {
+                CodeName = "/Code" + ((int)App.CppVersion).ToString() + ".txt";
             }
 
-#endif
+            //各バージョン専用のソースコードが見つからない場合は別のバージョンのファイルを選択
+            if (CodeLanguage == CodeLanguage.C)
+            {
+
+
+                if (App.UseCppInCSample)
+                {
+                    var cppversion = App.CppVersion;
+                    while (cppversion > UserAPI.MinCppVersion)
+                    {
+                        if (File.Exists(Data.DefaultSamplePath + Folder + CodeName)) break;
+                        --cppversion;
+                        CodeName = "/CodeCpp" + ((int)cppversion).ToString() + ".txt";
+                    }
+                }
+                else
+                {
+                    var cversion = App.CVersion;
+                    while (cversion > UserAPI.MinCVersion)
+                    {
+                        if (File.Exists(Data.DefaultSamplePath + Folder + CodeName)) break;
+                        --cversion;
+                        CodeName = "/Code" + ((int)cversion).ToString() + ".txt";
+                    }
+
+                }
+
+            }
+            else
+            {
+                var version = App.CppVersion;
+                while (version > UserAPI.MinCppVersion)
+                {
+                    if (File.Exists(Data.DefaultSamplePath + Folder + CodeName)) break;
+                    --version;
+                    CodeName = "/Code" + ((int)version).ToString() + ".txt";
+                }
+
+
+            }
 
             StreamReader sr = new StreamReader(Data.DefaultSamplePath + Folder + "/Def.txt");
             Lines = sr.ReadToEnd().Split('\n');

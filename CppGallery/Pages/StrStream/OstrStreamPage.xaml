@@ -15,6 +15,7 @@
             <local:ResultsPanel>
                 <InfoBar Style="{StaticResource NotRecommendedClass}"/>
                 <InfoBar Style="{StaticResource NotRecommendedClassGCC}" />
+                <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             </local:ResultsPanel>
             
             <local:BlockPanel Header="BaseClass" >

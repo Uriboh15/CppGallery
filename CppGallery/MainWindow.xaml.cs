@@ -310,6 +310,8 @@ namespace CppGallery
             buf[7] = (byte)App.ProcesserType;
             buf[8] = (byte)(App.UseCppInCSample ? 1 : 0);
             buf[9] = (byte)(App.IsShowReturnCode ? 1 : 0);
+            buf[10] = (byte)App.CppVersion;
+            buf[11] = (byte)App.CVersion;
 
             fs.Write(buf, 0, App.SettingsLen);
             fs.Close();

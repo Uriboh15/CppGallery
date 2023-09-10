@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp17" >
             <local:BlockPanel Header="Constructor">
                 <local:FunctionExpander Folder="string_view__basic_string_view/basic_string_view" AutoFunc="False" />
             </local:BlockPanel>
@@ -51,7 +51,7 @@
                 <local:FunctionExpander Folder="string_view__basic_string_view/data" />
                 <local:FunctionExpander Folder="string_view__basic_string_view/empty" />
                 <local:FunctionExpander Folder="string_view__basic_string_view/end" />
-                <local:FunctionExpander Folder="string_view__basic_string_view/ends_with" />
+                <local:FunctionExpander Folder="string_view__basic_string_view/ends_with" TargetMinCppVersion="Cpp20" />
 
                 <local:FunctionExpander Folder="string_view__basic_string_view/find" >
                     <local:TextBoxPane Message="文字列を検索" Text="6" />
@@ -86,7 +86,7 @@
                 </local:FunctionExpander>
                 
                 <local:FunctionExpander Folder="string_view__basic_string_view/size" />
-                <local:FunctionExpander Folder="string_view__basic_string_view/starts_with" />
+                <local:FunctionExpander Folder="string_view__basic_string_view/starts_with" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="string_view__basic_string_view/substr" />
                 <local:FunctionExpander Folder="string_view__basic_string_view/swap" />
             </local:BlockPanel>

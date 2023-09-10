@@ -14,10 +14,8 @@
         <TextBlock x:Name="ErrorText" Text="更新された項目はありません" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
-
-                <local:BasicBlockPanel HeadText="&lt;cstring>" >
-                    <local:FunctionExpander Folder="string.h/memchr" CodeLanguage="C" />
-                </local:BasicBlockPanel>
+                
+                
 
             </local:OuterPanel>
         </ScrollViewer>

@@ -10,6 +10,8 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="Windows" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="FunctionAndMacro">
                 <local:FunctionExpander Folder="ProcessEnv/FreeEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ProcessEnv/GetCommandLine" CodeLanguage="CppWin32" Icon="Macro" />
@@ -40,6 +42,8 @@
                         </local:ControlGrid>
                     </local:ResultsPanel>
                 </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ProcessEnv/SetEnvironmentVariable" CodeLanguage="CppWin32" SampleType="None" Icon="Macro" />
             </local:BlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/processenv/" />

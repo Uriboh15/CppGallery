@@ -10,6 +10,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="Typedefs" >
                 <local:ItemGrid Title="false_type" Sentence="false の bool 定数値" Value="integral_constant&lt;bool, false>" />
                 <local:ItemGrid Title="true_type" Sentence="true の bool 定数値" Value="integral_constant&lt;bool, true>" />

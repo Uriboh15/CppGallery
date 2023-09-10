@@ -12,6 +12,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
+            
             <local:BlockPanel Header="BaseClass" >
                 <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
             </local:BlockPanel>
@@ -53,7 +55,8 @@
                 <local:ToRightButton Style="{StaticResource BasicOStringStreamClass}" />
                 <local:ToRightButton Style="{StaticResource OStrStreamClass}" />
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ostream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ostream/basic_ostream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

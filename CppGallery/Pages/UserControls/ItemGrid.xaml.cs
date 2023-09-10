@@ -72,6 +72,7 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(ValueProperty, value); }
         }
 
+        public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
 
         public ItemGrid()
         {
@@ -83,6 +84,18 @@ namespace CppGallery.Pages.UserControls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            if(App.CppVersion < TargetMinCppVersion)
+            {
+                if(this.Parent is ContentControl contentControl)
+                {
+                    contentControl.Content = null;
+                }
+                else if(this.Parent is Panel panel)
+                {
+                    panel.Children.Remove(this);
+                }
+                return;
+            }
             if (Sentence == string.Empty)
             {
                 this.MinHeight = Data.CompactGalleryControlHeight;

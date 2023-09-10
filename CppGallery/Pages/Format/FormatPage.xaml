@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<UserControl
+<Page
     x:Class="CppGallery.Pages.Format.FormatPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,12 +9,39 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
             <local:BlockPanel Header="Function" >
-                
+                <local:FunctionExpander Folder="format/format" />
+                <local:FunctionExpander Folder="format/format_to" />
+                <local:FunctionExpander Folder="format/format_to_n" />
+                <local:FunctionExpander Folder="format/formatted_size" />
+
+                <local:CustomExpander Title="vformat() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="vformat_to() 関数" IsEnabled="False" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Concepts" >
+                <local:CustomExpander Title="formattable" Sentence="このコンセプトはまだ実装されていません" IsEnabled="False" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Struct" >
+                <local:CustomExpander Title="format_to_n_result 構造体" Sentence="format_to_n() 関数の戻り値に用いられるテンプレート構造体" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="Out out" Sentence="コンテナの出力イテレーター (Out は Template)" />
+                        <local:ItemGrid Title="iter_difference_t&lt;Out> size" Sentence="出力された文字数" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+
+                <local:ToRightButton Style="{StaticResource FormatterClass}" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Exception" >
+                <local:FunctionExpander Folder="format/format_error" Icon="Object" />
             </local:BlockPanel>
 
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/format/format.html" />
         </local:OuterPanel>
     </ScrollViewer>
-</UserControl>
+</Page>

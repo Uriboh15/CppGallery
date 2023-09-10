@@ -11,6 +11,8 @@ namespace CppGallery.Pages.UserControls
     {
         private TextBlock HeadTextBlock { get; } = new TextBlock();
 
+        public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
+
         public string HeadText
         {
             get { return HeadTextBlock.Text; }
@@ -21,6 +23,32 @@ namespace CppGallery.Pages.UserControls
         {
             ApplyIsCompact();
             this.Children.Add(HeadTextBlock);
+            this.Loaded += BasicBlockPanel_Loaded;
+        }
+
+        private void BasicBlockPanel_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        {
+            //バージョンを親に合わせる
+            if (Parent is OuterPanel outerPanel)
+            {
+                if (this.TargetMinCppVersion < outerPanel.TargetMinCppVersion)
+                {
+                    this.TargetMinCppVersion = outerPanel.TargetMinCppVersion;
+                }
+            }
+
+            if (this.TargetMinCppVersion == UserAPI.MinCppVersion) return;
+
+            foreach (var element in Children)
+            {
+                if (element is FunctionExpander expander)
+                {
+                    if (expander.TargetMinCppVersion < this.TargetMinCppVersion)
+                    {
+                        expander.TargetMinCppVersion = this.TargetMinCppVersion;
+                    }
+                }
+            }
         }
 
         private void ApplyIsCompact()

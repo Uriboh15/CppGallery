@@ -10,6 +10,8 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="Windows" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="FunctionAndMacro" >
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleProcessList" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleWindow" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />

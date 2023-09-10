@@ -24,6 +24,7 @@
                     <local:ToRightButton Style="{StaticResource Concepts}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Deque}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource FileSystem}" InLibraryPage="True" />
+                    <local:ToRightButton Style="{StaticResource Format}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource ForwardList}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Fstream}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource InitializerList}" InLibraryPage="True"/>
@@ -39,6 +40,7 @@
                     <local:ToRightButton Style="{StaticResource Numbers}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Numeric}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Ostream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Print}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Queue}" InLibraryPage="True" />
                     <local:ToRightButton Style="{StaticResource Random}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Set}" InLibraryPage="True"/>

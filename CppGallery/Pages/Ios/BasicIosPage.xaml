@@ -12,6 +12,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
 
             <local:BlockPanel Header="BaseClass">
                 <local:ToRightButton Style="{StaticResource IosBaseClass}"/>

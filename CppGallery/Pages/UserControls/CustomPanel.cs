@@ -27,7 +27,7 @@ namespace CppGallery.Pages.UserControls
             "Title",　// Max という名前の……
             typeof(string),　// int 型の CLR プロパティを……
             typeof(CustomExpander), // クラスに登録するやで―
-            new PropertyMetadata(string.Empty));
+            new PropertyMetadata(null));
 
         public static readonly DependencyProperty SentenceProperty = DependencyProperty.Register(
             "Sentence",　// Max という名前の……
@@ -71,7 +71,7 @@ namespace CppGallery.Pages.UserControls
 
         private void CustomExpander_Loaded(object sender, RoutedEventArgs e)
         {
-            if (this.Header == null)
+            if (this.Title != null)
             {
                 this.Header = new EHeader { Title = this.Title, Sentence = this.Sentence, Icon = this.Icon };
             }

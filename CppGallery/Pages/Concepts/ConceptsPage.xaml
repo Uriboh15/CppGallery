@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel >
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <local:BlockPanel Header="Concepts" >
                 <local:FunctionExpander Folder="concepts/assignable_from" Icon="Object" />
                 <local:FunctionExpander Folder="concepts/common_reference_with" Icon="Object" />

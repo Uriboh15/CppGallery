@@ -105,6 +105,7 @@ namespace CppGallery.Pages.UserControls
             "RegisterClassEx",
             "SearchPath",
             "SetConsoleTitle",
+            "SetEnvironmentVariable",
             "SetWindowText",
             "STD_ERROR_HANDLE",
             "STD_INPUT_HANDLE",

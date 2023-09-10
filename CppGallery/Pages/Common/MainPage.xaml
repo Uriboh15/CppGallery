@@ -232,6 +232,13 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="format" Content="&lt;format>" Tag="Jformat">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE943;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="forward_list" Content="&lt;forward_list>" Tag="xforward_list">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE71D;"/>
@@ -457,6 +464,13 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="print" Content="&lt;print>" Tag="IPrint">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7F4;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="queue" Content="&lt;queue>" Tag="qqueue">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE8B5;"/>
@@ -500,6 +514,12 @@
                 <NavigationViewItem.MenuItems>
 
                     <NavigationViewItem Content="set" Tag="Aset0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="multiset" Tag="Amultiset0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>

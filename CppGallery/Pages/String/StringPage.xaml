@@ -26,7 +26,7 @@
             <local:BlockPanel Header="Typedefs" >
                 <local:ItemGrid Title="string" Sentence="basic_string を char に特殊化した型"/>
                 <local:ItemGrid Title="wstring" Sentence="basic_string を wchar_t に特殊化した型"/>
-                <local:ItemGrid Title="u8string" Sentence="basic_string を char8_t に特殊化した型"/>
+                <local:ItemGrid Title="u8string" Sentence="basic_string を char8_t に特殊化した型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="u16string" Sentence="basic_string を char16_t に特殊化した型"/>
                 <local:ItemGrid Title="u32string" Sentence="basic_string を char32_t に特殊化した型"/>
             </local:BlockPanel>
@@ -51,8 +51,8 @@
             </local:BlockPanel>
 
             <local:BlockPanel Header="Function" >
-                <local:FunctionExpander Folder="string/erase" />
-                <local:FunctionExpander Folder="string/erase_if" />
+                <local:FunctionExpander Folder="string/erase" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="string/erase_if" TargetMinCppVersion="Cpp20" />
 
                 <local:FunctionExpander Folder="string/getline" >
                     <local:TextBoxPane Message="文字列を入力" Text="abc" />

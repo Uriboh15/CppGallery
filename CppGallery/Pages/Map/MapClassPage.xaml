@@ -46,7 +46,7 @@
                 <local:FunctionExpander Folder="map__map/cbegin" />
                 <local:FunctionExpander Folder="map__map/cend" />
                 <local:FunctionExpander Folder="map__map/clear" />
-                <local:FunctionExpander Folder="map__map/contains" />
+                <local:FunctionExpander Folder="map__map/contains" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="map__map/count" />
                 <local:FunctionExpander Folder="map__map/crbegin" />
                 <local:FunctionExpander Folder="map__map/crend" />
@@ -96,7 +96,8 @@
                     </Expander.Header>
                 </local:CustomExpander>
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/map-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/map/map.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

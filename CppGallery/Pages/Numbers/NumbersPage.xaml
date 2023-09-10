@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <local:BlockPanel Header="Constant" >
                 <local:FunctionExpander Folder="numbers/e" Icon="Object" />
                 <local:FunctionExpander Folder="numbers/log2e" Icon="Object" />
@@ -25,6 +25,8 @@
                 <local:FunctionExpander Folder="numbers/egamma" Icon="Object" />
                 <local:FunctionExpander Folder="numbers/phi" Icon="Object" />
             </local:BlockPanel>
+
+            <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/numbers.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

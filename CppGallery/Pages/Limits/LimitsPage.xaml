@@ -55,7 +55,7 @@
                 <local:ItemGrid Title="numeric_limits&lt;double>" Sentence="numeric_limits を double に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;long double>" Sentence="numeric_limits を long double に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;wchar_t>" Sentence="numeric_limits を wchar_t に特殊化した型"/>
-                <local:ItemGrid Title="numeric_limits&lt;char8_t>" Sentence="numeric_limits を char8_t に特殊化した型"/>
+                <local:ItemGrid Title="numeric_limits&lt;char8_t>" Sentence="numeric_limits を char8_t に特殊化した型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="numeric_limits&lt;char16_t>" Sentence="numeric_limits を char16_t に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;char32_t>" Sentence="numeric_limits を char32_t に特殊化した型"/>
             </local:BlockPanel>

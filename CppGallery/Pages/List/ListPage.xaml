@@ -33,6 +33,8 @@
                 <local:ToRightButton Style="{StaticResource ListClass}"/>
             </local:BlockPanel>
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/list?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/list.html" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

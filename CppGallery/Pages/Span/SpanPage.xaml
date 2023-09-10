@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp20">
             <local:BlockPanel Header="Constant" >
                 <local:ItemGrid Title="size_t dynamic_extent" Sentence="span の要素数が実行時に決まることを示す定数値" />
             </local:BlockPanel>

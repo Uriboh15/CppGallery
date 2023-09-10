@@ -12,6 +12,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="Including">
                 <local:ToRightButton Style="{StaticResource InitializerList}"/>
             </local:BlockPanel>
@@ -20,7 +22,8 @@
                 <TextBlock Text="エンジン テンプレート" FontWeight="Bold"/>
                 <local:ToRightButton Style="{StaticResource LinearCongruentialEngineClass}" />
             </local:BasicBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/random?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/random.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

@@ -14,6 +14,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Media.Animation;
 using CppGallery.Pages.UserControls;
+using Windows.Devices.AllJoyn;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -33,6 +34,8 @@ namespace CppGallery.Pages.Settings
         private bool CompilerLoaded = false;
         private bool UseCppLoaded = false;
         private bool IsShowReturnCodeTLoaded = false;
+        private bool CppVersionComboBoxLoaded = false;
+        private bool CVersionComboBoxLoaded = false;
         public static bool IsCompact { get; set; }
 
         private static SettingPage Handle = null;
@@ -49,6 +52,26 @@ namespace CppGallery.Pages.Settings
         private SettingPage()
         {
             this.InitializeComponent();
+        }
+
+        //GCC
+        private async void CheckGCCVersion()
+        {
+            if(App.Compiler == Compiler.GCC && App.CppVersion == CppVersion.Cpp23)
+            {
+                ContentDialog dialog = new ContentDialog
+                {
+                    Title = "C++23 非対応",
+                    Content = "GCC 13.1.0 時点ではまだ C++23 の機能に十分に対応していません",
+                    DefaultButton = ContentDialogButton.Primary,
+                    PrimaryButtonText = "OK",
+                    XamlRoot = this.XamlRoot,
+                };
+
+                await dialog.ShowAsync();
+
+                CppVersionComboBox.SelectedItem = "C++20";
+            }
         }
 
         private void ThemeC_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -182,6 +205,7 @@ namespace CppGallery.Pages.Settings
                 }
 
                 UpdateOtherPage();
+                CheckGCCVersion();
             }
 
             CompilerLoaded = true;
@@ -441,6 +465,54 @@ namespace CppGallery.Pages.Settings
             grid.Height = Data.GalleryControlHeight;
 
             grid.Loaded -= Grid_Loaded;
+        }
+
+        private void CppVersionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (CppVersionComboBox.SelectedItem as string)
+            {
+                case "C++14": App.CppVersion = CppVersion.Cpp14; break;
+                case "C++17": App.CppVersion = CppVersion.Cpp17; break;
+                case "C++20": App.CppVersion = CppVersion.Cpp20; break;
+                case "C++23": App.CppVersion = CppVersion.Cpp23; break;
+            }
+
+            if (CppVersionComboBoxLoaded) UpdateOtherPage();
+            CheckGCCVersion();
+        }
+
+        private void CppVersionComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            switch (App.CppVersion)
+            {
+                case CppVersion.Cpp14: CppVersionComboBox.SelectedItem = "C++14"; break;
+                case CppVersion.Cpp17: CppVersionComboBox.SelectedItem = "C++17"; break;
+                case CppVersion.Cpp20: CppVersionComboBox.SelectedItem = "C++20"; break;
+                case CppVersion.Cpp23: CppVersionComboBox.SelectedItem = "C++23"; break;
+            }
+            CppVersionComboBoxLoaded = true;
+            CppVersionComboBox.Loaded -= CppVersionComboBox_Loaded;
+        }
+
+        private void CVersionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (CVersionComboBox.SelectedItem as string)
+            {
+                case "C11": App.CVersion = CVersion.C11; break;
+                case "C17": App.CVersion = CVersion.C17; break;
+            }
+            if(CVersionComboBoxLoaded) UpdateOtherPage();
+        }
+
+        private void CVersionComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            switch (App.CVersion)
+            {
+                case CVersion.C11: CVersionComboBox.SelectedIndex = 0; break;
+                case CVersion.C17: CVersionComboBox.SelectedIndex = 1; break;
+            }
+            CVersionComboBoxLoaded = true;
+            CVersionComboBox.Loaded -= CVersionComboBox_Loaded;
         }
     }
 }

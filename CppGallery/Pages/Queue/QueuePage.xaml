@@ -10,6 +10,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
             <local:BlockPanel Header="Operator">
                 <local:FunctionExpander Folder="queue/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="queue/operatorL" Icon="Operator" />
@@ -22,6 +24,8 @@
             <local:BlockPanel Header="Class" >
                 <local:ToRightButton Style="{StaticResource QueueClass}"/>
             </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/queue?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/queue.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

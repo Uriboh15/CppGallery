@@ -12,6 +12,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="Included">
                 <local:ToRightButton Style="{StaticResource BitSet}"/>
                 <local:ToRightButton Style="{StaticResource Iterator}"/>

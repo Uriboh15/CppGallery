@@ -15,7 +15,7 @@
                     <Image Source="../Assets/Square150x150Logo.scale-200.png" Height="23" Margin="21,0,0,0"/>
                     <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" >
                         <TextBlock Text="C++ Library Gallery" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock Text="Version 2.3.0  2023年9月7日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                        <TextBlock Text="Version 2.3.2  2023年9月10日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -26,16 +26,12 @@
                     <Expander.Content>
                         <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
                             <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="C++言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <TextBlock Text="C++20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="C言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <TextBlock Text="C17" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
                                 <TextBlock Text="Windows SDK" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                 <TextBlock Text="Windows 11 SDK (22621.0)" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="ターゲット最小バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="Windows 10 2004 (10.0.19041.0)" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                             </Grid>
                         </StackPanel>
                     </Expander.Content>
@@ -47,14 +43,6 @@
                     </Expander.Header>
                     <Expander.Content>
                         <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="C++言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <TextBlock Text="C++20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="C言語バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <TextBlock Text="C17" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            </Grid>
                             <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
                                 
                                 <TextBlock Text="GCC バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>

@@ -14,7 +14,7 @@
         <local:OuterPanel>
             <local:BlockPanel Header="Typedefs" >
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
-                <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" Value="unsigned long long"/>
+                <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
                 <local:ItemGrid Title="va_list" Sentence="可変引数を格納する型" Value="char*"/>
                 <local:ItemGrid Title="wchar_t" Sentence="ワイド文字を表す型"/>
                 <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型" Value="unsigned short"/>

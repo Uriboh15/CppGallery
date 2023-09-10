@@ -74,7 +74,7 @@
                 <local:FunctionExpander Folder="string__basic_string/data" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/empty" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/end" AutoFunc="False" />
-                <local:FunctionExpander Folder="string__basic_string/ends_with" AutoFunc="False" />
+                <local:FunctionExpander Folder="string__basic_string/ends_with" AutoFunc="False" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="string__basic_string/erase" AutoFunc="False" />
 
                 <local:FunctionExpander Folder="string__basic_string/find" AutoFunc="False" >
@@ -139,7 +139,7 @@
                     <local:TextBoxPane Message="文字列を入力" Text="abc" />
                 </local:FunctionExpander>
 
-                <local:FunctionExpander Folder="string__basic_string/starts_with" AutoFunc="False" />
+                <local:FunctionExpander Folder="string__basic_string/starts_with" AutoFunc="False" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="string__basic_string/substr" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/swap" AutoFunc="False" />
             </local:BlockPanel>

@@ -12,6 +12,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            
             <local:BlockPanel Header="Including">
                 <local:ToRightButton Style="{StaticResource Ios}"/>
             </local:BlockPanel>
@@ -38,17 +40,30 @@
             </local:BlockPanel>
 
             <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="ostream/print" TargetMinCppVersion="Cpp23" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="ostream/println" TargetMinCppVersion="Cpp23" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="swap() 関数" Sentence="2つのストリームの値を入れ替えます"/>
                     </Expander.Header>
                 </local:CustomExpander>
+                
+
+                <local:CustomExpander Title="vprint_nonunicode() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="vprint_unicode() 関数" IsEnabled="False" />
             </local:BlockPanel>
 
             <local:BlockPanel Header="Class" >
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ostream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ostream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

@@ -136,4 +136,14 @@
         <Setter Property="Message" Value="この関数は実装されていません" />
     </Style>
 
+    <Style x:Key="IncompleteClassPageInfoBar" BasedOn="{StaticResource WarningInfo}" TargetType="InfoBar" >
+        <Setter Property="Title" Value="不完全なページ" />
+        <Setter Property="Message" Value="まだここに載っていない項目があります" />
+    </Style>
+
+    <Style x:Key="IncompleteHeaderPageInfoBar" BasedOn="{StaticResource WarningInfo}" TargetType="InfoBar" >
+        <Setter Property="Title" Value="不完全なページ" />
+        <Setter Property="Message" Value="まだここに載っていない項目があります" />
+    </Style>
+
 </ResourceDictionary>

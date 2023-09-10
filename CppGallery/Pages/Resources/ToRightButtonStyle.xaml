@@ -386,8 +386,17 @@
     <Style x:Key="Format" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;format>" />
         <Setter Property="Sentence" Value="文字列フォーマット" />
-        <Setter Property="PageTag" Value=""/>
+        <Setter Property="PageTag" Value="Jformat"/>
         <Setter Property="Icon" Value="&#xE943;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FormatterClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="formatter 構造体" />
+        <Setter Property="Sentence" Value="フォーマットを行うクラス" />
+        <Setter Property="PageTag" Value="Jformat"/>
+        <Setter Property="IsEnabled" Value="False" />
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -611,6 +620,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="MultiSetClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="multiset クラス" />
+        <Setter Property="Sentence" Value="要素の重複が可能な要素をキーとするコンテナクラス" />
+        <Setter Property="PageTag" Value="Amultiset0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="New" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;new>" />
         <Setter Property="Sentence" Value="メモリを動的確保" />
@@ -667,6 +684,15 @@
         <Setter Property="Title" Value="path クラス" />
         <Setter Property="Sentence" Value="パスの操作に適した文字列クラス" />
         <Setter Property="PageTag" Value="wpath0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Print" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;print>" />
+        <Setter Property="Sentence" Value="書式指定で文字列を出力" />
+        <Setter Property="PageTag" Value="IPrint"/>
+        <Setter Property="Icon" Value="&#xE7F4;"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

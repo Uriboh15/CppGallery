@@ -24,10 +24,30 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.3.2" Sentence="2023年9月10日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・作成中...
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
+                    <local:EHeader Title="Ver 2.3.1" Sentence="2023年9月10日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに36項目追加<LineBreak />
+                    ・任意の C/C++ 言語バージョンで実行する機能を追加
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.3.0" Sentence="2023年9月7日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>
                     ・新たに36項目追加<LineBreak />
+                    ・1項目更新<LineBreak />
                     ・大文字を含む項目が検索でヒットしない不具合を修正
                 </TextBlock>
             </Expander>

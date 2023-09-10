@@ -16,7 +16,7 @@
                 <local:CustomExpander Title="adjacent_difference() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="exclusive_scan() 関数" IsEnabled="False" />
 
-                <local:FunctionExpander Folder="numeric/gcd" >
+                <local:FunctionExpander Folder="numeric/gcd" TargetMinCppVersion="Cpp17" >
                     <local:MultiTextBoxPane Message1="整数を入力" Text1="12" Message2="整数を入力" Text2="8" />
                 </local:FunctionExpander>
                 
@@ -41,7 +41,7 @@
                 
                 <local:FunctionExpander Folder="numeric/iota" AutoFunc="False" />
 
-                <local:FunctionExpander Folder="numeric/lcm" >
+                <local:FunctionExpander Folder="numeric/lcm" TargetMinCppVersion="Cpp17" >
                     <local:MultiTextBoxPane Message1="整数を入力" Text1="13" Message2="整数を入力" Text2="8" />
                 </local:FunctionExpander>
                 
@@ -51,6 +51,8 @@
                 <local:CustomExpander Title="transform_inclusive_scan() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="transform_reduce() 関数" IsEnabled="False" />
             </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/numeric?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/numeric.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

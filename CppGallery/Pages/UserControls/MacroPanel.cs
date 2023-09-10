@@ -26,60 +26,14 @@ namespace CppGallery.Pages.UserControls
             
             if (Children.Count == 1)
             {
-                
-                var parent = Parent;
 
-                var outerPanel = Parent as Panel;
+                var outerPanel = Parent as OuterPanel;
 
                 outerPanel.Children.Remove(this);
 
                 if(outerPanel.Children.Count == 0)
                 {
-                    while (parent is not Page)
-                    {
-                        parent = (parent as FrameworkElement).Parent;
-                    }
-                    var page = parent as Page;
-
-                    string message = "C" + (App.UseCppInCSample ? "++20" : "17") + " では何も定義されていません";
-
-                    if (App.UseCppInCSample)
-                    {
-                        var resultPanel = new ResultsPanel
-                        {
-                            HorizontalAlignment = HorizontalAlignment.Center,
-                            VerticalAlignment = VerticalAlignment.Center,
-                        };
-                        resultPanel.Children.Add(new TextBlock
-                        {
-                            Text = message,
-                            HorizontalAlignment = HorizontalAlignment.Center,
-                        });
-                        var button = new Button
-                        {
-                            HorizontalAlignment = HorizontalAlignment.Center,
-                            Content = "設定へ移動",
-                        };
-                        button.Click += (s, e) =>
-                        {
-                            MainWindow.Handle.OpenSettings();
-                        };
-
-                        resultPanel.Children.Add(button);
-
-                        page.Content = resultPanel;
-                    }
-                    else
-                    {
-                        
-
-                        page.Content = new TextBlock
-                        {
-                            Text = message,
-                            HorizontalAlignment = HorizontalAlignment.Center,
-                            VerticalAlignment = VerticalAlignment.Center,
-                        };
-                    }
+                    outerPanel.SetAsNone(CodeLanguage.C);
                     
 
                 }

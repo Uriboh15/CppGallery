@@ -9,7 +9,8 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel >
+        <local:OuterPanel TargetMinCppVersion="Cpp17" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:BlockPanel Header="Function" >
                 <local:CustomExpander Title="absolute() 関数" IsEnabled="False" />

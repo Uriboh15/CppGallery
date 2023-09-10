@@ -26,6 +26,22 @@
                     </ComboBox>
                 </local:ControlGrid>
 
+                <local:ControlGrid Message="C++ の言語バージョン" >
+                    <ComboBox x:Name="CppVersionComboBox" SelectionChanged="CppVersionComboBox_SelectionChanged" Loaded="CppVersionComboBox_Loaded" Width="93" >
+                        <x:String>C++14</x:String>
+                        <x:String>C++17</x:String>
+                        <x:String>C++20</x:String>
+                        <x:String>C++23</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
+
+                <local:ControlGrid Message="C言語の言語バージョン" >
+                    <ComboBox x:Name="CVersionComboBox" Width="74" SelectionChanged="CVersionComboBox_SelectionChanged" Loaded="CVersionComboBox_Loaded" >
+                        <x:String>C11</x:String>
+                        <x:String>C17</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
+
                 <local:ControlGrid Message="C言語の項目を C++ で実行する" >
                     <Grid>
                         <ToggleSwitch x:Name="UseCppT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="UseCppT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="UseCppT_Loaded"/>
@@ -39,6 +55,8 @@
                         <TextBlock x:Name="IsShowReturnCodeText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
                     </Grid>
                 </local:ControlGrid>
+
+                
             </local:ResultsPanel>
 
 

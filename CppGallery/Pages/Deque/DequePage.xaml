@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp17" >
 
             <local:BlockPanel Header="Operator" >
                 <local:FunctionExpander Folder="deque/operatorNE" Icon="Operator" />

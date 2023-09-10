@@ -20,11 +20,10 @@
                 <local:ItemGrid Title="const_pointer" Sentence="set の要素にアクセスできる const ポインター"/>
                 <local:ItemGrid Title="const_reference" Sentence="set の要素への const 参照を表す型"/>
                 <local:ItemGrid Title="const_reverse_iterator" Sentence="set の要素にアクセスできる const 逆イテレータ"/>
-                <local:ItemGrid Title="difference_type" Sentence="set の2 つの要素のイテレータの差を表す型"/>
+                <local:ItemGrid Title="difference_type" Sentence="set の 2 つの要素のイテレータの差を表す型"/>
                 <local:ItemGrid Title="iterator" Sentence="set の要素にアクセスできる const イテレータ"/>
                 <local:ItemGrid Title="key_compare" Sentence="2 つのキーの順序を表す型"/>
                 <local:ItemGrid Title="key_type" Sentence="set のキーを表す型"/>
-                
                 <local:ItemGrid Title="pointer" Sentence="set の要素にアクセスできる const ポインター"/>
                 <local:ItemGrid Title="reference" Sentence="set の要素への参照を表す型"/>
                 <local:ItemGrid Title="reverse_iterator" Sentence="set の要素にアクセスできる逆イテレータ"/>
@@ -42,11 +41,11 @@
                 <local:FunctionExpander Folder="set__set/cbegin" />
                 <local:FunctionExpander Folder="set__set/cend" />
                 <local:FunctionExpander Folder="set__set/clear" />
-                <local:FunctionExpander Folder="set__set/contains" />
+                <local:FunctionExpander Folder="set__set/contains" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="set__set/count" />
                 <local:FunctionExpander Folder="set__set/crbegin" />
                 <local:FunctionExpander Folder="set__set/crend" />
-                <local:CustomExpander Title="emplace() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="set__set/emplace" />
                 <local:CustomExpander Title="emplace_hint() 関数" IsEnabled="False" />
                 <local:FunctionExpander Folder="set__set/empty" />
                 <local:FunctionExpander Folder="set__set/end" />
@@ -65,6 +64,8 @@
                 <local:FunctionExpander Folder="set__set/upper_bound" />
                 <local:CustomExpander Title="value_comp() 関数" IsEnabled="False" />
             </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/set-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/set/set.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

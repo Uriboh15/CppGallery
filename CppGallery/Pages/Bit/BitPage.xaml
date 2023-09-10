@@ -11,7 +11,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <local:BlockPanel Header="Including">
                 <local:ToRightButton Style="{StaticResource Limits}"/>
                 <local:ToRightButton Style="{StaticResource TypeTraits}"/>

@@ -29,7 +29,9 @@
                 <local:FunctionExpander Folder="queue__queue/push" />
                 <local:FunctionExpander Folder="queue__queue/size" />
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/queue-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/queue/queue.html" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

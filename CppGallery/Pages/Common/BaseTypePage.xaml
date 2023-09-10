@@ -26,7 +26,7 @@
                 <local:ItemGrid Title="double" Sentence="float の 2 倍の精度を持つ浮動小数点数" />
                 <local:ItemGrid Title="long double" Sentence="環境によって定義が異なる少なくとも double 以上の精度を持つ浮動小数点数" />
                 <local:ItemGrid Title="wchar_t" Sentence="Unicode 文字を表す型" />
-                <local:ItemGrid Title="char8_t" Sentence="UTF-8 文字を表す型" />
+                <local:ItemGrid Title="char8_t" Sentence="UTF-8 文字を表す型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="char16_t" Sentence="UTF-16 文字を表す型" />
                 <local:ItemGrid Title="char32_t" Sentence="UTF-32 文字を表す型" />
             </local:BasicBlockPanel>

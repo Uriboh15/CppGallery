@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <local:BlockPanel Header="Constructor" >
                 <local:FunctionExpander Folder="source_location__source_location/source_location" SampleType="None" />
             </local:BlockPanel>

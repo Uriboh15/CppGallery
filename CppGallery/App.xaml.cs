@@ -60,6 +60,21 @@ namespace CppGallery
         x64,
     }
 
+    public enum CppVersion
+    {
+        Cpp14 = 14,
+        Cpp17 = 17,
+        Cpp20 = 20,
+        Cpp23 = 23,
+    }
+
+    public enum CVersion
+    {
+        C11 = 11,
+        C17 = 17,
+        C23 = 23,
+    }
+
     public partial class App : Application
     {
         /// <summary>
@@ -81,6 +96,8 @@ namespace CppGallery
         public static ProcesserType ProcesserType { get; set; }             //buf[7]
         public static bool UseCppInCSample { get; set; }                    //buf[8]
         public static bool IsShowReturnCode { get; set; }                   //buf[9]
+        public static CppVersion CppVersion { get; set; }                   //buf[10]
+        public static CVersion CVersion { get; set; }                       //buf[11]
 
 
         public static bool IsFirstCSampleOpened { get; set; }       //log[0]
@@ -90,7 +107,7 @@ namespace CppGallery
         public static string UserLogPath => @"Pages/log.bin";
         private static bool _isFirstLaunch = false;
 
-        public static int SettingsLen => 10;
+        public static int SettingsLen => 12;
         public static int LogLen => 1;
         public static bool Win10 => _winver == WinVer.Win10;
         public static WinVer WinVer => _winver;
@@ -180,6 +197,16 @@ namespace CppGallery
             IsShowReturnCode = x == 1;
         }
 
+        private static void ApplyCppVersion(byte x)
+        {
+            CppVersion = (CppVersion)x;
+        }
+
+        private static void ApplyCVersion(byte x)
+        {
+            CVersion = (CVersion)x;
+        }
+
         private static void ApplySettings()
         {
             byte[] buf = new byte[SettingsLen];
@@ -204,6 +231,8 @@ namespace CppGallery
                 buf[7] = (byte)ProcesserType.x64;
                 buf[8] = 1;
                 buf[9] = 0;
+                buf[10] = 17;
+                buf[11] = 17;
                 _isFirstLaunch = true;
             }
             else
@@ -222,6 +251,8 @@ namespace CppGallery
             ApplyProcesserType(buf[7]);
             ApplyUseCppInCSample(buf[8]);
             ApplyIsShowReturnCode(buf[9]);
+            ApplyCppVersion(buf[10]);
+            ApplyCVersion(buf[11]);
 
             fs.Close();
         }

@@ -88,7 +88,9 @@
                 <local:FunctionExpander Folder="list__list/swap" />
                 <local:FunctionExpander Folder="list__list/unique" />
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/list-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/list/list.html" />
+
         </local:OuterPanel>
 
     </ScrollViewer>

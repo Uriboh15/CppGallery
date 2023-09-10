@@ -72,7 +72,8 @@
                 <local:FunctionExpander Folder="new/bad_alloc" Icon="Object" />
                 <local:FunctionExpander Folder="new/bad_array_new_length" Icon="Object" />
             </local:BlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/new?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/new.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

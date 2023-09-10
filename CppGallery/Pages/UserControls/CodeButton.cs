@@ -86,6 +86,7 @@ namespace CppGallery.Pages.UserControls
             "file_status",
             
             "floating_point",
+            "format_error",
             "from_chars_result",
             "fstream",
             "greater",
@@ -149,6 +150,7 @@ namespace CppGallery.Pages.UserControls
             "basic_string",
             "bitset",
             "char_traits",
+            "formattable",
             "forward_list",
             "hash",
             "initializer_list",
@@ -172,6 +174,7 @@ namespace CppGallery.Pages.UserControls
             "is_void",
             "list",
             "map",
+            "multiset",
             "numeric_limits",
             "pair",
             "queue",

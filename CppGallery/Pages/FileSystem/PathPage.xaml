@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:OuterPanel>
+        <local:OuterPanel TargetMinCppVersion="Cpp17" >
             <local:BlockPanel Header="Constructor" >
                 <local:FunctionExpander Folder="filesystem__path/path" AutoFunc="False" >
                     <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
