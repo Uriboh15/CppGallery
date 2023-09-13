@@ -25,6 +25,24 @@
                 <local:FunctionExpander Folder="WinUser/GetDpiForWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="WinUser/GetWindowRect" SampleType="GUIApp" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="WinUser/GetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+
+                <local:FunctionExpander Folder="WinUser/IsCharAlpha" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="WinUser/IsCharAlphaNumeric" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="WinUser/IsCharLower" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="WinUser/IsCharUpper" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
+                </local:FunctionExpander>
+
+
                 <local:FunctionExpander Folder="WinUser/IsZoomed" SampleType="GUIApp" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="WinUser/MessageBeep" SampleType="GUIApp" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="WinUser/MessageBox" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />

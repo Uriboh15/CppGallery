@@ -28,14 +28,6 @@ namespace CppGallery.Pages.UserControls
 
         private void BasicBlockPanel_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
-            //バージョンを親に合わせる
-            if (Parent is OuterPanel outerPanel)
-            {
-                if (this.TargetMinCppVersion < outerPanel.TargetMinCppVersion)
-                {
-                    this.TargetMinCppVersion = outerPanel.TargetMinCppVersion;
-                }
-            }
 
             if (this.TargetMinCppVersion == UserAPI.MinCppVersion) return;
 

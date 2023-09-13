@@ -14,8 +14,12 @@
         <TextBlock x:Name="ErrorText" Text="更新された項目はありません" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
-                
-                
+
+                <local:BasicBlockPanel HeadText="valarray クラス" >
+                    <local:FunctionExpander Folder="valarray__valarray/operatorParE" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorKAKERUE" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorPlus" AutoFunc="False" Icon="Operator" />
+                </local:BasicBlockPanel>
 
             </local:OuterPanel>
         </ScrollViewer>

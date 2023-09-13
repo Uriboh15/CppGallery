@@ -15,6 +15,70 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
+                <local:BasicBlockPanel HeadText="ヘッダー" >
+                    <local:ToRightButton Style="{StaticResource Algorithm}" />
+                    <local:ToRightButton Style="{StaticResource Ranges}" />
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="&lt;algorithm>" >
+                    <local:FunctionExpander Folder="algorithm/adjacent_find" />
+                    <local:FunctionExpander Folder="algorithm/all_of" />
+                    <local:FunctionExpander Folder="algorithm/any_of" />
+                    <local:FunctionExpander Folder="algorithm/count" />
+                    <local:FunctionExpander Folder="algorithm/count_if" />
+                    <local:FunctionExpander Folder="algorithm/find" />
+                    <local:FunctionExpander Folder="algorithm/find_if" />
+                    <local:FunctionExpander Folder="algorithm/find_if_not" />
+                    <local:FunctionExpander Folder="algorithm/for_each" />
+                    <local:FunctionExpander Folder="algorithm/for_each_n" TargetMinCppVersion="Cpp17" />
+                    <local:FunctionExpander Folder="algorithm/generate" />
+                    <local:FunctionExpander Folder="algorithm/none_of" />
+                    <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="algorithm/ranges__for_each" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="algorithm/ranges__none_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="basic_string クラス" >
+                    <local:FunctionExpander Folder="string__basic_string/contains" TargetMinCppVersion="Cpp23" >
+                        <local:MultiTextBoxPane Message1="文字列を入力" Text1="123abcあいう" Message2="検索する文字を入力" Text2="1aAあア" />
+                    </local:FunctionExpander>
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="&lt;ranges>" TargetMinCppVersion="Cpp20" >
+                    <local:FunctionExpander Folder="ranges/begin" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/cbegin" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/cdata" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/cend" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/crbegin" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/crend" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/data" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/empty" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/end" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/rbegin" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/rend" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/size" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="ranges/ssize" Icon="Object" AutoFunc="False" />
+                </local:BasicBlockPanel>
+
+                <local:BasicBlockPanel HeadText="&lt;WinUser.h>" >
+                    <local:FunctionExpander Folder="WinUser/IsCharAlpha" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="WinUser/IsCharAlphaNumeric" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="WinUser/IsCharLower" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="WinUser/IsCharUpper" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
+                    </local:FunctionExpander>
+                </local:BasicBlockPanel>
+
                 
 
             </local:OuterPanel>

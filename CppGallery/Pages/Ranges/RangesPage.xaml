@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Ranges.RangesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
+            <local:BlockPanel Header="FunctionObject" >
+                <local:FunctionExpander Folder="ranges/begin" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/cbegin" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/cdata" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/cend" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/crbegin" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/crend" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/data" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/empty" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/end" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/rbegin" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/rend" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/size" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="ranges/ssize" Icon="Object" AutoFunc="False" />
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ranges?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ranges.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

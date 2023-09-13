@@ -17,6 +17,12 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Algorithm\AlgorithmPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Ranges\RangesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Set\MultiSetClassPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -194,73 +200,7 @@
     <Page Update="Pages\UserControls\BlockOldSystemPane.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Columns\Column22\Column22Window.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column22\Column22Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column21\Column21Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column20\Column20Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column20\Column20Window.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column19\Column19Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column18\Column18.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column17\CoenerWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column17\Column17Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column16\Column16Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\UserControls\ColumnBlockPane.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column15\Column15Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Pages\UserControls\CodeButtonBase.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column14\Column14Window.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column14\Column14Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column13\Column13Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column12\Column12Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column11\Column11Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column10\Column10Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column9\Column9Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column8\Column8Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column7\Column7Page.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\Columns\Column6\Column6.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\IosFwd\IosFwdPage.xaml">
@@ -435,9 +375,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserControls\ControlGrid.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\UserControls\ColumnsDictionary.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserControls\ButtonGrid.xaml">

@@ -75,12 +75,6 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
-            <NavigationViewItem x:Name="ColumnsPage" x:Uid="NavViewItem_Columns" Tag="Column" Visibility="Collapsed">
-                <NavigationViewItem.Icon>
-                    <FontIcon Glyph="&#xF000;"/>
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-            
             <NavigationViewItem x:Uid="NavViewItem_New" Tag="New">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE896;"/>
@@ -95,6 +89,13 @@
 
             <NavigationViewItemSeparator/>
             <NavigationViewItemHeader Content="C++ Library" FontSize="18"/>
+
+            <NavigationViewItem x:Name="algorithm" Content="&lt;algorithm>" Tag="Kalgorithm">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7C2;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
 
             <NavigationViewItem x:Name="any" Content="&lt;any>" Tag="rany">
                 <NavigationViewItem.Icon>
@@ -504,6 +505,12 @@
                 </NavigationViewItem.MenuItems>
 
 
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="ranges" Content="&lt;ranges>" Tag="Cranges">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF407;"/>
+                </NavigationViewItem.Icon>
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="set" Content="&lt;set>" Tag="Aset">

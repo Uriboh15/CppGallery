@@ -11,71 +11,74 @@
     mc:Ignorable="d">
 
     <ScrollViewer>
-        <local:CustomPanel>
-            <TextBlock Text="コンストラクター" Style="{StaticResource Title}"/>
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="fpos()" Sentence="fpos 型のオブジェクトを構築します"/>
-                </Expander.Header>
-            </local:CustomExpander>
+        <local:OuterPanel>
+            <local:BlockPanel Header="Constructor" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="fpos()" Sentence="fpos 型のオブジェクトを構築します"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
 
-            <TextBlock Text="演算子" Style="{StaticResource Title}" Margin="0,56,0,0"/>
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator!=" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+            <local:BlockPanel Header="Operator" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator!=" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator+" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator+" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator+=" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator+=" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator-" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator-" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator-=" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator-=" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator==" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator==" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="operator streamoff" Sentence="aaa" Icon="&#xE710;"/>
-                </Expander.Header>
-            </local:CustomExpander>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="operator streamoff" Sentence="aaa" Icon="&#xE710;"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
 
-            <TextBlock Text="メンバー関数" Style="{StaticResource Title}" Margin="0,56,0,0"/>
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="seekpos() 関数" Sentence="aaa"/>
-                </Expander.Header>
-            </local:CustomExpander>
+            <local:BlockPanel Header="Method" >
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="seekpos() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
 
-            <local:CustomExpander IsEnabled="False">
-                <Expander.Header>
-                    <local:EHeader Title="state() 関数" Sentence="aaa"/>
-                </Expander.Header>
-            </local:CustomExpander>
-
-            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/fpos-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/fpos.html" Margin="0,56,0,0" />
-        </local:CustomPanel>
+                <local:CustomExpander IsEnabled="False">
+                    <Expander.Header>
+                        <local:EHeader Title="state() 関数" Sentence="aaa"/>
+                    </Expander.Header>
+                </local:CustomExpander>
+            </local:BlockPanel>
+            
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/fpos-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/fpos.html" />
+        </local:OuterPanel>
     </ScrollViewer>
 </Page>

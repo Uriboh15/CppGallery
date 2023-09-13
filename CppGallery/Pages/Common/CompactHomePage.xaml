@@ -15,6 +15,7 @@
             <local:OuterPanel x:Name="ListStylePanel">
                 <local:ResultsPanel x:Name="CppLibraryList">
                     <TextBlock Text="C++ ライブラリ"/>
+                    <local:ToRightButton Style="{StaticResource Algorithm}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Any}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Array}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Bit}" InLibraryPage="True"/>
@@ -43,6 +44,7 @@
                     <local:ToRightButton Style="{StaticResource Print}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Queue}" InLibraryPage="True" />
                     <local:ToRightButton Style="{StaticResource Random}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Ranges}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Set}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource SourceLocation}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Span}" InLibraryPage="True"/>

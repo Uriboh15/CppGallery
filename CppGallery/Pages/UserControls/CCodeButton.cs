@@ -61,6 +61,7 @@ namespace CppGallery.Pages.UserControls
             "intmax_t",
             "ldiv_t",
             "lldiv_t",
+            "ptrdiff_t",
             "size_t",
             "time_t",
             "tm",

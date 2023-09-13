@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Algorithm.AlgorithmPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
+            <local:BlockPanel Header="Function" >
+                <local:FunctionExpander Folder="algorithm/adjacent_find" />
+                <local:FunctionExpander Folder="algorithm/all_of" />
+                <local:FunctionExpander Folder="algorithm/any_of" />
+                <local:FunctionExpander Folder="algorithm/count" />
+                <local:FunctionExpander Folder="algorithm/count_if" />
+
+                <local:CustomExpander Title="binary_search() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="equal() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="algorithm/find" />
+
+                <local:CustomExpander Title="find_end() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="find_first_of() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="algorithm/find_if" />
+                <local:FunctionExpander Folder="algorithm/find_if_not" />
+                <local:FunctionExpander Folder="algorithm/for_each" />
+                <local:FunctionExpander Folder="algorithm/for_each_n" TargetMinCppVersion="Cpp17" />
+                <local:FunctionExpander Folder="algorithm/generate" />
+
+                <local:CustomExpander Title="mismatch() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="algorithm/none_of" />
+
+                <local:CustomExpander Title="search() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="search_n() 関数" IsEnabled="False" />
+
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="FunctionObject" >
+                <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__for_each" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__none_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="Struct" >
+                <local:CustomExpander Title="ranges::for_each_result 構造体" Sentence="for_each() の戻り値" Icon="&#xEA86;" >
+                    <local:EnumPanel>
+                        <local:ItemGrid Title="in" Sentence="イテレータ" />
+                        <local:ItemGrid Title="out" Sentence="関数オブジェクト" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/algorithm?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/algorithm.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

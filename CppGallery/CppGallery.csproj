@@ -33,6 +33,7 @@
 		<None Remove="HomePage.xaml" />
 		<None Remove="MainPage.xaml" />
 		<None Remove="NewContentPage.xaml" />
+		<None Remove="Pages\Algorithm\AlgorithmPage.xaml" />
 		<None Remove="Pages\Any\AnyClassPage.xaml" />
 		<None Remove="Pages\Any\AnyPage.xaml" />
 		<None Remove="Pages\Array\ArrayClassPage.xaml" />
@@ -57,27 +58,6 @@
 		<None Remove="Pages\CHeader\TimehPage.xaml" />
 		<None Remove="Pages\CHeader\UcharhPage.xaml" />
 		<None Remove="Pages\CHeader\WcharhPage.xaml" />
-		<None Remove="Pages\Columns\Column10\Column10Page.xaml" />
-		<None Remove="Pages\Columns\Column11\Column11Page.xaml" />
-		<None Remove="Pages\Columns\Column12\Column12Page.xaml" />
-		<None Remove="Pages\Columns\Column13\Column13Page.xaml" />
-		<None Remove="Pages\Columns\Column14\Column14Page.xaml" />
-		<None Remove="Pages\Columns\Column14\Column14Window.xaml" />
-		<None Remove="Pages\Columns\Column15\Column15Page.xaml" />
-		<None Remove="Pages\Columns\Column16\Column16Page.xaml" />
-		<None Remove="Pages\Columns\Column17\CoenerWindow.xaml" />
-		<None Remove="Pages\Columns\Column17\Column17Page.xaml" />
-		<None Remove="Pages\Columns\Column18\Column18.xaml" />
-		<None Remove="Pages\Columns\Column19\Column19Page.xaml" />
-		<None Remove="Pages\Columns\Column20\Column20Page.xaml" />
-		<None Remove="Pages\Columns\Column20\Column20Window.xaml" />
-		<None Remove="Pages\Columns\Column21\Column21Page.xaml" />
-		<None Remove="Pages\Columns\Column22\Column22Page.xaml" />
-		<None Remove="Pages\Columns\Column22\Column22Window.xaml" />
-		<None Remove="Pages\Columns\Column6\Column6.xaml" />
-		<None Remove="Pages\Columns\Column7\Column7Page.xaml" />
-		<None Remove="Pages\Columns\Column8\Column8Page.xaml" />
-		<None Remove="Pages\Columns\Column9\Column9Page.xaml" />
 		<None Remove="Pages\Common\BaseTypePage.xaml" />
 		<None Remove="Pages\Common\GCCCommandPage.xaml" />
 		<None Remove="Pages\Common\OperatorPage.xaml" />
@@ -87,6 +67,7 @@
 		<None Remove="Pages\Deque\DequeClassPage.xaml" />
 		<None Remove="Pages\Deque\DequePage.xaml" />
 		<None Remove="Pages\Print\PrintPage.xaml" />
+		<None Remove="Pages\Ranges\RangesPage.xaml" />
 		<None Remove="Pages\Set\MultiSetClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeIndexClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeInfoPage.xaml" />
@@ -170,8 +151,6 @@
 		<None Remove="Pages\UserControls\BlockOldSystemPane.xaml" />
 		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
 		<None Remove="Pages\UserControls\CodeButtonBase.xaml" />
-		<None Remove="Pages\UserControls\ColumnBlockPane.xaml" />
-		<None Remove="Pages\UserControls\ColumnsDictionary.xaml" />
 		<None Remove="Pages\UserControls\ControlGrid.xaml" />
 		<None Remove="Pages\UserControls\EHeader.xaml" />
 		<None Remove="Pages\UserControls\GCCSourceFilePane.xaml" />
@@ -239,10 +218,16 @@
 		<Page Update="Pages\Any\AnyClassPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
+		<Page Update="Pages\Algorithm\AlgorithmPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<None Update="Pages\Assets\Square150x150Logo.scale-200.ico">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\Ranges\RangesPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\Set\MultiSetClassPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
@@ -420,73 +405,7 @@
 		<Page Update="Pages\UserControls\BlockOldSystemPane.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
-		<Page Update="Pages\Columns\Column22\Column22Window.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column22\Column22Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column21\Column21Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column20\Column20Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column20\Column20Window.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column19\Column19Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column18\Column18.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column17\CoenerWindow.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column17\Column17Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column16\Column16Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\UserControls\ColumnBlockPane.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column15\Column15Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
 		<Page Update="Pages\UserControls\CodeButtonBase.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column14\Column14Window.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column14\Column14Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column13\Column13Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column12\Column12Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column11\Column11Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column10\Column10Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column9\Column9Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column8\Column8Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column7\Column7Page.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\Columns\Column6\Column6.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
 		<Page Update="Pages\IosFwd\IosFwdPage.xaml">
@@ -690,9 +609,6 @@
 		<Page Update="Pages\UserControls\ControlGrid.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
-		<Page Update="Pages\UserControls\ColumnsDictionary.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
 		<Page Update="Pages\UserControls\ButtonGrid.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
@@ -754,13 +670,6 @@
 		<Page Update="HomePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</Page>
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Pages\Columns\Column1\" />
-	  <Folder Include="Pages\Columns\Column2\" />
-	  <Folder Include="Pages\Columns\Column3\" />
-	  <Folder Include="Pages\Columns\Column4\" />
-	  <Folder Include="Pages\Columns\Column5\" />
 	</ItemGroup>
 
 	<!-- 

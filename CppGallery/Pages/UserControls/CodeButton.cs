@@ -204,6 +204,7 @@ namespace CppGallery.Pages.UserControls
             "filesystem",
             "std",
             "numbers",
+            "ranges",
             "this_thread",
         };
 

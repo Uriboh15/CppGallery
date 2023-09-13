@@ -68,6 +68,10 @@
                     </Expander.Header>
                 </local:CustomExpander>
 
+                <local:FunctionExpander Folder="string__basic_string/contains" TargetMinCppVersion="Cpp23" >
+                    <local:MultiTextBoxPane Message1="文字列を入力" Text1="123abcあいう" Message2="検索する文字を入力" Text2="1aAあア" />
+                </local:FunctionExpander>
+
                 <local:FunctionExpander Folder="string__basic_string/copy" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/crbegin" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/crend" AutoFunc="False" />

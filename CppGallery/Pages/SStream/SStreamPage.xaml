@@ -43,6 +43,8 @@
                 <local:ToRightButton Style="{StaticResource BasicStringStreamClass}" />
             </local:BlockPanel>
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/sstream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream.html" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

@@ -22,6 +22,7 @@ namespace CppGallery.Pages.UserControls
         Exception,
         Function,
         FunctionAndMacro,
+        FunctionObject,
         GlobalstreamOjbect,
         Included,
         Including,
@@ -137,6 +138,10 @@ namespace CppGallery.Pages.UserControls
 
                 case PanelHeader.FunctionAndMacro:
                     HeadText = "関数 ・ 関数マクロ";
+                    break;
+
+                case PanelHeader.FunctionObject:
+                    HeadText = "関数オブジェクト";
                     break;
 
                 case PanelHeader.GlobalstreamOjbect:

@@ -509,9 +509,16 @@ namespace CppGallery.Pages.UserControls
                                             {
                                                 if (SetColor(run, tmp, st, i)) break;
                                             }
-                                            if (st[i + 1] == '(' || st[i + 1] == '<')
+                                            if (st[i + 1] == '(')
+                                            {
+                                                mae = string.Empty;
+                                                run.Foreground = this.AutoFunc ? yellow : local;
+                                                break;
+                                            }
+                                            else if (st[i + 1] == '<')
                                             {
                                                 run.Foreground = yellow;
+                                                break;
                                             }
                                             else
                                             {

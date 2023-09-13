@@ -11,6 +11,15 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="Algorithm" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;algorithm>" />
+        <Setter Property="Sentence" Value="アルゴリズム関数" />
+        <Setter Property="PageTag" Value="Kalgorithm"/>
+        <Setter Property="Icon" Value="&#xE7C2;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="Any" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;any>" />
         <Setter Property="Sentence" Value="すべての型の値を格納可能なクラス" />
@@ -728,6 +737,15 @@
         <Setter Property="Sentence" Value="様々な乱数" />
         <Setter Property="PageTag" Value="nrandom"/>
         <Setter Property="Icon" Value="&#xE8B1;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Ranges" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;ranges>" />
+        <Setter Property="Sentence" Value="コンテナの操作" />
+        <Setter Property="PageTag" Value="Cranges"/>
+        <Setter Property="Icon" Value="&#xF407;"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
