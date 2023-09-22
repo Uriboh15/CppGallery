@@ -12,26 +12,26 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including" >
+            <local:SymbolBlockPanel Symbol="Including" >
                 <local:ToRightButton Style="{StaticResource IosFwd}"/>
                 <local:ToRightButton Style="{StaticResource Limits}"/>
                 <local:ToRightButton Style="{StaticResource New}"/>
                 <local:ToRightButton Style="{StaticResource Tuple}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Included" >
+            <local:SymbolBlockPanel Symbol="Included" >
                 <local:ToRightButton Style="{StaticResource SStream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="string" Sentence="basic_string を char に特殊化した型"/>
                 <local:ItemGrid Title="wstring" Sentence="basic_string を wchar_t に特殊化した型"/>
                 <local:ItemGrid Title="u8string" Sentence="basic_string を char8_t に特殊化した型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="u16string" Sentence="basic_string を char16_t に特殊化した型"/>
                 <local:ItemGrid Title="u32string" Sentence="basic_string を char32_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="string/operatorPlus" AutoFunc="False" Icon="Operator" />
                 <local:FunctionExpander Folder="string/operatorNE" AutoFunc="False" Icon="Operator" />
                 <local:FunctionExpander Folder="string/operatorEE" AutoFunc="False" Icon="Operator" />
@@ -44,13 +44,13 @@
                 <local:FunctionExpander Folder="string/operatorRR" Icon="Operator" >
                     <local:TextBoxPane Message="文字列を入力" Text="abc" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Literal" >
+            <local:SymbolBlockPanel Symbol="Literal" >
                 <local:FunctionExpander Folder="string/operators" Icon="Literal" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="string/erase" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="string/erase_if" TargetMinCppVersion="Cpp20" />
 
@@ -313,26 +313,26 @@
                 <local:FunctionExpander Folder="string/swap" AutoFunc="False" />
                 <local:FunctionExpander Folder="string/to_string" />
                 <local:FunctionExpander Folder="string/to_wstring" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource BasicStringClass}" />
                 <local:ToRightButton Style="{StaticResource CharTraitsClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:FunctionExpander Folder="string/hash" Icon="Object" >
                     <local:TextBoxPane Message="文字列を入力" Text="aaa" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Specialization" >
+            <local:SymbolBlockPanel Symbol="Specialization" >
                 <local:ItemGrid Title="char_traits&lt;char> 構造体" Sentence="テンプレート構造体 char_traits を char に特殊化した構造体"/>
                 <local:ItemGrid Title="char_traits&lt;wchar_t> 構造体" Sentence="テンプレート構造体 char_traits を wchar_t に特殊化した構造体"/>
                 <local:ItemGrid Title="char_traits&lt;char8_t> 構造体" Sentence="テンプレート構造体 char_traits を char8_t に特殊化した構造体"/>
                 <local:ItemGrid Title="char_traits&lt;char16_t> 構造体" Sentence="テンプレート構造体 char_traits を char16_t に特殊化した構造体"/>
                 <local:ItemGrid Title="char_traits&lt;char32_t> 構造体" Sentence="テンプレート構造体 char_traits を char32_t に特殊化した構造体"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

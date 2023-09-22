@@ -12,7 +12,7 @@
         <local:OuterPanel HeaderType="Windows" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:BlockPanel Header="FunctionAndMacro" >
+            <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
                 <local:FunctionExpander Folder="ConsoleApi2/GetConsoleOriginalTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ConsoleApi2/GetConsoleTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                 
@@ -20,7 +20,7 @@
                 <local:FunctionExpander Folder="ConsoleApi2/SetConsoleCursorPosition" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi2/SetConsoleTextAttribute" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi2/SetConsoleTitle" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
             
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/console/console-functions" />

@@ -8,7 +8,8 @@
     xmlns:local="using:CppGallery"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    GettingFocus="Page_GettingFocus">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -40,10 +41,10 @@
 
 
     <NavigationView x:Name="NavView"
-                        Loaded="NavView_Loaded"
-                        ItemInvoked="NavView_ItemInvoked"
-                        BackRequested="NavView_BackRequested"
-                        PointerPressed="NavView_PointerPressed"
+                    Loaded="NavView_Loaded"
+                    ItemInvoked="NavView_ItemInvoked"
+                    BackRequested="NavView_BackRequested"
+                    PointerPressed="NavView_PointerPressed"
                     IsSettingsVisible="False">
         <NavigationView.Header>
             <BreadcrumbBar x:Name="HeadBar" ItemClicked="HeadBar_ItemClicked"/>
@@ -237,6 +238,14 @@
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE943;"/>
                 </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="basic_format_string" Tag="Jbasic_format_string0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
 
             </NavigationViewItem>
 
@@ -448,6 +457,23 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="optional" Content="&lt;optional>" Tag="Loptional" Visibility="Collapsed">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xECAA;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="optional" Tag="Loptional0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="ostream" Content="&lt;ostream>" Tag="fostream">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE7F4;"/>
@@ -497,6 +523,12 @@
                 <NavigationViewItem.MenuItems>
 
                     <NavigationViewItem Content="linear_congruential_engine" Tag="nlinear_congruential_engine0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="mersenne_twister_engine" Tag="nmersenne_twister_engine0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -944,6 +976,12 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
+            <NavigationViewItem Content="&lt;fileapi.h>" Tag="4fileapi">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7C3;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
             <NavigationViewItem Content="&lt;ProcessEnv.h>" Tag="4ProcessEnv">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xF16E;"/>
@@ -967,7 +1005,6 @@
         <NavigationView.AutoSuggestBox>
             <AutoSuggestBox x:Name="Suggest" QueryIcon="Find" AutomationProperties.Name="Search" PlaceholderText="ライブラリを検索" TextChanged="Suggest_TextChanged" SuggestionChosen="Suggest_SuggestionChosen" QuerySubmitted="Suggest_QuerySubmitted"/>
         </NavigationView.AutoSuggestBox>
-
 
         <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated"/>
     </NavigationView>

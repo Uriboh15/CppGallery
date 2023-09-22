@@ -31,6 +31,8 @@ namespace CppGallery.Pages.UserControls
 
         private void Out_Loaded(object sender, RoutedEventArgs e)
         {
+            Loaded -= Out_Loaded;
+
             FunctionExpander.Execute(this, this.Text);
             TextBox.TextChanging += In_TextChanging;
         }

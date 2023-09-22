@@ -10,25 +10,25 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="queue__queue/queue" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="container_type" Sentence="コンテナの型" />
                 <local:ItemGrid Title="size_type" Sentence="queue の要素番号を表す型" />
                 <local:ItemGrid Title="value_type" Sentence="queue の要素の型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="queue__queue/back" />
-                <local:CustomExpander Title="emplace() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="queue__queue/emplace" />
                 <local:FunctionExpander Folder="queue__queue/empty" />
                 <local:FunctionExpander Folder="queue__queue/front" />
                 <local:FunctionExpander Folder="queue__queue/pop" />
                 <local:FunctionExpander Folder="queue__queue/push" />
                 <local:FunctionExpander Folder="queue__queue/size" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/queue-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/queue/queue.html" />
 

@@ -12,12 +12,12 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="wchar_t" Sentence="ワイド文字を表す型"/>
                 <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="wctype.h/iswalnum" CodeLanguage="C">
                     <local:ControlGrid Message="文字列を入力">
                         <TextBox Text="123abc" TextChanging="In_TextChanging" Loaded="Out_Loaded"/>
@@ -51,7 +51,7 @@
 
                 <local:CustomExpander Title="wctrans() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="wctype() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
             <local:MacroPanel Folder="wctype.h" >

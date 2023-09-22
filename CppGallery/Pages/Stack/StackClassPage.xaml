@@ -10,24 +10,26 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="stack__stack/stack" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="container_type" Sentence="コンテナの型" />
                 <local:ItemGrid Title="size_type" Sentence="stack の要素番号を表す型" />
                 <local:ItemGrid Title="value_type" Sentence="stack の要素の型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
-                <local:CustomExpander Title="emplace() 関数" IsEnabled="False" />
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:FunctionExpander Folder="stack__stack/emplace" />
                 <local:FunctionExpander Folder="stack__stack/empty" />
                 <local:FunctionExpander Folder="stack__stack/pop" />
                 <local:FunctionExpander Folder="stack__stack/push" />
                 <local:FunctionExpander Folder="stack__stack/size" />
                 <local:FunctionExpander Folder="stack__stack/top" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/stack-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/stack/stack.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

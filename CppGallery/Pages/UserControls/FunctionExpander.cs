@@ -11,17 +11,11 @@ using System.Globalization;
 using System.Reflection.PortableExecutable;
 using Windows.Devices.Enumeration;
 using Microsoft.VisualBasic;
+using Windows.Services.Maps;
 
 namespace CppGallery.Pages.UserControls
 {
-    public enum HeaderIcon
-    {
-        Function,
-        Literal,
-        Macro,
-        Object,
-        Operator,
-    }
+    
 
     public enum CodeLanguage
     {
@@ -137,42 +131,44 @@ namespace CppGallery.Pages.UserControls
         public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
         public CVersion TargetMinCVersion { get; set; } = UserAPI.MinCVersion;
 
-        private string _text;
 
         public string Text
         {
             get
             {
-                return _text;
+                return OutPut?.Text;
             }
             set
             {
-                _text = value;
-                if (outPut != null)
+                if (OutPut != null)
                 {
-
-                    outPut.Text = value;
+                    OutPut.Text = value;
                 }
             }
         }
 
-        private double TitleSize;
-        private string LaunchAppMessage;
-        private string LaunchButtonContent;
-        private string CodeName;
-        private string DefName;
-        private string Motion;
-        private string NoPrm;
-        private string NoReturn;
-        private string OverLoad;
-        private string Prm;
-        private string Results;
-        private string Returns;
+        private static double TitleSize => Data.FunctionTitleTextSize;
+        private static string LaunchAppMessage => "サンプルアプリを起動して動作確認";
+        private static string LaunchButtonContent => "起動";
+        private static string DefName => "定義";
+        private static string Motion => "サンプル";
+        private static string NoPrm => "なし(void)";
+        private static string NoReturn => "なし(void)";
+        private static string Prm => "パラメーター";
+        private static string Results => "実行結果";
+        private static string Returns => "戻り値";
         private string SampleName;
         private string[] Lines;
+
+        //コンテンツはExpanderを展開したときにロードする
         private bool IsContentLoaded = false;
-        private OutPuts outPut = null;
+
+        private OutPuts OutPut = null;
         private string[] GCCPath;
+
+        //サンプルコードのファイル名
+        private string CodeName;
+        private static string DeclName => "/Decl.txt";
 
         public FunctionExpander()
         {
@@ -182,43 +178,7 @@ namespace CppGallery.Pages.UserControls
             this.Expanding += FunctionExpander_Expanding;
             this.Padding = new Thickness(Data.FunctionExpanderPadding);
             this.MinHeight = Data.GalleryControlHeight;
-            this.TitleSize = Data.FunctionTitleTextSize;
-            DefName = "定義";
-            LaunchAppMessage = "サンプルアプリを起動して動作確認";
-            LaunchButtonContent = "起動";
-            Motion = "動作";
-            NoPrm = "なし(void)\n";
-            NoReturn = "なし(void)";
-            OverLoad = "オーバーロード";
-            Prm = "パラメーター";
-            Results = "実行結果";
-            Returns = "戻り値";
 
-            
-        }
-
-        private string ParseIcon()
-        {
-            switch (this.Icon)
-            {
-                case HeaderIcon.Function:
-                    return "\uF158";
-
-                case HeaderIcon.Literal:
-                    return "\uEA3A";
-
-                case HeaderIcon.Macro:
-                    return "\uE71A";
-
-                case HeaderIcon.Object:
-                    return "\uEA86";
-
-                case HeaderIcon.Operator:
-                    return "\uE710";
-
-                default:
-                    return "\uF158";
-            }
         }
 
         private static InfoBar GetVersionErrorInfoBar(string language, int MinVersion = -1)
@@ -358,7 +318,7 @@ namespace CppGallery.Pages.UserControls
                             panel1.Children.Add(grid);
 
                             
-                            outPut = new OutPuts { Text = this.Text };
+                            OutPut = new OutPuts { Text = this.Text };
                             if (this.Content == null)
                             {
                                 Execute(this);
@@ -367,7 +327,7 @@ namespace CppGallery.Pages.UserControls
                             {
                                 panel1.Children.Add(this.Content);
                             }
-                            panel1.Children.Add(outPut);
+                            panel1.Children.Add(OutPut);
                             break;
 
                         case SampleType.ConsoleOnly:
@@ -395,9 +355,9 @@ namespace CppGallery.Pages.UserControls
             }
         }
 
-        private InnerPanel SetDefinition()
+        private StackPanel SetDefinition()
         {
-            InnerPanel panel = new InnerPanel();
+            StackPanel panel = new StackPanel { Spacing = Data.CompactOuterPanelSpacing };
 
             int i;
 
@@ -405,65 +365,87 @@ namespace CppGallery.Pages.UserControls
             {
                 return panel;
             }
-            TextBlock title1 = new TextBlock();
-            panel.Children.Add(title1);
-            title1.FontWeight = new Windows.UI.Text.FontWeight(700);
-            TextBlock sentence1 = new TextBlock();
-            panel.Children.Add(sentence1);
-            sentence1.IsTextSelectionEnabled = true;
 
+            //関数定義ファイルがあればそれを表示
+            if(File.Exists(Data.DefaultSamplePath + Folder + DeclName))
+            {
+                switch (this.CodeLanguage)
+                {
+                    case CodeLanguage.C:
+                        if (App.UseCppInCSample)
+                        {
+                            panel.Children.Add(new CodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty });
+                        }
+                        else
+                        {
+                            panel.Children.Add(new CCodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty });
+                        }
+
+
+                        break;
+
+                    case CodeLanguage.Cpp: panel.Children.Add(new CodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
+                    case CodeLanguage.CppWin32: panel.Children.Add(new Win32CodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
+                    case CodeLanguage.CppWinRT: panel.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
+                }
+            }
+
+            
+            
+            //空回し
             for (i = 2; i < Lines.Length; ++i)
             {
-                if (Lines[i].Length == 1)
+                if (Lines[i].Length == 0)
                 {
                     ++i;
                     break;
                 }
-                sentence1.Text += Lines[i] + '\n';
-            }
-
-            if (i > 4)
-            {
-                title1.Text = OverLoad;
-            }
-            else
-            {
-                title1.Text = DefName;
             }
 
             if (i == Lines.Length)
             {
-                sentence1.Text = sentence1.Text.Substring(0, sentence1.Text.Length - 1);
                 return panel;
             }
+
+            var resultPanel2 = new ResultsPanel();
+            panel.Children.Add(resultPanel2);
             TextBlock title2 = new TextBlock();
-            panel.Children.Add(title2);
+            resultPanel2.Children.Add(title2);
             title2.FontWeight = new Windows.UI.Text.FontWeight(700);
+            title2.FontSize = TitleSize;
             title2.Text = Prm;
-            TextBlock sentence2 = new TextBlock();
-            panel.Children.Add(sentence2);
+            
 
             for (; i < Lines.Length; ++i)
             {
-                if (Lines[i].Length == 1)
+                if (Lines[i].Length == 0)
                 {
                     ++i;
                     break;
                 }
-                sentence2.Text += Lines[i] + '\n';
+                string[] line = Lines[i].Split(": "); 
+
+                if(line.Length == 2)
+                {
+                    resultPanel2.Children.Add(new DetailPane { Title = line[0], Detail = line[1] });
+                }
+
             }
 
-            if (sentence2.Text.Length < 2)
+            if(resultPanel2.Children.Count == 1)
             {
-                sentence2.Text = NoPrm;
+                resultPanel2.Children.Add(new TextBlock { Text = NoPrm });
             }
 
+            var resultPanel3 = new ResultsPanel();
+            panel.Children.Add(resultPanel3);
             TextBlock title3 = new TextBlock();
-            panel.Children.Add(title3);
+            resultPanel3.Children.Add(title3);
             title3.Text = Returns;
+            title3.FontSize = TitleSize;
             title3.FontWeight = new Windows.UI.Text.FontWeight(700);
             TextBlock sentence3 = new TextBlock();
-            panel.Children.Add(sentence3);
+            resultPanel3.Children.Add(sentence3);
 
             for (; i < Lines.Length; ++i)
             {
@@ -488,7 +470,7 @@ namespace CppGallery.Pages.UserControls
         private void SetHeader()
         {
 
-            this.Header = new EHeader { Title = this.Title, Sentence = this.Sentence, Icon = ParseIcon() };
+            this.Header = new EHeader { Title = this.Title, Sentence = this.Sentence, Icon = UserAPI.GetIconSymbol(this.Icon) };
 
         }
 
@@ -498,7 +480,7 @@ namespace CppGallery.Pages.UserControls
             SampleName = UserAPI.GetExeName(CodeLanguage == CodeLanguage.C);
             CodeName = App.UseCppInCSample && this.CodeLanguage == CodeLanguage.C ? "/CodeCpp.txt" : "/Code" + ((int)App.CVersion).ToString() + ".txt";
 
-            if(CodeLanguage == CodeLanguage.C)
+            if (CodeLanguage == CodeLanguage.C)
             {
                 if (App.UseCppInCSample) CodeName = "/CodeCpp" + ((int)App.CppVersion).ToString() + ".txt";
                 else CodeName = "/Code" + ((int)App.CVersion).ToString() + ".txt";
@@ -550,21 +532,15 @@ namespace CppGallery.Pages.UserControls
             }
 
             StreamReader sr = new StreamReader(Data.DefaultSamplePath + Folder + "/Def.txt");
-            Lines = sr.ReadToEnd().Split('\n');
+            Lines = sr.ReadToEnd().Split(Environment.NewLine);
             sr.Close();
-            if (Lines.Length == 2)
-            {
-                Title = Lines[0].Substring(0, Lines[0].Length - 1);
-                Sentence = Lines[1];
-            }
-            else
-            {
-                Title = Lines[0].Substring(0, Lines[0].Length - 1);
-                Sentence = Lines[1].Substring(0, Lines[1].Length - 1);
-            }
+            Title = Lines[0];
+            Sentence = Lines[1];
 
             SetHeader();
             GCCPath = new string[] { (Data.DefaultSampleExePath + SampleName.Replace("/", "")).Replace('/', '\\'), SplitByFront(Folder, '/'), SplitByBack(Folder, '/') };
+
+            Loaded -= FunctionExpander_Loaded;
         }
 
         private static string SplitByBack(string text, char separator)
@@ -598,22 +574,6 @@ namespace CppGallery.Pages.UserControls
             return text.Substring(0, i);
         }
 
-        private string Replace(string text)
-        {
-            int i = text.Length - 1;
-
-            while (i >= 0)
-            {
-                if (text[i] == '/')
-                {
-                    break;
-                }
-                --i;
-            }
-
-            return text.Substring(0, i) + SampleName;
-        }
-
         private void ExeButton_Click(object sender, RoutedEventArgs e)
         {
             if(this.SampleType == SampleType.GUIApp)
@@ -640,7 +600,14 @@ namespace CppGallery.Pages.UserControls
                 error = true;
             }
 
-            var result = error ? errorMessage : sr.ReadToEnd();
+            var result = error ? string.Empty : sr.ReadToEnd();
+
+            if(result.Length == 0)
+            {
+                sr?.Close();
+                functionExpander.Text = errorMessage;
+                return;
+            }
 
             if (App.IsShowReturnCode)
             {
@@ -649,17 +616,15 @@ namespace CppGallery.Pages.UserControls
             }
             else
             {
-                if (result.EndsWith("\r\n"))
+                if (result.EndsWith(Environment.NewLine))
                 {
-                    functionExpander.Text = result.Substring(0, result.Length - 2);
+                    functionExpander.Text = result.Substring(0, result.Length - Environment.NewLine.Length);
                 }
                 else
                 {
                     functionExpander.Text = result;
                 }
             }
-
-            
 
             sr?.Close();
         }
@@ -678,7 +643,7 @@ namespace CppGallery.Pages.UserControls
 
             uint rc = await CoAPI.ExecuteAsync(fexpander.GCCPath[0] + ' ' + fexpander.GCCPath[1] + ' ' + fexpander.GCCPath[2]);
 
-            GetOutput(fexpander, "一時的なエラーのため、結果を表示できません", rc);
+            GetOutput(fexpander, "接続がタイムアウトしました", rc);
         }
 
         public static async void Execute(object element, string cmd, string errorMessage = "接続がタイムアウトしました")
@@ -705,7 +670,7 @@ namespace CppGallery.Pages.UserControls
                 {
                     sw.WriteLine(cmd);
                 }
-                rc = CoAPI.Execute(fexpander.GCCPath[0] + ' ' + fexpander.GCCPath[1] + ' ' + fexpander.GCCPath[2] + " NoCmd");
+                rc = CoAPI.Execute(fexpander.GCCPath[0] + ' ' + fexpander.GCCPath[1] + ' ' + fexpander.GCCPath[2] + " NoCmd", App.WaitFor);
             });
 
             GetOutput(fexpander, errorMessage, rc);
@@ -741,7 +706,7 @@ namespace CppGallery.Pages.UserControls
                         sw.WriteLine(str);
                     }
                 }
-                rc = CoAPI.Execute(fexpander.GCCPath[0] + ' ' + fexpander.GCCPath[1] + ' ' + fexpander.GCCPath[2] + " NoCmd");
+                rc = CoAPI.Execute(fexpander.GCCPath[0] + ' ' + fexpander.GCCPath[1] + ' ' + fexpander.GCCPath[2] + " NoCmd", App.WaitFor);
             });
 
             GetOutput(fexpander, errorMessage, rc);

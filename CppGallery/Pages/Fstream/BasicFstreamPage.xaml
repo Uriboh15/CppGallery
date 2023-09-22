@@ -14,29 +14,29 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="basic_fstream()" Sentence="basic_fstream 型のオブジェクトを構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="fstream__basic_fstream/operatorE" Icon="Operator">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="fstream__basic_fstream/close" AutoFunc="False" SampleType="None" />
                 <local:FunctionExpander Folder="fstream__basic_fstream/is_open" AutoFunc="False" SampleType="None" />
                 <local:FunctionExpander Folder="fstream__basic_fstream/open" SampleType="None" />
@@ -52,7 +52,7 @@
                         <local:EHeader Title="swap() 関数" Sentence="2つの basic_fstream オブジェクトの内容を入れ替えます"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-fstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_fstream.html" />
 

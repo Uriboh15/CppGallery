@@ -15,71 +15,70 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                <local:BasicBlockPanel HeadText="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource Algorithm}" />
-                    <local:ToRightButton Style="{StaticResource Ranges}" />
-                </local:BasicBlockPanel>
+                <local:BlockPanel Header="ヘッダー" >
+                    <local:ToRightButton Style="{StaticResource FileApih}" />
+                </local:BlockPanel>
 
-                <local:BasicBlockPanel HeadText="&lt;algorithm>" >
-                    <local:FunctionExpander Folder="algorithm/adjacent_find" />
-                    <local:FunctionExpander Folder="algorithm/all_of" />
-                    <local:FunctionExpander Folder="algorithm/any_of" />
-                    <local:FunctionExpander Folder="algorithm/count" />
-                    <local:FunctionExpander Folder="algorithm/count_if" />
-                    <local:FunctionExpander Folder="algorithm/find" />
-                    <local:FunctionExpander Folder="algorithm/find_if" />
-                    <local:FunctionExpander Folder="algorithm/find_if_not" />
-                    <local:FunctionExpander Folder="algorithm/for_each" />
-                    <local:FunctionExpander Folder="algorithm/for_each_n" TargetMinCppVersion="Cpp17" />
-                    <local:FunctionExpander Folder="algorithm/generate" />
-                    <local:FunctionExpander Folder="algorithm/none_of" />
-                    <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__for_each" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__none_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                </local:BasicBlockPanel>
+                <local:SymbolBlockPanel Symbol="Class" >
+                    <local:ToRightButton Style="{StaticResource MersenneTwisterEngineClass}" />
+                </local:SymbolBlockPanel>
 
-                <local:BasicBlockPanel HeadText="basic_string クラス" >
-                    <local:FunctionExpander Folder="string__basic_string/contains" TargetMinCppVersion="Cpp23" >
-                        <local:MultiTextBoxPane Message1="文字列を入力" Text1="123abcあいう" Message2="検索する文字を入力" Text2="1aAあア" />
+                <local:BlockPanel Header="&lt;algorithm>" TargetMinCppVersion="Cpp20" >
+                    <local:FunctionExpander Folder="algorithm/ranges__find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="algorithm/ranges__for_each_n" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;any>" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="any/make_any" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;array>" >
+                    <local:FunctionExpander Folder="array/to_array" TargetMinCppVersion="Cpp20" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;fileapi.h>" >
+                    <local:FunctionExpander Folder="fileapi/AreFileApisANSI" CodeLanguage="CppWin32" />
+
+                    <local:FunctionExpander Folder="fileapi/DeleteFile" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:OpenButtonPane />
                     </local:FunctionExpander>
-                </local:BasicBlockPanel>
+                </local:BlockPanel>
 
-                <local:BasicBlockPanel HeadText="&lt;ranges>" TargetMinCppVersion="Cpp20" >
-                    <local:FunctionExpander Folder="ranges/begin" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/cbegin" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/cdata" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/cend" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/crbegin" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/crend" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/data" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/empty" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/end" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/rbegin" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/rend" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/size" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="ranges/ssize" Icon="Object" AutoFunc="False" />
-                </local:BasicBlockPanel>
+                <local:BlockPanel Header="linear_congruential_engine クラス" >
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/max" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/min" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/discard" AutoFunc="False" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/seed" AutoFunc="False" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/operatorEE" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/operatorNE" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/operatorLL" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="random__linear_congruential_engine/operatorRR" AutoFunc="False" Icon="Operator" />
+                </local:BlockPanel>
 
-                <local:BasicBlockPanel HeadText="&lt;WinUser.h>" >
-                    <local:FunctionExpander Folder="WinUser/IsCharAlpha" CodeLanguage="CppWin32" Icon="Macro" >
-                        <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
-                    </local:FunctionExpander>
+                <local:BlockPanel Header="mersenne_twister_engine クラス" >
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorKAKKO" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/max" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/min" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/discard" AutoFunc="False" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/seed" AutoFunc="False" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorEE" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorNE" AutoFunc="False" Icon="Operator" />
+                </local:BlockPanel>
 
-                    <local:FunctionExpander Folder="WinUser/IsCharAlphaNumeric" CodeLanguage="CppWin32" Icon="Macro" >
-                        <local:TextBoxPane Message="文字列を入力" Text="123abcあいう" />
-                    </local:FunctionExpander>
+                <local:BlockPanel Header="queue クラス" >
+                    <local:FunctionExpander Folder="queue__queue/emplace" />
+                </local:BlockPanel>
 
-                    <local:FunctionExpander Folder="WinUser/IsCharLower" CodeLanguage="CppWin32" Icon="Macro" >
-                        <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
-                    </local:FunctionExpander>
+                <local:BlockPanel Header="span クラス" >
+                    <local:FunctionExpander Folder="span__span/cbegin" TargetMinCppVersion="Cpp23" />
+                    <local:FunctionExpander Folder="span__span/cend" TargetMinCppVersion="Cpp23" />
+                    <local:FunctionExpander Folder="span__span/crbegin" TargetMinCppVersion="Cpp23" />
+                    <local:FunctionExpander Folder="span__span/crend" TargetMinCppVersion="Cpp23" />
+                </local:BlockPanel>
 
-                    <local:FunctionExpander Folder="WinUser/IsCharUpper" CodeLanguage="CppWin32" Icon="Macro" >
-                        <local:TextBoxPane Message="文字列を入力" Text="123abcABCあいう" />
-                    </local:FunctionExpander>
-                </local:BasicBlockPanel>
-
-                
+                <local:BlockPanel Header="stack クラス" >
+                    <local:FunctionExpander Folder="stack__stack/emplace" />
+                </local:BlockPanel>
 
             </local:OuterPanel>
         </ScrollViewer>

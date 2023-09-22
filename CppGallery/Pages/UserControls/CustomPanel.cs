@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Media.Animation;
+using Windows.Devices.Enumeration;
 
 namespace CppGallery.Pages.UserControls
 {
@@ -71,6 +72,8 @@ namespace CppGallery.Pages.UserControls
 
         private void CustomExpander_Loaded(object sender, RoutedEventArgs e)
         {
+            Loaded -= CustomExpander_Loaded;
+
             if (this.Title != null)
             {
                 this.Header = new EHeader { Title = this.Title, Sentence = this.Sentence, Icon = this.Icon };
@@ -96,6 +99,8 @@ namespace CppGallery.Pages.UserControls
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
+            Loaded -= Grid_Loaded;
+
             if (App.IsCompact)
             {
                 this.Padding = new Thickness(Data.ControlGridPadding, Data.ControlGridPadding - 2.0, Data.ControlGridPadding, Data.ControlGridPadding - 2.0);
@@ -111,113 +116,30 @@ namespace CppGallery.Pages.UserControls
 
             if (App.ResultTheme != ElementTheme.Default)
             {
-                if (App.ResultTheme != MainPage.Handle.ActualTheme)
+                var panel = sender as Grid;
+                if (App.ResultTheme != ActualTheme)
                 {
-                    var panel = sender as Panel;
-                    panel.RequestedTheme = App.SourceCodeTheme;
+                    
+                    panel.RequestedTheme = App.ResultTheme;
                     if (App.ResultTheme == ElementTheme.Dark)
                     {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X20, 0x20, 0x20));
+                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X0C, 0x0C, 0x0C));
                     }
                     else
                     {
                         panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XFD, 0xFD, 0xFD));
                     }
                 }
-            }
-        }
-    }
-
-    public class ColumnButton : Button
-    {
-        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register(
-            "Title",　// Max という名前の……
-            typeof(string),　// int 型の CLR プロパティを……
-            typeof(ColumnButton), // クラスに登録するやで―
-            new PropertyMetadata(string.Empty));
-
-        public static readonly DependencyProperty IconProperty = DependencyProperty.Register(
-            "Icon",　// Max という名前の……
-            typeof(string),　// int 型の CLR プロパティを……
-            typeof(ColumnButton), // クラスに登録するやで―
-            new PropertyMetadata("\uF000"));
-
-        public static readonly DependencyProperty PageTagProperty = DependencyProperty.Register(
-           "PageTag", // Max という名前の……
-           typeof(string), // int 型の CLR プロパティを……
-           typeof(ColumnButton), // クラスに登録するやで―
-           new PropertyMetadata(null));
-
-        public string Title
-        {
-            get { return (string)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
-        }
-
-        public string Icon
-        {
-            get { return (string)GetValue(IconProperty); }
-            set { SetValue(IconProperty, value); }
-        }
-
-        public string PageTag
-        {
-            get { return (string)GetValue(PageTagProperty); }
-            set { SetValue(PageTagProperty, value); }
-        }
-
-        private static NavigationTransitionInfo Navigate { get; } = new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight };
-
-        public ColumnButton()
-        {
-            this.Loaded += ColumnButton_Loaded;
-            this.Click += ColumnButton_Click;
-            this.MinHeight = 60.0;
-            this.HorizontalAlignment = HorizontalAlignment.Stretch;
-            this.HorizontalContentAlignment = HorizontalAlignment.Stretch;
-        }
-
-        private void ColumnButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (PageTag != string.Empty)
-            {
-                foreach (var pair in MainPage.PageDictionary)
+                else
                 {
-                    if (pair.Value == PageTag)
+                    if (panel.ActualTheme == ElementTheme.Dark)
                     {
-                        var element = this.Parent;
-                        while (element is not MainPage)
-                        {
-                            element = (element as FrameworkElement).Parent;
-                        }
-                        (element as MainPage).FrameHandle.Navigate(pair.Key, null, Navigate);
+                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0xC0, 0x00, 0x00, 0x00));
+                        panel.BorderBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(0xA0, 0x0D, 0x0D, 0x0D));
                     }
                 }
-
+                
             }
-        }
-
-        private void ColumnButton_Loaded(object sender, RoutedEventArgs e)
-        {
-            Grid outpanel = new Grid();
-            FontIcon icon = new FontIcon { Glyph = this.Icon, FontFamily = new FontFamily("Segoe MDL2 Assets"), Margin = new Thickness(10.0, 0.0, 0.0, 0.0), HorizontalAlignment = HorizontalAlignment.Left };
-            TextBlock textblock = new TextBlock { Text = this.Title, Margin = new Thickness(54.0, 0.0, 32.0, 0.0), VerticalAlignment = VerticalAlignment.Center };
-            FontIcon toright = new FontIcon { Glyph = "\uE974", FontFamily = new FontFamily("Segoe Fluent Icons"), Margin = new Thickness(0.0, 0.0, 5.0, 0.0), HorizontalAlignment = HorizontalAlignment.Right, FontSize = 15.0 };
-            if (App.Win10)
-            {
-                toright.FontFamily = new FontFamily("Segoe MDL2 Assets");
-                toright.FontSize = 11;
-                toright.Margin = new Thickness(0.0, 0.0, 7.0, 0.0);
-            }
-            if (!App.IsCompact)
-            {
-                outpanel.Padding = new Thickness(0.0, 7.0, 0.0, 7.0);
-            }
-            outpanel.Children.Add(icon);
-            outpanel.Children.Add(textblock);
-            outpanel.Children.Add(toright);
-
-            this.Content = outpanel;
         }
     }
 }

@@ -14,35 +14,35 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="istream__basic_iostream/basic_iostream"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="istream__basic_iostream/operatorE" Icon="Operator">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="istream__basic_iostream/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="DerivedClass">
+            <local:SymbolBlockPanel Symbol="DerivedClass">
                 <local:ToRightButton Style="{StaticResource BasicFStreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicStringStreamClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-iostream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/istream/basic_iostream.html" />
 

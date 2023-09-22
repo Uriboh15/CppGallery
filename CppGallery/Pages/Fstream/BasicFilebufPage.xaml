@@ -12,27 +12,27 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicStreamBufClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="basic_filebuf()" Sentence="basic_filebuf 型のオブジェクトを構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="fstream/basic_filebuf/operatorE" Icon="Operator">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
 
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
@@ -286,7 +286,7 @@
                     </Expander.Header>
                 </local:CustomExpander>
 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-filebuf-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_filebuf.html" />
 

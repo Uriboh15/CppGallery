@@ -10,9 +10,9 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource SourceLocationClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

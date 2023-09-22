@@ -13,58 +13,58 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Ostream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Fstream}"/>
                 <local:ToRightButton Style="{StaticResource IoManip}"/>
                 <local:ToRightButton Style="{StaticResource Iostream}"/>
                 <local:ToRightButton Style="{StaticResource SStream}"/>
                 <local:ToRightButton Style="{StaticResource StrStream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="iostream" Sentence="型 basic_iostream を char に特殊化した型"/>
                 <local:ItemGrid Title="istream" Sentence="型 basic_istream を char に特殊化した型"/>
                 <local:ItemGrid Title="wiostream" Sentence="型 basic_iostream を wchar に特殊化した型"/>
                 <local:ItemGrid Title="wistream" Sentence="型 basic_istream を wchar に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Manipulator">
+            <local:SymbolBlockPanel Symbol="Manipulator">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="ws" Sentence="ストリーム内の空白をスキップします"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="istream/operatorRR" Icon="Operator" >
                     <local:ControlGrid Message="文字列を入力">
                         <TextBox Text="abc" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
                     </local:ControlGrid>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="swap" Sentence="2つのストリームオブジェクトを交換します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/istream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/istream.html" />
 

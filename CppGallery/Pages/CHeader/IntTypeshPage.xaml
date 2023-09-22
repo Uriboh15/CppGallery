@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Struct">
+            <local:SymbolBlockPanel Symbol="Struct">
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="imaxdiv_t 構造体" Sentence="intmax_t 型の割り算の商と余りを扱う構造体" Icon="&#xEA86;"/>
@@ -20,9 +20,9 @@
                         <local:ItemGrid Title="intmax_t rem" Sentence="余り"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
 
                 <local:FunctionExpander Folder="inttypes.h/imaxabs" CodeLanguage="C" >
                     <local:TextBoxPane Message="整数を入力" Text="-12" />
@@ -231,7 +231,7 @@
                         </local:ControlGrid>
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="inttypes.h" >
                 <local:ItemGrid Title="PRId8" Sentence="printf で 8bit 符号付き整数を出力するときの書式" />

@@ -56,6 +56,9 @@
                     </Grid>
                 </local:ControlGrid>
 
+                <local:DetailControlGrid Message="サンプルタイムアウト時間 (ミリ秒)" Detail="サンプルプログラムの終了を待機する時間を設定します" >
+                    <NumberBox x:Name="WaitForNumberBox" Loaded="WaitForNumberBox_Loaded" Maximum="5200" Minimum="0" SpinButtonPlacementMode="Inline" SmallChange="10" LargeChange="100" />
+                </local:DetailControlGrid>
                 
             </local:ResultsPanel>
 
@@ -63,15 +66,13 @@
             <local:ResultsPanel>
                 <TextBlock Text="外観" />
 
-                <Grid Style="{StaticResource EGrid}" Loaded="Grid_Loaded">
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" >
-                        <TextBlock Text="コンパクトモード (再起動が必要)" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock Text="アプリのレイアウトを小さいウィンドウサイズに最適化します" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
-                    </StackPanel>
-
-                    <ToggleSwitch x:Name="CompactT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="CompactT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="CompactT_Loaded"/>
-                    <TextBlock x:Name="SText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
-                </Grid>
+                <local:DetailControlGrid Message="コンパクトモード (再起動が必要)" Detail="アプリのレイアウトを小さいウィンドウサイズに最適化します" >
+                    <Grid>
+                        <ToggleSwitch x:Name="CompactT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="CompactT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="CompactT_Loaded"/>
+                        <TextBlock x:Name="SText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
+                    </Grid>
+                    
+                </local:DetailControlGrid>
 
                 <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" Padding="0" Loaded="Expander_Loaded">
                     <Expander.Header>

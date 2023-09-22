@@ -51,6 +51,8 @@ namespace CppGallery.Pages.UserControls
 
         private void MultiTextBoxPane_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
+            Loaded -= MultiTextBoxPane_Loaded;
+
             FunctionExpander.Execute(sender, new string[] { Text1, Text2 });
             TextBox1.TextChanging += TextBox1_TextChanging;
             TextBox2.TextChanging += TextBox1_TextChanging;

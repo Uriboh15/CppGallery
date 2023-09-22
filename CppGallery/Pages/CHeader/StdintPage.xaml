@@ -12,7 +12,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="int8_t" Sentence="8bit の符号付き整数型"/>
                 <local:ItemGrid Title="int16_t" Sentence="16bit の符号付き整数型"/>
                 <local:ItemGrid Title="int32_t" Sentence="32bit の符号付き整数型"/>
@@ -43,7 +43,7 @@
                 <local:ItemGrid Title="intptr_t" Sentence="メモリ領域を表しきれる大きさを持つ符号付き整数型"/>
                 <local:ItemGrid Title="uintptr_t" Sentence="メモリ領域を表しきれる大きさを持つ符号なし整数型"/>
                 <local:ItemGrid Title="ptrdiff_t" Sentence="2つのポインターの差を表す符号付き整数型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="stdint.h" >
                 <local:ItemGrid Title="INT8_MIN" Sentence="int8_t の最小値" />

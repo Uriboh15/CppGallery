@@ -33,15 +33,5 @@ namespace CppGallery.Pages.Iostream
         {
             this.InitializeComponent();
         }
-
-        private void In_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            FunctionExpander.Execute(sender, sender.Text);
-        }
-
-        private void Out_Loaded(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, (sender as TextBox).Text);
-        }
     }
 }

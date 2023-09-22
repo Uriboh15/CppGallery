@@ -9,13 +9,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="Root_Loaded">
-
-    <UserControl.Resources>
-        <Style TargetType="StackPanel">
-            <Setter Property="Spacing" Value="0"/>
-        </Style>
-    </UserControl.Resources>
+    Loaded="UserControl_Loaded">
 
     <local:ResultsPanel>
         <TextBlock x:Name="TitleText" Text="{x:Bind FileName}" Loaded="TitleText_Loaded"/>

@@ -84,6 +84,8 @@
                     <local:EHeader Title="underflow() 関数" Sentence="aaa"/>
                 </Expander.Header>
             </local:CustomExpander>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-stringbuf-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream/basic_stringbuf.html" Margin="0,56,0,0" />
         </local:CustomPanel>
     </ScrollViewer>
 </Page>

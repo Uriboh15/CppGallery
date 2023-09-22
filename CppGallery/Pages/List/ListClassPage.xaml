@@ -12,11 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="list__list/list" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="allocator_type" Sentence="list オブジェクトの allocator クラスを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="list 内の1つの const 要素を読み取ることができる双方向イテレータを表す型"/>
                 <local:ItemGrid Title="const_pointer" Sentence="list 内の const 要素へのポインターを表す型"/>
@@ -29,13 +29,13 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="逆順の list 内の1つの要素の読み取りまたは変更ができる双方向イテレータを表す型"/>
                 <local:ItemGrid Title="size_type" Sentence="list 内の要素数を表す型"/>
                 <local:ItemGrid Title="value_type" Sentence="list 内に格納されているデータ型を表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="list__list/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="list__list/assign" />
                 <local:FunctionExpander Folder="list__list/back" />
                 <local:FunctionExpander Folder="list__list/begin" />
@@ -87,7 +87,7 @@
 
                 <local:FunctionExpander Folder="list__list/swap" />
                 <local:FunctionExpander Folder="list__list/unique" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/list-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/list/list.html" />
 

@@ -12,25 +12,25 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource IosFwd}"/>
                 <local:ToRightButton Style="{StaticResource SystemError}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Ios}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="streambuf" Sentence="basic_streambuf を char に特殊化した型"/>
                 <local:ItemGrid Title="wstreambuf" Sentence="basic_streambuf を wchar_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource BasicStreamBufClass}" />
                 <local:ToRightButton Style="{StaticResource IosBaseClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

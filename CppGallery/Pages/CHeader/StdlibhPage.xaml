@@ -12,17 +12,17 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Limitsh}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Struct">
+            <local:SymbolBlockPanel Symbol="Struct">
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="div_t 構造体" Sentence="int 型の割り算の商と余りを扱う構造体" Icon="&#xEA86;"/>
@@ -52,10 +52,10 @@
                         <local:ItemGrid Title="long long rem" Sentence="余り"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="stdlib.h/abort" />
 
                 <local:FunctionExpander Folder="stdlib.h/abs" CodeLanguage="C" >
@@ -381,7 +381,7 @@
                         <InfoBar Style="{StaticResource VisualWarning}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
             <local:MacroPanel Folder="stdlib.h">

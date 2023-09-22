@@ -13,17 +13,17 @@
     <Grid>
         <ScrollViewer>
             <local:OuterPanel>
-                <local:BlockPanel Header="BaseClass">
+                <local:SymbolBlockPanel Symbol="BaseClass">
                     <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="Constructor">
+                <local:SymbolBlockPanel Symbol="Constructor">
                     <local:FunctionExpander Folder="fstream__basic_ifstream/basic_ifstream" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
                         <local:OpenButtonPane/>
                     </local:FunctionExpander>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="Operator">
+                <local:SymbolBlockPanel Symbol="Operator">
                     <local:CustomExpander IsEnabled="False">
                         <Expander.Header>
                             <local:EHeader Title="explicit operator bool" Sentence="aaa" Icon="&#xE710;"/>
@@ -42,10 +42,10 @@
                             <InfoBar Style="{StaticResource DeletedOperator}"/>
                         </local:FunctionExpander.Info>
                     </local:FunctionExpander>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
                 
 
-                <local:BlockPanel Header="Method">
+                <local:SymbolBlockPanel Symbol="Method">
                     <local:FunctionExpander Folder="fstream__basic_ifstream/bad"/>
                     <local:FunctionExpander Folder="fstream__basic_ifstream/close" AutoFunc="False" SampleType="None"/>
                     <local:FunctionExpander Folder="fstream__basic_ifstream/clear" AutoFunc="False" />
@@ -227,7 +227,7 @@
                     </local:CustomExpander>
 
                     <local:FunctionExpander Folder="fstream__basic_ifstream/width"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
                 <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ifstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_ifstream.html" />
 

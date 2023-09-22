@@ -96,6 +96,7 @@
                     <local:ToRightButton Style="{StaticResource ConsoleApi2}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource ConsoleApi3}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource DwmAPI}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource FileApih}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource ProcessEnv}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Windowsh}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinUserh}" InLibraryPage="True"/>

@@ -10,11 +10,11 @@
 
     <ScrollViewer >
         <local:OuterPanel >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="set__multiset/multiset" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="multiset の allocator クラスを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="multiset の要素にアクセスできる const イテレータ"/>
                 <local:ItemGrid Title="const_pointer" Sentence="multiset の要素にアクセスできる const ポインター"/>
@@ -30,13 +30,13 @@
                 <local:ItemGrid Title="size_type" Sentence="multiset の要素数を数える型"/>
                 <local:ItemGrid Title="value_compare" Sentence="2 つの要素の順序を表す型"/>
                 <local:ItemGrid Title="value_type" Sentence="multiset の要素の型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="set__multiset/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="set__multiset/begin" />
                 <local:FunctionExpander Folder="set__multiset/cbegin" />
                 <local:FunctionExpander Folder="set__multiset/cend" />
@@ -68,7 +68,7 @@
                 <local:FunctionExpander Folder="set__multiset/upper_bound" />
 
                 <local:CustomExpander Title="value_comp() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/multiset-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/set/multiset.html" />
         </local:OuterPanel>

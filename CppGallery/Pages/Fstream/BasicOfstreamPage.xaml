@@ -12,11 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="fstream__basic_ofstream/basic_ofstream" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
                     <local:ResultsPanel>
                         <local:ControlGrid Message="文字列を入力">
@@ -27,10 +27,10 @@
                         </local:ControlGrid>
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:CustomExpander Title="explicit operator bool" Icon="&#xE710;" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="fstream__basic_ofstream/operatorvoid" AutoFunc="False" Icon="Operator"  />
@@ -45,10 +45,10 @@
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="ios__basic_ios/bad"/>
                 <local:FunctionExpander Folder="fstream__basic_ofstream/clear" AutoFunc="False" />
                 <local:FunctionExpander Folder="fstream__basic_ofstream/close" AutoFunc="False" SampleType="None" />
@@ -130,7 +130,7 @@
                 <local:FunctionExpander Folder="fstream__basic_ofstream/write" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
                     <local:SaveButtonPane />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ofstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream/basic_ofstream.html" />
 

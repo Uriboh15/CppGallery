@@ -10,12 +10,12 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp23">
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:FunctionExpander Folder="print/print" />
                 <local:FunctionExpander Folder="print/println" />
                 <local:CustomExpander Title="vprint_nonunicode() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="vprint_unicode() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/print.html" />
         </local:OuterPanel>

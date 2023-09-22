@@ -101,7 +101,7 @@ namespace CppGallery.Pages.UserControls
             Clipboard.SetContent(dataPackage);
         }
 
-        protected abstract void Root_Loaded(object sender, RoutedEventArgs e);
+        protected abstract void LoadFile();
 
         private void Panel_Loaded(object sender, RoutedEventArgs e)
         {
@@ -109,7 +109,7 @@ namespace CppGallery.Pages.UserControls
             {
                 var panel = sender as StackPanel;
                 panel.RequestedTheme = App.SourceCodeTheme;
-                if (App.SourceCodeTheme != MainWindow.Handle.GetTheme())
+                if (App.SourceCodeTheme != MainWindow.GetParentMainWindow(this).GetTheme())
                 {
                     
                     if (App.SourceCodeTheme == ElementTheme.Dark)
@@ -139,6 +139,13 @@ namespace CppGallery.Pages.UserControls
             {
                 (TitleText.Parent as Panel).Children.Remove(TitleText);
             }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadFile();
+
+            Loaded -= UserControl_Loaded;
         }
     }
 }

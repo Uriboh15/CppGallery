@@ -10,14 +10,14 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource TypeInfoClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Exception" >
+            <local:SymbolBlockPanel Symbol="Exception" >
                 <local:FunctionExpander Folder="typeinfo/bad_cast" Icon="Object" />
                 <local:FunctionExpander Folder="typeinfo/bad_typeid" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/typeinfo?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/typeinfo.html" />
         </local:OuterPanel>

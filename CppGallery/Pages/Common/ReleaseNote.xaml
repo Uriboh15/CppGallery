@@ -24,6 +24,21 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.0  Preview" Sentence="2023年9月22日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに27項目追加<LineBreak />
+                    ・19項目更新<LineBreak />
+                    ・タブの分離、結合機能を追加<LineBreak/>
+                    ・サンプルの表示スタイルを変更<LineBreak />
+                    ・ページ遷移ボタンに右クリックメニューに「新しいウィンドウで開く」アクションを追加<LineBreak />
+                    ・サンプル待機時間の設定を追加<LineBreak />
+                    ・ページ遷移ボタンを中クリックしたときに新しいタブでページを開く機能を追加
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.3.2" Sentence="2023年9月14日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>

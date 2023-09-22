@@ -14,27 +14,27 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             
-            <local:BlockPanel Header="BaseClass" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
                 <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="sstream__basic_istringstream/basic_istringstream" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="basic_istringstream の allocator を表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="sstream__basic_istringstream/operatorE" Icon="Operator">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}" />
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="rdbuf() 関数" Sentence="型 pointer の格納されたストリームバッファーのアドレスを basic_stringbuf&lt;Elem, Tr, Alloc>* として返します"/>
@@ -43,8 +43,9 @@
 
                 <local:FunctionExpander Folder="sstream__basic_istringstream/str" AutoFunc="False" />
                 <local:FunctionExpander Folder="sstream__basic_istringstream/swap" AutoFunc="False" />
-            </local:BlockPanel>
-            
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-istringstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream/basic_istringstream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

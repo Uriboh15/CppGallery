@@ -12,23 +12,23 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="ios__ios_base/ios_base">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource ProtectedConstructor}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="event_callback" Sentence="register_call に渡す関数を記述します"/>
                 <local:ItemGrid Title="fmtflags" Sentence="出力の外観を指定する定数の型"/>
                 <local:ItemGrid Title="iostate" Sentence="ストリームの状態を表す定数の型"/>
                 <local:ItemGrid Title="openmode" Sentence="ファイルのオープンモードを指定する型"/>
                 <local:ItemGrid Title="seekdir" Sentence="オフセット演算の開始位置を指定する型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constant">
+            <local:SymbolBlockPanel Symbol="Constant">
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="fmtflags 型定数" Sentence="出力の外観を指定する型の定数値" Icon="&#xEA86;"/>
@@ -99,10 +99,10 @@
                         </local:EnumPanel>
                     </Expander.Content>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Enum">
+            <local:SymbolBlockPanel Symbol="Enum">
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="enum event" Sentence="オフセット演算の開始位置を指定する型" Icon="&#xEA86;"/>
@@ -113,17 +113,17 @@
                         <local:ItemGrid Title="copyfmt_event" Sentence="imbue への呼び出しの終了時の関数が返す直前に発生するコールバックを識別します"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="ios__ios_base/operator=" Icon="Operator">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="StaticMethod" >
+            <local:SymbolBlockPanel Symbol="StaticMethod" >
                 <local:FunctionExpander Folder="ios__ios_base/sync_with_stdio" />
 
                 <local:CustomExpander IsEnabled="False">
@@ -131,9 +131,9 @@
                         <local:EHeader Title="xalloc() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
 
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
@@ -183,16 +183,16 @@
 
                 <local:FunctionExpander Folder="ios__ios_base/width" />
 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ItemGrid Title="failure クラス" Sentence="ストリームからスローされる例外クラス" />
                 <local:ItemGrid Title="Init クラス" Sentence="iostream オブジェクトを適切に構築するためのクラス" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="DerivedClass">
+            <local:SymbolBlockPanel Symbol="DerivedClass">
                 <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ios-base-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/ios_base.html" />
 

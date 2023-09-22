@@ -12,16 +12,16 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Istream}"/>
                 <local:ToRightButton Style="{StaticResource String}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Complex}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="istringstream" Sentence="basic_istringstream を char に特殊化した型"/>
                 <local:ItemGrid Title="ostringstream" Sentence="basic_ostringstream を char に特殊化した型"/>
                 <local:ItemGrid Title="stringbuf" Sentence="basic_stringbuf を char に特殊化した型"/>
@@ -30,18 +30,18 @@
                 <local:ItemGrid Title="wostringstream" Sentence="basic_ostringstream を wchar_t に特殊化した型"/>
                 <local:ItemGrid Title="wstringbuf" Sentence="basic_stringbuf を wchar_t に特殊化した型"/>
                 <local:ItemGrid Title="wstringstream" Sentence="basic_stringstream を wchar_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="sstream/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource BasicStringBufClass}" />
                 <local:ToRightButton Style="{StaticResource BasicIStringStreamClass}" />
                 <local:ToRightButton Style="{StaticResource BasicOStringStreamClass}" />
                 <local:ToRightButton Style="{StaticResource BasicStringStreamClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/sstream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream.html" />
 

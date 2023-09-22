@@ -12,7 +12,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constant">
+            <local:SymbolBlockPanel Symbol="Constant">
                 <local:FunctionExpander Folder="limits__numeric_limits/digits" Icon="Object" />
                 <local:FunctionExpander Folder="limits__numeric_limits/digits10" Icon="Object" />
 
@@ -118,9 +118,9 @@
                         <local:EHeader Title="traps" Sentence="aaa" Icon="&#xEA86;"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="StaticMethod">
+            <local:SymbolBlockPanel Symbol="StaticMethod">
                 <local:FunctionExpander Folder="limits__numeric_limits/denorm_min" />
                 <local:FunctionExpander Folder="limits__numeric_limits/epsilon" />
                 <local:FunctionExpander Folder="limits__numeric_limits/infinity" />
@@ -145,7 +145,7 @@
                         <local:EHeader Title="signaling_NaN() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/numeric-limits-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/limits/numeric_limits.html" />
 

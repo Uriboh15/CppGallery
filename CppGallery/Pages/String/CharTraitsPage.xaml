@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="char_type" Sentence="文字の型"/>
                 <local:ItemGrid Title="int_type" Sentence="char_type 型の文字とファイルの終端文字 (EOF) を表すことができる整数型"/>
                 <local:ItemGrid Title="off_type" Sentence="ストリーム内の位置間のオフセットを表すことのできる整数型"/>
                 <local:ItemGrid Title="pos_type" Sentence="ストリーム内の位置を表すことのできる整数型"/>
                 <local:ItemGrid Title="state_type" Sentence="ストリーム内のマルチバイト文字の変換状態を表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="StaticMethod" >
+            <local:SymbolBlockPanel Symbol="StaticMethod" >
                 <local:FunctionExpander Folder="string__char_traits/assign" />
 
                 <local:FunctionExpander Folder="string__char_traits/compare" >
@@ -58,7 +58,7 @@
 
                 <local:FunctionExpander Folder="string__char_traits/to_char_type" />
                 <local:FunctionExpander Folder="string__char_traits/to_int_type" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
         </local:OuterPanel>
     </ScrollViewer>

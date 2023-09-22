@@ -237,7 +237,7 @@ namespace CppGallery.Pages.Common
             picker.FileTypeFilter.Add(".c");
             picker.FileTypeFilter.Add(".cpp");
 
-            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.GetParentMainWindow(this)));
 
             IReadOnlyList<StorageFile> files = await picker.PickMultipleFilesAsync();
 

@@ -12,7 +12,7 @@
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:CustomExpander Title="absolute() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="begin() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="canonical() 関数" IsEnabled="False" />
@@ -111,16 +111,16 @@
                 <local:CustomExpander Title="temp_directory_path() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="u8path() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="weakly_canonical() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource DirectoryIteratorClass}" />
                 <local:ItemGrid Title="directory_error クラス" Sentence="フォルダ操作に失敗したときにスローされる例外クラス" />
                 <local:ToRightButton Style="{StaticResource FileStatusClass}" />
                 <local:ToRightButton Style="{StaticResource PathClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct">
+            <local:SymbolBlockPanel Symbol="Struct">
                 <local:CustomExpander Title="space_info 構造体" Sentence="ボリュームの情報を格納します" Icon="&#xEA86;">
                     <local:EnumPanel>
                         <local:ItemGrid Title="uintmax_t capacity" Sentence="ボリュームの容量" />
@@ -128,7 +128,7 @@
                         <local:ItemGrid Title="uintmax_t available" Sentence="ボリュームの利用可能な領域" />
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/filesystem?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem.html" />
         </local:OuterPanel>

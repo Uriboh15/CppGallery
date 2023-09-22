@@ -14,21 +14,21 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource NotRecommended}" Message="代わりに &lt;sstream> の使用を検討してください"/>
 
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Istream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="swap() 関数" Sentence="2つの ストリーム の中身を入れ替えます"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="strstreambuf クラス" Sentence="aaa"/>
                 </Button>
@@ -40,7 +40,7 @@
                 <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="strstream クラス" Sentence="入出力先に char 配列を用いるストリームクラス"/>
                 </Button>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
         </local:OuterPanel>
     </ScrollViewer>

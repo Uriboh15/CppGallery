@@ -12,7 +12,7 @@
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:BlockPanel Header="FunctionObject" >
+            <local:SymbolBlockPanel Symbol="FunctionObject" >
                 <local:FunctionExpander Folder="ranges/begin" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="ranges/cbegin" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="ranges/cdata" Icon="Object" AutoFunc="False" />
@@ -26,7 +26,7 @@
                 <local:FunctionExpander Folder="ranges/rend" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="ranges/size" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="ranges/ssize" Icon="Object" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ranges?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ranges.html" />
         </local:OuterPanel>

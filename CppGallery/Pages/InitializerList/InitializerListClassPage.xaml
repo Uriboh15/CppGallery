@@ -12,24 +12,24 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="initializer_list__initializer_list/initializer_list" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="value_type" Sentence="initializer_list 内の要素の型"/>
                 <local:ItemGrid Title="reference" Sentence="initializer_list 内の要素への参照を表す型"/>
                 <local:ItemGrid Title="const_reference" Sentence="initializer_list 内の要素へのconst参照を表す型"/>
                 <local:ItemGrid Title="size_type" Sentence="initializer_list 内の要素の数を表す型"/>
                 <local:ItemGrid Title="iterator" Sentence="initializer_list にイテレータを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="initializer_list に const イテレータを表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="initializer_list__initializer_list/begin" />
                 <local:FunctionExpander Folder="initializer_list__initializer_list/end" />
                 <local:FunctionExpander Folder="initializer_list__initializer_list/size" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/initializer-list-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/initializer_list/initializer_list.html" />
 

@@ -77,6 +77,8 @@ namespace CppGallery.Pages.UserControls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            Loaded -= UserControl_Loaded;
+
             if(App.WinVer < MinimumVersion)
             {
                 ErrorInfo.Message = GetErrorMessage(MinimumVersion);

@@ -13,7 +13,7 @@
     <ScrollViewer>
         <local:OuterPanel HeaderType="Windows">
             <InfoBar Style="{StaticResource NonStandardHeader}"/>
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="conio.h/cgets" CodeLanguage="C" SampleType="ConsoleOnly" />
                 <local:FunctionExpander Folder="conio.h/cprintf" CodeLanguage="C" AutoFunc="False" SampleType="ConsoleOnly" />
                 <local:FunctionExpander Folder="conio.h/cputs" CodeLanguage="C" SampleType="ConsoleOnly" />
@@ -34,7 +34,7 @@
                         <local:EHeader Title="_ungetch() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
         </local:OuterPanel>
     </ScrollViewer>

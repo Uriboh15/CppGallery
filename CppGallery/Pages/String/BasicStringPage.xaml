@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="basic_string()" Sentence="文字列を作成します" Icon="&#xF158;"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="文字列の allocator クラス型を表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="文字列内の const 要素にアクセスし、読み取ることができるランダムアクセスイテレータを提供する型"/>
                 <local:ItemGrid Title="const_pointer" Sentence="文字列内の const 要素へのポインターを提供する型"/>
@@ -34,19 +34,19 @@
                 <local:ItemGrid Title="size_type" Sentence="文字列の要素数を表す符号なし整数型"/>
                 <local:ItemGrid Title="traits_type" Sentence="文字列に格納されている要素の文字の特徴の型"/>
                 <local:ItemGrid Title="value_type" Sentence="文字列に格納された文字の型を表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constant" >
+            <local:SymbolBlockPanel Symbol="Constant" >
                 <local:ItemGrid Title="npos" Sentence="find() 関数が検索結果が見つからなかったときに返す値"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="string__basic_string/operatorPlusE" Icon="Operator" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/operatorE" Icon="Operator" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/operatorKAKKO" Icon="Operator" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="string__basic_string/append" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/assign" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/at" AutoFunc="False" />
@@ -146,7 +146,7 @@
                 <local:FunctionExpander Folder="string__basic_string/starts_with" AutoFunc="False" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="string__basic_string/substr" AutoFunc="False" />
                 <local:FunctionExpander Folder="string__basic_string/swap" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
         </local:OuterPanel>
     </ScrollViewer>

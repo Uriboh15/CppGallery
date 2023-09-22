@@ -14,17 +14,17 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="istream__basic_istream/basic_istream"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="istream__basic_istream/operatorRR" Icon="Operator" >
                     <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
@@ -34,10 +34,10 @@
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="istream__basic_istream/gcount" >
                     <local:TextBoxPane Message="文字列を入力" Text="abc" />
                 </local:FunctionExpander>
@@ -103,13 +103,13 @@
                         <local:EHeader Title="unget() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="DerivedClass">
+            <local:SymbolBlockPanel Symbol="DerivedClass">
                 <local:ToRightButton Style="{StaticResource BasicIFStreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicIStringStreamClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-istream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/istream/basic_istream.html" />
 

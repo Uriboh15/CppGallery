@@ -30,16 +30,5 @@ namespace CppGallery.Pages.Random
         {
             this.InitializeComponent();
         }
-
-        private void OpeKAKKOButton_Click(object sender, RoutedEventArgs e)
-        {
-            OpeKAKKOOut.Text = Func.RandomLinearCongruentialEngineOpeKAKKO().ToString();
-        }
-
-        private void OpeKAKKOOut_Loaded(object sender, RoutedEventArgs e)
-        {
-            Func.RandomLinearCongruentialEngineSeed(0);
-            OpeKAKKOOut.Text = Func.RandomLinearCongruentialEngineOpeKAKKO().ToString();
-        }
     }
 }

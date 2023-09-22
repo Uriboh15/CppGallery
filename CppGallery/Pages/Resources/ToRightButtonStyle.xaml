@@ -70,6 +70,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="BasicFormatStringClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="basic_format_string 構造体" />
+        <Setter Property="Sentence" Value="フォーマット文字列" />
+        <Setter Property="PageTag" Value="Jbasic_format_string0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="BasicFStreamClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="basic_fstream クラス" />
         <Setter Property="Sentence" Value="ファイルの読み書きを行うファイルストリームクラステンプレート"/>
@@ -366,6 +374,15 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="FileApih" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;fileapi.h>" />
+        <Setter Property="Sentence" Value="ファイルと I/O デバイス操作" />
+        <Setter Property="PageTag" Value="4fileapi"/>
+        <Setter Property="Icon" Value="&#xE7C3;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="FileStatusClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="file_status クラス" />
         <Setter Property="Sentence" Value="file_type と perm のラッパークラス" />
@@ -562,7 +579,7 @@
 
     <Style x:Key="LinearCongruentialEngineClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="linear_congruential_engine クラス" />
-        <Setter Property="Sentence" Value="線形合同法アルゴリズムでランダムな値を生成します" />
+        <Setter Property="Sentence" Value="線形合同法による疑似乱数生成" />
         <Setter Property="PageTag" Value="nlinear_congruential_engine0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
@@ -620,6 +637,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="MersenneTwisterEngineClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="mersenne_twister_engine クラス" />
+        <Setter Property="Sentence" Value="メルセンヌツイスター法による疑似乱数生成" />
+        <Setter Property="PageTag" Value="nmersenne_twister_engine0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="MultiMapClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="multimap クラス" />
         <Setter Property="Sentence" Value="aaa" />
@@ -668,6 +693,23 @@
         <Setter Property="Title" Value="numeric_limits クラス" />
         <Setter Property="Sentence" Value="数値型の算術プロパティを提供するクラス" />
         <Setter Property="PageTag" Value="3numeric_limits0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="Optional" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;optional>" />
+        <Setter Property="Sentence" Value="型の有効値と無効値" />
+        <Setter Property="PageTag" Value="Loptional"/>
+        <Setter Property="Icon" Value="&#xECAA;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="OptionalClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="optional クラス" />
+        <Setter Property="Sentence" Value="型の有効値と無効値を代入可能なクラス" />
+        <Setter Property="PageTag" Value="Loptional0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

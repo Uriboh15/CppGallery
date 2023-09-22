@@ -10,11 +10,11 @@
 
     <ScrollViewer>
         <local:OuterPanel >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander Title="forward_list()" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="forward_list オブジェクトの allocator クラスを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="forward_list 内の1つの const 要素を読み取ることができる単方向反復子を提供する型"/>
                 <local:ItemGrid Title="const_pointer" Sentence="forward_list 内の const 要素へのポインターを提供する型"/>
@@ -27,13 +27,13 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="逆順の forward_list 内の1つの要素の読み取りまたは変更ができる単方向反復子を提供する型"/>
                 <local:ItemGrid Title="size_type" Sentence="forward_list 内の要素数を表す型"/>
                 <local:ItemGrid Title="value_type" Sentence="forward_list 内に格納されているデータ型を表す型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="forward_list__forward_list/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="forward_list__forward_list/assign" />
                 <local:FunctionExpander Folder="forward_list__forward_list/before_begin" />
                 <local:FunctionExpander Folder="forward_list__forward_list/begin" />
@@ -61,7 +61,7 @@
                 <local:CustomExpander Title="splice_after() 関数" IsEnabled="False" />
                 <local:FunctionExpander Folder="forward_list__forward_list/swap" />
                 <local:FunctionExpander Folder="forward_list__forward_list/unique" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/forward-list-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/forward_list/forward_list.html" />
         </local:OuterPanel>

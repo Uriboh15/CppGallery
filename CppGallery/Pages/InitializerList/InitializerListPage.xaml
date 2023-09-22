@@ -12,18 +12,18 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource List}"/>
                 <local:ToRightButton Style="{StaticResource Map}"/>
                 <local:ToRightButton Style="{StaticResource Random}"/>
                 <local:ToRightButton Style="{StaticResource Utility}"/>
                 <local:ToRightButton Style="{StaticResource Valarray}"/>
                 <local:ToRightButton Style="{StaticResource Vector}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource InitializerListClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/initializer-list?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/initializer_list.html"/>
 

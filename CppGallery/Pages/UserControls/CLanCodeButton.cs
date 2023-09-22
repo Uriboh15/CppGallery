@@ -68,6 +68,7 @@ namespace CppGallery.Pages.UserControls
         protected List<List<string>> KeyEnum { get; } = new List<List<string>>();
 
         private List<string> AddedDefine { get; } = new List<string>();
+        private List<string> AddedGreen { get; } = new List<string>();
 
         protected bool cLanguage = true;
 
@@ -87,6 +88,7 @@ namespace CppGallery.Pages.UserControls
         {
             ChangeTheme(App.SourceCodeTheme);
             KeyDefine.Add(AddedDefine);
+            KeyGreen.Add(AddedGreen);
         }
 
         private static bool Contains(List<List<string>> lists, string str)
@@ -100,7 +102,7 @@ namespace CppGallery.Pages.UserControls
 
         public void ChangeTheme(ElementTheme theme)
         {
-            if (theme == ElementTheme.Default) theme = MainWindow.Handle.GetTheme();
+            if (theme == ElementTheme.Default) theme = MainWindow.GetParentMainWindow(this).GetTheme();
 
             if (theme == ElementTheme.Dark)
             {
@@ -226,7 +228,7 @@ namespace CppGallery.Pages.UserControls
             return false;
         }
 
-        protected override void Root_Loaded(object sender, RoutedEventArgs e)
+        protected override void LoadFile()
         {
             if (File.Exists(Path) == false)
             {
@@ -540,9 +542,37 @@ namespace CppGallery.Pages.UserControls
 
 
                                 }
+                                else
+                                {
+                                    if (Contains(KeyEnum, (Code.Inlines[^2] as Run).Text))
+                                    {
+                                        run.Foreground = global;
+                                    }
+                                    else
+                                    {
+                                        run.Foreground = local;
+                                    }
+                                    mae = string.Empty;
+
+                                    break;
+                                }
                             }
 
                             if (SetColor(run, tmp, st, i)) break;
+
+                            if (Code.Inlines.Count > 2 && Code.Inlines[^2].Foreground == blue)
+                            {
+                                string tmp1 = (Code.Inlines[^2] as Run).Text;
+
+                                if(tmp1 == "typename" || tmp1 == "class")
+                                {
+                                    AddedGreen.Add(tmp);
+
+                                    run.Foreground = green;
+                                    break;
+                                }
+
+                            }
 
                             if (!AutoFunc)
                             {

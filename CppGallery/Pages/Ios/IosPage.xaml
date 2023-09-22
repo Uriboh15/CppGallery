@@ -13,26 +13,26 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource IosFwd}"/>
                 <local:ToRightButton Style="{StaticResource Iterator}"/>
                 <local:ToRightButton Style="{StaticResource StreamBuf}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Ostream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="ios" Sentence="basic_ios を char に特殊化した型"/>
                 <local:ItemGrid Title="streamoff" Sentence="内部操作をサポートする型"/>
                 <local:ItemGrid Title="streampos" Sentence="バッファー ポインターまたはファイル ポインターの現在の位置を保持する型"/>
                 <local:ItemGrid Title="streamsize" Sentence="ストリームのサイズを指定する型"/>
                 <local:ItemGrid Title="wios" Sentence="従来の &lt;iostream> ライブラリの wios クラスをサポートする型"/>
                 <local:ItemGrid Title="wstreampos" Sentence="バッファー ポインターまたはファイル ポインターの現在の位置を保持する型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Manipulator">
+            <local:SymbolBlockPanel Symbol="Manipulator">
                 <local:FunctionExpander Folder="ios/boolalpha" />
                 <local:FunctionExpander Folder="ios/dec" />
                 <local:FunctionExpander Folder="ios/defaultfloat" />
@@ -40,7 +40,7 @@
                 <local:FunctionExpander Folder="ios/hex" />
                 <local:FunctionExpander Folder="ios/hexfloat" />
                 <local:FunctionExpander Folder="ios/internal" />
-                <local:FunctionExpander Folder="ios/left" />
+                <local:FunctionExpander Folder="ios/left" AutoFunc="False" />
                 <local:FunctionExpander Folder="ios/noboolalpha" />
                 <local:FunctionExpander Folder="ios/noshowbase" />
                 <local:FunctionExpander Folder="ios/noshowpoint" />
@@ -55,7 +55,7 @@
 
                 <local:FunctionExpander Folder="ios/nouppercase" />
                 <local:FunctionExpander Folder="ios/oct" />
-                <local:FunctionExpander Folder="ios/right" />
+                <local:FunctionExpander Folder="ios/right" AutoFunc="False" />
                 <local:FunctionExpander Folder="ios/scientific" />
                 <local:FunctionExpander Folder="ios/showbase" />
                 <local:FunctionExpander Folder="ios/showpoint" />
@@ -69,12 +69,12 @@
                 </local:CustomExpander>
 
                 <local:FunctionExpander Folder="ios/uppercase" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="ErrorReporting">
+            <local:SymbolBlockPanel Symbol="ErrorReporting">
                 <local:CustomExpander>
                     <Expander.Header>
-                        <local:EHeader Title="io_errc" Sentence="入出力のエラーの種類を表す列挙型" Icon="&#xEB90;"/>
+                        <local:EHeader Title="io_errc" Sentence="入出力のエラーの種類を表す列挙型" Icon="Error"/>
                     </Expander.Header>
                     <Expander.Content>
                         <local:EnumPanel>
@@ -82,18 +82,18 @@
                         </local:EnumPanel>
                     </Expander.Content>
                 </local:CustomExpander>
-                <local:ItemGrid Title="is_error_code_enum" Sentence="aaa" Icon="&#xEB90;" IsEnabled="False"/>
-                <local:ItemGrid Title="iostream_category" Sentence="aaa" Icon="&#xEB90;" IsEnabled="False"/>
-                <local:ItemGrid Title="make_error_code" Sentence="aaa" Icon="&#xEB90;" IsEnabled="False"/>
-                <local:ItemGrid Title="make_error_condition" Sentence="aaa" Icon="&#xEB90;" IsEnabled="False"/>
-            </local:BlockPanel>
+                <local:ItemGrid Title="is_error_code_enum" Sentence="aaa" Icon="Error" IsEnabled="False"/>
+                <local:ItemGrid Title="iostream_category" Sentence="aaa" Icon="Error" IsEnabled="False"/>
+                <local:ItemGrid Title="make_error_code" Sentence="aaa" Icon="Error" IsEnabled="False"/>
+                <local:ItemGrid Title="make_error_condition" Sentence="aaa" Icon="Error" IsEnabled="False"/>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
                 <local:ToRightButton Style="{StaticResource FposClass}"/>
                 <local:ToRightButton Style="{StaticResource IosBaseClass}"/>
                 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ios?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios.html" />
         </local:OuterPanel>

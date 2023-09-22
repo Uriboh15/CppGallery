@@ -12,12 +12,12 @@
         <local:OuterPanel HeaderType="Windows" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="FunctionAndMacro" >
+            <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleProcessList" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleWindow" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetCurrentConsoleFont" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetNumberOfConsoleMouseButtons" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/console/console-functions" />
         </local:OuterPanel>

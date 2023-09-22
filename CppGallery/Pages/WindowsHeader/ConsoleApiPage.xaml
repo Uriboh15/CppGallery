@@ -12,10 +12,10 @@
         <local:OuterPanel HeaderType="Windows" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="FunctionAndMacro" >
+            <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
                 <local:FunctionExpander Folder="ConsoleApi/ReadConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ConsoleApi/WriteConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/console/console-functions" />
         </local:OuterPanel>

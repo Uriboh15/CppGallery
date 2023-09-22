@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml.Controls;
+﻿using Microsoft.UI.Input;
+using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using Microsoft.UI.Xaml.Media.Animation;
 using Windows.Graphics.Holographic;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 
 namespace CppGallery.Pages.UserControls
 {
@@ -94,8 +96,17 @@ namespace CppGallery.Pages.UserControls
             this.Loaded += ToRightButton_Loaded;
             this.Click += ToRightButton_Click;
             this.ContextRequested += ToRightButton_ContextRequested;
-
+            this.PointerPressed += ToRightButton_PointerPressed;
             
+        }
+
+        private void ToRightButton_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            PointerPoint ptrPt = e.GetCurrentPoint(sender as UIElement);
+            if (ptrPt.Properties.IsMiddleButtonPressed)
+            {
+                MainWindow.GetParentMainWindow(this).AddTab(PageTag);
+            }
         }
 
         private void ToRightButton_ContextRequested(UIElement sender, Microsoft.UI.Xaml.Input.ContextRequestedEventArgs args)
@@ -103,7 +114,7 @@ namespace CppGallery.Pages.UserControls
             //FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
             if(ContextFlyout == null)
             {
-                this.ContextFlyout = UserAPI.GetMenuFlyout(PageTag);
+                this.ContextFlyout = UserAPI.GetMenuFlyout(PageTag, this);
             }
             ContextFlyout.ShowAt(this);
         }
@@ -130,7 +141,9 @@ namespace CppGallery.Pages.UserControls
 
         private void ToRightButton_Loaded(object sender, RoutedEventArgs e)
         {
-            this.ContextFlyout = UserAPI.GetMenuFlyout(PageTag);
+            Loaded -= ToRightButton_Loaded;
+
+            this.ContextFlyout = UserAPI.GetMenuFlyout(PageTag, this);
             if (App.LibraryPageStyle == LibraryPageStyle.Block && this.InLibraryPage)
             {
                 double width;

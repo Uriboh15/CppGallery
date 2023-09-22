@@ -10,18 +10,18 @@
 
     <ScrollViewer >
         <local:OuterPanel>
-            <local:BlockPanel Header="Struct">
+            <local:SymbolBlockPanel Symbol="Struct">
                 <local:CustomExpander Title="lconv 構造体" IsEnabled="False" Icon="&#xEA86;" >
                     <local:EnumPanel>
                         
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:CustomExpander Title="localeconv" IsEnabled="False"/>
                 <local:FunctionExpander Folder="locale.h/setlocale" CodeLanguage="C" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="locale.h" >
                 <local:ItemGrid Title="LC_ALL" Sentence="すべてのカテゴリー"/>

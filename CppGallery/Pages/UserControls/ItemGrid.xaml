@@ -10,19 +10,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <UserControl.Resources>
-        <Style TargetType="StackPanel">
-            <Setter Property="Spacing" Value="0"/>
-        </Style>
-    </UserControl.Resources>
-
     <Grid Style="{StaticResource EGrid}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition />
             <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
-        <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon, Mode=OneWay}" HorizontalAlignment="Left" FontSize="24" Grid.Column="0"/>
+        <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind IconString, Mode=OneWay}" HorizontalAlignment="Left" FontSize="24" Grid.Column="0"/>
         <StackPanel VerticalAlignment="Center" Grid.Column="1">
             <TextBlock Text="{x:Bind Title, Mode=OneWay}"/>
             <TextBlock Text="{x:Bind Sentence, Mode=OneWay}" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12" Loaded="UserControl_Loaded"/>

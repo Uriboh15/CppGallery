@@ -12,11 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="array__array/array" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="const_iterator" Sentence="array の要素の const イテレータを表す型"/>
                 <local:ItemGrid Title="const_pointer" Sentence="array の要素の const ポインターを表す型"/>
                 <local:ItemGrid Title="const_reference" Sentence="array の要素の const 参照を表す型"/>
@@ -28,14 +28,14 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="array の要素の逆イテレータを表す型"/>
                 <local:ItemGrid Title="size_type" Sentence="要素番号を表す型"/>
                 <local:ItemGrid Title="value_type" Sentence="要素の型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="array__array/operatorE" Icon="Operator" />
                 <local:FunctionExpander Folder="array__array/operatorKAKKO" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="array__array/assign">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedFunctionByHeader}" Message="この関数は C++11 で削除されました 代わりに fill() 関数を使用してください"/>
@@ -60,7 +60,7 @@
                 <local:FunctionExpander Folder="array__array/size" />
                 <local:FunctionExpander Folder="array__array/swap" />
 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/array-class-stl?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/array/array.html" />
         </local:OuterPanel>

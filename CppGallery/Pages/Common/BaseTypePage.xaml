@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BasicBlockPanel x:Name="BasicTypePanel" HeadText="基本型" Loaded="BasicTypePanel_Loaded"  >
+            <local:BlockPanel x:Name="BasicTypePanel" Header="基本型" Loaded="BasicTypePanel_Loaded"  >
                 <local:ItemGrid Title="bool" Sentence="真偽型" />
                 <local:ItemGrid Title="char" Sentence="環境によって定義が異なる 1 バイト文字を表す整数型" />
                 <local:ItemGrid Title="short" Sentence="2 バイトの符号付き整数型" />
@@ -29,7 +29,7 @@
                 <local:ItemGrid Title="char8_t" Sentence="UTF-8 文字を表す型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="char16_t" Sentence="UTF-16 文字を表す型" />
                 <local:ItemGrid Title="char32_t" Sentence="UTF-32 文字を表す型" />
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
             
         </local:OuterPanel>

@@ -10,21 +10,21 @@
 
     <ScrollViewer >
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="any__any/any" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="any__any/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="any__any/emplace" />
                 <local:FunctionExpander Folder="any__any/has_value" />
                 <local:FunctionExpander Folder="any__any/reset" />
                 <local:FunctionExpander Folder="any__any/swap" />
                 <local:FunctionExpander Folder="any__any/type" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/any-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/any/any.html" />
 

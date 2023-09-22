@@ -16,9 +16,11 @@ namespace CppGallery.Pages.UserControls
             "double",
             "extern",
             "float",
+            "inline",
             "int",
             "long",
             "short",
+            "signed",
             "sizeof",
             "static",
             "struct",
@@ -27,6 +29,7 @@ namespace CppGallery.Pages.UserControls
             "union",
             "unsigned",
             "void",
+            "__cdecl",
             "__declspec",
         };
 

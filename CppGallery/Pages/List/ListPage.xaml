@@ -12,26 +12,26 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="list/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="list/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="list/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="list/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="list/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="list/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:FunctionExpander Folder="list/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource ListClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/list?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/list.html" />
 

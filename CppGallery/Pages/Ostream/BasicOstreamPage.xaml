@@ -14,15 +14,15 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             
-            <local:BlockPanel Header="BaseClass" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
                 <local:ToRightButton Style="{StaticResource BasicIosClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="ostream__basic_ostream/basic_ostream" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="ostream__basic_ostream/operatorE" Icon="Operator" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
@@ -30,10 +30,10 @@
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="ostream/operatorLL" AutoFunc="False" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="ostream__basic_ostream/flush" SampleType="ConsoleOnly" />
                 <local:FunctionExpander Folder="ostream__basic_ostream/put" />
                 <local:FunctionExpander Folder="ostream__basic_ostream/seekp" />
@@ -47,14 +47,14 @@
                 <local:FunctionExpander Folder="ostream__basic_ostream/swap" />
                 <local:FunctionExpander Folder="ostream__basic_ostream/tellp" />
                 <local:FunctionExpander Folder="ostream__basic_ostream/write" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="DerivedClass" >
+            <local:SymbolBlockPanel Symbol="DerivedClass" >
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicOFStreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicOStringStreamClass}" />
                 <local:ToRightButton Style="{StaticResource OStrStreamClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ostream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ostream/basic_ostream.html" />
 

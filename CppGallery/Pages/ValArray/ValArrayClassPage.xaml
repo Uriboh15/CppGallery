@@ -12,20 +12,20 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="valarray()" Sentence="valarray を構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="value_type" Sentence="valarray の要素の型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="valarray__valarray/operatorN" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray__valarray/operatorParE" AutoFunc="False" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray__valarray/operatorANDE" Icon="Operator" />
@@ -42,9 +42,9 @@
                 <local:FunctionExpander Folder="valarray__valarray/operatorKAKUE" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray__valarray/operatorBOE" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray__valarray/operatorNYORO" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="valarray__valarray/apply" />
                 <local:FunctionExpander Folder="valarray__valarray/cshift" />
 
@@ -62,7 +62,7 @@
                 <local:FunctionExpander Folder="valarray__valarray/size" />
                 <local:FunctionExpander Folder="valarray__valarray/sum" />
                 <local:FunctionExpander Folder="valarray__valarray/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

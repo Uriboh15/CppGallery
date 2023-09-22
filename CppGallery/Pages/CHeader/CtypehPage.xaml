@@ -13,11 +13,11 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型" Value="unsigned short"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:FunctionExpander Folder="ctype.h/isalnum" CodeLanguage="C" />
                 <local:FunctionExpander Folder="ctype.h/isalpha" CodeLanguage="C" />
                 <local:FunctionExpander Folder="ctype.h/isblank" CodeLanguage="C" />
@@ -44,7 +44,7 @@
                 <local:FunctionExpander Folder="ctype.h/isxdigit" CodeLanguage="C" />
                 <local:FunctionExpander Folder="ctype.h/tolower" CodeLanguage="C" />
                 <local:FunctionExpander Folder="ctype.h/toupper" CodeLanguage="C" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="ctype.h">
                 <local:ItemGrid Title="NULL" Sentence="空ポインタ" />

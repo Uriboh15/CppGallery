@@ -37,7 +37,8 @@ namespace CppGallery.Pages.UserControls
 
         private void OuterPanel_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            Loaded -= OuterPanel_Loaded;
+
             //Windowsヘッダーの時
             if (this.HeaderType == HeaderType.Windows || this.HeaderType == HeaderType.WinRT)
             {
@@ -91,7 +92,7 @@ namespace CppGallery.Pages.UserControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.Handle.OpenSettings();
+            MainWindow.OpenSettings(this);
 
         }
 

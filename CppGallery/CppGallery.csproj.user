@@ -17,6 +17,30 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Random\MersenneTwisterEngineClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\DetailControlGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\ButtonGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Format\BasicFormatStringPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\DetailPane.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Optional\OptionalClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Optional\OptionalPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WindowsHeader\FIleApiPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Algorithm\AlgorithmPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -368,16 +392,10 @@
     <Page Update="Pages\UserControls\ItemGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\UserControls\HomeButtonGrid.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Pages\UserControls\EHeader.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserControls\ControlGrid.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\UserControls\ButtonGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
     <None Update="MainWindow.xaml">

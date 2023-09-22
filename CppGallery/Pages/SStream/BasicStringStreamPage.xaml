@@ -13,33 +13,32 @@
     <ScrollViewer>
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
-            
-            <local:BlockPanel Header="BaseClass">
+
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicIostreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="basic_stringstream()" Sentence="basic_stringstream を構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="テンプレート パラメーター Alloc と同義"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="sstream__basic_stringstream/operatorE" Icon="Operator" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="rdbuf() 関数" Sentence="型 pointer の格納されたストリームバッファーのアドレスを basic_stringbuf&lt;Elem, Tr, Alloc>* として返します"/>
@@ -47,8 +46,9 @@
                 </local:CustomExpander>
 
                 <local:FunctionExpander Folder="sstream__basic_stringstream/str" AutoFunc="False" />
-            </local:BlockPanel>
-            
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-stringstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream/basic_stringstream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

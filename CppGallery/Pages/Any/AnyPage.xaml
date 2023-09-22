@@ -11,19 +11,19 @@
     <ScrollViewer >
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="any/any_cast" />
-                <local:CustomExpander Title="make_any() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="any/make_any" />
                 <local:FunctionExpander Folder="any/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource AnyClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Exception" >
+            <local:SymbolBlockPanel Symbol="Exception" >
                 <local:FunctionExpander Folder="any/bad_any_cast" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/any?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/any.html" />
 

@@ -49,7 +49,17 @@
                     <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
                 </Grid.ColumnDefinitions>
 
-                <TabView x:Name="Tab" Grid.Column="2" AddTabButtonClick="Tab_AddTabButtonClick" TabCloseRequested="Tab_TabCloseRequested" SelectionChanged="Tab_SelectionChanged" ActualThemeChanged="ContentFrame_ActualThemeChanged" >
+                <TabView x:Name="Tab" Grid.Column="2" AddTabButtonClick="Tab_AddTabButtonClick"
+                         TabCloseRequested="Tab_TabCloseRequested"
+                         SelectionChanged="Tab_SelectionChanged"
+                         ActualThemeChanged="ContentFrame_ActualThemeChanged"
+                         AllowDropTabs="True"
+                         CanDragTabs="True"
+                         CanReorderTabs="True"
+                         TabDroppedOutside="Tab_TabDroppedOutside"
+                         TabDragStarting="Tab_TabDragStarting"
+                         TabStripDrop="Tab_TabStripDrop"
+                         TabStripDragOver="Tab_TabStripDragOver">
                     <TabView.TabStripHeader>
                         <Image x:Name="TitleBarIcon" Source="/Pages/Assets/StoreLogo.png" HorizontalAlignment="Left" Margin="14,4,8,0" VerticalAlignment="Center"
                     Width="16" Height="16" />
@@ -73,9 +83,6 @@
             <Grid x:Name="Back" Grid.Row="1" />
             <Grid x:Name="MainFrame" Grid.Row="1"  />
         </Grid>
-
-        
-
 
     </Grid>
     

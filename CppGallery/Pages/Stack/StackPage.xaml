@@ -11,18 +11,20 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="stack/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="stack/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="stack/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="stack/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="stack/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="stack/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource StackClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/stack?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/stack.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

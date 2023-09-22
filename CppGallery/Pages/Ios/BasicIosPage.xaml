@@ -14,28 +14,28 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
 
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource IosBaseClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="ios__basic_ios/basic_ios">
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource ProtectedConstructor}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="char_type" Sentence="テンプレートパラメーター Elem のシノニム"/>
                 <local:ItemGrid Title="int_type" Sentence="Traits::int_type と同義"/>
                 <local:ItemGrid Title="off_type" Sentence="Traits::off_type と同義"/>
                 <local:ItemGrid Title="pos_type" Sentence="Traits::pos_type と同義"/>
                 <local:ItemGrid Title="traits_type" Sentence="テンプレートパラメーター Traits のシノニム"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:CustomExpander Title="explicit operator bool" Icon="&#xE710;" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="ios__basic_ios/operatorvoid" Icon="Operator" AutoFunc="False" />
@@ -46,10 +46,10 @@
                         <InfoBar Style="{StaticResource DeletedOperator}"/>
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="ios__basic_ios/bad"/>
 
                 <local:FunctionExpander Folder="ios__basic_ios/clear" >
@@ -131,13 +131,13 @@
                         <local:EHeader Title="widen() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="DerivedClass">
+            <local:SymbolBlockPanel Symbol="DerivedClass">
                 <local:ToRightButton Style="{StaticResource BasicIstreamClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ios-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/basic_ios.html" />
 

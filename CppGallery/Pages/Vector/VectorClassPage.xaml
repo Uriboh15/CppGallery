@@ -12,15 +12,15 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="vector()" Sentence="vector を構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="vector の allocator クラスを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="vector の要素にアクセスできる const イテレータ"/>
                 <local:ItemGrid Title="const_pointer" Sentence="vector の要素にアクセスできる const ポインター"/>
@@ -33,14 +33,14 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="vector の要素にアクセスできる逆イテレータ"/>
                 <local:ItemGrid Title="size_type" Sentence="vector の要素数を数える型"/>
                 <local:ItemGrid Title="value_type" Sentence="vector の要素の型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="vector__vector/operatorKAKKO" Icon="Operator" />
                 <local:FunctionExpander Folder="vector__vector/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="assign() 関数" Sentence="aaa"/>
@@ -121,7 +121,7 @@
                 <local:FunctionExpander Folder="vector__vector/shrink_to_fit" />
                 <local:FunctionExpander Folder="vector__vector/size" />
                 <local:FunctionExpander Folder="vector__vector/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

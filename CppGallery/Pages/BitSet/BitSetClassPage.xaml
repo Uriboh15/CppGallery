@@ -13,15 +13,15 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:CustomExpander Title="bitset()" Sentence="bitset オブジェクトを構築します" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="element_type" Sentence="bitset の要素の参照に使われる型" Value="bool"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="bitset__bitset/operatorNE" Icon="Operator" AutoFunc="False" />
 
                 <local:FunctionExpander Folder="bitset__bitset/operatorAndE" Icon="Operator" >
@@ -61,9 +61,9 @@
                 <local:FunctionExpander Folder="bitset__bitset/operatorNYORO" Icon="Operator" >
                     <local:TextBoxPane Message="値を入力" Text="11100011" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="bitset__bitset/all" AutoFunc="False">
                     <local:TextBoxPane Message="整数を入力" Text="27" />
                 </local:FunctionExpander>
@@ -109,7 +109,7 @@
                 <local:FunctionExpander Folder="bitset__bitset/to_ulong" >
                     <local:TextBoxPane Message="ビットを入力" Text="111" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/bitset-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/bitset/bitset.html" />
 

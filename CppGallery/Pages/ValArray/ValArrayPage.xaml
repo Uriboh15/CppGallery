@@ -12,11 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="valarray/operatorNE" AutoFunc="False" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray/operatorPAR" AutoFunc="False" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray/operatorAND" Icon="Operator" />
@@ -35,9 +35,9 @@
                 <local:FunctionExpander Folder="valarray/operatorKAKU" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray/operatorBO" Icon="Operator" />
                 <local:FunctionExpander Folder="valarray/operatorMATAHA" AutoFunc="False" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="valarray/abs" AutoFunc="False" />
                 <local:FunctionExpander Folder="valarray/acos" AutoFunc="False" />
                 <local:FunctionExpander Folder="valarray/asin" AutoFunc="False" />
@@ -64,38 +64,38 @@
                 <local:FunctionExpander Folder="valarray/swap" />
                 <local:FunctionExpander Folder="valarray/tan" AutoFunc="False" />
                 <local:FunctionExpander Folder="valarray/tanh" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Class" >
-                <Button x:Name="ClassButton1" Style="{StaticResource ToRightButton}" IsEnabled="False">
+            <local:SymbolBlockPanel Symbol="Class" >
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="gslice クラス" Sentence="aaa"/>
                 </Button>
 
-                <Button x:Name="ClassButton2" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="gslice_array クラス" Sentence="aaa"/>
                 </Button>
 
-                <Button x:Name="ClassButton3" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="indirect_array クラス" Sentence="aaa"/>
                 </Button>
 
-                <Button x:Name="ClassButton4" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="mask_array クラス" Sentence="aaa"/>
                 </Button>
 
                 <local:ToRightButton Style="{StaticResource SliceClass}" />
 
-                <Button x:Name="ClassButton6" Style="{StaticResource ToRightButton}" IsEnabled="False">
+                <Button Style="{StaticResource ToRightButton}" IsEnabled="False">
                     <local:ButtonGrid Title="slice_array クラス" Sentence="aaa"/>
                 </Button>
 
                 <local:ToRightButton Style="{StaticResource ValarrayClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Specialization" >
+            <local:SymbolBlockPanel Symbol="Specialization" >
                 <local:ItemGrid Title="valarray&lt;bool> クラス" Sentence="valarray を bool に特殊化したクラス"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

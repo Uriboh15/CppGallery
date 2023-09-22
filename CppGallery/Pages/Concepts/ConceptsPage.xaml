@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
-            <local:BlockPanel Header="Concepts" >
+            <local:SymbolBlockPanel Symbol="Concepts" >
                 <local:FunctionExpander Folder="concepts/assignable_from" Icon="Object" />
                 <local:FunctionExpander Folder="concepts/common_reference_with" Icon="Object" />
                 <local:FunctionExpander Folder="concepts/common_with" Icon="Object" />
@@ -53,7 +53,7 @@
                 <local:FunctionExpander Folder="concepts/totally_ordered_with" Icon="Object" />
                 <local:FunctionExpander Folder="concepts/unsigned_integral" Icon="Object" />
 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/concepts.html" />
 

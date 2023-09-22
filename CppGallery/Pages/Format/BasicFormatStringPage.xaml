@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Format.BasicFormatStringPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <local:OuterPanel TargetMinCppVersion="Cpp20" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:CustomExpander Title="basic_format_string()" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:CustomExpander Title="get() 関数" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

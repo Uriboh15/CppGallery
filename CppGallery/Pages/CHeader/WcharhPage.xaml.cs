@@ -41,7 +41,7 @@ namespace CppGallery.Pages.CHeader
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.FileTypeFilter.Add(".csv");
 
-            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.GetParentMainWindow(this)));
 
             Windows.Storage.StorageFile savefile = await picker.PickSingleFileAsync();
             if (savefile != null)

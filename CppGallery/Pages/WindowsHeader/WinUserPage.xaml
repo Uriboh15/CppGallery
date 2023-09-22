@@ -12,7 +12,7 @@
         <local:OuterPanel HeaderType="Windows">
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="FunctionAndMacro" >
+            <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
                 <local:FunctionExpander Folder="WinUser/CharLower" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="WinUser/CharNext" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="WinUser/CharPrev" CodeLanguage="CppWin32" Icon="Macro" />
@@ -48,7 +48,7 @@
                 <local:FunctionExpander Folder="WinUser/MessageBox" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="WinUser/MoveWindow" SampleType="GUIApp" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="WinUser/SetWindowText" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/" />
         </local:OuterPanel>

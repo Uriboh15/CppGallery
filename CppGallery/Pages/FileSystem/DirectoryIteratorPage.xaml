@@ -10,13 +10,13 @@
 
     <ScrollViewer >
         <local:OuterPanel  TargetMinCppVersion="Cpp17" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="filesystem__directory_iterator/directory_iterator" ConsoleButtonVisibility="Collapsed" >
                     <local:OpenFolderPane />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="filesystem__directory_iterator/operatorNE" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
                     <local:OpenFolderPane />
                 </local:FunctionExpander>
@@ -36,13 +36,13 @@
                 <local:FunctionExpander Folder="filesystem__directory_iterator/operatorPlusPlus" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
                     <local:OpenFolderPane />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="filesystem__directory_iterator/increment" ConsoleButtonVisibility="Collapsed"  >
                     <local:OpenFolderPane />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/directory-iterator-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem/directory_iterator.html" />
         </local:OuterPanel>

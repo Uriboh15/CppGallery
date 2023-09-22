@@ -15,11 +15,49 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                <local:BasicBlockPanel HeadText="valarray クラス" >
-                    <local:FunctionExpander Folder="valarray__valarray/operatorParE" AutoFunc="False" Icon="Operator" />
-                    <local:FunctionExpander Folder="valarray__valarray/operatorKAKERUE" Icon="Operator" />
-                    <local:FunctionExpander Folder="valarray__valarray/operatorPlus" AutoFunc="False" Icon="Operator" />
-                </local:BasicBlockPanel>
+                <local:BlockPanel Header="&lt;iostream>" >
+                    <local:FunctionExpander Folder="iostream/cerr" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/cin" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/clog" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/cout" Icon="Object" />
+
+                    <local:FunctionExpander Folder="iostream/wcerr" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/wcin" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/wclog" Icon="Object" >
+                        <local:TextBoxPane Message="整数を入力" Text="1" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="iostream/wcout" Icon="Object" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="valarray クラス" >
+                    <local:FunctionExpander Folder="valarray__valarray/operatorPlusE" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorMinus" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorMinusE" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorWARUE" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorE" AutoFunc="False" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/operatorKAKKO" Icon="Operator" />
+                    <local:FunctionExpander Folder="valarray__valarray/apply" />
+                    <local:FunctionExpander Folder="valarray__valarray/cshift" />
+                    <local:FunctionExpander Folder="valarray__valarray/resize" />
+                    <local:FunctionExpander Folder="valarray__valarray/shift" />
+                    <local:FunctionExpander Folder="valarray__valarray/swap" />
+                </local:BlockPanel>
 
             </local:OuterPanel>
         </ScrollViewer>

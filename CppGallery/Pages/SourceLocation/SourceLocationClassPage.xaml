@@ -10,24 +10,24 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="source_location__source_location/source_location" SampleType="None" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="source_location__source_location/operatorE" SampleType="None" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="StaticMethod" >
+            <local:SymbolBlockPanel Symbol="StaticMethod" >
                 <local:FunctionExpander Folder="source_location__source_location/current" SampleType="None" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="source_location__source_location/column" SampleType="None" />
                 <local:FunctionExpander Folder="source_location__source_location/file_name" SampleType="None" />
                 <local:FunctionExpander Folder="source_location__source_location/function_name" SampleType="None" />
                 <local:FunctionExpander Folder="source_location__source_location/line" SampleType="None" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

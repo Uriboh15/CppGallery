@@ -12,7 +12,12 @@
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="format_string" Sentence="basic_format_string を char に特殊化した型" />
+                <local:ItemGrid Title="wformat_string" Sentence="basic_format_string を wchar_t に特殊化した型" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="format/format" />
                 <local:FunctionExpander Folder="format/format_to" />
                 <local:FunctionExpander Folder="format/format_to_n" />
@@ -20,13 +25,15 @@
 
                 <local:CustomExpander Title="vformat() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="vformat_to() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Concepts" >
+            <local:SymbolBlockPanel Symbol="Concepts" >
                 <local:CustomExpander Title="formattable" Sentence="このコンセプトはまだ実装されていません" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
+                <local:ToRightButton Style="{StaticResource BasicFormatStringClass}" />
+
                 <local:CustomExpander Title="format_to_n_result 構造体" Sentence="format_to_n() 関数の戻り値に用いられるテンプレート構造体" Icon="&#xEA86;" >
                     <local:EnumPanel>
                         <local:ItemGrid Title="Out out" Sentence="コンテナの出力イテレーター (Out は Template)" />
@@ -35,11 +42,11 @@
                 </local:CustomExpander>
 
                 <local:ToRightButton Style="{StaticResource FormatterClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Exception" >
+            <local:SymbolBlockPanel Symbol="Exception" >
                 <local:FunctionExpander Folder="format/format_error" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/format/format.html" />
         </local:OuterPanel>

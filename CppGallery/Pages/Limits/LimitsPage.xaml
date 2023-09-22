@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Bit}"/>
                 <local:ToRightButton Style="{StaticResource BitSet}"/>
                 <local:ToRightButton Style="{StaticResource Complex}"/>
                 <local:ToRightButton Style="{StaticResource String}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Enum">
+            <local:SymbolBlockPanel Symbol="Enum">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="float_denorm_style" Sentence="aaa" Icon="&#xEA86;"/>
@@ -33,13 +33,13 @@
                     </Expander.Header>
                     
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource NumericLimitsClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Specialization">
+            <local:SymbolBlockPanel Symbol="Specialization">
                 <local:ItemGrid Title="numeric_limits&lt;bool>" Sentence="numeric_limits を bool に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;char>" Sentence="numeric_limits を char に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;short>" Sentence="numeric_limits を short に特殊化した型"/>
@@ -58,7 +58,7 @@
                 <local:ItemGrid Title="numeric_limits&lt;char8_t>" Sentence="numeric_limits を char8_t に特殊化した型" TargetMinCppVersion="Cpp20" />
                 <local:ItemGrid Title="numeric_limits&lt;char16_t>" Sentence="numeric_limits を char16_t に特殊化した型"/>
                 <local:ItemGrid Title="numeric_limits&lt;char32_t>" Sentence="numeric_limits を char32_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/limits?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/limits.html" />
 

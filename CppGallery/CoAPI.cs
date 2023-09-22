@@ -13,37 +13,15 @@ namespace CppGallery
     internal static class CoAPI
     {
         private const string DllName = @"../dll/CoAPI.dll";
-        private static Dictionary<string, string> SpacialChars { get; } = new Dictionary<string, string>
-        {
-            { "^", "^^^^" },
-            { "\"", "^\"" },
-            { "&", "^^^&" },
-            { "<", "^^^<" },
-            { ">", "^^^>" },
-            { "|", "^^^|" },
-        };
 
         [DllImport(DllName, CharSet = CharSet.Unicode)]
-        public static extern uint Execute(string args);
+        public static extern uint Execute(string args, uint wait);
 
         [DllImport(DllName, CharSet = CharSet.Unicode)]
         private static extern IntPtr _getOutputFileName();
 
         [DllImport(DllName, CharSet = CharSet.Unicode)]
         private static extern IntPtr _getInputFileName();
-
-        [DllImport(DllName, CharSet = CharSet.Unicode)]
-        public static extern int SetFrameArea(IntPtr hWnd);
-
-        public static string ParceSpecialChar(string str)
-        {
-            foreach (var pair in SpacialChars)
-            {
-                str.Replace(pair.Key, pair.Value);
-            }
-
-            return str;
-        }
 
         public static string GetOutputFileName()
         {
@@ -59,7 +37,7 @@ namespace CppGallery
         {
             return await Task.Run(() =>
             {
-                return Execute(args);
+                return Execute(args, App.WaitFor);
             });
         }
     }

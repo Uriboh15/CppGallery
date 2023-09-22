@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace CppGallery.Pages.UserControls
 {
-    public class BasicBlockPanel : ResultsPanel
+    public abstract class BasicBlockPanel : ResultsPanel
     {
         private TextBlock HeadTextBlock { get; } = new TextBlock();
 
         public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
 
-        public string HeadText
+        protected string HeadText
         {
             get { return HeadTextBlock.Text; }
             set { HeadTextBlock.Text = value; }
@@ -28,6 +28,7 @@ namespace CppGallery.Pages.UserControls
 
         private void BasicBlockPanel_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
+            Loaded -= BasicBlockPanel_Loaded;
 
             if (this.TargetMinCppVersion == UserAPI.MinCppVersion) return;
 

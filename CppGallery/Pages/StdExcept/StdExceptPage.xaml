@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Exception" >
+            <local:SymbolBlockPanel Symbol="Exception" >
                 <local:ItemGrid Title="domain_error クラス" Sentence="aaa" />
                 <local:ItemGrid Title="invalid_argument クラス" Sentence="無効な引数が関数に渡されたときに発生する例外の基底クラス" />
                 <local:ItemGrid Title="length_error クラス" Sentence="aaa" />
@@ -20,7 +20,7 @@
                 <local:ItemGrid Title="range_error クラス" Sentence="aaa" />
                 <local:ItemGrid Title="runtime_error クラス" Sentence="aaa" />
                 <local:ItemGrid Title="underflow_error クラス" Sentence="aaa" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

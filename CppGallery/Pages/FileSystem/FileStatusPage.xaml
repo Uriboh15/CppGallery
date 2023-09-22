@@ -10,25 +10,25 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="filesystem__file_status/file_status" >
                     <local:ResultsPanel>
                         <local:OpenFolderPane />
                         <local:OpenButtonPane />
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="filesystem__file_status/operatorE" Icon="Operator" >
                     <local:ResultsPanel>
                         <local:OpenFolderPane />
                         <local:OpenButtonPane />
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:CustomExpander Title="permissions() 関数" IsEnabled="False" />
                 <local:FunctionExpander Folder="filesystem__file_status/type" >
                     <local:ResultsPanel>
@@ -36,7 +36,7 @@
                         <local:OpenButtonPane />
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/file-status-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem/file_status.html" />
         </local:OuterPanel>

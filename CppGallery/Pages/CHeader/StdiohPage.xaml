@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
                 <local:ItemGrid Title="fpos_t" Sentence="開いているファイルの読み取り位置を表す型" Value="long long"/>
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
                 <local:ItemGrid Title="va_list" Sentence="可変引数を格納する型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="FILE" Sentence="ファイルを表す構造体" Icon="&#xEA86;"/>
@@ -30,10 +30,10 @@
                         <local:ItemGrid Title="void* _Placeholder" Sentence="ファイルの位置指定子"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="stdio.h/clearerr" CodeLanguage="C" SampleType="None" />
                 <local:FunctionExpander Folder="stdio.h/fclose" CodeLanguage="C" SampleType="None" />
 
@@ -221,7 +221,7 @@
                         <local:EHeader Title="vsscanf() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="stdio.h" >
                 <local:ItemGrid Title="BUFSIZ" Sentence="ストリームの最小バッファサイズ" />

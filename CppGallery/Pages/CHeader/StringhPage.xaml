@@ -12,13 +12,13 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="string.h/memchr" CodeLanguage="C" />
                 <local:FunctionExpander Folder="string.h/memcmp" CodeLanguage="C" />
                 <local:FunctionExpander Folder="string.h/memcpy" CodeLanguage="C" />
@@ -84,7 +84,7 @@
                 <local:CustomExpander Title="strxfrm() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="string.h/strdup" CodeLanguage="C" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
             <local:MacroPanel Folder="string.h" >

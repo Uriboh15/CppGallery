@@ -32,7 +32,7 @@ namespace CppGallery.Pages.UserControls
             Working = true;
             Windows.Storage.Pickers.FolderPicker Picker = new Windows.Storage.Pickers.FolderPicker();
             Picker.FileTypeFilter.Add("*");
-            InitializeWithWindow.Initialize(Picker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            InitializeWithWindow.Initialize(Picker, WindowNative.GetWindowHandle(MainWindow.GetParentMainWindow(this)));
 
             Windows.Storage.StorageFolder folder = await Picker.PickSingleFolderAsync();
 

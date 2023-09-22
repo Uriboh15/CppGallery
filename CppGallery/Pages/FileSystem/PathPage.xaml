@@ -10,24 +10,24 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="filesystem__path/path" AutoFunc="False" >
                     <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="const_iterator" Sentence="path オブジェクト内の cosnt 要素にアクセス可能なイテレータ" />
                 <local:ItemGrid Title="iterator" Sentence="path オブジェクト内の要素にアクセス可能なイテレータ" />
                 <local:ItemGrid Title="string_type" Sentence="OS ネイティブのパスを表せる文字列型" Value="wstring" />
                 <local:ItemGrid Title="value_type" Sentence="OS が使用する文字コードの型" Value="whar_t" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constant">
+            <local:SymbolBlockPanel Symbol="Constant">
                 <local:ItemGrid Title="preferred_separator" Sentence="OS 推奨の区切り文字" Value="\" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="filesystem__path/operatorE" Icon="Operator" />
                 <local:FunctionExpander Folder="filesystem__path/operatorLL" AutoFunc="False" Icon="Operator" >
                     <local:TextBoxPane Message="パスを入力" Text="folder/subfolder/abc.txt" />
@@ -40,11 +40,11 @@
                 <local:FunctionExpander Folder="filesystem__path/operatorPlusE" Icon="Operator" />
                 <local:FunctionExpander Folder="filesystem__path/operatorWARUE" Icon="Operator" />
                 <local:FunctionExpander Folder="filesystem__path/operator_string_type" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="filesystem__path/append" />
                 <local:FunctionExpander Folder="filesystem__path/assign" />
                 <local:FunctionExpander Folder="filesystem__path/begin" />
@@ -159,7 +159,7 @@
                 <local:FunctionExpander Folder="filesystem__path/u32string" SampleType="None" />
                 <local:FunctionExpander Folder="filesystem__path/wstring" SampleType="None" />
 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/path-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem/path.html" />
 

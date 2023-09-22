@@ -18,27 +18,27 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="complex__complex/complex" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="value_type" Sentence="実部と虚部を表すのに使用される型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="complex__complex/operatorKAKERUE" Icon="Operator" />
                 <local:FunctionExpander Folder="complex__complex/operatorPlusE" Icon="Operator" />
                 <local:FunctionExpander Folder="complex__complex/operatorMinusE" Icon="Operator" />
                 <local:FunctionExpander Folder="complex__complex/operatorWARUE" Icon="Operator" />
                 <local:FunctionExpander Folder="complex__complex/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="complex__complex/imag" />
                 <local:FunctionExpander Folder="complex__complex/real" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/complex-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/complex/complex.html" />
 

@@ -12,19 +12,19 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="BaseClass">
+            <local:SymbolBlockPanel Symbol="BaseClass">
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="sstream__basic_ostringstream/basic_ostringstream" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="テンプレート パラメーター Alloc と同義"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="explicit operator bool" Sentence="aaa" Icon="&#xE710;"/>
@@ -39,9 +39,9 @@
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
                 <local:FunctionExpander Folder="sstream__basic_ostringstream/operatorLL" AutoFunc="False" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="ios__basic_ios/bad"/>
 
                 <local:CustomExpander IsEnabled="False">
@@ -194,8 +194,9 @@
 
                 <local:FunctionExpander Folder="sstream__basic_ostringstream/width" />
                 <local:FunctionExpander Folder="sstream__basic_ostringstream/write" />
-            </local:BlockPanel>
-            
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-ostringstream-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/sstream/basic_ostringstream.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

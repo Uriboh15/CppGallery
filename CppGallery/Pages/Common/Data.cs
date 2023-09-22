@@ -140,24 +140,15 @@ namespace CppGallery
             }
         }
 
-        
-
-        //ColumnOuterPanel の Spacing
-        public static double ColumnOuterPanelSpacing => 65.0;
-
-        //ColumnOuterPanel の Padding
-        public static double NormalColumnOuterPanelPadding => NormalOuterPanelPadding;
-        public static double CompactColumnOuterPanelPadding => CompactOuterPanelPadding;
-        public static double ColumnOuterPanelPadding => OuterPanelPadding;
-
-        //ColumnContentPanel の Spacing
-        public static double ColumnContentPanelSpaxing => 24.0;
 
         //サンプルがあるフォルダ
         public static string DefaultSamplePath => @"../data/";
 
         //サンプルの実行ファイルがあるフォルダ
         public static string DefaultSampleExePath => @"../sample/";
+
+        //検索データのフォルダ
+        public static string DefaultSearchingTextPath => @"../search/";
 
         public static double NormalNavigationViewHeaderFontSize => 28.0;
         public static double CompactNavigationViewHeaderFontSize => 24.0;

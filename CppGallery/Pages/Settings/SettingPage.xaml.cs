@@ -89,7 +89,11 @@ namespace CppGallery.Pages.Settings
             {
                 App.Theme = ElementTheme.Default;
             }
-            MainWindow.Handle.SetTitleBarColors(App.Theme);
+
+            foreach(var window in MainWindow.WindowList)
+            {
+                window.SetTitleBarColors(App.Theme);
+            }
         }
 
         private void ThemeC_Loaded(object sender, RoutedEventArgs e)
@@ -145,8 +149,10 @@ namespace CppGallery.Pages.Settings
                     case "ƒAƒNƒŠƒ‹": App.Back = BackDrop.Acrylic; break;
                 }
 
-
-                MainWindow.Handle.SetBackdrop();
+                foreach (var window in MainWindow.WindowList)
+                {
+                    window.SetBackdrop();
+                }
                 return;
             }
             BackCLoaded = true;
@@ -458,15 +464,6 @@ namespace CppGallery.Pages.Settings
             expander.Loaded -= Expander_Loaded;
         }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-            var grid = sender as Grid;
-            grid.Padding = new Thickness(Data.ControlGridPadding, 0.0, Data.ControlGridPadding, 0.0);
-            grid.Height = Data.GalleryControlHeight;
-
-            grid.Loaded -= Grid_Loaded;
-        }
-
         private void CppVersionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch (CppVersionComboBox.SelectedItem as string)
@@ -513,6 +510,20 @@ namespace CppGallery.Pages.Settings
             }
             CVersionComboBoxLoaded = true;
             CVersionComboBox.Loaded -= CVersionComboBox_Loaded;
+        }
+
+        private void WaitForNumberBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            WaitForNumberBox.Loaded -= WaitForNumberBox_Loaded;
+
+            WaitForNumberBox.Value = App.WaitFor;
+
+            WaitForNumberBox.ValueChanged += WaitForNumberBox_ValueChanged;
+        }
+
+        private void WaitForNumberBox_ValueChanged(NumberBox sender, NumberBoxValueChangedEventArgs args)
+        {
+            App.WaitFor = (uint)WaitForNumberBox.Value;
         }
     }
 }

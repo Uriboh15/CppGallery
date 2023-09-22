@@ -34,7 +34,7 @@ namespace CppGallery.Pages.UserControls
 
             savepicker.FileTypeChoices.Add("テキストファイル", new List<string>() { ".txt" });
 
-            InitializeWithWindow.Initialize(savepicker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            InitializeWithWindow.Initialize(savepicker, WindowNative.GetWindowHandle(MainWindow.GetParentMainWindow(this)));
 
             Windows.Storage.StorageFile savefile = await savepicker.PickSaveFileAsync();
             if (savefile != null)

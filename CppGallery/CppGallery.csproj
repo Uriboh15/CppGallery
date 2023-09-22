@@ -23,6 +23,9 @@
 
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="Pages\UserControls\HomeButtonGrid.xaml.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<None Remove="Columns\Column1\Column1Page.xaml" />
 		<None Remove="Columns\Column2\Column2Page.xaml" />
 		<None Remove="Columns\Column3\Column3Page.xaml" />
@@ -66,11 +69,18 @@
 		<None Remove="Pages\Concepts\ConceptsPage.xaml" />
 		<None Remove="Pages\Deque\DequeClassPage.xaml" />
 		<None Remove="Pages\Deque\DequePage.xaml" />
+		<None Remove="Pages\Format\BasicFormatStringPage.xaml" />
+		<None Remove="Pages\Optional\OptionalClassPage.xaml" />
+		<None Remove="Pages\Optional\OptionalPage.xaml" />
 		<None Remove="Pages\Print\PrintPage.xaml" />
+		<None Remove="Pages\Random\MersenneTwisterEngineClassPage.xaml" />
 		<None Remove="Pages\Ranges\RangesPage.xaml" />
 		<None Remove="Pages\Set\MultiSetClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeIndexClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeInfoPage.xaml" />
+		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
+		<None Remove="Pages\UserControls\DetailControlGrid.xaml" />
+		<None Remove="Pages\UserControls\DetailPane.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi2Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi3Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApiPage.xaml" />
@@ -149,7 +159,6 @@
 		<None Remove="Pages\StrStream\StrStreamPage.xaml" />
 		<None Remove="Pages\TypeTraits\TypeTraitsPage.xaml" />
 		<None Remove="Pages\UserControls\BlockOldSystemPane.xaml" />
-		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
 		<None Remove="Pages\UserControls\CodeButtonBase.xaml" />
 		<None Remove="Pages\UserControls\ControlGrid.xaml" />
 		<None Remove="Pages\UserControls\EHeader.xaml" />
@@ -163,6 +172,7 @@
 		<None Remove="Pages\ValArray\ValArrayPage.xaml" />
 		<None Remove="Pages\Vector\VectorClassPage.xaml" />
 		<None Remove="Pages\Vector\VectorPage.xaml" />
+		<None Remove="Pages\WindowsHeader\FIleApiPage.xaml" />
 		<None Remove="Pages\WindowsHeader\ProcessEnvPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WindowshPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WinUserPage.xaml" />
@@ -192,8 +202,9 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230822000" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
 		<Manifest Remove="app.manifest" />
+		<Page Remove="Pages\UserControls\HomeButtonGrid.xaml" />
 		<Manifest Include="$(ApplicationManifest)" />
 	</ItemGroup>
 
@@ -225,6 +236,30 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\Random\MersenneTwisterEngineClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\DetailControlGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\ButtonGrid.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Format\BasicFormatStringPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\DetailPane.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Optional\OptionalClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Optional\OptionalPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WindowsHeader\FIleApiPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\Ranges\RangesPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
@@ -600,16 +635,10 @@
 		<Page Update="Pages\UserControls\ItemGrid.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
-		<Page Update="Pages\UserControls\HomeButtonGrid.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
 		<Page Update="Pages\UserControls\EHeader.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
 		<Page Update="Pages\UserControls\ControlGrid.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="Pages\UserControls\ButtonGrid.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
 		<Page Update="UpdatedPage.xaml">

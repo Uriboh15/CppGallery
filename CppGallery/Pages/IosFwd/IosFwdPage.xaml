@@ -14,13 +14,13 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource BitSet}"/>
                 <local:ToRightButton Style="{StaticResource Iterator}"/>
                 <local:ToRightButton Style="{StaticResource String}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="filebuf" Sentence="basic_filebuf を char に特殊化した型"/>
                 <local:ItemGrid Title="fstream" Sentence="basic_fstream を char に特殊化した型"/>
                 <local:ItemGrid Title="ifstream" Sentence="basic_ifstream を char に特殊化した型"/>
@@ -50,15 +50,15 @@
                 <local:ItemGrid Title="wstreambuf" Sentence="basic_streambuf wchar_t に特殊化した型"/>
                 <local:ItemGrid Title="wstringbuf" Sentence="basic_stringbuf を wchar_t に特殊化した型"/>
                 <local:ItemGrid Title="wstringstream" Sentence="basic_stringstream を wchar_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource FposClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" IsDeclarationOnly="True">
+            <local:SymbolBlockPanel Symbol="Class" IsDeclarationOnly="True">
                 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iosfwd?view=msvc-170" />
 

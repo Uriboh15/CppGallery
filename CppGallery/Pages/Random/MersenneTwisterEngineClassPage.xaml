@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Random.MersenneTwisterEngineClassPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel >
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:CustomExpander Title="mersenne_twister_engine()" Sentence="mersenne_twister_engine 型のオブジェクトを構築します" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="mt19937" Sentence="32 ビット メルセンヌ ツイスタ" Value="mersenne_twister_engine&lt;unsigned int, 32, 624, 397, 31, 0x9908b0df, 11, 0xffffffff, 7, 0x9d2c5680, 15, 0xefc60000, 18, 1812433253>" />
+                <local:ItemGrid Title="mt19937_64" Sentence="64 ビット メルセンヌ ツイスタ" Value="mersenne_twister_engine&lt;unsigned long long, 64, 312, 156, 31, 0xb5026f5aa96619e9ULL, 29, 0x5555555555555555ULL, 17, 0x71d67fffeda60000ULL, 37, 0xfff7eee000000000ULL, 43, 6364136223846793005ULL>" />
+                <local:ItemGrid Title="result_type" Sentence="乱数の型" Value="unsigned int"/>
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Constant" >
+                <local:ItemGrid Title="default_seed" Sentence="シードの初期値" Value="5489u" />
+                <local:ItemGrid Title="initialization_multiplier" Sentence="初期化の乗数" />
+                <local:ItemGrid Title="mask_bits" Sentence="マスクのビットサイズ" />
+                <local:ItemGrid Title="shift_size" Sentence="シフトサイズ" />
+                <local:ItemGrid Title="state_size" Sentence="状態のサイズ" />
+                <local:ItemGrid Title="tempering_b" Sentence="調律ビットマスクのパラメータ" />
+                <local:ItemGrid Title="tempering_c" Sentence="調律ビットマスクのパラメータ" />
+                <local:ItemGrid Title="tempering_d" Sentence="調律ビットマスクのパラメータ" />
+                <local:ItemGrid Title="tempering_l" Sentence="調律シフトのパラメータ" />
+                <local:ItemGrid Title="tempering_s" Sentence="調律シフトのパラメータ" />
+                <local:ItemGrid Title="tempering_t" Sentence="調律シフトのパラメータ" />
+                <local:ItemGrid Title="tempering_u" Sentence="調律シフトのパラメータ" />
+                <local:ItemGrid Title="word_size" Sentence="ワードサイズ" />
+                <local:ItemGrid Title="xor_mask" Sentence="XOR のマスク" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorKAKKO" AutoFunc="False" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="StaticMethod" >
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/max" />
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/min" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/discard" AutoFunc="False" />
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/seed" AutoFunc="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorEE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorNE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorLL" AutoFunc="False" Icon="Operator" IsEnabled="False" />
+                <local:FunctionExpander Folder="random__mersenne_twister_engine/operatorRR" AutoFunc="False" Icon="Operator" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/mersenne-twister-engine-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/random/mersenne_twister_engine.html" />
+
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

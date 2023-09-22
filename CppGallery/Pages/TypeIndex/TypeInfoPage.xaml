@@ -10,9 +10,9 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="class" >
+            <local:SymbolBlockPanel Symbol="class" >
                 
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/typeindex?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/typeindex.html" />
         </local:OuterPanel>

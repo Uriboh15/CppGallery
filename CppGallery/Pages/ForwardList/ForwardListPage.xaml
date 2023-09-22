@@ -10,22 +10,22 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="forward_list/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="forward_list/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="forward_list/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="forward_list/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="forward_list/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="forward_list/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="forward_list/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource ForwardListClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/forward-list?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/forward_list.html" />
         </local:OuterPanel>

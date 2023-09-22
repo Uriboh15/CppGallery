@@ -22,6 +22,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -98,6 +99,7 @@ namespace CppGallery
         public static bool IsShowReturnCode { get; set; }                   //buf[9]
         public static CppVersion CppVersion { get; set; }                   //buf[10]
         public static CVersion CVersion { get; set; }                       //buf[11]
+        public static uint WaitFor { get; set; }                            //buf[12, 13, 14, 15]
 
 
         public static bool IsFirstCSampleOpened { get; set; }       //log[0]
@@ -107,7 +109,7 @@ namespace CppGallery
         public static string UserLogPath => @"Pages/log.bin";
         private static bool _isFirstLaunch = false;
 
-        public static int SettingsLen => 12;
+        public static int SettingsLen => 16;
         public static int LogLen => 1;
         public static bool Win10 => _winver == WinVer.Win10;
         public static WinVer WinVer => _winver;
@@ -207,6 +209,11 @@ namespace CppGallery
             CVersion = (CVersion)x;
         }
 
+        private static void ApplyWaitFor(byte[] arr)
+        {
+            WaitFor = BitConverter.ToUInt32(arr, 12);
+        }
+
         private static void ApplySettings()
         {
             byte[] buf = new byte[SettingsLen];
@@ -227,12 +234,18 @@ namespace CppGallery
                 buf[3] = (byte)Compiler.VC;
                 buf[4] = (byte)LibraryPageStyle.Block;
                 buf[5] = (byte)ElementTheme.Dark;
-                buf[6] = (byte)ElementTheme.Default;
+                buf[6] = (byte)ElementTheme.Dark;
                 buf[7] = (byte)ProcesserType.x64;
                 buf[8] = 1;
                 buf[9] = 0;
                 buf[10] = 17;
                 buf[11] = 17;
+
+                var tmp = BitConverter.GetBytes(400u);
+                buf[12] = tmp[0];
+                buf[13] = tmp[1];
+                buf[14] = tmp[2];
+                buf[15] = tmp[3];
                 _isFirstLaunch = true;
             }
             else
@@ -253,6 +266,7 @@ namespace CppGallery
             ApplyIsShowReturnCode(buf[9]);
             ApplyCppVersion(buf[10]);
             ApplyCVersion(buf[11]);
+            ApplyWaitFor(buf);
 
             fs.Close();
         }

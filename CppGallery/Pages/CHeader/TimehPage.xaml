@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="clock_t" Sentence="プログラムの実行時間を表す型" Value="long"/>
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" Value="unsigned long long"/>
                 <local:ItemGrid Title="time_t" Sentence="時刻を表す型" Value="long long"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="tm 構造体" Sentence="暦時刻を表す構造体" Icon="&#xEA86;"/>
@@ -37,11 +37,11 @@
                         <local:ItemGrid Title="int tm_isdst" Sentence="サマータイム"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander x:Name="Asctime" Folder="time.h/asctime" CodeLanguage="C" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource VisualCppX64OnlyNow}"/>
@@ -94,7 +94,7 @@
                     </local:FunctionExpander.Info>
                     <Grid Loaded="TimeOut_Loaded"/>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
             <local:MacroPanel Folder="time.h" >

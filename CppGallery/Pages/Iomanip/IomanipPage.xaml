@@ -13,14 +13,14 @@
     <Grid>
         <ScrollViewer>
             <local:OuterPanel>
-                <local:BlockPanel Header="Including">
+                <local:SymbolBlockPanel Symbol="Including">
                     <local:ToRightButton Style="{StaticResource Istream}"/>
                     <local:ToRightButton Style="{StaticResource Iterator}"/>
                     <local:ToRightButton Style="{StaticResource TypeTraits}"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
 
-                <local:BlockPanel Header="Manipulator">
+                <local:SymbolBlockPanel Symbol="Manipulator">
                     <local:FunctionExpander Folder="iomanip/get_money" >
                         <local:ControlGrid Message="金額">
                             <TextBox Text="200" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
@@ -69,7 +69,7 @@
 
                     <local:FunctionExpander Folder="iomanip/setprecision" />
                     <local:FunctionExpander Folder="iomanip/setw" />
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
                 <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iomanip?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/iomanip.html" />
 

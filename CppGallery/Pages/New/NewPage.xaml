@@ -12,20 +12,20 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Included" >
+            <local:SymbolBlockPanel Symbol="Included" >
                 <local:ToRightButton Style="{StaticResource BitSet}"/>
                 <local:ToRightButton Style="{StaticResource String}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Object" >
+            <local:SymbolBlockPanel Symbol="Object" >
                 <local:FunctionExpander Folder="new/nothrow" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="new_handler" Sentence="メモリ確保に失敗したときに呼ばれる関数ポインタの型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="new/delete" Icon="Operator" SampleType="None" />
                 <local:FunctionExpander Folder="new/deleteKAKKO" Icon="Operator" SampleType="None" />
 
@@ -40,9 +40,9 @@
                         <Button Content="確保" Width="65" Click="NewButton_Click"/>
                     </local:ControlGrid>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="new/get_new_handler" AutoFunc="False" />
 
                 <local:CustomExpander IsEnabled="False">
@@ -52,9 +52,9 @@
                 </local:CustomExpander>
 
                 <local:FunctionExpander Folder="new/set_new_handler" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Enum" >
+            <local:SymbolBlockPanel Symbol="Enum" >
                 <local:CustomExpander Title="class enum align_val_t" Icon="&#xEA86;">
                     <local:EnumPanel>
                         <local:InnerGrid Style="{StaticResource EGrid}">
@@ -62,16 +62,16 @@
                         </local:InnerGrid>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:FunctionExpander Folder="new/nothrow_t" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Exception" >
+            <local:SymbolBlockPanel Symbol="Exception" >
                 <local:FunctionExpander Folder="new/bad_alloc" Icon="Object" />
                 <local:FunctionExpander Folder="new/bad_array_new_length" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/new?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/new.html" />
 

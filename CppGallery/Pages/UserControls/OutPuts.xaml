@@ -12,7 +12,7 @@
 
     <local:InnerGrid>
         <ScrollViewer>
-            <TextBlock x:Name="OutPut" VerticalAlignment="Center" FontFamily="MS Gothic"/>
+            <TextBlock x:Name="OutPut" VerticalAlignment="Center" FontFamily="MS Gothic" FontSize="16" />
         </ScrollViewer>
     </local:InnerGrid>
     

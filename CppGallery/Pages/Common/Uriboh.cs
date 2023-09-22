@@ -15,12 +15,6 @@ namespace CppGallery
         public static extern int RandTest();
 
         [DllImport("../dll/Func.dll")]
-        public static extern uint RandomLinearCongruentialEngineOpeKAKKO();
-
-        [DllImport("../dll/Func.dll")]
-        public static extern void RandomLinearCongruentialEngineSeed(uint a);
-
-        [DllImport("../dll/Func.dll")]
         public static extern void SrandTest(int radix);
 
         [DllImport("../dll/Func.dll")]
@@ -69,26 +63,6 @@ namespace CppGallery
         public static extern IntPtr StrftimeTest();
 
         
-    }
-
-    public static class Column
-    {
-        private const string DllName = @"../dll/Column.dll";
-
-        [DllImport(DllName)]
-        public static extern IntPtr C4(string str);
-
-        [DllImport(DllName)]
-        public static extern IntPtr C5(string str);
-
-        [DllImport(DllName)]
-        public static extern IntPtr C7();
-
-        [DllImport(DllName)]
-        public static extern IntPtr C8(string str);
-
-        [DllImport(DllName)]
-        public static extern IntPtr C11(string path);
     }
 
     public static class Wcharh

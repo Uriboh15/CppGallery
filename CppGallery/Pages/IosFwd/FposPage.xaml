@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="fpos()" Sentence="fpos 型のオブジェクトを構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="operator!=" Sentence="aaa" Icon="&#xE710;"/>
@@ -62,9 +62,9 @@
                         <local:EHeader Title="operator streamoff" Sentence="aaa" Icon="&#xE710;"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="seekpos() 関数" Sentence="aaa"/>
@@ -76,7 +76,7 @@
                         <local:EHeader Title="state() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/fpos-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ios/fpos.html" />
         </local:OuterPanel>

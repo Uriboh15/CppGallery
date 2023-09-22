@@ -30,11 +30,6 @@
                 <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
             </Style>
 
-            <Style TargetType="local:ColumnButton" BasedOn="{StaticResource DefaultButtonStyle}">
-                <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
-                <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
-            </Style>
-
             <Style x:Key="EGrid" TargetType="Grid">
                 <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
                 <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
@@ -69,23 +64,21 @@
                 <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                 <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                <Setter Property="Height" Value="70"/>
-            </Style>
-
-            <Style x:Key="BasicStringstreamClass" TargetType="local:ButtonGrid">
-                <Setter Property="Title" Value="basic_stringstream クラス"/>
-                <Setter Property="Sentence" Value=""/>
+                <Setter Property="Height" Value="68"/>
             </Style>
 
             <Style x:Key="NotDefinedFuntionItemGrid" TargetType="local:ItemGrid">
-                <Setter Property="Icon" Value="&#xF158;" />
+                <Setter Property="Icon" Value="Function" />
                 <Setter Property="Sentence" Value="この関数は実装されていません" />
             </Style>
 
             <Style x:Key="NoEffectFunctionItemGrid" TargetType="local:ItemGrid">
-                <Setter Property="Icon" Value="&#xF158;" />
+                <Setter Property="Icon" Value="Function" />
                 <Setter Property="Sentence" Value="この関数は効果がありません" />
             </Style>
+            
+            
+            
 
         </ResourceDictionary>
 

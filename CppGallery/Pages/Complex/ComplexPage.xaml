@@ -12,14 +12,14 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Limits}"/>
                 <local:ToRightButton Style="{StaticResource SStream}"/>
                 <local:ToRightButton Style="{StaticResource TypeTraits}"/>
                 <local:ToRightButton Style="{StaticResource Utility}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="complex/operatorNE" Icon="Operator" AutoFunc="False" />
 
                 <local:FunctionExpander Folder="complex/operatorKAKERU" Icon="Operator" >
@@ -44,16 +44,16 @@
                 <local:FunctionExpander Folder="complex/operatorRR" Icon="Operator" >
                     <local:TextBoxPane Message="z" Text="(1,1)" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Literal" >
+            <local:SymbolBlockPanel Symbol="Literal" >
                 <local:FunctionExpander Folder="complex/operatorI" Icon="Literal" />
                 <local:FunctionExpander Folder="complex/operatorIF" Icon="Literal" />
                 <local:FunctionExpander Folder="complex/operatorIL" Icon="Literal" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:FunctionExpander Folder="complex/abs" >
                     <local:TextBoxPane Message="z" Text="(1,0)" />
                 </local:FunctionExpander>
@@ -153,17 +153,17 @@
                 <local:FunctionExpander Folder="complex/tanh" >
                     <local:TextBoxPane Message="z" Text="(1,0)" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource ComplexClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Specialization">
+            <local:SymbolBlockPanel Symbol="Specialization">
                 <local:ItemGrid Title="complex&lt;double>" Sentence="テンプレートクラス complex を double に特殊化したクラス"/>
                 <local:ItemGrid Title="complex&lt;float>" Sentence="テンプレートクラス complex を float に特殊化したクラス"/>
                 <local:ItemGrid Title="complex&lt;long double>" Sentence="テンプレートクラス complex を long double に特殊化したクラス"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/complex?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/complex.html" />
 

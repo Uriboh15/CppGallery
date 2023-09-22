@@ -9,13 +9,13 @@ using Microsoft.UI.Xaml.Media.Animation;
 
 namespace CppGallery.Pages.UserControls
 {
-    internal class MacroPanel : BlockPanel
+    internal class MacroPanel : SymbolBlockPanel
     {
         public string Folder { get; set; } = string.Empty;
 
         public MacroPanel()
         {
-            Header = PanelHeader.Macro;
+            Symbol = PanelHeader.Macro;
             Loaded += MacroPanel_Loaded;
         }
 

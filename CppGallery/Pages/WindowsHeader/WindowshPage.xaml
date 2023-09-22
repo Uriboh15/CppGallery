@@ -12,21 +12,23 @@
         <local:OuterPanel HeaderType="Windows" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BasicBlockPanel HeadText="一般ユーティリティ" >
+            <local:BlockPanel Header="一般ユーティリティ" >
                 <local:ToRightButton Style="{StaticResource WinUserh}" />
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="環境設定" >
+            <local:BlockPanel Header="環境設定" >
                 <local:ToRightButton Style="{StaticResource ProcessEnv}" />
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="コンソール操作" >
+            <local:BlockPanel Header="コンソール操作" >
                 <local:ToRightButton Style="{StaticResource ConsoleApi}" />
                 <local:ToRightButton Style="{StaticResource ConsoleApi2}" />
                 <local:ToRightButton Style="{StaticResource ConsoleApi3}" />
-            </local:BasicBlockPanel>
-            
-            
+            </local:BlockPanel>
+
+            <local:BlockPanel Header="ファイル・ディレクトリ操作" >
+                <local:ToRightButton Style="{StaticResource FileApih}" />
+            </local:BlockPanel>
             
         </local:OuterPanel>
     </ScrollViewer>

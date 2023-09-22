@@ -13,11 +13,11 @@
     <Grid>
         <ScrollViewer>
             <local:OuterPanel>
-                <local:BlockPanel Header="Including">
+                <local:SymbolBlockPanel Symbol="Including">
                     <local:ToRightButton Style="{StaticResource Istream}"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
                 
-                <local:BlockPanel Header="Typedefs">
+                <local:SymbolBlockPanel Symbol="Typedefs">
                     <local:ItemGrid Title="filebuf" Sentence="basic_filebuf を char に特殊化した型"/>
                     <local:ItemGrid Title="fstream" Sentence="basic_fstream を char に特殊化した型"/>
                     <local:ItemGrid Title="ifstream" Sentence="basic_ifstream を char に特殊化した型"/>
@@ -26,18 +26,18 @@
                     <local:ItemGrid Title="wifstream" Sentence="basic_ifstream を wchar_t に特殊化した型"/>
                     <local:ItemGrid Title="wofstream" Sentence="basic_ofstream を wchar_t に特殊化した型"/>
                     <local:ItemGrid Title="wfilebuf" Sentence="basic_filebuf を wchar_t に特殊化した型"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="Function" >
+                <local:SymbolBlockPanel Symbol="Function" >
                     <local:CustomExpander Title="swap() 関数" Sentence="2 つのファイルストリームオブジェクトを入れ替えます" IsEnabled="False" />
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="Class">
+                <local:SymbolBlockPanel Symbol="Class">
                     <local:ToRightButton Style="{StaticResource BasicFileBufClass}"/>
                     <local:ToRightButton Style="{StaticResource BasicFStreamClass}"/>
                     <local:ToRightButton Style="{StaticResource BasicIFStreamClass}"/>
                     <local:ToRightButton Style="{StaticResource BasicOFStreamClass}"/>
-                </local:BlockPanel>
+                </local:SymbolBlockPanel>
 
                 <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/fstream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/fstream.html"/>
 

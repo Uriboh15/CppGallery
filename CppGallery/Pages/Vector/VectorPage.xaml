@@ -12,31 +12,31 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including" >
+            <local:SymbolBlockPanel Symbol="Including" >
                 <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="vector/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="vector/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="vector/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="vector/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="vector/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="vector/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="vector/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource VectorClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Specialization" >
+            <local:SymbolBlockPanel Symbol="Specialization" >
                 <local:ItemGrid Title="vector&lt;bool> クラス" Sentence="vector を bool に特殊化したクラス"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

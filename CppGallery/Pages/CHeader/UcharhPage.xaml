@@ -12,13 +12,13 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="char16_t" Sentence="UTF-16 の文字型" />
                 <local:ItemGrid Title="char32_t" Sentence="UTF-32 の文字型" />
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:CustomExpander Title="mbstate_t" Sentence="マルチバイト文字とワイド文字の間の変換状態を表す型" Icon="&#xEA86;">
                     <local:EnumPanel>
                         <local:ItemGrid Title="unsigned short _Byte" Sentence="aaa"/>
@@ -26,15 +26,15 @@
                         <local:ItemGrid Title="unsigned long _Wchar" Sentence="文字コード"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 <local:CustomExpander Title="c16rtomb() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="c32rtomb() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="mbrtoc16() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="mbrtoc32() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

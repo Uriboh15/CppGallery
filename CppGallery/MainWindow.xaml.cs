@@ -30,6 +30,8 @@ using System.Threading.Tasks;
 using CppGallery.Pages.Settings;
 using System.Diagnostics;
 using CppGallery.Pages.UserControls;
+using Windows.ApplicationModel.DataTransfer;
+using DispatcherQueueHandler = Microsoft.UI.Dispatching.DispatcherQueueHandler;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -50,15 +52,15 @@ namespace CppGallery
 
     public sealed partial class MainWindow : Window
     {
-        private int CreateTabCount = 0;
-        public static MainWindow Handle { get; private set; }
+        private static int CreateTabCount = 0;
         private IntPtr _hWnd { get; set; }
         public IntPtr HWnd => _hWnd;
-        public static bool WindowClosed { get; set; } = false;
         public IList<object> TabChildren => Tab.TabItems;
         public UIElementCollection Children => MainFrame.Children;
         double Scaling;
         private AppWindow OldAppWindow { get; set; }
+        public static List<MainWindow> WindowList { get; } = new List<MainWindow>();
+
 
         [DllImport("User32.dll")]
         private static extern int IsZoomed(IntPtr hWnd);
@@ -84,8 +86,7 @@ namespace CppGallery
         SystemBackdropConfiguration configurationSource;
         DesktopAcrylicController m_acrylicController;
 
-
-        public MainWindow()
+        public MainWindow(bool createTabContent = true)
         {
             this.InitializeComponent();
 
@@ -97,22 +98,32 @@ namespace CppGallery
 
 
 
-
+            WindowList.Add(this);
             _hWnd = WindowNative.GetWindowHandle(this);
 
-            //int value = 1;
-            //_ = DwmSetWindowAttribute(_hWnd, 20, ref value , sizeof(int));
             SetIsCompact();
             OldAppWindow = AppWindow.GetFromWindowId(Win32Interop.GetWindowIdFromWindow(_hWnd));
-            Handle = this;
             OldAppWindow.Title = "C++ Library Gallery";
             SetTitleBarColors(App.Theme);
             InitializeTheme();
             OldAppWindow.SetIcon("Pages/Assets/Square150x150Logo.scale-200.ico");
-            AddTab();
+            
             this.SizeChanged += Window_SizeChanged;
-            //_ = SetWindowLongPtrW(_hWnd, -16, 0x00040000L | 0x00020000L | 0x00C00000L | 0x00800000L | 0x00080000L | 0x00010000L);
-            //_ = CoAPI.SetFrameArea(_hWnd);
+
+            if (createTabContent) AddTab();
+        }
+
+        public static MainWindow GetParentMainWindow(UIElement element)
+        {
+            foreach(var window in WindowList)
+            {
+                if(element.XamlRoot == window.Content.XamlRoot)
+                {
+                    return window;
+                }
+            }
+
+            throw new Exception("Element is not setted in a MainWindow.");
         }
 
         public void ShowCSampleTeaching()
@@ -293,37 +304,48 @@ namespace CppGallery
             }
         }
 
-
-
-
         private void Window_Closed(object sender, WindowEventArgs args)
         {
-            byte[] buf = new byte[App.SettingsLen];
-            FileStream fs = new FileStream(App.SettingsFilePath, FileMode.Open, FileAccess.Write);
-            buf[0] = (byte)App.Theme;
-            buf[1] = (byte)App.Back;
-            buf[2] = (byte)(Pages.Settings.SettingPage.IsCompact ? 1 : 0);
-            buf[3] = (byte)App.Compiler;
-            buf[4] = (byte)App.LibraryPageStyle;
-            buf[5] = (byte)App.SourceCodeTheme;
-            buf[6] = (byte)App.ResultTheme;
-            buf[7] = (byte)App.ProcesserType;
-            buf[8] = (byte)(App.UseCppInCSample ? 1 : 0);
-            buf[9] = (byte)(App.IsShowReturnCode ? 1 : 0);
-            buf[10] = (byte)App.CppVersion;
-            buf[11] = (byte)App.CVersion;
+            WindowList.Remove(this);
 
-            fs.Write(buf, 0, App.SettingsLen);
-            fs.Close();
+            if(WindowList.Count == 0)
+            {
+                byte[] buf = new byte[App.SettingsLen];
+                FileStream fs = new FileStream(App.SettingsFilePath, FileMode.Open, FileAccess.Write);
+                buf[0] = (byte)App.Theme;
+                buf[1] = (byte)App.Back;
+                buf[2] = (byte)(Pages.Settings.SettingPage.IsCompact ? 1 : 0);
+                buf[3] = (byte)App.Compiler;
+                buf[4] = (byte)App.LibraryPageStyle;
+                buf[5] = (byte)App.SourceCodeTheme;
+                buf[6] = (byte)App.ResultTheme;
+                buf[7] = (byte)App.ProcesserType;
+                buf[8] = (byte)(App.UseCppInCSample ? 1 : 0);
+                buf[9] = (byte)(App.IsShowReturnCode ? 1 : 0);
+                buf[10] = (byte)App.CppVersion;
+                buf[11] = (byte)App.CVersion;
 
-            byte[] log = new byte[App.LogLen];
-            fs = new FileStream(App.UserLogPath, FileMode.Open, FileAccess.Write);
-            log[0] = (byte)(App.IsFirstCSampleOpened ? 1 : 0);
+                var tmp = BitConverter.GetBytes(App.WaitFor);
+                for (int i = 0; i < tmp.Length; i++)
+                {
+                    buf[i + 12] = tmp[i];
+                }
 
-            fs.Write(log, 0, App.LogLen);
-            fs.Close();
+                fs.Write(buf, 0, App.SettingsLen);
+                fs.Close();
 
-            WindowClosed = true;
+                byte[] log = new byte[App.LogLen];
+                fs = new FileStream(App.UserLogPath, FileMode.Open, FileAccess.Write);
+                log[0] = (byte)(App.IsFirstCSampleOpened ? 1 : 0);
+
+                fs.Write(log, 0, App.LogLen);
+                fs.Close();
+            }
+            else
+            {
+                MainFrame.Children.Clear();
+            }
+            
 
             //mica
             if (micaController != null)
@@ -338,16 +360,14 @@ namespace CppGallery
             }
             this.Activated -= Window_Activated;
             configurationSource = null;
+
+            Content = null;
         }
 
         public ElementTheme GetTheme()
         {
             return Dodai.ActualTheme;
         }
-
-
-
-
 
 
         //mica
@@ -596,7 +616,7 @@ namespace CppGallery
             // Windows App SDK on Windows 11.
             if (appWindow == null) return;
 
-            double wid = Dodai.ActualWidth - 220.0;
+            double wid = Dodai.ActualWidth - 260.0;
             if (wid >= 0.0)
             {
                 Tab.MaxWidth = wid;
@@ -636,36 +656,43 @@ namespace CppGallery
             SetDragRegionForCustomTitleBar(OldAppWindow);
         }
 
-        public void OpenSettings()
+        public static void OpenSettings(UIElement element)
         {
-            for (int i = 0; i < Tab.TabItems.Count; ++i)
+            //既に設定を開いている場合はそれを表示
+            foreach(var window in WindowList)
             {
-                if ((Tab.TabItems[i] as TabViewItem).Header as string == "設定")
+                for (int i = 0; i < window.Tab.TabItems.Count; ++i)
                 {
-                    Tab.SelectedItem = Tab.TabItems[i];
-                    return;
+                    if ((window.Tab.TabItems[i] as TabViewItem).Header as string == "設定")
+                    {
+                        window.Tab.SelectedItem = window.Tab.TabItems[i];
+                        window.Activate();
+                        return;
+                    }
                 }
             }
 
+            var currentWindow = GetParentMainWindow(element);
+
             var newTab = new TabViewItem { Tag = CreateTabCount };
-            Tab.TabItems.Add(newTab);
+            currentWindow.Tab.TabItems.Add(newTab);
             newTab.IconSource = new SymbolIconSource { Symbol = Symbol.Setting };
             newTab.Header = "設定";
             var spage = SettingsParentPage.GetHandle();
             spage.Tag = CreateTabCount;
-            MainFrame.Children.Add(spage);
+            currentWindow.MainFrame.Children.Add(spage);
             ++CreateTabCount;
-            Tab.SelectedItem = newTab;
+            currentWindow.Tab.SelectedItem = newTab;
         }
 
         private void SettingButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenSettings();
+            OpenSettings(this.Content);
         }
 
         private async void Dodai_Loaded(object sender, RoutedEventArgs e)
         {
-            if (App.IsFirstLaunch)
+            if (App.IsFirstLaunch && CreateTabCount < 2)
             {
                 DirectoryInfo di = new DirectoryInfo(Data.DefaultSampleExePath);
                 FileInfo[] fiAlls = di.GetFiles();
@@ -734,7 +761,6 @@ namespace CppGallery
                 {
                     Func.SrandTest(0);
                     _ = Wcharh.WcsftimeTest();
-                    _ = Column.C4("");
                 });
 
 
@@ -751,6 +777,157 @@ namespace CppGallery
             });
 
 #endif
+        }
+
+        private void Tab_TabDroppedOutside(TabView sender, TabViewTabDroppedOutsideEventArgs args)
+        {
+            //タブが1個の場合はウィンドウを移動しない
+            if (Tab.TabItems.Count == 1) return;
+
+            var selected = Tab.SelectedItem as TabViewItem;
+            int index = (int)selected.Tag;
+
+            Page page = null;
+
+            foreach (var element in MainFrame.Children)
+            {
+                if ((int)(element as Page).Tag == index)
+                {
+                    page = element as Page;
+                    MainFrame.Children.Remove(element);
+                    Tab.TabItems.Remove(selected);
+                    break;
+                }
+            }
+
+            if (page == null) throw new Exception("Page not found.");
+
+            var window = new MainWindow(false);
+
+            var newTab = new TabViewItem { Tag = index, IconSource = selected.IconSource, Header = selected.Header };
+            window.Tab.TabItems.Add(newTab);
+            window.MainFrame.Children.Add(page);
+            window.Tab.SelectedItem = newTab;
+
+            window.Activate();
+        }
+
+        //staticにマークしてはいけない
+        private void Tab_TabDragStarting(TabView sender, TabViewTabDragStartingEventArgs args)
+        {
+            // We can only drag one tab at a time, so grab the first one...
+
+            // ... set the drag data to the tab...
+            args.Data.Properties.Add("MainPage", sender.SelectedItem);
+
+            // ... and indicate that we can move it
+            args.Data.RequestedOperation = DataPackageOperation.Move;
+        }
+
+        private async void Tab_TabStripDrop(object sender, DragEventArgs e)
+        {
+            //なんかよくわからんやつ
+            if (e.DataView.Properties.TryGetValue("MainPage", out object obj))
+            {
+                // Ensure that the obj property is set before continuing.
+                if (obj == null)
+                {
+                    return;
+                }
+
+                var destinationTabView = sender as TabView;
+                var destinationItems = destinationTabView.TabItems;
+
+                if (destinationItems != null)
+                {
+                    // First we need to get the position in the List to drop to
+                    var index = -1;
+
+                    // Determine which items in the list our pointer is between.
+                    for (int i = 0; i < destinationTabView.TabItems.Count; i++)
+                    {
+                        var item = destinationTabView.ContainerFromIndex(i) as TabViewItem;
+
+                        if (e.GetPosition(item).X - item.ActualWidth < 0)
+                        {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    // The TabViewItem can only be in one tree at a time. Before moving it to the new TabView, remove it from the old.
+                    // Note that this call can happen on a different thread if moving across windows. So make sure you call methods on
+                    // the same thread as where the UI Elements were created.
+
+                    var element = (obj as UIElement);
+
+                    var taskCompletionSource = new TaskCompletionSource();
+
+                    element.DispatcherQueue.TryEnqueue(
+                        Microsoft.UI.Dispatching.DispatcherQueuePriority.Normal,
+                        new DispatcherQueueHandler(() =>
+                        {
+                            var tabItem = obj as TabViewItem;
+                            var destinationTabViewListView = (tabItem.Parent as TabViewListView);
+                            destinationTabViewListView.Items.Remove(obj);
+
+                            taskCompletionSource.SetResult();
+                        }));
+
+                    await taskCompletionSource.Task;
+
+                    var tabItem = obj as TabViewItem;
+                    int count = (int)tabItem.Tag;
+
+                    Page page = null;
+
+                    for (int j = 0; j < WindowList.Count; ++j)
+                    {
+                        var window = WindowList[j];
+                        foreach (var uiElement in window.Children)
+                        {
+                            var subpage = uiElement as Page;
+
+                            if ((int)subpage.Tag == count)
+                            {
+                                page = subpage;
+                                window.Children.Remove(subpage);
+                                if (window.Children.Count == 0)
+                                {
+                                    window.Close();
+                                }
+                                break;
+                            }
+                        }
+                    }
+
+                    MainFrame.Children.Add(page);
+
+                    if (index < 0)
+                    {
+                        // We didn't find a transition point, so we're at the end of the list
+                        destinationItems.Add(tabItem);
+                    }
+                    else if (index < destinationTabView.TabItems.Count)
+                    {
+                        // Otherwise, insert at the provided index.
+                        destinationItems.Insert(index, tabItem);
+                    }
+
+                    // Select the newly dragged tab
+                    destinationTabView.SelectedItem = tabItem;
+
+                    
+                }
+            }
+        }
+
+        private void Tab_TabStripDragOver(object sender, DragEventArgs e)
+        {
+            if (e.DataView.Properties.ContainsKey("MainPage"))
+            {
+                e.AcceptedOperation = DataPackageOperation.Move;
+            }
         }
     }
 }

@@ -55,6 +55,8 @@ namespace CppGallery.Pages.UserControls
 
         private void NumberBoxPane_Loaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
+            Loaded -= NumberBoxPane_Loaded;
+
             NumberBox.ValueChanged += NumberBox_ValueChanged;
             FunctionExpander.Execute(this, Value.ToString());
         }

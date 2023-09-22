@@ -12,11 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="map__map/map" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="allocator_type" Sentence="map の allocator クラスを表す型"/>
                 <local:ItemGrid Title="const_iterator" Sentence="map の要素にアクセスできる const イテレータ"/>
                 <local:ItemGrid Title="const_pointer" Sentence="map の要素にアクセスできる const ポインター"/>
@@ -32,15 +32,15 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="map の要素にアクセスできる逆イテレータ"/>
                 <local:ItemGrid Title="size_type" Sentence="map の要素数を数える型"/>
                 <local:ItemGrid Title="value_type" Sentence="map の要素の型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="map__map/operatorKAKKO" Icon="Operator" />
                 <local:FunctionExpander Folder="map__map/operatorE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="map__map/at" />
                 <local:FunctionExpander Folder="map__map/begin" />
                 <local:FunctionExpander Folder="map__map/cbegin" />
@@ -95,7 +95,7 @@
                         <local:EHeader Title="value_comp() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/map-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/map/map.html" />
 

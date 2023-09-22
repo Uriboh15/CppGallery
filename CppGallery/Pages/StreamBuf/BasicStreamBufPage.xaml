@@ -12,32 +12,32 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="streambuf__basic_streambuf/basic_streambuf" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource ProtectedConstructor}" />
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="char_type" Sentence="Elem に関連付けられる型"/>
                 <local:ItemGrid Title="int_type" Sentence="basic_streambuf スコープ内の型名と Elem を関連付ける型"/>
                 <local:ItemGrid Title="off_type" Sentence="basic_streambuf スコープ内の型名と Elem を関連付ける型"/>
                 <local:ItemGrid Title="pos_type" Sentence="basic_streambuf スコープ内の型名と Elem を関連付ける型"/>
                 <local:ItemGrid Title="traits_type" Sentence="Tr に関連付けられる型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="operator=" Sentence="値を別の basic_streambuf オブジェクトのコピーに置き換えます" Icon="&#xE710;"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="streambuf__basic_streambuf/eback" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource ProtectedMethod}" />
@@ -265,14 +265,14 @@
                         <local:EHeader Title="xsputn() 関数" Sentence="aaa"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
 
-            <local:BlockPanel Header="DerivedClass" >
+            <local:SymbolBlockPanel Symbol="DerivedClass" >
                 <local:ToRightButton Style="{StaticResource BasicFileBufClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicStringBufClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

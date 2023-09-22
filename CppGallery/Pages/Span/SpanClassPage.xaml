@@ -10,13 +10,15 @@
 
     <ScrollViewer >
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="span__span/span" AutoFunc="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs" >
-                <local:ItemGrid Title="const_pointer" Sentence="const 要素のポインタの型" />
-                <local:ItemGrid Title="const_reference" Sentence="const 要素の参照の型" />
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="const_iterator" Sentence="要素の const イテレータの型" />
+                <local:ItemGrid Title="const_pointer" Sentence="要素の const ポインタの型" />
+                <local:ItemGrid Title="const_reference" Sentence="要素の const 参照の型" />
+                <local:ItemGrid Title="const_reverse_iterator" Sentence="要素の const 逆イテレータの型" />
                 <local:ItemGrid Title="difference_type" Sentence="2 つの要素のインデックスの差を表す型" />
                 <local:ItemGrid Title="element_type" Sentence="要素の型" />
                 <local:ItemGrid Title="iterator" Sentence="要素のイテレータの型" />
@@ -25,16 +27,20 @@
                 <local:ItemGrid Title="reverse_iterator" Sentence="要素の逆イテレータの型" />
                 <local:ItemGrid Title="size_type" Sentence="要素数を表す型" />
                 <local:ItemGrid Title="value_type" Sentence="要素の型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="span__span/operatorE" Icon="Operator" />
                 <local:FunctionExpander Folder="span__span/operatorKAKKO" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:FunctionExpander Folder="span__span/back" />
                 <local:FunctionExpander Folder="span__span/begin" />
+                <local:FunctionExpander Folder="span__span/cbegin" TargetMinCppVersion="Cpp23" />
+                <local:FunctionExpander Folder="span__span/cend" TargetMinCppVersion="Cpp23" />
+                <local:FunctionExpander Folder="span__span/crbegin" TargetMinCppVersion="Cpp23" />
+                <local:FunctionExpander Folder="span__span/crend" TargetMinCppVersion="Cpp23" />
                 <local:FunctionExpander Folder="span__span/data" />
                 <local:FunctionExpander Folder="span__span/empty" />
                 <local:FunctionExpander Folder="span__span/end" />
@@ -46,7 +52,7 @@
                 <local:FunctionExpander Folder="span__span/size" />
                 <local:FunctionExpander Folder="span__span/size_bytes" />
                 <local:FunctionExpander Folder="span__span/subspan" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

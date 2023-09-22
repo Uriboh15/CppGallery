@@ -37,15 +37,21 @@ namespace CppGallery.Pages.UserControls
 
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register(
            "Icon", // Max という名前の……
-           typeof(string), // int 型の CLR プロパティを……
+           typeof(HeaderIcon), // int 型の CLR プロパティを……
            typeof(ItemGrid), // クラスに登録するやで―
-           new PropertyMetadata("\uEA86"));
+           new PropertyMetadata(HeaderIcon.Object));
 
         public static readonly DependencyProperty ValueProperty = DependencyProperty.Register(
            "Value", // Max という名前の……
            typeof(string), // int 型の CLR プロパティを……
            typeof(ItemGrid), // クラスに登録するやで―
            new PropertyMetadata(string.Empty));
+
+        public static readonly DependencyProperty IconStringProperty = DependencyProperty.Register(
+           "IconString", // Max という名前の……
+           typeof(string), // int 型の CLR プロパティを……
+           typeof(ItemGrid), // クラスに登録するやで―
+           new PropertyMetadata("\uea86"));
 
 
         public string Title
@@ -60,10 +66,14 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(SentenceProperty, value); }
         }
 
-        public string Icon
+        public HeaderIcon Icon
         {
-            get { return (string)GetValue(IconProperty); }
-            set { SetValue(IconProperty, value); }
+            get { return (HeaderIcon)GetValue(IconProperty); }
+            set
+            {
+                SetValue(IconProperty, value);
+                IconString = UserAPI.GetIconSymbol(Icon);
+            }
         }
 
         public string Value
@@ -73,6 +83,12 @@ namespace CppGallery.Pages.UserControls
         }
 
         public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
+
+        private string IconString
+        {
+            get { return (string)GetValue(IconStringProperty); }
+            set { SetValue(IconStringProperty, value); }
+        }
 
         public ItemGrid()
         {

@@ -18,19 +18,19 @@
                 <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
             </local:ResultsPanel>
             
-            <local:BlockPanel Header="BaseClass" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="ostrstream()" Sentence="ostrstream を構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
+            <local:SymbolBlockPanel Symbol="Method" >
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="freeze() 関数" Sentence="aaa"/>
@@ -47,7 +47,7 @@
 
                 <local:FunctionExpander Folder="strstream__ostrstream/str" />
                 <local:FunctionExpander Folder="strstream__ostrstream/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
 
         </local:OuterPanel>

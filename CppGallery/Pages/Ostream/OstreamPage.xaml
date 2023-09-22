@@ -14,32 +14,32 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Ios}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Included">
+            <local:SymbolBlockPanel Symbol="Included">
                 <local:ToRightButton Style="{StaticResource Istream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="ostream" Sentence="basic_ostream を char に特殊化した型"/>
                 <local:ItemGrid Title="wostream" Sentence="basic_ostream を wchar_t に特殊化した型"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Manipulator">
+            <local:SymbolBlockPanel Symbol="Manipulator">
                 <local:FunctionExpander Folder="ostream/endl" />
                 <local:FunctionExpander Folder="ostream/ends" />
                 <local:FunctionExpander Folder="ostream/flush" SampleType="ConsoleOnly" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="ostream/operatorLL" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="ostream/print" TargetMinCppVersion="Cpp23" AutoFunc="False" ConsoleButtonVisibility="Collapsed" >
                     <local:SaveButtonPane />
                 </local:FunctionExpander>
@@ -57,11 +57,11 @@
 
                 <local:CustomExpander Title="vprint_nonunicode() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="vprint_unicode() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource BasicOstreamClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ostream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/ostream.html" />
 

@@ -11,15 +11,15 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Constructor" >
+            <local:SymbolBlockPanel Symbol="Constructor" >
                 <local:FunctionExpander Folder="typeinfo__type_info/type_info" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource WarningInfo}" Title="コンストラクタ使用不可" Message="この型のオブジェクトは typeid 演算子でのみ構築可能です" />
                     </local:FunctionExpander.Info>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="typeinfo__type_info/operatorE" Icon="Operator" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource DeletedOperator}" />
@@ -28,13 +28,13 @@
 
                 <local:FunctionExpander Folder="typeinfo__type_info/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="typeinfo__type_info/operatorNE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Method">
+            <local:SymbolBlockPanel Symbol="Method">
                 <local:FunctionExpander Folder="typeinfo__type_info/before" />
                 <local:FunctionExpander Folder="typeinfo__type_info/hash_code" />
                 <local:FunctionExpander Folder="typeinfo__type_info/name" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/cpp/type-info-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/typeinfo/type_info.html" />
         </local:OuterPanel>

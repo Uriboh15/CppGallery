@@ -12,9 +12,9 @@ namespace CppGallery.Pages.UserControls
         private HyperlinkButton MSButton { get; } = new HyperlinkButton { Content = "Microsoft リファレンス" };
         private HyperlinkButton CppJPButton { get; } = new HyperlinkButton { Content = "C++日本語リファレンス" };
 
-        private BlockPanel BlockPanel { get; } = new BlockPanel
+        private SymbolBlockPanel BlockPanel { get; } = new SymbolBlockPanel
         {
-            Header = PanelHeader.ReferenceURL,
+            Symbol = PanelHeader.ReferenceURL,
         };
 
         private StackPanel MSPanel { get; } = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };

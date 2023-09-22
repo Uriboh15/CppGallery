@@ -10,127 +10,127 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BasicBlockPanel HeadText="代入演算子" >
-                <local:ItemGrid Title="operator=" Sentence="右辺の値を左辺に代入します" Icon="&#xE710;" />
+            <local:BlockPanel Header="代入演算子" >
+                <local:ItemGrid Title="operator=" Sentence="右辺の値を左辺に代入します" Icon="Operator" />
 
-                <local:ItemGrid Title="operator+=" Sentence="左辺に右辺を加算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator-=" Sentence="左辺に右辺を減算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator*=" Sentence="左辺に右辺を乗算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator/=" Sentence="左辺に右辺を除算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator%=" Sentence="左辺を右辺で除算した余りを代入します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator&amp;=" Sentence="右辺とのビット積を左辺に代入します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator|=" Sentence="右辺とのビット和を左辺に代入します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator^=" Sentence="右辺とのビット差を左辺に代入します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator&lt;&lt;=" Sentence="左辺のビットを右辺の値だけ左にシフトします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator>>=" Sentence="左辺のビットを右辺の値だけ右にシフトします" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+                <local:ItemGrid Title="operator+=" Sentence="左辺に右辺を加算します" Icon="Operator" />
+                <local:ItemGrid Title="operator-=" Sentence="左辺に右辺を減算します" Icon="Operator" />
+                <local:ItemGrid Title="operator*=" Sentence="左辺に右辺を乗算します" Icon="Operator" />
+                <local:ItemGrid Title="operator/=" Sentence="左辺に右辺を除算します" Icon="Operator" />
+                <local:ItemGrid Title="operator%=" Sentence="左辺を右辺で除算した余りを代入します" Icon="Operator" />
+                <local:ItemGrid Title="operator&amp;=" Sentence="右辺とのビット積を左辺に代入します" Icon="Operator" />
+                <local:ItemGrid Title="operator|=" Sentence="右辺とのビット和を左辺に代入します" Icon="Operator" />
+                <local:ItemGrid Title="operator^=" Sentence="右辺とのビット差を左辺に代入します" Icon="Operator" />
+                <local:ItemGrid Title="operator&lt;&lt;=" Sentence="左辺のビットを右辺の値だけ左にシフトします" Icon="Operator" />
+                <local:ItemGrid Title="operator>>=" Sentence="左辺のビットを右辺の値だけ右にシフトします" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="算術演算子" >
-                <local:ItemGrid Title="operator+" Sentence="値を加算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator-" Sentence="値を減算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator*" Sentence="値を乗算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator/" Sentence="値を除算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator%" Sentence="値を除算した余りを求めます" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+            <local:BlockPanel Header="算術演算子" >
+                <local:ItemGrid Title="operator+" Sentence="値を加算します" Icon="Operator" />
+                <local:ItemGrid Title="operator-" Sentence="値を減算します" Icon="Operator" />
+                <local:ItemGrid Title="operator*" Sentence="値を乗算します" Icon="Operator" />
+                <local:ItemGrid Title="operator/" Sentence="値を除算します" Icon="Operator" />
+                <local:ItemGrid Title="operator%" Sentence="値を除算した余りを求めます" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="比較演算子" >
-                <local:ItemGrid Title="operator==" Sentence="左辺と右辺が等しいかを確認します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator!=" Sentence="左辺と右辺が等しくないかを確認します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator&lt;" Sentence="左辺が右辺より小さいかを確認します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator&lt;=" Sentence="左辺が右辺以下かを確認します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator>" Sentence="左辺が右辺より大きいかを確認します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator>=" Sentence="左辺が右辺以上かを確認します" Icon="&#xE710;" />
+            <local:BlockPanel Header="比較演算子" >
+                <local:ItemGrid Title="operator==" Sentence="左辺と右辺が等しいかを確認します" Icon="Operator" />
+                <local:ItemGrid Title="operator!=" Sentence="左辺と右辺が等しくないかを確認します" Icon="Operator" />
+                <local:ItemGrid Title="operator&lt;" Sentence="左辺が右辺より小さいかを確認します" Icon="Operator" />
+                <local:ItemGrid Title="operator&lt;=" Sentence="左辺が右辺以下かを確認します" Icon="Operator" />
+                <local:ItemGrid Title="operator>" Sentence="左辺が右辺より大きいかを確認します" Icon="Operator" />
+                <local:ItemGrid Title="operator>=" Sentence="左辺が右辺以上かを確認します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="単項演算子" >
-                <local:ItemGrid Title="operator+" Sentence="符号を変えずに値を評価します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator-" Sentence="符号を反転させた値を評価します" Icon="&#xE710;" />
+            <local:BlockPanel Header="単項演算子" >
+                <local:ItemGrid Title="operator+" Sentence="符号を変えずに値を評価します" Icon="Operator" />
+                <local:ItemGrid Title="operator-" Sentence="符号を反転させた値を評価します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="インクリメント・デクリメント演算子" >
-                <local:ItemGrid Title="operator++" Sentence="値をインクリメントします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator--" Sentence="値をデクリメントします" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+            <local:BlockPanel Header="インクリメント・デクリメント演算子" >
+                <local:ItemGrid Title="operator++" Sentence="値をインクリメントします" Icon="Operator" />
+                <local:ItemGrid Title="operator--" Sentence="値をデクリメントします" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="論理演算子" >
+            <local:BlockPanel Header="論理演算子" >
                 
-                <local:ItemGrid Title="operator&amp;&amp;" Sentence="論理AND" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator||" Sentence="論理OR" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator!" Sentence="bool 値を反転させます" Icon="&#xE710;" />
+                <local:ItemGrid Title="operator&amp;&amp;" Sentence="論理AND" Icon="Operator" />
+                <local:ItemGrid Title="operator||" Sentence="論理OR" Icon="Operator" />
+                <local:ItemGrid Title="operator!" Sentence="bool 値を反転させます" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
             
 
-            <local:BasicBlockPanel HeadText="ビット演算子" >
+            <local:BlockPanel Header="ビット演算子" >
                 
-                <local:ItemGrid Title="operator&amp;" Sentence="ビット積を計算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator|" Sentence="ビット和を計算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator^" Sentence="ビット差を計算します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator&lt;&lt;" Sentence="ビットを左にシフトします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator>>" Sentence="ビットを右にシフトします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator~" Sentence="値のビットをすべて反転させます" Icon="&#xE710;" />
+                <local:ItemGrid Title="operator&amp;" Sentence="ビット積を計算します" Icon="Operator" />
+                <local:ItemGrid Title="operator|" Sentence="ビット和を計算します" Icon="Operator" />
+                <local:ItemGrid Title="operator^" Sentence="ビット差を計算します" Icon="Operator" />
+                <local:ItemGrid Title="operator&lt;&lt;" Sentence="ビットを左にシフトします" Icon="Operator" />
+                <local:ItemGrid Title="operator>>" Sentence="ビットを右にシフトします" Icon="Operator" />
+                <local:ItemGrid Title="operator~" Sentence="値のビットをすべて反転させます" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="条件演算子" >
-                <local:ItemGrid Title="operator?:" Sentence="条件を満たすかで評価する値を変えます" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+            <local:BlockPanel Header="条件演算子" >
+                <local:ItemGrid Title="operator?:" Sentence="条件を満たすかで評価する値を変えます" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="アクセス演算子" >
-                <local:ItemGrid Title="operator::" Sentence="名前空間内を詮索します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator." Sentence="インスタンスメンバーにアクセスします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator->" Sentence="インスタンスのポインターからメンバーにアクセスします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator.*" Sentence="インスタンスメンバーのポインターにアクセスします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator->*" Sentence="インスタンスのポインターからメンバーのポインターにアクセスします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator[]" Sentence="配列の要素にアクセスします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator()" Sentence="関数の呼び出しを行います" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+            <local:BlockPanel Header="アクセス演算子" >
+                <local:ItemGrid Title="operator::" Sentence="名前空間内を詮索します" Icon="Operator" />
+                <local:ItemGrid Title="operator." Sentence="インスタンスメンバーにアクセスします" Icon="Operator" />
+                <local:ItemGrid Title="operator->" Sentence="インスタンスのポインターからメンバーにアクセスします" Icon="Operator" />
+                <local:ItemGrid Title="operator.*" Sentence="インスタンスメンバーのポインターにアクセスします" Icon="Operator" />
+                <local:ItemGrid Title="operator->*" Sentence="インスタンスのポインターからメンバーのポインターにアクセスします" Icon="Operator" />
+                <local:ItemGrid Title="operator[]" Sentence="配列の要素にアクセスします" Icon="Operator" />
+                <local:ItemGrid Title="operator()" Sentence="関数の呼び出しを行います" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="カンマ演算子" >
-                <local:ItemGrid Title="operator," Sentence="行をグループ化します" Icon="&#xE710;" />
+            <local:BlockPanel Header="カンマ演算子" >
+                <local:ItemGrid Title="operator," Sentence="行をグループ化します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="関数呼び出し演算子">
-                <local:ItemGrid Title="operator()" Sentence="関数の呼び出しを行います" Icon="&#xE710;" />
+            <local:BlockPanel Header="関数呼び出し演算子">
+                <local:ItemGrid Title="operator()" Sentence="関数の呼び出しを行います" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="ポインタ演算子">
-                <local:ItemGrid Title="operator&amp;" Sentence="変数のメモリ番地を取得します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator*" Sentence="ポインタが指す値を取得します" Icon="&#xE710;" />
+            <local:BlockPanel Header="ポインタ演算子">
+                <local:ItemGrid Title="operator&amp;" Sentence="変数のメモリ番地を取得します" Icon="Operator" />
+                <local:ItemGrid Title="operator*" Sentence="ポインタが指す値を取得します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="型サイズ演算子">
-                <local:ItemGrid Title="operator sizeof" Sentence="型や変数のサイズを取得します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator alignof" Sentence="型のメンバーが占有する最大サイズを取得します" Icon="&#xE710;" />
+            <local:BlockPanel Header="型サイズ演算子">
+                <local:ItemGrid Title="operator sizeof" Sentence="型や変数のサイズを取得します" Icon="Operator" />
+                <local:ItemGrid Title="operator alignof" Sentence="型のメンバーが占有する最大サイズを取得します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="new, delete 演算子" >
-                <local:ItemGrid Title="operator new" Sentence="メモリを動的確保します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator delete" Sentence="動的確保したメモリを破棄します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator new[]" Sentence="配列を動的確保します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator delete[]" Sentence="動的確保した配列を破棄します" Icon="&#xE710;" />
+            <local:BlockPanel Header="new, delete 演算子" >
+                <local:ItemGrid Title="operator new" Sentence="メモリを動的確保します" Icon="Operator" />
+                <local:ItemGrid Title="operator delete" Sentence="動的確保したメモリを破棄します" Icon="Operator" />
+                <local:ItemGrid Title="operator new[]" Sentence="配列を動的確保します" Icon="Operator" />
+                <local:ItemGrid Title="operator delete[]" Sentence="動的確保した配列を破棄します" Icon="Operator" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="型変換演算子" >
-                <local:ItemGrid Title="operator()" Sentence="値を別の型にキャストします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator const_cast" Sentence="型から const をつけ外しします" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator dynamic_cast" Sentence="型を動的に変換します" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator reinterpret_cast" Sentence="整数型とポインター型間の変換を行います" Icon="&#xE710;" />
-                <local:ItemGrid Title="operator static_cast" Sentence="コンパイル時に型変換を行います" Icon="&#xE710;" />
-            </local:BasicBlockPanel>
+            <local:BlockPanel Header="型変換演算子" >
+                <local:ItemGrid Title="operator()" Sentence="値を別の型にキャストします" Icon="Operator" />
+                <local:ItemGrid Title="operator const_cast" Sentence="型から const をつけ外しします" Icon="Operator" />
+                <local:ItemGrid Title="operator dynamic_cast" Sentence="型を動的に変換します" Icon="Operator" />
+                <local:ItemGrid Title="operator reinterpret_cast" Sentence="整数型とポインター型間の変換を行います" Icon="Operator" />
+                <local:ItemGrid Title="operator static_cast" Sentence="コンパイル時に型変換を行います" Icon="Operator" />
+            </local:BlockPanel>
 
-            <local:BasicBlockPanel HeadText="型名演算子" >
-                <local:ItemGrid Title="operator typeid" Sentence="型の情報を取得します" Icon="&#xE710;" />
+            <local:BlockPanel Header="型名演算子" >
+                <local:ItemGrid Title="operator typeid" Sentence="型の情報を取得します" Icon="Operator" />
 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
         </local:OuterPanel>
     </ScrollViewer>

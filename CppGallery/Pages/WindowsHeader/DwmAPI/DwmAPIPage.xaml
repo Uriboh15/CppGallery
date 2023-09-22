@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel HeaderType="Windows">
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:ItemGrid Title="DwmAttachMilContent() 関数" Style="{StaticResource NotDefinedFuntionItemGrid}" />
                 <local:CustomExpander Title="DwmDefWindowProc() 関数" IsEnabled="False" />
                 
@@ -18,7 +18,7 @@
 
                 <local:CustomExpander Title="DwmEnableBlurBehindWindow() 関数" IsEnabled="False" />
 
-                <local:FunctionExpander Folder="dwmapi.h/DwmEnableComposition" >
+                <local:FunctionExpander Folder="dwmapi.h/DwmEnableComposition" CodeLanguage="CppWin32" >
                     <local:FunctionExpander.Info>
                         <InfoBar Style="{StaticResource ErrorInfo}" Message="この関数は Windows 8 以降では機能しません" />
                     </local:FunctionExpander.Info>
@@ -56,7 +56,7 @@
                 <local:CustomExpander Title="DwmTransitionOwnedWindow() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="DwmUnregisterThumbnail() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="DwmUpdateThumbnailProperties() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/" />
         </local:OuterPanel>

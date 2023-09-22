@@ -10,7 +10,7 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp17">
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="charconv/from_chars" >
                     <local:ResultsPanel >
                         <local:ControlGrid Message="基数を入力">
@@ -61,9 +61,9 @@
                 <local:FunctionExpander Folder="charconv/to_chars" >
                     <local:TextBoxPane Message="値を入力" Text="12.345" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Enum" >
+            <local:SymbolBlockPanel Symbol="Enum" >
                 <local:CustomExpander Title="enum chars_format" Sentence="浮動小数点数の表記フォーマット" Icon="&#xEA86;" >
                     <local:EnumPanel>
                         <local:ItemGrid Title="scientific" Sentence="指数表記" />
@@ -72,9 +72,9 @@
                         <local:ItemGrid Title="general" Sentence="scientific と fixed を自動で切り替え" />
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:CustomExpander Title="from_chars_result 構造体" Sentence="from_chars() で返される構造体" Icon="&#xEA86;" >
                     <local:EnumPanel>
                         <local:ItemGrid Title="char* ptr" Sentence="読み取った文字列の数値を表さない初めの位置へのポインター" />
@@ -88,7 +88,7 @@
                         <local:ItemGrid Title="errc ec" Sentence="エラーコード" />
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/charconv?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/charconv.html" />
         </local:OuterPanel>

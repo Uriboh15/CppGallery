@@ -12,12 +12,12 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="false_type" Sentence="false の bool 定数値" Value="integral_constant&lt;bool, false>" />
                 <local:ItemGrid Title="true_type" Sentence="true の bool 定数値" Value="integral_constant&lt;bool, true>" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BasicBlockPanel HeadText="構造体・クラス">
+            <local:BlockPanel Header="構造体・クラス">
                 
                 <local:FunctionExpander Folder="type_traits/integral_constant" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_arithmetic" Icon="Object" />
@@ -49,7 +49,7 @@
                 <local:FunctionExpander Folder="type_traits/is_void" Icon="Object" />
                 <local:CustomExpander Title="is_volatile 構造体" Icon="&#xEA86;" IsEnabled="False" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

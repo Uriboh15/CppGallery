@@ -25,7 +25,7 @@
                 </local:DefinePane.Returns>
             </local:DefinePane>
             
-            <local:BasicBlockPanel HeadText="用法" >
+            <local:BlockPanel Header="用法" >
                 <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/background" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinWinVersion="Win11_22H2" />
                 <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/bordercolor" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinWinVersion="Win11_21H2" />
                 <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/cornerround" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinWinVersion="Win11_21H2" />
@@ -33,7 +33,7 @@
                 <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/titlebartextcolor" CodeLanguage="CppWin32" SampleType="GUIApp" TargetMinWinVersion="Win11_21H2" />
                 <local:FunctionExpander Folder="dwmapi.h__DwmSetWindowAttribute/theme" CodeLanguage="CppWin32" SampleType="GUIApp" />
                 
-            </local:BasicBlockPanel>
+            </local:BlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute" />
         </local:OuterPanel>

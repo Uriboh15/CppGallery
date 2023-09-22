@@ -11,20 +11,20 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="fexcept_t" Sentence="浮動小数点数状態フラグのビット和を表す型" Value="unsigned int" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Struct">
+            <local:SymbolBlockPanel Symbol="Struct">
                 <local:CustomExpander Title="fenv_t 構造体" Sentence="浮動小数点数環境全体を表す型" Icon="&#xEA86;">
                     <local:EnumPanel>
                         <local:ItemGrid Title="unsigned long _Fe_ctl" Sentence="aaa" />
                         <local:ItemGrid Title="unsigned long _Fe_stat" Sentence="aaa" />
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function">
+            <local:SymbolBlockPanel Symbol="Function">
                 
                 <local:CustomExpander Title="feclearexcept() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="feholdexcept() 関数" IsEnabled="False" />
@@ -57,7 +57,7 @@
 
                 <local:CustomExpander Title="fetestexcept() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="feupdateenv() 関数" IsEnabled="False" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="fenv.h">
                 <local:ItemGrid Title="FE_TONEAREST" Sentence="最も近い値への丸め" />

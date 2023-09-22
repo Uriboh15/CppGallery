@@ -14,14 +14,18 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BasicBlockPanel HeadText="Uniform Random Number Generator">
-                <TextBlock Text="エンジン テンプレート" FontWeight="Bold"/>
+            <local:SymbolBlockPanel Symbol="Concepts" >
+                <local:CustomExpander Title="uniform_random_bit_generator" IsEnabled="False" Icon="&#xEA86;" />
+            </local:SymbolBlockPanel>
+
+            <local:BlockPanel Header="擬似乱数生成">
                 <local:ToRightButton Style="{StaticResource LinearCongruentialEngineClass}" />
-            </local:BasicBlockPanel>
+                <local:ToRightButton Style="{StaticResource MersenneTwisterEngineClass}" />
+            </local:BlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/random?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/random.html" />
 

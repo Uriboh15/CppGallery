@@ -12,52 +12,40 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource Istream}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="GlobalstreamOjbect">
+            <local:SymbolBlockPanel Symbol="GlobalstreamOjbect">
                 <local:FunctionExpander Folder="iostream/cerr" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/cin" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/clog" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/cout" Icon="Object" />
 
                 <local:FunctionExpander Folder="iostream/wcerr" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/wcin" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/wclog" Icon="Object" >
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="1" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="1" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="iostream/wcout" Icon="Object" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iostream?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/iostream.html" />
 

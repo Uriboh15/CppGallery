@@ -23,9 +23,9 @@ namespace CppGallery.Pages.UserControls
             ChangeTheme(App.SourceCodeTheme);
         }
 
-        public static void ChangeTheme(ElementTheme theme)
+        public void ChangeTheme(ElementTheme theme)
         {
-            if (theme == ElementTheme.Default) theme = MainPage.Handle.ActualTheme;
+            if (theme == ElementTheme.Default) theme = ActualTheme;
 
             if (theme == ElementTheme.Dark)
             {
@@ -41,7 +41,7 @@ namespace CppGallery.Pages.UserControls
             }
         }
 
-        bool CanUseName(char ch)
+        static bool CanUseName(char ch)
         {
             if ('0' <= ch && ch <= '9') return true;
             if ('A' <= ch && ch <= 'Z') return true;
@@ -52,7 +52,7 @@ namespace CppGallery.Pages.UserControls
             return false;
         }
 
-        protected override void Root_Loaded(object sender, RoutedEventArgs e)
+        protected override void LoadFile()
         {
             if (File.Exists(Path) == false)
             {

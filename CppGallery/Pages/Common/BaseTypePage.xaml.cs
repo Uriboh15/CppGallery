@@ -33,6 +33,7 @@ namespace CppGallery.Pages
 
         private async void BasicTypePanel_Loaded(object sender, RoutedEventArgs e)
         {
+            this.Loaded -= BasicTypePanel_Loaded;
 
             await CoAPI.ExecuteAsync(Data.DefaultSampleExePath + UserAPI.GetExeName(false).Replace("/", "") + " basictype basictype");
 

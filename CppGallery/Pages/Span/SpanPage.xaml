@@ -10,18 +10,18 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp20">
-            <local:BlockPanel Header="Constant" >
+            <local:SymbolBlockPanel Symbol="Constant" >
                 <local:ItemGrid Title="size_t dynamic_extent" Sentence="span の要素数が実行時に決まることを示す定数値" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="span/as_bytes" />
                 <local:FunctionExpander Folder="span/as_writable_bytes" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource SpanClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

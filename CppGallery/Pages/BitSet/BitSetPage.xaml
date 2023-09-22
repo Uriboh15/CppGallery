@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Including">
+            <local:SymbolBlockPanel Symbol="Including">
                 <local:ToRightButton Style="{StaticResource IosFwd}"/>
                 <local:ToRightButton Style="{StaticResource Limits}"/>
                 <local:ToRightButton Style="{StaticResource New}"/>
                 <local:ToRightButton Style="{StaticResource Utility}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="bitset/operatorAND" Icon="Operator">
                     <local:ResultsPanel Loaded="OpeANDOut_Loaded" >
                         <local:ControlGrid Message="bs1">
@@ -65,12 +65,12 @@
                         </local:ControlGrid>
                     </local:ResultsPanel>
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Class">
+            <local:SymbolBlockPanel Symbol="Class">
                 <local:ToRightButton Style="{StaticResource BitSetClass}"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/bitset?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/bitset.html" />
 

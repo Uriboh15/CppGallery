@@ -12,23 +12,23 @@
         <local:OuterPanel >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="set/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="set/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="set/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="set/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="set/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="set/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="set/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource SetClass}" />
                 <local:ToRightButton Style="{StaticResource MultiSetClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/set?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/set.html" />
         </local:OuterPanel>

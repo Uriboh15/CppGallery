@@ -12,15 +12,15 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="errno_t" Sentence="エラー番号を表す型" Value="int"/>
                 <local:ItemGrid Title="size_t" Sentence="メモリ領域の大きさを表す型" />
                 <local:ItemGrid Title="va_list" Sentence="可変引数を格納する型" Value="char*"/>
                 <local:ItemGrid Title="wchar_t" Sentence="ワイド文字を表す型"/>
                 <local:ItemGrid Title="wint_t" Sentence="ワイド文字を表現するための十分な大きさの型" Value="unsigned short"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:CustomExpander>
                     <Expander.Header>
                         <local:EHeader Title="FILE" Sentence="ファイルを表す構造体" Icon="&#xEA86;"/>
@@ -40,10 +40,10 @@
                         <local:ItemGrid Title="unsigned long _Wchar" Sentence="文字コード"/>
                     </local:EnumPanel>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:CustomExpander Title="btowc() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="wchar.h/fgetwc" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
@@ -164,7 +164,7 @@
                     </local:FunctionExpander.Info>
                     <local:TextBoxPane Message="整数を入力" Text="11" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="wchar.h" >
                 <local:ItemGrid Title="NULL" Sentence="空ポインタ" />

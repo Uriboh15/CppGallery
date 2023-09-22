@@ -10,14 +10,14 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
-            <local:BlockPanel Header="Typedefs" >
+            <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="string_view" Sentence="basic_string_view を char に特殊化した型" />
                 <local:ItemGrid Title="wstring_view" Sentence="basic_string_view を wchar_t に特殊化した型" />
                 <local:ItemGrid Title="u16string_view" Sentence="basic_string_view を char16_t に特殊化した型" />
                 <local:ItemGrid Title="u32string_view" Sentence="basic_string_view を char32_t に特殊化した型" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
+            <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="string_view/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="string_view/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="string_view/operatorL" Icon="Operator" />
@@ -25,21 +25,21 @@
                 <local:FunctionExpander Folder="string_view/operatorLL" Icon="Operator" />
                 <local:FunctionExpander Folder="string_view/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="string_view/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BasicBlockPanel HeadText="リテラル" >
+            <local:SymbolBlockPanel Symbol="Literal" >
                 <local:FunctionExpander Folder="string_view/sv" Icon="Literal" />
-            </local:BasicBlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="class">
+            <local:SymbolBlockPanel Symbol="class">
                 <local:ToRightButton Style="{StaticResource BasicStringViewClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Struct" >
+            <local:SymbolBlockPanel Symbol="Struct" >
                 <local:FunctionExpander Folder="string_view/hash" Icon="Object" >
                     <local:TextBoxPane Message="文字列を入力" Text="aaa" />
                 </local:FunctionExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

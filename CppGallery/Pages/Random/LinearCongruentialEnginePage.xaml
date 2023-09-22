@@ -12,34 +12,49 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:BlockPanel Header="Constructor">
+            <local:SymbolBlockPanel Symbol="Constructor">
                 <local:CustomExpander IsEnabled="False">
                     <Expander.Header>
                         <local:EHeader Title="linear_congruential_engine()" Sentence="linear_congruential_engine 型のオブジェクトを構築します"/>
                     </Expander.Header>
                 </local:CustomExpander>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Typedefs">
+            <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="minstd_rand0" Sentence="1988 年の最小標準エンジン" Value="linear_congruential_engine&lt;unsigned int, 16807, 0, 2147483647>"/>
                 <local:ItemGrid Title="minstd_rand" Sentence="minstd_rand0 を改良したエンジン" Value="linear_congruential_engine&lt;unsigned int, 48271, 0, 2147483647>"/>
                 <local:ItemGrid Title="result_type" Sentence="乱数の型" Value="unsigned int"/>
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Operator">
-                <local:FunctionExpander x:Name="OpeKAKKOOut" Folder="random/linear_congruential_engine/operatorKAKKO" AutoFunc="False" ConsoleButtonVisibility="Collapsed" Icon="Operator" >
-                    <local:FunctionExpander.Info>
-                        <InfoBar Style="{StaticResource VisualCppX64OnlyNow}" />
-                    </local:FunctionExpander.Info>
-                    <local:ControlGrid Message="乱数を生成" Loaded="OpeKAKKOOut_Loaded">
-                        <Button x:Name="OpeKAKKOButton" Content="生成" Click="OpeKAKKOButton_Click" Width="65"/>
-                    </local:ControlGrid>
-                </local:FunctionExpander>
-            </local:BlockPanel>
+            <local:SymbolBlockPanel Symbol="Constant" >
+                <local:ItemGrid Title="default_seed" Sentence="シードの初期値" Value="1u" />
+                <local:ItemGrid Title="increment" Sentence="増分" />
+                <local:ItemGrid Title="modulus" Sentence="法" />
+                <local:ItemGrid Title="multiplier" Sentence="乗数" />
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Method" >
-                
-            </local:BlockPanel>
+            <local:SymbolBlockPanel Symbol="Operator">
+                <local:FunctionExpander Folder="random__linear_congruential_engine/operatorKAKKO" AutoFunc="False" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="StaticMethod" >
+                <local:FunctionExpander Folder="random__linear_congruential_engine/max" />
+                <local:FunctionExpander Folder="random__linear_congruential_engine/min" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:FunctionExpander Folder="random__linear_congruential_engine/discard" AutoFunc="False" />
+                <local:FunctionExpander Folder="random__linear_congruential_engine/seed" AutoFunc="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="random__linear_congruential_engine/operatorEE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="random__linear_congruential_engine/operatorNE" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="random__linear_congruential_engine/operatorLL" AutoFunc="False" Icon="Operator" />
+                <local:FunctionExpander Folder="random__linear_congruential_engine/operatorRR" AutoFunc="False" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/linear-congruential-engine-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/random/linear_congruential_engine.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

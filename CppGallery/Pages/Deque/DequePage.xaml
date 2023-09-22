@@ -11,22 +11,22 @@
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp17" >
 
-            <local:BlockPanel Header="Operator" >
+            <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="deque/operatorNE" Icon="Operator" />
                 <local:FunctionExpander Folder="deque/operatorL" Icon="Operator" />
                 <local:FunctionExpander Folder="deque/operatorLE" Icon="Operator" />
                 <local:FunctionExpander Folder="deque/operatorEE" Icon="Operator" />
                 <local:FunctionExpander Folder="deque/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="deque/operatorRE" Icon="Operator" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
-            <local:BlockPanel Header="Function" >
+            <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="deque/swap" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
             
-            <local:BlockPanel Header="Class" >
+            <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource DequeClass}" />
-            </local:BlockPanel>
+            </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/deque?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/deque.html" />
         </local:OuterPanel>
