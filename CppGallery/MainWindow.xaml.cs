@@ -472,6 +472,7 @@ namespace CppGallery
 
         private void Window_Activated(object sender, WindowActivatedEventArgs args)
         {
+            //背景更新
             if (App.Back != BackDrop.None && App.Back != BackDrop.FrostedGlass)
             {
                 configurationSource.IsInputActive = args.WindowActivationState != WindowActivationState.Deactivated;
@@ -515,6 +516,24 @@ namespace CppGallery
                 }
 
 
+            }
+
+
+
+            //ほかのウィンドウで設定を変更したときにMainPageを更新
+            if(args.WindowActivationState != WindowActivationState.Deactivated)
+            {
+                foreach(var element in MainFrame.Children)
+                {
+                    if(element is MainPage mainPage)
+                    {
+                        if(mainPage.Visibility == Visibility.Visible && !mainPage.Updated)
+                        {
+                            mainPage.UpdateSample();
+                            break;
+                        }
+                    }
+                }
             }
         }
 

@@ -21,6 +21,7 @@
                     <local:ToRightButton Style="{StaticResource Bit}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource BitSet}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource CharConv}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Compare}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Complex}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Concepts}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Deque}" InLibraryPage="True"/>
@@ -55,6 +56,7 @@
                     <local:ToRightButton Style="{StaticResource String}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource StringView}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource StrStream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource TypeIndex}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource TypeInfo}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource TypeTraits}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Valarray}" InLibraryPage="True"/>

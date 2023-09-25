@@ -8,8 +8,7 @@
     xmlns:local="using:CppGallery"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    GettingFocus="Page_GettingFocus">
+    mc:Ignorable="d">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -158,6 +157,22 @@
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xF093;"/>
                 </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="compare" Content="&lt;compare>" Tag="Ncompare">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E3;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="strong_ordering" Tag="Nstrong_ordering0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
 
             </NavigationViewItem>
 
@@ -734,6 +749,22 @@
                 </NavigationViewItem.MenuItems>
 
 
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="typeindex" Content="&lt;typeindex>" Tag="Mtypeindex">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF167;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="type_index" Tag="Mtype_index0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="typeinfo" Content="&lt;typeinfo>" Tag="Gtypeinfo">

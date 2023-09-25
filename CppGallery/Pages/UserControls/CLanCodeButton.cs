@@ -372,7 +372,11 @@ namespace CppGallery.Pages.UserControls
                                         {
                                             tmp += st[i];
                                         }
-                                        if (!tmp.Contains("*/"))
+                                        if (tmp.Contains("*/"))
+                                        {
+                                            --i;
+                                        }
+                                        else
                                         {
                                             mae = "comment";
                                         }

@@ -16,7 +16,7 @@
             <ColumnDefinition />
             <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
-        <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind IconString, Mode=OneWay}" HorizontalAlignment="Left" FontSize="24" Grid.Column="0"/>
+        <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Left" FontSize="24" Grid.Column="0"/>
         <StackPanel VerticalAlignment="Center" Grid.Column="1">
             <TextBlock Text="{x:Bind Title, Mode=OneWay}"/>
             <TextBlock Text="{x:Bind Sentence, Mode=OneWay}" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12" Loaded="UserControl_Loaded"/>

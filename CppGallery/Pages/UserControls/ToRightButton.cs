@@ -81,11 +81,7 @@ namespace CppGallery.Pages.UserControls
         public string PageTag
         {
             get { return (string)GetValue(PageTagProperty); }
-            set
-            {
-                SetValue(PageTagProperty, value);
-                
-            }
+            set {  SetValue(PageTagProperty, value); }
         }
 
         private NavigationTransitionInfo navigate = new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight };
@@ -102,7 +98,7 @@ namespace CppGallery.Pages.UserControls
 
         private void ToRightButton_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
-            PointerPoint ptrPt = e.GetCurrentPoint(sender as UIElement);
+            PointerPoint ptrPt = e.GetCurrentPoint(this);
             if (ptrPt.Properties.IsMiddleButtonPressed)
             {
                 MainWindow.GetParentMainWindow(this).AddTab(PageTag);

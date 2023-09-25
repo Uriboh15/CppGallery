@@ -74,7 +74,7 @@
             <local:SymbolBlockPanel Symbol="ErrorReporting">
                 <local:CustomExpander>
                     <Expander.Header>
-                        <local:EHeader Title="io_errc" Sentence="入出力のエラーの種類を表す列挙型" Icon="Error"/>
+                        <local:EHeader Title="io_errc" Sentence="入出力のエラーの種類を表す列挙型" Icon="&#xEB90;"/>
                     </Expander.Header>
                     <Expander.Content>
                         <local:EnumPanel>

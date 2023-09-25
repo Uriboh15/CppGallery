@@ -10,8 +10,22 @@
 
     <ScrollViewer >
         <local:OuterPanel>
-            <local:SymbolBlockPanel >
-                
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:FunctionExpander Folder="typeindex__type_index/type_index" AutoFunc="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="typeindex__type_index/operatorEE" Icon="Operator" />
+                <local:FunctionExpander Folder="typeindex__type_index/operatorNE" Icon="Operator" />
+                <local:FunctionExpander Folder="typeindex__type_index/operatorL" Icon="Operator" />
+                <local:FunctionExpander Folder="typeindex__type_index/operatorLE" Icon="Operator" />
+                <local:FunctionExpander Folder="typeindex__type_index/operatorR" Icon="Operator" />
+                <local:FunctionExpander Folder="typeindex__type_index/operatorRE" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:FunctionExpander Folder="typeindex__type_index/hash_code" />
+                <local:FunctionExpander Folder="typeindex__type_index/name" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/type-index-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/typeindex/type_index.html" />

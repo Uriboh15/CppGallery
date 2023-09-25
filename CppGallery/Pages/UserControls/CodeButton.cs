@@ -71,11 +71,7 @@ namespace CppGallery.Pages.UserControls
             "constructible_from",
             "const_iterator",
             "const_reference",
-            "const_reverse_iterator",
-            "convertible_to",
-            "copyable",
-            "copy_constructible",
-            "default_initializable",
+            
             "difference_type",
             "Derived",
             "destructible",
@@ -83,8 +79,8 @@ namespace CppGallery.Pages.UserControls
             "equality_comparable",
             "equality_comparable_with",
             "filesystem_error",
-            "deque",
-            "derived_from",
+            
+            
             "directory_iterator",
             "E",
             "errc",
@@ -121,6 +117,7 @@ namespace CppGallery.Pages.UserControls
             "ostringstream",
             "ostrstream",
             "out_of_range",
+            "partial_ordering",
             "path",
             "reference",
             "result_type",
@@ -136,12 +133,13 @@ namespace CppGallery.Pages.UserControls
             "stringstream",
             "string_type",
             "string_view",
-            "totally_ordered",
-            "totally_ordered_with",
+            "strong_ordering",
+            
             "to_chars_result",
             "Traits",
             "true_type",
             "Type",
+            "type_index",
             "type_info",
             "wifstream",
             "wofstream",
@@ -163,6 +161,13 @@ namespace CppGallery.Pages.UserControls
             "basic_string",
             "bitset",
             "char_traits",
+            "const_reverse_iterator",
+            "convertible_to",
+            "copyable",
+            "copy_constructible",
+            "default_initializable",
+            "deque",
+            "derived_from",
             "formattable",
             "format_string",
             "format_to_n_result",
@@ -203,6 +208,10 @@ namespace CppGallery.Pages.UserControls
             "stack",
             "swappable",
             "swappable_with",
+            "three_way_comparable",
+            "three_way_comparable_with",
+            "totally_ordered",
+            "totally_ordered_with",
             "unsigned_integral",
             "valarray",
             "vector",
@@ -287,7 +296,7 @@ namespace CppGallery.Pages.UserControls
         };
 
 
-        public CodeButton() : base()
+        public CodeButton()
         {
             Lan = "C++";
             AddList();

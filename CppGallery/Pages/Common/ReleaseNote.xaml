@@ -24,6 +24,16 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.0" Sentence="2023年9月25日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに36項目追加<LineBreak />
+                    ・別のウィンドウで変更した設定が適用されない不具合を修正
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.4.0  Preview" Sentence="2023年9月22日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>

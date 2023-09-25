@@ -32,17 +32,17 @@ namespace CppGallery.Pages.UserControls
         {
             this.Spacing = Data.OuterPanelSpacing;
             this.Padding = new Thickness(Data.OuterPanelPadding, 0, Data.OuterPanelPadding, Data.OuterPanelPadding);
-            this.Loaded += OuterPanel_Loaded;
+            this.Loading += OuterPanel_Loading;
         }
 
-        private void OuterPanel_Loaded(object sender, RoutedEventArgs e)
+        private void OuterPanel_Loading(FrameworkElement sender, object args)
         {
-            Loaded -= OuterPanel_Loaded;
+            this.Loading -= OuterPanel_Loading;
 
             //Windowsヘッダーの時
             if (this.HeaderType == HeaderType.Windows || this.HeaderType == HeaderType.WinRT)
             {
-                if(App.Compiler != Compiler.VC)
+                if (App.Compiler != Compiler.VC)
                 {
                     this.Children.Clear();
                     this.Spacing = Data.ResultPanelSpacing;
@@ -71,7 +71,7 @@ namespace CppGallery.Pages.UserControls
             }
 
             //言語バージョンの確認
-            if(HeaderLanguage == CodeLanguage.C)
+            if (HeaderLanguage == CodeLanguage.C)
             {
                 if (App.UseCppInCSample)
                 {
@@ -79,15 +79,13 @@ namespace CppGallery.Pages.UserControls
                 }
                 else
                 {
-                    if(App.CVersion < TargetMinCVersion) SetAsNone(CodeLanguage.C, (int)TargetMinCVersion);
+                    if (App.CVersion < TargetMinCVersion) SetAsNone(CodeLanguage.C, (int)TargetMinCVersion);
                 }
             }
             else
             {
                 if (App.CppVersion < TargetMinCppVersion) SetAsNone(CodeLanguage.Cpp, (int)TargetMinCppVersion);
             }
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -64,6 +64,8 @@
 		<None Remove="Pages\Common\BaseTypePage.xaml" />
 		<None Remove="Pages\Common\GCCCommandPage.xaml" />
 		<None Remove="Pages\Common\OperatorPage.xaml" />
+		<None Remove="Pages\Compare\ComparePage.xaml" />
+		<None Remove="Pages\Compare\StrongOrderingClassPage.xaml" />
 		<None Remove="Pages\Complex\ComplexCalssPage.xaml" />
 		<None Remove="Pages\Complex\ComplexPage.xaml" />
 		<None Remove="Pages\Concepts\ConceptsPage.xaml" />
@@ -77,7 +79,7 @@
 		<None Remove="Pages\Ranges\RangesPage.xaml" />
 		<None Remove="Pages\Set\MultiSetClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeIndexClassPage.xaml" />
-		<None Remove="Pages\TypeIndex\TypeInfoPage.xaml" />
+		<None Remove="Pages\TypeIndex\TypeIndexPage.xaml" />
 		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
 		<None Remove="Pages\UserControls\DetailControlGrid.xaml" />
 		<None Remove="Pages\UserControls\DetailPane.xaml" />
@@ -236,6 +238,12 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\Compare\StrongOrderingClassPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Compare\ComparePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\Random\MersenneTwisterEngineClassPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
@@ -290,7 +298,7 @@
 		<Page Update="Pages\TypeIndex\TypeIndexClassPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
-		<Page Update="Pages\TypeIndex\TypeInfoPage.xaml">
+		<Page Update="Pages\TypeIndex\TypeIndexPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
 		<Page Update="Pages\DwmAPI\DwmSetWindowAttributePage.xaml">

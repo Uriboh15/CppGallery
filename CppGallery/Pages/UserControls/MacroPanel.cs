@@ -21,6 +21,8 @@ namespace CppGallery.Pages.UserControls
 
         private async void MacroPanel_Loaded(object sender, RoutedEventArgs e)
         {
+            Loaded -= MacroPanel_Loaded;
+
             await UserAPI.GetMacroValue(Children, Folder);
 
             

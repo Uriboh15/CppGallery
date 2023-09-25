@@ -233,6 +233,17 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="Compare" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;compare>" />
+        <Setter Property="Sentence" Value="三方向比較" />
+        <Setter Property="PageTag" Value="Ncompare"/>
+        <Setter Property="Icon" Value="&#xE8E3;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    
+
     <Style x:Key="Complex" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;complex>" />
         <Setter Property="Sentence" Value="複素数クラス" />
@@ -976,7 +987,13 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
-    
+    <Style x:Key="StronOrderingClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="strong_ordering クラス" />
+        <Setter Property="Sentence" Value="全順序関係を表す比較カテゴリ型" />
+        <Setter Property="PageTag" Value="Nstrong_ordering0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
 
     <Style x:Key="StrStream" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;strstream>" />
@@ -1021,6 +1038,23 @@
         <Setter Property="PageTag" Value=""/>
         <Setter Property="Icon" Value="&#xE74C;"/>
         <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TypeIndex" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;typeindex>" />
+        <Setter Property="Sentence" Value="type_info のラッパー" />
+        <Setter Property="PageTag" Value="Mtypeindex"/>
+        <Setter Property="Icon" Value="&#xF167;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="TypeIndexClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="type_index クラス" />
+        <Setter Property="Sentence" Value="type_info のラッパークラス" />
+        <Setter Property="PageTag" Value="Mtype_index0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

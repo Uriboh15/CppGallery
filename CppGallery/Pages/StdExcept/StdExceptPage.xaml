@@ -21,6 +21,8 @@
                 <local:ItemGrid Title="runtime_error クラス" Sentence="aaa" />
                 <local:ItemGrid Title="underflow_error クラス" Sentence="aaa" />
             </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/stdexcept?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/stdexcept.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

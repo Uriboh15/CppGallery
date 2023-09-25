@@ -46,6 +46,12 @@
                 <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+
+                <local:CustomExpander Title="find_end() 関数" IsEnabled="False" Icon="&#xEA86;" />
+                <local:CustomExpander Title="find_first_of() 関数" IsEnabled="False" Icon="&#xEA86;" />
+
+                <local:FunctionExpander Folder="algorithm/ranges__find_if" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__find_if_not" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__for_each" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__for_each_n" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__none_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />

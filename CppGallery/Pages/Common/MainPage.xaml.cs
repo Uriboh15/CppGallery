@@ -177,6 +177,10 @@ namespace CppGallery.Pages
            {typeof(Algorithm.AlgorithmPage), "Kalgorithm" },
             {typeof(Optional.OptionalPage), "Loptional" },
             {typeof(Optional.OptionalClassPage), "Loptional0" },
+            {typeof(TypeIndex.TypeIndexPage), "Mtypeindex" },
+            {typeof(TypeIndex.TypeIndexClassPage), "Mtype_index0" },
+            {typeof(Compare.ComparePage), "Ncompare" },
+            {typeof(Compare.StrongOrderingClassPage), "Nstrong_ordering0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -188,130 +192,6 @@ namespace CppGallery.Pages
             {"BaseType", "基本型"},
             {"BaseOperator", "基本演算子" },
             {"GCCCommand", "GCC コマンド生成" },
-            {"0asserth", "<assert.h>" },
-            {"0complexh", "<complex.h>"},
-            {"0ctypeh", "<ctype.h>"},
-            {"0errnoh", "<errno.h>"},
-            {"0fenvh", "<fenv.h>"},
-            {"0floath", "<float.h>"},
-            {"0inttypesh", "<inttypes.h>"},
-            {"0iso646h", "<iso646.h>"},
-            {"0limitsh", "<limits.h>"},
-            {"0localeh", "<locale.h>"},
-            {"0mathh", "<math.h>"},
-            {"0stdalignh", "<stdalign.h>"},
-            {"0stdboolh", "<stdbool.h>"},
-            {"0stdinth", "<stdint.h>"},
-            {"0stdioh", "<stdio.h>"},
-            {"0stdlibh", "<stdlib.h>"},
-            {"0stdnoreturnh", "<stdnoreturn.h>"},
-            {"0stringh", "<string.h>"},
-            {"0tgmathh", "<tgmath.h>"},
-            {"0timeh", "<time.h>"},
-            {"0ucharh", "<uchar.h>"},
-            {"0wcharh", "<wchar.h>"},
-            {"0wctypeh", "<wctype.h>"},
-            {"1stringc", "<string>"},
-            {"1basic_string0", "basic_string クラス"},
-            {"1char_traits0", "char_traits 構造体"},
-            {"2bit", "<bit>"},
-            {"3limits", "<limits>"},
-            {"3numeric_limits0", "numeric_limits クラス"},
-            {"4conioh", "<conio.h>"},
-            {"4ConsoleApi", "<ConsoleApi.h>"},
-            {"4ConsoleApi2h", "<ConsoleApi2.h>"},
-            {"4ConsoleApi3h", "<ConsoleApi3.h>"},
-            {"4fileapi", "<fileapi.h>"},
-            {"4ProcessEnv", "<ProcessEnv.h>" },
-            {"4Windows", "<Windows.h>" },
-            {"4WinUser", "<WinUser.h>" },
-            {"5bitset", "<bitset>"},
-            {"5bitset0", "bitset クラス"},
-            {"6strstream", "<strstream>"},
-            {"6ostrstream0", "ostrstream クラス"},
-            {"7array", "<array>" },
-            {"7array0", "array クラス" },
-            {"8iosfwd", "<iosfwd>"},
-            {"8fpos0", "fpos クラス"},
-            {"9iostream", "<iostream>"},
-            {"aios", "<ios>"},
-            {"abasic_ios0", "basic_ios クラス"},
-            {"aios_base0", "ios_base クラス"},
-            {"biomanip", "<iomanip>"},
-            {"clist", "<list>"},
-            {"clist0", "list クラス"},
-            {"distream", "<istream>"},
-            {"dbasic_iostream0", "basic_iostream クラス"},
-            {"dbasic_istream0", "basic_istream クラス"},
-            {"emap", "<map>"},
-            {"emap0", "map クラス"},
-            {"fostream", "<ostream>"},
-            {"fbasic_ostream0", "basic_ostream クラス"},
-            {"gstreambuf", "<streambuf>"},
-            {"gbasic_streambuf0", "basic_streambuf クラス"},
-            {"hvector", "<vector>"},
-            {"hvector0", "vector クラス"},
-            {"ifstream", "<fstream>"},
-            {"ibasic_filebuf0", "basic_filebuf クラス"},
-            {"ibasic_fstream0", "basic_fstream クラス"},
-            {"ibasic_ifstream0", "basic_ifstream クラス"},
-            {"ibasic_ofstream0", "basic_ofstream クラス"},
-            {"jvalarray", "<valarray>"},
-            {"jslice0", "slice クラス"},
-            {"jvalarray0", "valarray クラス"},
-            {"kinitializer_list", "<initializer_list>"},
-            {"kinitializer_list0", "initializer_list クラス"},
-            {"lsstream", "<sstream>"},
-            {"lbasic_stringbuf0", "basic_stringbuf クラス"},
-            {"lbasic_istringstream0", "basic_istringstream クラス"},
-            {"lbasic_ostringstream0", "basic_ostringstream クラス"},
-            {"lbasic_stringstream0", "basic_stringstream クラス"},
-            {"mnew", "<new>"},
-            {"nrandom", "<random>"},
-            {"nlinear_congruential_engine0", "linear_congruential_engine クラス"},
-            {"nmersenne_twister_engine0", "mersenne_twister_engine クラス" },
-            {"ocomplex", "<complex>"},
-            {"ocomplex0", "complex クラス"},
-            {"pstack", "<stack>" },
-            {"pstack0", "stack クラス" },
-            {"qqueue", "<queue>" },
-            {"qqueue0", "queue クラス" },
-            {"rany", "<any>" },
-            {"rany0", "any クラス" },
-            {"sstdexcept", "<stdexcept>" },
-            {"tstring_view", "<string_view>" },
-            {"tbasic_string_view0", "basic_string_view クラス" },
-            {"utype_traits", "<type_traits>" },
-            {"vspan", "<span>" },
-            {"vspan0", "span クラス" },
-            {"wfilesystem", "<filesystem>" },
-            {"wfile_status0", "file_status クラス" },
-            {"wpath0", "path クラス" },
-            {"wdirectory_iterator0", "directory_iterator クラス" },
-            {"xforward_list", "<forward_list>" },
-            {"xforward_list0", "forward_list クラス" },
-            {"ydeque", "<deque>" },
-            {"ydeque0", "deque クラス" },
-            {"zcharconv", "<charconv>" },
-            {"Aset", "<set>" },
-            {"Aset0", "set クラス" },
-            {"Amultiset0", "multiset クラス" },
-            {"Bnumeric", "<numeric>" },
-            {"Cranges", "<ranges>" },
-            {"Dnumbers", "<numbers>" },
-            {"Esource_location", "<source_location>" },
-            {"Esource_location0", "source_location クラス" },
-            {"Fconcepts", "<concepts>" },
-            {"Gtypeinfo", "<typeinfo>" },
-            {"Gtype_info0", "type_info クラス" },
-            {"Hdwmapi", "<dwmapi.h>" },
-            {"HDwmSetWindowAttribute0", "DwmSetWindowAttribute() 関数" },
-            {"IPrint", "<print>" },
-            {"Jformat", "<format>" },
-            {"Jbasic_format_string0", "basic_format_string 構造体" },
-            {"Kalgorithm", "<algorithm>" },
-            {"Loptional", "<optional>" },
-            {"Loptional0", "optional クラス" },
         };
 
 
@@ -356,6 +236,8 @@ namespace CppGallery.Pages
 
                     SuggestDictionary.Add(name, fileName);
                     UseCppSuggestDictionary.Add(useCppName, fileName);
+                        AMD.Add(fileName, name);
+                    
 
                     if (!name.StartsWith('<'))
                     {
@@ -371,6 +253,9 @@ namespace CppGallery.Pages
                     }
                 }
             }
+
+            //ヘッダー名変更
+            AMD["HDwmSetWindowAttribute0"] = "DwmSetWindowAttribute()";
         }
 
         public void ChangeCHeaderName()
@@ -498,22 +383,21 @@ namespace CppGallery.Pages
             throw new NotImplementedException();
         }
 
-
+        //staticにマークしてはいけない
         private void Suggest_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-            var dictionary = App.UseCppInCSample ? UseCppSuggestDictionary : SuggestDictionary;
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
             {
                 var suitableItems = new List<string>();
                 var splitText = sender.Text.ToLower();
-                foreach (var cat in dictionary)
+                foreach (var cat in CurrentSuggestDictionary)
                 {
                     if (cat.Key.ToLower().StartsWith(splitText))
                     {
                         suitableItems.Add(cat.Key);
                     }
                 }
-                foreach (var cat in dictionary)
+                foreach (var cat in CurrentSuggestDictionary)
                 {
                     if (cat.Key.ToLower().Contains(splitText))
                     {
@@ -536,15 +420,14 @@ namespace CppGallery.Pages
 
         private void Suggest_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            var dictionary = App.UseCppInCSample ? UseCppSuggestDictionary : SuggestDictionary;
-            ChosedItemsTag = dictionary[(string)args.SelectedItem];
+            ChosedItemsTag = CurrentSuggestDictionary[(string)args.SelectedItem];
             
         }
 
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
         {
             var tag = PageDictionary[ContentFrame.SourcePageType];
-            if (tag[tag.Length - 1] == '0')
+            if (tag[^1] == '0')
             {
                 string folder = string.Empty;
                 switch (tag[0])
@@ -746,6 +629,18 @@ namespace CppGallery.Pages
                         NavView.SelectedItem = GetItem(optional.MenuItems, tag);
                         break;
 
+                    case 'M':
+                        typeindex.IsExpanded = true;
+                        folder = AMD["Mtypeindex"];
+                        NavView.SelectedItem = GetItem(typeindex.MenuItems, tag);
+                        break;
+
+                    case 'N':
+                        compare.IsExpanded = true;
+                        folder = AMD["Ncompare"];
+                        NavView.SelectedItem = GetItem(compare.MenuItems, tag);
+                        break;
+
                 }
                 SetHeader(folder, tag);
             }
@@ -920,17 +815,6 @@ namespace CppGallery.Pages
                     }
                 }
             }
-        }
-
-        //ほかのウィンドうで設定を変更した時用
-        private void Page_GettingFocus(UIElement sender, GettingFocusEventArgs args)
-        {
-#if false
-            if (!_updated)
-            {
-                UpdateSample();
-            }
-#endif
         }
     }
 }

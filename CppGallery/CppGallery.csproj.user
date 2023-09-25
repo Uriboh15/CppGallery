@@ -17,6 +17,12 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Compare\StrongOrderingClassPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Compare\ComparePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Random\MersenneTwisterEngineClassPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -74,7 +80,7 @@
     <Page Update="Pages\TypeIndex\TypeIndexClassPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\TypeIndex\TypeInfoPage.xaml">
+    <Page Update="Pages\TypeIndex\TypeIndexPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\TypeInfo\TypeInfoClassPage.xaml">

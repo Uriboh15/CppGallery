@@ -13,9 +13,12 @@
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:SymbolBlockPanel Symbol="Function" >
-                <local:CustomExpander Title="absolute() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="filesystem/absolute" />
+                
                 <local:CustomExpander Title="begin() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="canonical() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/canonical" />
+                
                 <local:CustomExpander Title="copy() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="copy_file() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="copy_symlink() 関数" IsEnabled="False" />
@@ -45,7 +48,13 @@
                 </local:FunctionExpander>
 
                 <local:CustomExpander Title="hard_link_count() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="hash_value() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/hash_value" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="filesystem/is_block_file" />
                 <local:FunctionExpander Folder="filesystem/is_character_file" />
@@ -66,7 +75,12 @@
 
                 <local:FunctionExpander Folder="filesystem/is_fifo" />
 
-                <local:CustomExpander Title="is_other() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="filesystem/is_other" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="filesystem/is_regular_file" >
                     <local:ResultsPanel>
@@ -91,7 +105,14 @@
                 </local:FunctionExpander>
                 
                 <local:CustomExpander Title="remove() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="remove_all() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/remove_all" >
+                    <local:ResultsPanel>
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+                
                 <local:CustomExpander Title="rename() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="resize_file() 関数" IsEnabled="False" />
 
@@ -104,13 +125,23 @@
                     </local:ResultsPanel>
                 </local:FunctionExpander>
 
-                <local:CustomExpander Title="status_known() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="swap() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="filesystem/status_known" >
+                    <local:ResultsPanel >
+                        <local:OpenFolderPane />
+                        <local:OpenButtonPane />
+                    </local:ResultsPanel>
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="filesystem/swap" />
+                
                 <local:CustomExpander Title="symlink_status() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="system_complete() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="temp_directory_path() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/temp_directory_path" />
+
                 <local:CustomExpander Title="u8path() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="weakly_canonical() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="filesystem/weakly_canonical" />
             </local:SymbolBlockPanel>
             
             <local:SymbolBlockPanel Symbol="Class" >
@@ -128,6 +159,10 @@
                         <local:ItemGrid Title="uintmax_t available" Sentence="ボリュームの利用可能な領域" />
                     </local:EnumPanel>
                 </local:CustomExpander>
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Exception" >
+                <local:FunctionExpander Folder="filesystem/filesystem_error" Icon="Object" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/filesystem?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/filesystem.html" />
