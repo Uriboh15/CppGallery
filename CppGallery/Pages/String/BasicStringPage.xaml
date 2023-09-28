@@ -148,6 +148,8 @@
                 <local:FunctionExpander Folder="string__basic_string/swap" AutoFunc="False" />
             </local:SymbolBlockPanel>
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-string-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/string/basic_string.html" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

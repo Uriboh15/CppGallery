@@ -327,13 +327,14 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Specialization" >
-                <local:ItemGrid Title="char_traits&lt;char> 構造体" Sentence="テンプレート構造体 char_traits を char に特殊化した構造体"/>
-                <local:ItemGrid Title="char_traits&lt;wchar_t> 構造体" Sentence="テンプレート構造体 char_traits を wchar_t に特殊化した構造体"/>
-                <local:ItemGrid Title="char_traits&lt;char8_t> 構造体" Sentence="テンプレート構造体 char_traits を char8_t に特殊化した構造体"/>
-                <local:ItemGrid Title="char_traits&lt;char16_t> 構造体" Sentence="テンプレート構造体 char_traits を char16_t に特殊化した構造体"/>
-                <local:ItemGrid Title="char_traits&lt;char32_t> 構造体" Sentence="テンプレート構造体 char_traits を char32_t に特殊化した構造体"/>
+                <local:ItemGrid Title="char_traits&lt;char> 構造体" Sentence="char_traits を char に特殊化した構造体"/>
+                <local:ItemGrid Title="char_traits&lt;wchar_t> 構造体" Sentence="char_traits を wchar_t に特殊化した構造体"/>
+                <local:ItemGrid Title="char_traits&lt;char8_t> 構造体" Sentence="char_traits を char8_t に特殊化した構造体" TargetMinCppVersion="Cpp20"/>
+                <local:ItemGrid Title="char_traits&lt;char16_t> 構造体" Sentence="char_traits を char16_t に特殊化した構造体"/>
+                <local:ItemGrid Title="char_traits&lt;char32_t> 構造体" Sentence="char_traits を char32_t に特殊化した構造体"/>
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/string?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/string.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

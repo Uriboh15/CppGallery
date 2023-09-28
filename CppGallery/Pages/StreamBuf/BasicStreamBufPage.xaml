@@ -273,7 +273,8 @@
                 <local:ToRightButton Style="{StaticResource BasicFileBufClass}"/>
                 <local:ToRightButton Style="{StaticResource BasicStringBufClass}" />
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-streambuf-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/streambuf/basic_streambuf.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

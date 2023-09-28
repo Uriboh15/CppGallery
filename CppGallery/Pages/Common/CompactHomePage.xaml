@@ -35,6 +35,7 @@
                     <local:ToRightButton Style="{StaticResource IosFwd}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Iostream}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Istream}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource Iterator}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Limits}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource List}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Map}" InLibraryPage="True"/>

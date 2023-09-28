@@ -86,6 +86,9 @@ namespace CppGallery
         SystemBackdropConfiguration configurationSource;
         DesktopAcrylicController m_acrylicController;
 
+        //背景が更新されたかどうか
+        public bool BackUpdated { get; set; } = true;
+
         public MainWindow(bool createTabContent = true)
         {
             this.InitializeComponent();
@@ -373,6 +376,8 @@ namespace CppGallery
         //mica
         public void SetBackdrop()
         {
+            BackUpdated = true;
+
             if (micaController != null)
             {
                 micaController.Dispose();
@@ -472,6 +477,13 @@ namespace CppGallery
 
         private void Window_Activated(object sender, WindowActivatedEventArgs args)
         {
+            //ほかのウィンドウで設定を変更したあと、ウィンドウをアクティブにときに背景を更新する
+            if(!BackUpdated && args.WindowActivationState != WindowActivationState.Deactivated)
+            {
+                SetBackdrop();
+                return;
+            }
+
             //背景更新
             if (App.Back != BackDrop.None && App.Back != BackDrop.FrostedGlass)
             {

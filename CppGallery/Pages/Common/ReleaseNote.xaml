@@ -24,6 +24,16 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.1" Sentence="2023年9月29日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに37項目追加<LineBreak />
+                    ・1項目更新
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.4.0" Sentence="2023年9月25日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>
@@ -142,11 +152,11 @@
                     <local:EHeader Title="Ver 2.1.2" Sentence="2023年8月3日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>
-                        ・新たに39項目追加<LineBreak />
-                        ・43項目更新<LineBreak/>
-                        ・Windows 10 で設定を 2 回開くとアプリがクラッシュする問題を修正<LineBreak/>
-                        ・Windows 10 でフォルダーを選択できない問題を修正<LineBreak />
-                        ・サンプル内でハンドルされない例外が発生したときに、その例外の詳細を表示するように改良
+                    ・新たに39項目追加<LineBreak />
+                    ・43項目更新<LineBreak/>
+                    ・Windows 10 で設定を 2 回開くとアプリがクラッシュする問題を修正<LineBreak/>
+                    ・Windows 10 でフォルダーを選択できない問題を修正<LineBreak />
+                    ・サンプル内でハンドルされない例外が発生したときに、その例外の詳細を表示するように改良
                 </TextBlock>
             </Expander>
 

@@ -11,12 +11,6 @@
     mc:Ignorable="d"
     Margin="0,-1,0,0">
 
-    <UserControl.Resources>
-        <Style TargetType="StackPanel">
-            <Setter Property="Spacing" Value="0"/>
-        </Style>
-    </UserControl.Resources>
-
     <Grid Padding="0,10,0,10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
@@ -24,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}" HorizontalAlignment="Left" FontSize="24" />
         <StackPanel Grid.Column="1">
-            <TextBlock Text="{x:Bind Title}"/>
+            <TextBlock x:Name="TitleTextBlock" />
             <TextBlock Text="{x:Bind Sentence}" FontSize="12" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" />
         </StackPanel>
     </Grid>

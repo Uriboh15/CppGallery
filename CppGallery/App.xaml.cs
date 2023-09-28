@@ -36,9 +36,10 @@ namespace CppGallery
 
     public enum Compiler
     {
-        Clang,
         GCC,
         VC,
+        ClangOnGCC,
+        ClangOnVC,
     }
 
     public enum LibraryPageStyle

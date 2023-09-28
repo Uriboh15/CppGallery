@@ -27,7 +27,7 @@ namespace CppGallery.Pages.UserControls
             "Title",　// Max という名前の……
             typeof(string),　// int 型の CLR プロパティを……
             typeof(EHeader), // クラスに登録するやで―
-            new PropertyMetadata(string.Empty));
+            new PropertyMetadata(string.Empty, new PropertyChangedCallback(OnTitleChanged)));
 
         public static readonly DependencyProperty SentenceProperty = DependencyProperty.Register(
             "Sentence",　// Max という名前の……
@@ -59,6 +59,17 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(GlyphProperty, value); }
         }
 
+        //https://qiita.com/tricogimmick/items/62cd9f5deca365a83858
+        // 3. 依存プロパティが変更されたとき呼ばれるコールバック関数の定義
+        private static void OnTitleChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            // オブジェクトを取得して処理する
+            EHeader ctrl = obj as EHeader;
+            if (ctrl != null)
+            {
+                ctrl.TitleTextBlock.Text = ctrl.Title.Replace("::", " : : ");
+            }
+        }
 
         public EHeader()
         {

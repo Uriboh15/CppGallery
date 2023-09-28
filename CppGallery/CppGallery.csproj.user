@@ -17,6 +17,9 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\Iterator\IteratorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Compare\StrongOrderingClassPage.xaml">
       <SubType>Designer</SubType>
     </Page>

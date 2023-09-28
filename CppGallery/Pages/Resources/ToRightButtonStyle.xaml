@@ -335,7 +335,7 @@
 
     <Style x:Key="DequeClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;deque>" />
-        <Setter Property="Sentence" Value="vector に似た先頭と末尾の両方から値を挿入・削除可能なコンテナクラス" />
+        <Setter Property="Sentence" Value="先頭と末尾の両方から値を挿入・削除可能な可変長配列クラス" />
         <Setter Property="PageTag" Value="ydeque0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
@@ -562,10 +562,9 @@
 
     <Style x:Key="Iterator" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;iterator>" />
-        <Setter Property="Sentence" Value="aaa" />
-        <Setter Property="PageTag" Value=""/>
-        <Setter Property="Icon" Value="&#xE74C;"/>
-        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Sentence" Value="ポインターの抽象化" />
+        <Setter Property="PageTag" Value="Oiterator"/>
+        <Setter Property="Icon" Value="&#xE81B;"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

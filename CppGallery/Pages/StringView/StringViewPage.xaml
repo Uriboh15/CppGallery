@@ -40,6 +40,8 @@
                     <local:TextBoxPane Message="文字列を入力" Text="aaa" />
                 </local:FunctionExpander>
             </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/string-view?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/string_view.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

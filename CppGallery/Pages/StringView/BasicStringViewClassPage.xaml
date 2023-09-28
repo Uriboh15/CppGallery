@@ -90,7 +90,8 @@
                 <local:FunctionExpander Folder="string_view__basic_string_view/substr" />
                 <local:FunctionExpander Folder="string_view__basic_string_view/swap" />
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/basic-string-view-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/string_view/basic_string_view.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

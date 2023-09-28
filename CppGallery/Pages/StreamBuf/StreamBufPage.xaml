@@ -31,7 +31,8 @@
                 <local:ToRightButton Style="{StaticResource BasicStreamBufClass}" />
                 <local:ToRightButton Style="{StaticResource IosBaseClass}"/>
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/streambuf?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/streambuf.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

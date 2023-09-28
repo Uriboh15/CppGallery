@@ -43,6 +43,7 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="FunctionObject" >
+                <local:FunctionExpander Folder="algorithm/ranges__adjacent_find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />

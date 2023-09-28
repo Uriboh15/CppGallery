@@ -15,7 +15,7 @@
                     <Image Source="../Assets/Square150x150Logo.scale-200.png" Height="23" Margin="21,0,0,0"/>
                     <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" >
                         <TextBlock Text="C++ Library Gallery" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock Text="Version 2.4.0  2023年9月25日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                        <TextBlock Text="Version 2.4.1  2023年9月29日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
                     </StackPanel>
                 </StackPanel>
 

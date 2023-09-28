@@ -84,7 +84,21 @@ namespace CppGallery.Pages.UserControls
             set {  SetValue(PageTagProperty, value); }
         }
 
-        private NavigationTransitionInfo navigate = new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight };
+#if false
+
+        private FontIcon FontIcon { get; } = new FontIcon
+        {
+            FontFamily = new FontFamily("Segoe MDL2 Assets"),
+        };
+
+        private TextBlock TitleTextBlock { get; } = new TextBlock();
+        private SentenceTextBlock SentenceTextBlock { get; } = new SentenceTextBlock();
+
+#endif
+
+        private static NavigationTransitionInfo ToRightNavigateInfo { get; } = new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight };
+        private static NavigationTransitionInfo DrillInNavigateInfo { get; } = new DrillInNavigationTransitionInfo();
+        private NavigationTransitionInfo CurrentNavigateInfo { get; set; }
 
         public ToRightButton()
         {
@@ -128,7 +142,7 @@ namespace CppGallery.Pages.UserControls
                         {
                             element = (element as FrameworkElement).Parent;
                         }
-                        (element as MainPage).FrameHandle.Navigate(pair.Key, null, navigate);
+                        (element as MainPage).FrameHandle.Navigate(pair.Key, null, CurrentNavigateInfo);
                     }
                 }
                 
@@ -187,7 +201,7 @@ namespace CppGallery.Pages.UserControls
                 innerpanel.Children.Add(new SentenceTextBlock { Text = this.Sentence });
                 panel.Children.Add(innerpanel);
                 this.Content = panel;
-                navigate = new DrillInNavigationTransitionInfo();
+                CurrentNavigateInfo = DrillInNavigateInfo;
             }
             else
             {
@@ -240,6 +254,7 @@ namespace CppGallery.Pages.UserControls
 
 
                 this.Content = grid;
+                CurrentNavigateInfo = ToRightNavigateInfo;
             }
             
         }

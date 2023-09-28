@@ -181,6 +181,7 @@ namespace CppGallery.Pages
             {typeof(TypeIndex.TypeIndexClassPage), "Mtype_index0" },
             {typeof(Compare.ComparePage), "Ncompare" },
             {typeof(Compare.StrongOrderingClassPage), "Nstrong_ordering0" },
+            {typeof(Iterator.IteratorPage), "Oiterator" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()

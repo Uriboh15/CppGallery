@@ -493,8 +493,6 @@ namespace CppGallery.Pages.UserControls
             //各バージョン専用のソースコードが見つからない場合は別のバージョンのファイルを選択
             if (CodeLanguage == CodeLanguage.C)
             {
-
-
                 if (App.UseCppInCSample)
                 {
                     var cppversion = App.CppVersion;

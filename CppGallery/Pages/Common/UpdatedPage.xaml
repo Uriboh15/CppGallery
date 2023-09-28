@@ -15,7 +15,9 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                
+                <local:BlockPanel Header="&lt;ranges>" >
+                    <local:FunctionExpander Folder="ranges/ssize" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                </local:BlockPanel>
 
             </local:OuterPanel>
         </ScrollViewer>

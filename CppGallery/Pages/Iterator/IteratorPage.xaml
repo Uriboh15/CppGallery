@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.Iterator.IteratorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
+            <local:SymbolBlockPanel Symbol="Function" >
+                <local:FunctionExpander Folder="iterator/advance" />
+                <local:FunctionExpander Folder="iterator/back_inserter" />
+                <local:FunctionExpander Folder="iterator/begin" />
+                <local:FunctionExpander Folder="iterator/cbegin" />
+                <local:FunctionExpander Folder="iterator/cend" />
+                <local:FunctionExpander Folder="iterator/crbegin" />
+                <local:FunctionExpander Folder="iterator/crend" />
+                <local:FunctionExpander Folder="iterator/data" TargetMinCppVersion="Cpp17" />
+                <local:FunctionExpander Folder="iterator/distance" />
+                <local:FunctionExpander Folder="iterator/empty" TargetMinCppVersion="Cpp17" />
+                <local:FunctionExpander Folder="iterator/end" />
+                <local:FunctionExpander Folder="iterator/front_inserter" />
+                <local:FunctionExpander Folder="iterator/inserter" />
+
+                <local:CustomExpander Title="make_move_iterator() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/next" />
+                <local:FunctionExpander Folder="iterator/prev" />
+                <local:FunctionExpander Folder="iterator/rbegin" />
+                <local:FunctionExpander Folder="iterator/rend" />
+                <local:FunctionExpander Folder="iterator/size" TargetMinCppVersion="Cpp17" />
+                <local:FunctionExpander Folder="iterator/ssize" TargetMinCppVersion="Cpp20" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="FunctionObject" >
+                <local:FunctionExpander Folder="iterator/ranges__advance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/ranges__distance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="ranges::iter_move() 関数" Icon="&#xEA86;" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="iterator/ranges__iter_swap" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/ranges__next" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/ranges__prev" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+            </local:SymbolBlockPanel>
+            
+            <local:SymbolBlockPanel Symbol="Concepts" >
+                <local:FunctionExpander Folder="iterator/bidirectional_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/contiguous_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                
+                <local:CustomExpander Title="disable_sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="incrementable" Icon="&#xEA86;" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/random_access_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/weakly_incrementable" Icon="Object" TargetMinCppVersion="Cpp20" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Class" >
+                
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/iterator?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/iterator.html" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

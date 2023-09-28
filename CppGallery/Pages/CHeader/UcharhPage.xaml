@@ -30,12 +30,22 @@
 
 
             <local:SymbolBlockPanel Symbol="Function">
-                <local:CustomExpander Title="c16rtomb() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="c32rtomb() 関数" IsEnabled="False" />
+                <local:FunctionExpander Folder="uchar.h/c16rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="uchar.h/c32rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
+                    <local:SaveButtonPane />
+                </local:FunctionExpander>
+                
                 <local:CustomExpander Title="mbrtoc16() 関数" IsEnabled="False" />
                 <local:CustomExpander Title="mbrtoc32() 関数" IsEnabled="False" />
             </local:SymbolBlockPanel>
-            
+
+            <local:MacroPanel Folder="uchar.h" >
+                <local:ItemGrid Title="__STDC_UTF_16__" Sentence="char16_t の文字列が UTF-16 でエンコードされていることを示すマクロ" />
+                <local:ItemGrid Title="__STDC_UTF_32__" Sentence="char32_t の文字列が UTF-32 でエンコードされていることを示すマクロ" />
+            </local:MacroPanel>
 
         </local:OuterPanel>
     </ScrollViewer>

@@ -465,6 +465,14 @@ namespace CppGallery.Pages.UserControls
                         tmp += st[i];
                         if (StKey(st, i))
                         {
+                            //キーワードが最優先
+                            if (Contains(KeyBlue, tmp))
+                            {
+                                run.Foreground = blue;
+                                mae = string.Empty;
+                                break;
+                            }
+
                             if (mae == "." || mae == "::")
                             {
                                 if (i + 1 < st.Length)

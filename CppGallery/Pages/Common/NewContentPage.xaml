@@ -16,122 +16,58 @@
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
                 <local:BlockPanel Header="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource Compare}" />
-                    <local:ToRightButton Style="{StaticResource TypeIndex}" />
+                    <local:ToRightButton Style="{StaticResource Iterator}" />
                 </local:BlockPanel>
-
-                <local:SymbolBlockPanel Symbol="Class" >
-                    <local:ToRightButton Style="{StaticResource StronOrderingClass}" />
-                    <local:ToRightButton Style="{StaticResource TypeIndexClass}" />
-                </local:SymbolBlockPanel>
 
                 <local:BlockPanel Header="&lt;algorithm>" >
-                    <local:FunctionExpander Folder="algorithm/ranges__find_if" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__find_if_not" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                    <local:FunctionExpander Folder="algorithm/ranges__adjacent_find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;compare>" TargetMinCppVersion="Cpp20" >
-                    <local:FunctionExpander Folder="compare/is_eq" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/is_neq" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/is_lt" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/is_lteq" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/is_gt" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/is_gteq" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="8" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare/three_way_comparable" Icon="Object" />
-                    <local:FunctionExpander Folder="compare/three_way_comparable_with" Icon="Object" />
+                <local:BlockPanel Header="&lt;iterator>" >
+                    <local:FunctionExpander Folder="iterator/advance" />
+                    <local:FunctionExpander Folder="iterator/back_inserter" />
+                    <local:FunctionExpander Folder="iterator/begin" />
+                    <local:FunctionExpander Folder="iterator/cbegin" />
+                    <local:FunctionExpander Folder="iterator/cend" />
+                    <local:FunctionExpander Folder="iterator/crbegin" />
+                    <local:FunctionExpander Folder="iterator/crend" />
+                    <local:FunctionExpander Folder="iterator/data" TargetMinCppVersion="Cpp17" />
+                    <local:FunctionExpander Folder="iterator/distance" />
+                    <local:FunctionExpander Folder="iterator/empty" TargetMinCppVersion="Cpp17" />
+                    <local:FunctionExpander Folder="iterator/end" />
+                    <local:FunctionExpander Folder="iterator/front_inserter" />
+                    <local:FunctionExpander Folder="iterator/inserter" />
+                    <local:FunctionExpander Folder="iterator/next" />
+                    <local:FunctionExpander Folder="iterator/prev" />
+                    <local:FunctionExpander Folder="iterator/rbegin" />
+                    <local:FunctionExpander Folder="iterator/rend" />
+                    <local:FunctionExpander Folder="iterator/size" TargetMinCppVersion="Cpp17" />
+                    <local:FunctionExpander Folder="iterator/ssize" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/ranges__advance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/ranges__distance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/ranges__iter_swap" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/ranges__next" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/ranges__prev" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/bidirectional_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/contiguous_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/random_access_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/weakly_incrementable" Icon="Object" TargetMinCppVersion="Cpp20" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;filesystem>" >
-                    <local:FunctionExpander Folder="filesystem/absolute" />
-                    <local:FunctionExpander Folder="filesystem/canonical" />
-                    
-                    <local:FunctionExpander Folder="filesystem/hash_value" >
-                        <local:ResultsPanel>
-                            <local:OpenFolderPane />
-                            <local:OpenButtonPane />
-                        </local:ResultsPanel>
+                <local:BlockPanel Header="&lt;uchar.h>" >
+                    <local:FunctionExpander Folder="uchar.h/c16rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
+                        <local:SaveButtonPane />
                     </local:FunctionExpander>
 
-                    <local:FunctionExpander Folder="filesystem/is_other" >
-                        <local:ResultsPanel>
-                            <local:OpenFolderPane />
-                            <local:OpenButtonPane />
-                        </local:ResultsPanel>
+                    <local:FunctionExpander Folder="uchar.h/c32rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
+                        <local:SaveButtonPane />
                     </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="filesystem/remove_all" >
-                        <local:ResultsPanel>
-                            <local:OpenFolderPane />
-                            <local:OpenButtonPane />
-                        </local:ResultsPanel>
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="filesystem/status_known" >
-                        <local:ResultsPanel >
-                            <local:OpenFolderPane />
-                            <local:OpenButtonPane />
-                        </local:ResultsPanel>
-                    </local:FunctionExpander>
-                    
-                    <local:FunctionExpander Folder="filesystem/temp_directory_path" />
-                    <local:FunctionExpander Folder="filesystem/weakly_canonical" />
-                    <local:FunctionExpander Folder="filesystem/swap" />
-                    <local:FunctionExpander Folder="filesystem/filesystem_error" Icon="Object" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="&lt;type_index>" >
-                    <local:FunctionExpander Folder="typeindex/hash" AutoFunc="False" Icon="Object" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="strong_ordering クラス" TargetMinCppVersion="Cpp20" >
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorEE" Icon="Operator" />
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorNE" Icon="Operator" />
-
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorL" Icon="Operator" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="7" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorLE" Icon="Operator" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="7" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorR" Icon="Operator" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="7" />
-                    </local:FunctionExpander>
-
-                    <local:FunctionExpander Folder="compare__strong_ordering/operatorRE" Icon="Operator" >
-                        <local:MultiTextBoxPane Message1="整数を入力" Text1="3" Message2="整数を入力" Text2="7" />
-                    </local:FunctionExpander>
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="type_index クラス" >
-                    <local:FunctionExpander Folder="typeindex__type_index/type_index" AutoFunc="False" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorEE" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorNE" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorL" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorLE" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorR" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/operatorRE" Icon="Operator" />
-                    <local:FunctionExpander Folder="typeindex__type_index/hash_code" />
-                    <local:FunctionExpander Folder="typeindex__type_index/name" />
                 </local:BlockPanel>
                 
             </local:OuterPanel>

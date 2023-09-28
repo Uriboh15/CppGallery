@@ -405,6 +405,13 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="iterator" Content="&lt;iterator>" Tag="Oiterator">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE81B;"/>
+                </NavigationViewItem.Icon>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="limits" Content="&lt;limits>" Tag="3limits">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE81B;"/>

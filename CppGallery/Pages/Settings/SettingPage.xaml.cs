@@ -151,8 +151,10 @@ namespace CppGallery.Pages.Settings
 
                 foreach (var window in MainWindow.WindowList)
                 {
-                    window.SetBackdrop();
+                    window.BackUpdated = false;
                 }
+
+                MainWindow.GetParentMainWindow(this).SetBackdrop();
                 return;
             }
             BackCLoaded = true;
@@ -197,8 +199,12 @@ namespace CppGallery.Pages.Settings
             {
                 switch (e.AddedItems[0].ToString())
                 {
-                    case "Clang":
-                        App.Compiler = Compiler.Clang;
+                    case "Clang (GCC ŒÝŠ·)":
+                        App.Compiler = Compiler.ClangOnGCC;
+                        break;
+
+                    case "Clang (Visual C++ ŒÝŠ·)":
+                        App.Compiler = Compiler.ClangOnVC;
                         break;
 
                     case "GCC":
@@ -221,8 +227,12 @@ namespace CppGallery.Pages.Settings
         {
             switch (App.Compiler)
             {
-                case Compiler.Clang:
-                    ComC.SelectedItem = "Clang";
+                case Compiler.ClangOnGCC:
+                    ComC.SelectedItem = "Clang (GCC ŒÝŠ·)";
+                    break;
+
+                case Compiler.ClangOnVC:
+                    ComC.SelectedItem = "Clang (Visual C++ ŒÝŠ·)";
                     break;
 
                 case Compiler.GCC:

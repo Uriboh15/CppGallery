@@ -59,7 +59,9 @@
                 <local:FunctionExpander Folder="string__char_traits/to_char_type" />
                 <local:FunctionExpander Folder="string__char_traits/to_int_type" />
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/char-traits-struct?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/string/char_traits.html" />
+
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

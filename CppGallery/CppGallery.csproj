@@ -72,6 +72,7 @@
 		<None Remove="Pages\Deque\DequeClassPage.xaml" />
 		<None Remove="Pages\Deque\DequePage.xaml" />
 		<None Remove="Pages\Format\BasicFormatStringPage.xaml" />
+		<None Remove="Pages\Iterator\IteratorPage.xaml" />
 		<None Remove="Pages\Optional\OptionalClassPage.xaml" />
 		<None Remove="Pages\Optional\OptionalPage.xaml" />
 		<None Remove="Pages\Print\PrintPage.xaml" />
@@ -238,6 +239,9 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\Iterator\IteratorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\Compare\StrongOrderingClassPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>
