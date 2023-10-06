@@ -12,10 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Included" >
-                <local:ToRightButton Style="{StaticResource BitSet}"/>
-                <local:ToRightButton Style="{StaticResource String}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Object" >
                 <local:FunctionExpander Folder="new/nothrow" Icon="Object" />

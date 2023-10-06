@@ -12,10 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource Limits}"/>
-                <local:ToRightButton Style="{StaticResource TypeTraits}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Function">
                 <local:FunctionExpander Folder="bit/bit_cast" >

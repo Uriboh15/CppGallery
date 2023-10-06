@@ -13,10 +13,7 @@
     <Grid>
         <ScrollViewer>
             <local:OuterPanel>
-                <local:SymbolBlockPanel Symbol="Including">
-                    <local:ToRightButton Style="{StaticResource Istream}"/>
-                </local:SymbolBlockPanel>
-                
+
                 <local:SymbolBlockPanel Symbol="Typedefs">
                     <local:ItemGrid Title="filebuf" Sentence="basic_filebuf を char に特殊化した型"/>
                     <local:ItemGrid Title="fstream" Sentence="basic_fstream を char に特殊化した型"/>

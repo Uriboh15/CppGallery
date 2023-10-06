@@ -12,9 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Including" >
-                <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="vector/operatorNE" Icon="Operator" />

@@ -13,13 +13,7 @@
     <ScrollViewer>
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-            
-            <local:SymbolBlockPanel Symbol="Included">
-                <local:ToRightButton Style="{StaticResource BitSet}"/>
-                <local:ToRightButton Style="{StaticResource Iterator}"/>
-                <local:ToRightButton Style="{StaticResource String}"/>
-            </local:SymbolBlockPanel>
-            
+
             <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="filebuf" Sentence="basic_filebuf を char に特殊化した型"/>
                 <local:ItemGrid Title="fstream" Sentence="basic_fstream を char に特殊化した型"/>

@@ -24,6 +24,16 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.2" Sentence="2023年10月6日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに21項目追加<LineBreak />
+                    ・GCC のバージョンを 13.2.0 に更新
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.4.1" Sentence="2023年9月29日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>

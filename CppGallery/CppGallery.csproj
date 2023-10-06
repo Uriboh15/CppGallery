@@ -176,6 +176,7 @@
 		<None Remove="Pages\Vector\VectorClassPage.xaml" />
 		<None Remove="Pages\Vector\VectorPage.xaml" />
 		<None Remove="Pages\WindowsHeader\FIleApiPage.xaml" />
+		<None Remove="Pages\WindowsHeader\MinWinDefPage.xaml" />
 		<None Remove="Pages\WindowsHeader\ProcessEnvPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WindowshPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WinUserPage.xaml" />
@@ -239,6 +240,9 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WindowsHeader\MinWinDefPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\Iterator\IteratorPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

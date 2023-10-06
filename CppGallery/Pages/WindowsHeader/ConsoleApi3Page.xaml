@@ -10,14 +10,95 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="Windows" >
-            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-            
+
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="PCONSOLE_FONT_INFOEX" Sentence="CONSOLE_FONT_INFOEX 構造体のポインターの型" />
+                <local:ItemGrid Title="PCONSOLE_HISTORY_INFO" Sentence="CONSOLE_HISTORY_INFO 構造体のポインターの型" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Struct" >
+                <local:CustomExpander Title="CONSOLE_HISTORY_INFO 構造体" Sentence="コンソール画面の履歴" Icon="&#xEA86;" >
+                    <local:EnumPanel >
+                        <local:ItemGrid Title="UINT cbsize" Sentence="型のサイズ" />
+                        <local:ItemGrid Title="UINT HistoryBufferSize" Sentence="各履歴に含まれるコマンドの数" />
+                        <local:ItemGrid Title="UINT NumberOfHistoryBuffers" Sentence="履歴の数" />
+                        <local:ItemGrid Title="DWORD dwFlags" Sentence="重複するエントリを履歴に含めないかを指定" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+
+                <local:CustomExpander Title="CONSOLE_FONT_INFOEX 構造体" Sentence="コンソール画面の拡張フォント情報" Icon="&#xEA86;" >
+                    <local:EnumPanel >
+                        <local:ItemGrid Title="ULONG cbsize" Sentence="型のサイズ" />
+                        <local:ItemGrid Title="DWORD nFont" Sentence="フォントのインデックス" />
+                        <local:ItemGrid Title="COORD dwFontSize" Sentence="フォントサイズ" />
+                        <local:ItemGrid Title="UINT FontFamily" Sentence="フォントファミリー" />
+                        <local:ItemGrid Title="UINT FontWeight" Sentence="フォントの太さ" />
+                        <local:ItemGrid Title="WCHAR FaceName" Sentence="フォント名" />
+                    </local:EnumPanel>
+
+                </local:CustomExpander>
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
+                <local:CustomExpander Title="AddConsoleAlias() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="ExpungeConsoleCommandHistory() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="GetConsoleAlias() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="ConsoleApi3/GetConsoleAliases" ConsoleButtonVisibility="Collapsed" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:OpenButtonPane  >
+                        <local:OpenButtonPane.Filter>
+                            <x:String>.exe</x:String>
+                        </local:OpenButtonPane.Filter>
+                    </local:OpenButtonPane>
+                </local:FunctionExpander>
+                
+                <local:FunctionExpander Folder="ConsoleApi3/GetConsoleAliasesLength" ConsoleButtonVisibility="Collapsed" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:OpenButtonPane  >
+                        <local:OpenButtonPane.Filter>
+                            <x:String>.exe</x:String>
+                        </local:OpenButtonPane.Filter>
+                    </local:OpenButtonPane>
+                </local:FunctionExpander>
+
+                <local:CustomExpander Title="GetConsoleAliasExes() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="GetConsoleAliasExesLength() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="GetConsoleCommandHistory() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="GetConsoleCommandHistoryLength() 関数" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="ConsoleApi3/GetConsoleDisplayMode" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="ConsoleApi3/GetConsoleFontSize" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+
+                <local:CustomExpander Title="GetConsoleHistoryInfo() 関数" IsEnabled="False" />
+
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleProcessList" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+
+                <local:CustomExpander Title="GetConsoleSelectionInfo() 関数" IsEnabled="False" />
+
                 <local:FunctionExpander Folder="ConsoleApi3/GetConsoleWindow" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetCurrentConsoleFont" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                <local:FunctionExpander Folder="ConsoleApi3/GetCurrentConsoleFontEx" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 <local:FunctionExpander Folder="ConsoleApi3/GetNumberOfConsoleMouseButtons" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+
+                <local:CustomExpander Title="SetConsoleDisplayMode() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="SetConsoleHistoryInfo() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="SetCurrentConsoleFontEx() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="SetConsoleNumberOfCommands() 関数" IsEnabled="False" />
             </local:SymbolBlockPanel>
+
+            
+
+            <local:MacroPanel Folder="ConsoleApi3" >
+                <local:ItemGrid Title="CONSOLE_FULLSCREEN" Sentence="コンソール画面が全画面モードであることを示す値" />
+                <local:ItemGrid Title="CONSOLE_FULLSCREEN_HARDWARE" Sentence="コンソール画面がGPUに直接接続された全画面モードであることを示す値" />
+                <local:ItemGrid Title="CONSOLE_FULLSCREEN_MODE" Sentence="コンソール画面が全画面モードであることを示す値" />
+                <local:ItemGrid Title="CONSOLE_WINDOWED_MODE" Sentence="コンソール画面がウィンドウモードであることを示す値" />
+                <local:ItemGrid Title="CONSOLE_NO_SELECTION" Sentence="コンソール画面内で選択されていないことを示す値" />
+                <local:ItemGrid Title="CONSOLE_SELECTION_IN_PROGRESS" Sentence="コンソール画面内を選択中であることを示す値" />
+                <local:ItemGrid Title="CONSOLE_SELECTION_NOT_EMPTY" Sentence="コンソール選択が空でないことを示す値" />
+                <local:ItemGrid Title="CONSOLE_MOUSE_SELECTION" Sentence="コンソール画面がマウスで選択されていることを示す値" />
+                <local:ItemGrid Title="CONSOLE_MOUSE_DOWN" Sentence="コンソール画面にマウスでクリックしていることを示す値" />
+                <local:ItemGrid Title="HISTORY_NO_DUP_FLAG" Sentence="SetConsoleHistoryInfo で使用する重複するエントリを履歴に含めないことを指定する値" />
+            </local:MacroPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/console/console-functions" />
         </local:OuterPanel>

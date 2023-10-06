@@ -121,6 +121,13 @@ namespace CppGallery.Pages.UserControls
                 var textblock = sender as TextBlock;
                 textblock.Visibility = Visibility.Collapsed;
             }
+
+#if DEBUG
+            if(Sentence == "aaa")
+            {
+                (this.Content as Panel).Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0x50, 0xFF, 0x00, 0x00));
+            }
+#endif
         }
     }
 }

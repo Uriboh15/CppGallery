@@ -100,6 +100,7 @@
                     <local:ToRightButton Style="{StaticResource ConsoleApi3}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource DwmAPI}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource FileApih}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource MinWindef}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource ProcessEnv}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource Windowsh}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinUserh}" InLibraryPage="True"/>
@@ -107,15 +108,15 @@
             </local:OuterPanel>
 
             <StackPanel x:Name="BlockStylePanel" Visibility="Collapsed" >
-                <StackPanel x:Name="CppLibraryBlock" Spacing="0">
+                <StackPanel x:Name="CppLibraryBlock" >
                     <TextBlock Text="C++ ライブラリ"/>
                 </StackPanel>
 
-                <StackPanel x:Name="CLibraryBlock" Spacing="0">
+                <StackPanel x:Name="CLibraryBlock" >
                     <TextBlock Text="C ライブラリ"/>
                 </StackPanel>
 
-                <StackPanel x:Name="WindowsLibraryBlock" Spacing="0">
+                <StackPanel x:Name="WindowsLibraryBlock" >
                     <TextBlock Text="Windows ライブラリ"/>
                 </StackPanel>
 

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WindowsHeader.MinWinDefPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel >
+
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="BOOL" Sentence="ブーリアン型" Value="int" />
+                <local:ItemGrid Title="BYTE" Sentence="バイト型" Value="unsigned char" />
+                <local:ItemGrid Title="INT" Sentence="int 型" Value="int" />
+                <local:ItemGrid Title="UINT" Sentence="unsigned int 型" Value="unsigned int" />
+                <local:ItemGrid Title="DWORD" Sentence="ダブルワード" Value="unsigned long" />
+                <local:ItemGrid Title="WORD" Sentence="ワード" Value="iunsigned short" />
+                <local:ItemGrid Title="FLOAT" Sentence="浮動小数点数型" Value="float" />
+                <local:ItemGrid Title="LPVOID" Sentence="void の far ポインター" />
+                <local:ItemGrid Title="LPCVOID" Sentence="void の const far ポインター" />
+                <local:ItemGrid Title="PBOOL" Sentence="BOOL のポインター" />
+                <local:ItemGrid Title="LPBOOL" Sentence="BOOL の far ポインター" />
+                <local:ItemGrid Title="PBYTE" Sentence="BYTE のポインター" />
+                <local:ItemGrid Title="LPBYTE" Sentence="BYTE の far ポインター" />
+                <local:ItemGrid Title="PINT" Sentence="INT のポインター" />
+                <local:ItemGrid Title="LPINT" Sentence="INT の far ポインター" />
+                <local:ItemGrid Title="PUINT" Sentence="UINT のポインター" />
+                <local:ItemGrid Title="LPLONG" Sentence="long の far ポインター" />
+                <local:ItemGrid Title="PWORD" Sentence="WORD のポインター" />
+                <local:ItemGrid Title="LPWORD" Sentence="WORD の far ポインター" />
+                <local:ItemGrid Title="PDWORD" Sentence="DWORD のポインター" />
+                <local:ItemGrid Title="LPDWORD" Sentence="DWORD の far ポインター" />
+                <local:ItemGrid Title="PFLOAT" Sentence="FLOAT のポインター" />
+                <local:ItemGrid Title="WPARAM" Sentence="Windows API のパラメータの型" />
+                <local:ItemGrid Title="LPARAM" Sentence="Windows API のパラメータの型" />
+                <local:ItemGrid Title="LRESULT" Sentence="Windows API の戻り値の型" />
+                <local:ItemGrid Title="GLOBALHANDLE" Sentence="グローバルハンドル" />
+                <local:ItemGrid Title="HGLOBAL" Sentence="グローバルハンドル" />
+                <local:ItemGrid Title="HLOCAL" Sentence="ローカルハンドル" />
+                <local:ItemGrid Title="LOCALHANDLE" Sentence="ローカルハンドル" />
+                <local:ItemGrid Title="LPHANDLE" Sentence="HANDLE の far ポインター" />
+                <local:ItemGrid Title="SPHANDLE" Sentence="HANDLE のポインター" />
+                <local:ItemGrid Title="PROC" Sentence="int を返す引数なし関数のポインター" />
+                <local:ItemGrid Title="FARPROC" Sentence="int を返す引数なし関数の far ポインター" />
+                <local:ItemGrid Title="NEARPROC" Sentence="int を返す引数なし関数の near ポインター" />
+                <local:ItemGrid Title="ATOM" Sentence="アトム型" />
+                <local:ItemGrid Title="HKEY" Sentence="レジストリキーハンドル" />
+                <local:ItemGrid Title="PHKEY" Sentence="HKEY のポインター" />
+                <local:ItemGrid Title="HINSTANCE" Sentence="インスタンスハンドル" />
+                <local:ItemGrid Title="HMETAFILE" Sentence="メタファイルハンドル" />
+                <local:ItemGrid Title="HMODULE" Sentence="モジュールハンドル" />
+                <local:ItemGrid Title="HRGN" Sentence="リージョンハンドル" />
+                <local:ItemGrid Title="HRSRC" Sentence="リソースハンドル" />
+                <local:ItemGrid Title="HSPRITE" Sentence="aaa" />
+                <local:ItemGrid Title="HLSURF" Sentence="aaa" />
+                <local:ItemGrid Title="HSTR" Sentence="aaa" />
+                <local:ItemGrid Title="HTASK" Sentence="aaa" />
+                <local:ItemGrid Title="HWINSTA" Sentence="aaa" />
+                <local:ItemGrid Title="HKL" Sentence="aaa" />
+                <local:ItemGrid Title="HFILE" Sentence="ファイルハンドル" />
+                <local:ItemGrid Title="PFILETIME" Sentence="FILETIME のポインター" />
+                <local:ItemGrid Title="LPFILETIME" Sentence="FILETIME の far ポインター" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Struct" >
+                <local:CustomExpander Title="FILETIME 構造体" Sentence="ファイル時刻" Icon="&#xEA86;" >
+                    <local:EnumPanel >
+                        <local:ItemGrid Title="DWORD dwLowDateTime" Sentence="ファイル時刻の下位部分" />
+                        <local:ItemGrid Title="DWORD dwHighDateTime" Sentence="ファイル時刻の上位部分" />
+                    </local:EnumPanel>
+                </local:CustomExpander>
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="FunctionMacro" >
+                <local:CustomExpander Title="HIBYTE() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                <local:CustomExpander Title="HIWORD() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                <local:CustomExpander Title="LOBYTE() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                <local:CustomExpander Title="LOWORD() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                <local:CustomExpander Title="MAKEWORD() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                <local:CustomExpander Title="MAKELONG() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="Minwindef/max" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:MultiTextBoxPane Message1="整数を入力" Text1="8" Message2="整数を入力" Text2="3" />
+                </local:FunctionExpander>
+
+                <local:FunctionExpander Folder="Minwindef/min" CodeLanguage="CppWin32" Icon="Macro" >
+                    <local:MultiTextBoxPane Message1="整数を入力" Text1="8" Message2="整数を入力" Text2="3" />
+                </local:FunctionExpander>
+            </local:SymbolBlockPanel>
+
+            <local:MacroPanel Folder="Minwindef" >
+                <local:ItemGrid Title="APIENTRY" Sentence="aaa" />
+                <local:ItemGrid Title="PASCAL" Sentence="aaa" />
+                <local:ItemGrid Title="CALLBACK" Sentence="コールバック" />
+                <local:ItemGrid Title="WINAPI" Sentence="Windows API の呼び出し規則" />
+                <local:ItemGrid Title="WINAPIV" Sentence="Windows API の呼び出し規則" />
+                <local:ItemGrid Title="WINAPI_INLINE" Sentence="Windows API の呼び出し規則" />
+                <local:ItemGrid Title="CONST" Sentence="const 指定" />
+                <local:ItemGrid Title="FALSE" Sentence="BOOL 型の false 値" />
+                <local:ItemGrid Title="TRUE" Sentence="BOOL 型の true 値" />
+                <local:ItemGrid Title="MAX_PATH" Sentence="パスの最大文字数" />
+            </local:MacroPanel>
+        </local:OuterPanel>
+    </ScrollViewer>
+    
+</Page>

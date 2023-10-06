@@ -32,6 +32,8 @@ namespace CppGallery.Pages.UserControls
             this.Content = Button;
         }
 
+        public List<string> Filter { get; } = new List<string>();
+
         private async void OpenButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
             if (Working) return;
@@ -39,7 +41,18 @@ namespace CppGallery.Pages.UserControls
             Working = true;
 
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
-            picker.FileTypeFilter.Add("*");
+            if(Filter.Count == 0)
+            {
+                picker.FileTypeFilter.Add("*");
+            }
+            else
+            {
+                foreach(var extension in Filter)
+                {
+                    picker.FileTypeFilter.Add(extension);
+                }
+            }
+            
 
             InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.GetParentMainWindow(this)));
 

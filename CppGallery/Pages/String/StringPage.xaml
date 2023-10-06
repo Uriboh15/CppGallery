@@ -12,16 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Including" >
-                <local:ToRightButton Style="{StaticResource IosFwd}"/>
-                <local:ToRightButton Style="{StaticResource Limits}"/>
-                <local:ToRightButton Style="{StaticResource New}"/>
-                <local:ToRightButton Style="{StaticResource Tuple}"/>
-            </local:SymbolBlockPanel>
-
-            <local:SymbolBlockPanel Symbol="Included" >
-                <local:ToRightButton Style="{StaticResource SStream}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="string" Sentence="basic_string を char に特殊化した型"/>

@@ -13,12 +13,6 @@
     <Grid>
         <ScrollViewer>
             <local:OuterPanel>
-                <local:SymbolBlockPanel Symbol="Including">
-                    <local:ToRightButton Style="{StaticResource Istream}"/>
-                    <local:ToRightButton Style="{StaticResource Iterator}"/>
-                    <local:ToRightButton Style="{StaticResource TypeTraits}"/>
-                </local:SymbolBlockPanel>
-
 
                 <local:SymbolBlockPanel Symbol="Manipulator">
                     <local:FunctionExpander Folder="iomanip/get_money" >

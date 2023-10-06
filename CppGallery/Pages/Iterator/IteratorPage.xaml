@@ -57,8 +57,22 @@
                 <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
 
                 <local:CustomExpander Title="incrementable" Icon="&#xEA86;" IsEnabled="False" />
-                
+                <local:CustomExpander Title="indirect_binary_predicate" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_equivalence_relation" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_strict_weak_order" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_unary_predicate" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirectly_comparable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/indirectly_copyable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_copyable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_movable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_movable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="indirectly_regular_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirectly_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/indirectly_swappable" Icon="Object" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
                 <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />

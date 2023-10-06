@@ -10,15 +10,19 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="Windows" >
-            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-            
+
             <local:SymbolBlockPanel Symbol="FunctionAndMacro">
+                <local:CustomExpander Title="ExpandEnvironmentStrings() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+
                 <local:FunctionExpander Folder="ProcessEnv/FreeEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ProcessEnv/GetCommandLine" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:FunctionExpander Folder="ProcessEnv/GetCurrentDirectory" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentStrings" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ProcessEnv/GetEnvironmentVariable" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ProcessEnv/GetStdHandle" CodeLanguage="CppWin32" SampleType="None" />
 
+                <local:CustomExpander Title="NeedCurrentDirectoryForExePath() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+                
                 <local:FunctionExpander Folder="ProcessEnv/SearchPath" CodeLanguage="CppWin32" Icon="Macro" >
                     <local:ResultsPanel>
                         <local:ControlGrid Message="フォルダを選択" >
@@ -43,7 +47,13 @@
                     </local:ResultsPanel>
                 </local:FunctionExpander>
 
+                <local:FunctionExpander Folder="ProcessEnv/SetCurrentDirectory" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                
+                <local:CustomExpander Title="SetEnvironmentStrings() マクロ" Icon="&#xE71A;" IsEnabled="False" />
+
                 <local:FunctionExpander Folder="ProcessEnv/SetEnvironmentVariable" CodeLanguage="CppWin32" SampleType="None" Icon="Macro" />
+                <local:CustomExpander Title="SetStdHandle() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="SetStdHandleEx() 関数" IsEnabled="False" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/windows/win32/api/processenv/" />

@@ -22,10 +22,9 @@ namespace CppGallery.Pages.UserControls
         Exception,
         Function,
         FunctionAndMacro,
+        FunctionMacro,
         FunctionObject,
         GlobalstreamOjbect,
-        Included,
-        Including,
         Literal,
         Macro,
         Manipulator,
@@ -46,13 +45,13 @@ namespace CppGallery.Pages.UserControls
            "Symbol", // Max という名前の……
            typeof(PanelHeader), // int 型の CLR プロパティを……
            typeof(SymbolBlockPanel), // クラスに登録するやで―
-           new PropertyMetadata(PanelHeader.Function));
+           new PropertyMetadata(PanelHeader.Function, new PropertyChangedCallback(OnSymbolChanged)));
 
         public static readonly DependencyProperty IsDeclarationOnlyProperty = DependencyProperty.Register(
            "IsDeclarationOnly", // Max という名前の……
            typeof(bool), // int 型の CLR プロパティを……
            typeof(SymbolBlockPanel), // クラスに登録するやで―
-           new PropertyMetadata(false));
+           new PropertyMetadata(false, new PropertyChangedCallback(OnIsDeclarationOnlyChanged)));
 
         public bool IsDeclarationOnly
         {
@@ -66,31 +65,36 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(SymbolProperty, value); }
         }
 
+        private const string DeclarationOnlyString = " (宣言のみ)";
 
+        //https://qiita.com/tricogimmick/items/62cd9f5deca365a83858
+        // 3. 依存プロパティが変更されたとき呼ばれるコールバック関数の定義
+        private static void OnSymbolChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            // オブジェクトを取得して処理する
+            SymbolBlockPanel ctrl = obj as SymbolBlockPanel;
+            ctrl?.ApplyHead();
+        }
+
+        //https://qiita.com/tricogimmick/items/62cd9f5deca365a83858
+        // 3. 依存プロパティが変更されたとき呼ばれるコールバック関数の定義
+        private static void OnIsDeclarationOnlyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            // オブジェクトを取得して処理する
+            SymbolBlockPanel ctrl = obj as SymbolBlockPanel;
+            if (ctrl != null)
+            {
+                ctrl.ApplyHead();
+                if (ctrl.IsDeclarationOnly)
+                {
+                    ctrl.HeadText += DeclarationOnlyString;
+                }
+            }
+        }
 
         public SymbolBlockPanel()
         {
-
-            this.Loaded += BlockPanel_Loaded;
-        }
-
-        private void BlockPanel_Loaded(object sender, RoutedEventArgs e)
-        {
-            Loaded -= BlockPanel_Loaded;
-
-            if (this.Symbol == PanelHeader.Included || this.Symbol == PanelHeader.Including)
-            {
-                (this.Parent as StackPanel).Children.Remove(this);
-                return;
-            }
-
-            ApplyHead();
-
-
-            if (this.IsDeclarationOnly)
-            {
-                this.HeadText += " (宣言のみ)";
-            }
+            
         }
 
 
@@ -109,11 +113,10 @@ namespace CppGallery.Pages.UserControls
                 PanelHeader.ErrorReporting => "エラー報告",
                 PanelHeader.Exception => "例外クラス",
                 PanelHeader.Function => "関数",
+                PanelHeader.FunctionMacro => "関数マクロ",
                 PanelHeader.FunctionAndMacro => "関数 ・ 関数マクロ",
                 PanelHeader.FunctionObject => "関数オブジェクト",
                 PanelHeader.GlobalstreamOjbect => "グローバルストリームオブジェクト",
-                PanelHeader.Included => "このヘッダーを include しているライブラリ",
-                PanelHeader.Including => "このヘッダーに含まれるライブラリ",
                 PanelHeader.Literal => "リテラル",
                 PanelHeader.Macro => "マクロ",
                 PanelHeader.Manipulator => "マニピュレーター",

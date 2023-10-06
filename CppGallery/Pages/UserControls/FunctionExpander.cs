@@ -263,20 +263,21 @@ namespace CppGallery.Pages.UserControls
                             CCodeButton codeButton = App.UseCppInCSample ? new CodeButton() : new CCodeButton();
                             codeButton.Path = Data.DefaultSamplePath + Folder + CodeName;
                             codeButton.AutoFunc = this.AutoFunc;
+                            codeButton.FileName = string.Empty;
 
                             panel1.Children.Add(codeButton);
                             break;
 
                         case CodeLanguage.Cpp:
-                            panel1.Children.Add(new CodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc });
+                            panel1.Children.Add(new CodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc, FileName = string.Empty });
                             break;
 
                         case CodeLanguage.CppWin32:
-                            panel1.Children.Add(new Win32CodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc });
+                            panel1.Children.Add(new Win32CodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc, FileName = string.Empty });
                             break;
 
                         case CodeLanguage.CppWinRT:
-                            panel1.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc });
+                            panel1.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc, FileName = string.Empty });
                             break;
                     }
 

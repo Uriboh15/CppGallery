@@ -12,13 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource IosFwd}"/>
-                <local:ToRightButton Style="{StaticResource Limits}"/>
-                <local:ToRightButton Style="{StaticResource New}"/>
-                <local:ToRightButton Style="{StaticResource Utility}"/>
-            </local:SymbolBlockPanel>
-
 
             <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="bitset/operatorAND" Icon="Operator">

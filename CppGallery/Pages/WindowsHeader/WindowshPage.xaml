@@ -16,6 +16,10 @@
                 <local:ToRightButton Style="{StaticResource WinUserh}" />
             </local:BlockPanel>
 
+            <local:BlockPanel Header="型定義" >
+                <local:ToRightButton Style="{StaticResource MinWindef}" />
+            </local:BlockPanel>
+
             <local:BlockPanel Header="環境設定" >
                 <local:ToRightButton Style="{StaticResource ProcessEnv}" />
             </local:BlockPanel>

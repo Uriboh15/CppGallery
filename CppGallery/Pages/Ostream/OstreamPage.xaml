@@ -13,14 +13,6 @@
     <ScrollViewer>
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-            
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource Ios}"/>
-            </local:SymbolBlockPanel>
-
-            <local:SymbolBlockPanel Symbol="Included">
-                <local:ToRightButton Style="{StaticResource Istream}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="ostream" Sentence="basic_ostream を char に特殊化した型"/>

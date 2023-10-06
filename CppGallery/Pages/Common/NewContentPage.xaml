@@ -16,60 +16,70 @@
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
                 <local:BlockPanel Header="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource Iterator}" />
+                    <local:ToRightButton Style="{StaticResource MinWindef}" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;algorithm>" >
-                    <local:FunctionExpander Folder="algorithm/ranges__adjacent_find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:BlockPanel Header="&lt;ConsoleApi.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi/AllocConsole" SampleType="GUIApp" CodeLanguage="CppWin32"  />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;ConsoleApi2.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi2/FillConsoleOutputCharacter" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ConsoleApi2/GenerateConsoleCtrlEvent" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;ConsoleApi3.h>" >
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleAliases" ConsoleButtonVisibility="Collapsed" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:OpenButtonPane  >
+                            <local:OpenButtonPane.Filter>
+                                <x:String>.exe</x:String>
+                            </local:OpenButtonPane.Filter>
+                        </local:OpenButtonPane>
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleAliasesLength" ConsoleButtonVisibility="Collapsed" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:OpenButtonPane  >
+                            <local:OpenButtonPane.Filter>
+                                <x:String>.exe</x:String>
+                            </local:OpenButtonPane.Filter>
+                        </local:OpenButtonPane>
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleDisplayMode" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi3/GetConsoleFontSize" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="ConsoleApi3/GetCurrentConsoleFontEx" SampleType="ConsoleOnly" CodeLanguage="CppWin32" />
                 </local:BlockPanel>
 
                 <local:BlockPanel Header="&lt;iterator>" >
-                    <local:FunctionExpander Folder="iterator/advance" />
-                    <local:FunctionExpander Folder="iterator/back_inserter" />
-                    <local:FunctionExpander Folder="iterator/begin" />
-                    <local:FunctionExpander Folder="iterator/cbegin" />
-                    <local:FunctionExpander Folder="iterator/cend" />
-                    <local:FunctionExpander Folder="iterator/crbegin" />
-                    <local:FunctionExpander Folder="iterator/crend" />
-                    <local:FunctionExpander Folder="iterator/data" TargetMinCppVersion="Cpp17" />
-                    <local:FunctionExpander Folder="iterator/distance" />
-                    <local:FunctionExpander Folder="iterator/empty" TargetMinCppVersion="Cpp17" />
-                    <local:FunctionExpander Folder="iterator/end" />
-                    <local:FunctionExpander Folder="iterator/front_inserter" />
-                    <local:FunctionExpander Folder="iterator/inserter" />
-                    <local:FunctionExpander Folder="iterator/next" />
-                    <local:FunctionExpander Folder="iterator/prev" />
-                    <local:FunctionExpander Folder="iterator/rbegin" />
-                    <local:FunctionExpander Folder="iterator/rend" />
-                    <local:FunctionExpander Folder="iterator/size" TargetMinCppVersion="Cpp17" />
-                    <local:FunctionExpander Folder="iterator/ssize" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/ranges__advance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/ranges__distance" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/ranges__iter_swap" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/ranges__next" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/ranges__prev" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/bidirectional_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/contiguous_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/random_access_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/weakly_incrementable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_copyable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_copyable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_movable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_movable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                    <local:FunctionExpander Folder="iterator/indirectly_swappable" Icon="Object" TargetMinCppVersion="Cpp20" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;uchar.h>" >
-                    <local:FunctionExpander Folder="uchar.h/c16rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
-                        <local:SaveButtonPane />
+                <local:BlockPanel Header="&lt;Minwindef.h>" >
+                    <local:FunctionExpander Folder="Minwindef/max" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:MultiTextBoxPane Message1="整数を入力" Text1="8" Message2="整数を入力" Text2="3" />
                     </local:FunctionExpander>
 
-                    <local:FunctionExpander Folder="uchar.h/c32rtomb" CodeLanguage="C" ConsoleButtonVisibility="Collapsed" >
-                        <local:SaveButtonPane />
+                    <local:FunctionExpander Folder="Minwindef/min" CodeLanguage="CppWin32" Icon="Macro" >
+                        <local:MultiTextBoxPane Message1="整数を入力" Text1="8" Message2="整数を入力" Text2="3" />
                     </local:FunctionExpander>
                 </local:BlockPanel>
-                
+
+                <local:BlockPanel Header="&lt;ProcessEnv.h>" >
+                    <local:FunctionExpander Folder="ProcessEnv/GetCurrentDirectory" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="ProcessEnv/SetCurrentDirectory" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;WinUser.h>" >
+                    <local:FunctionExpander Folder="WinUser/AppendMenu" SampleType="GUIApp" CodeLanguage="CppWin32" Icon="Macro" />
+                    <local:FunctionExpander Folder="WinUser/CreateMenu" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/DrawMenuBar" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                    <local:FunctionExpander Folder="WinUser/SetMenu" SampleType="GUIApp" CodeLanguage="CppWin32" />
+                </local:BlockPanel>
+
             </local:OuterPanel>
         </ScrollViewer>
     </Grid>

@@ -87,6 +87,7 @@ namespace CppGallery.Pages
             {typeof(WindowsHeader.ConsoleApi2Page), "4ConsoleApi2h" },
             {typeof(WindowsHeader.ConsoleApi3Page), "4ConsoleApi3h" },
             {typeof(WindowsHeader.FIleApiPage), "4fileapi" },
+            {typeof(WindowsHeader.MinWinDefPage), "4Minwindef" },
             {typeof(WindowsHeader.ProcessEnvPage), "4ProcessEnv" },
             {typeof(WindowsHeader.WindowshPage), "4Windows" },
             {typeof(WindowsHeader.WinUserPage), "4WinUser" },

@@ -655,6 +655,15 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="MinWindef" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;Minwindef.h>" />
+        <Setter Property="Sentence" Value="MinWin の基本型" />
+        <Setter Property="PageTag" Value="4Minwindef"/>
+        <Setter Property="Icon" Value="&#xE70B;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="MultiMapClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="multimap クラス" />
         <Setter Property="Sentence" Value="aaa" />

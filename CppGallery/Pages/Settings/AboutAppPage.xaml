@@ -15,7 +15,7 @@
                     <Image Source="../Assets/Square150x150Logo.scale-200.png" Height="23" Margin="21,0,0,0"/>
                     <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" >
                         <TextBlock Text="C++ Library Gallery" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock Text="Version 2.4.1  2023年9月29日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                        <TextBlock Text="Version 2.4.2  2023年10月6日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -46,7 +46,7 @@
                             <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
                                 
                                 <TextBlock Text="GCC バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <TextBlock Text="13.1.0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                <TextBlock Text="13.2.0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                             </Grid>
                             <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
                                 <TextBlock Text="文字エンコード" HorizontalAlignment="Left" VerticalAlignment="Center"/>

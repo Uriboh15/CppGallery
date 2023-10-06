@@ -48,7 +48,8 @@
                 <local:FunctionExpander Folder="strstream__ostrstream/str" />
                 <local:FunctionExpander Folder="strstream__ostrstream/swap" />
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/ostrstream-class?view=msvc-170" />
 
         </local:OuterPanel>
     </ScrollViewer>

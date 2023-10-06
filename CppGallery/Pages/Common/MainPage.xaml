@@ -1020,6 +1020,12 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
+            <NavigationViewItem Content="&lt;Minwindef.h>" Tag="4Minwindef">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE70B;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+
             <NavigationViewItem Content="&lt;ProcessEnv.h>" Tag="4ProcessEnv">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xF16E;"/>

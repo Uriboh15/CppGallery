@@ -13,19 +13,6 @@
     <ScrollViewer>
         <local:OuterPanel>
 
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource Ostream}"/>
-            </local:SymbolBlockPanel>
-
-
-            <local:SymbolBlockPanel Symbol="Included">
-                <local:ToRightButton Style="{StaticResource Fstream}"/>
-                <local:ToRightButton Style="{StaticResource IoManip}"/>
-                <local:ToRightButton Style="{StaticResource Iostream}"/>
-                <local:ToRightButton Style="{StaticResource SStream}"/>
-                <local:ToRightButton Style="{StaticResource StrStream}"/>
-            </local:SymbolBlockPanel>
-
             <local:SymbolBlockPanel Symbol="Typedefs">
                 <local:ItemGrid Title="iostream" Sentence="型 basic_iostream を char に特殊化した型"/>
                 <local:ItemGrid Title="istream" Sentence="型 basic_istream を char に特殊化した型"/>

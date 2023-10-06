@@ -12,13 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Included">
-                <local:ToRightButton Style="{StaticResource Bit}"/>
-                <local:ToRightButton Style="{StaticResource BitSet}"/>
-                <local:ToRightButton Style="{StaticResource Complex}"/>
-                <local:ToRightButton Style="{StaticResource String}"/>
-            </local:SymbolBlockPanel>
-
 
             <local:SymbolBlockPanel Symbol="Enum">
                 <local:CustomExpander IsEnabled="False">

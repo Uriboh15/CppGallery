@@ -13,6 +13,7 @@
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
             
             <local:SymbolBlockPanel Symbol="FunctionAndMacro" >
+                <local:FunctionExpander Folder="ConsoleApi/AllocConsole" SampleType="GUIApp" CodeLanguage="CppWin32"  />
                 <local:FunctionExpander Folder="ConsoleApi/ReadConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
                 <local:FunctionExpander Folder="ConsoleApi/WriteConsole" SampleType="ConsoleOnly" CodeLanguage="CppWin32" Icon="Macro" />
             </local:SymbolBlockPanel>

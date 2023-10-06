@@ -12,10 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource Istream}"/>
-            </local:SymbolBlockPanel>
-
 
             <local:SymbolBlockPanel Symbol="GlobalstreamOjbect">
                 <local:FunctionExpander Folder="iostream/cerr" Icon="Object" >

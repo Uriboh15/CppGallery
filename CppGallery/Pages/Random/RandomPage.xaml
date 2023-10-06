@@ -13,10 +13,6 @@
     <ScrollViewer>
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-            
-            <local:SymbolBlockPanel Symbol="Including">
-                <local:ToRightButton Style="{StaticResource InitializerList}"/>
-            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Concepts" >
                 <local:CustomExpander Title="uniform_random_bit_generator" IsEnabled="False" Icon="&#xEA86;" />

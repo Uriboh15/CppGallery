@@ -12,9 +12,6 @@
 
     <ScrollViewer>
         <local:OuterPanel>
-            <local:SymbolBlockPanel Symbol="Included" >
-                <local:ToRightButton Style="{StaticResource StdLibh}"/>
-            </local:SymbolBlockPanel>
 
             <local:MacroPanel Folder="limits.h" >
                 <local:ItemGrid Title="CHAR_BIT" Sentence="char 型のビット数" />
