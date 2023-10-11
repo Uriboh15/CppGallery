@@ -46,20 +46,34 @@
                 <local:FunctionExpander Folder="algorithm/ranges__adjacent_find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__all_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__any_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__count" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__count_if" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+                <local:FunctionExpander Folder="algorithm/ranges__ends_with" TargetMinCppVersion="Cpp23" Icon="Object" AutoFunc="False" />
+
+                <local:CustomExpander Title="ranges::equal() 関数" IsEnabled="False" Icon="&#xEA86;" />
+
                 <local:FunctionExpander Folder="algorithm/ranges__find" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
 
-                <local:CustomExpander Title="find_end() 関数" IsEnabled="False" Icon="&#xEA86;" />
-                <local:CustomExpander Title="find_first_of() 関数" IsEnabled="False" Icon="&#xEA86;" />
+                <local:CustomExpander Title="ranges::find_end() 関数" IsEnabled="False" Icon="&#xEA86;" />
+                <local:CustomExpander Title="ranges::find_first_of() 関数" IsEnabled="False" Icon="&#xEA86;" />
 
                 <local:FunctionExpander Folder="algorithm/ranges__find_if" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__find_if_not" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__for_each" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="algorithm/ranges__for_each_n" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+
+                <local:CustomExpander Title="ranges::mismatch() 関数" IsEnabled="False" Icon="&#xEA86;" />
+
                 <local:FunctionExpander Folder="algorithm/ranges__none_of" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
+
+                <local:CustomExpander Title="ranges::search() 関数" IsEnabled="False" Icon="&#xEA86;" />
+                <local:CustomExpander Title="ranges::search_n() 関数" IsEnabled="False" Icon="&#xEA86;" />
+
+                <local:FunctionExpander Folder="algorithm/ranges__starts_with" TargetMinCppVersion="Cpp23" Icon="Object" AutoFunc="False" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Struct" >
-                <local:CustomExpander Title="ranges::for_each_result 構造体" Sentence="for_each() の戻り値" Icon="&#xEA86;" >
+                <local:CustomExpander Title="ranges::for_each_result 構造体" Sentence="ranges::for_each() の戻り値" Icon="&#xEA86;" >
                     <local:EnumPanel>
                         <local:ItemGrid Title="in" Sentence="イテレータ" />
                         <local:ItemGrid Title="out" Sentence="関数オブジェクト" />

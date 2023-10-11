@@ -83,6 +83,7 @@ namespace CppGallery.Pages.UserControls
             "BACKGROUND_INTENSITY",
             "CALLBACK",
             "CharLower",
+            "CharLowerBuff",
             "CharNext",
             "CharPrev",
             "CharUpper",

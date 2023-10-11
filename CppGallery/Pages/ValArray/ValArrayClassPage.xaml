@@ -13,17 +13,12 @@
     <ScrollViewer>
         <local:OuterPanel>
             <local:SymbolBlockPanel Symbol="Constructor" >
-                <local:CustomExpander IsEnabled="False">
-                    <Expander.Header>
-                        <local:EHeader Title="valarray()" Sentence="valarray を構築します"/>
-                    </Expander.Header>
-                </local:CustomExpander>
+                <local:CustomExpander Title="valarray()" Sentence="valarray を構築します" IsEnabled="False" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="value_type" Sentence="valarray の要素の型"/>
             </local:SymbolBlockPanel>
-
 
             <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="valarray__valarray/operatorN" Icon="Operator" />
@@ -48,12 +43,7 @@
                 <local:FunctionExpander Folder="valarray__valarray/apply" />
                 <local:FunctionExpander Folder="valarray__valarray/cshift" />
 
-
-                <local:CustomExpander IsEnabled="False">
-                    <Expander.Header>
-                        <local:EHeader Title="free() 関数" Sentence="aaa"/>
-                    </Expander.Header>
-                </local:CustomExpander>
+                <local:CustomExpander Title="free() 関数" Sentence="aaa" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="valarray__valarray/max" AutoFunc="False" />
                 <local:FunctionExpander Folder="valarray__valarray/min" AutoFunc="False" />
@@ -63,7 +53,8 @@
                 <local:FunctionExpander Folder="valarray__valarray/sum" />
                 <local:FunctionExpander Folder="valarray__valarray/swap" />
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/valarray-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/valarray/valarray.html" />
 
         </local:OuterPanel>
     </ScrollViewer>

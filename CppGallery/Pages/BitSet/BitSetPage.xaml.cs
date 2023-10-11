@@ -33,45 +33,5 @@ namespace CppGallery.Pages.BitSet
         {
             this.InitializeComponent();
         }
-
-        private void In_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            FunctionExpander.Execute(sender, sender.Text);
-        }
-
-        private void Out_Loaded(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, (sender as TextBox).Text);
-        }
-
-        private void OpeXORIn1_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeXORIn1.Text, OpeXORIn2.Text });
-        }
-
-        private void OpeXOROut_Loaded(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeXORIn1.Text, OpeXORIn2.Text });
-        }
-
-        private void OpeORIn1_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeORIn1.Text, OpeORIn2.Text });
-        }
-
-        private void OpeOROut_Loaded(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeORIn1.Text, OpeORIn2.Text });
-        }
-
-        private void OpeANDIn1_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeANDIn1.Text, OpeANDIn2.Text });
-        }
-
-        private void OpeANDOut_Loaded(object sender, RoutedEventArgs e)
-        {
-            FunctionExpander.Execute(sender, new string[] { OpeANDIn1.Text, OpeANDIn2.Text });
-        }
     }
 }

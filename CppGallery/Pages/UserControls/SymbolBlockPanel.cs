@@ -11,6 +11,7 @@ namespace CppGallery.Pages.UserControls
 {
     public enum PanelHeader
     {
+        AliasTemplates,
         BaseClass,
         Class,
         Concepts,
@@ -103,6 +104,7 @@ namespace CppGallery.Pages.UserControls
         {
             HeadText = this.Symbol switch
             {
+                PanelHeader.AliasTemplates => "エイリアステンプレート",
                 PanelHeader.BaseClass => "基底クラス",
                 PanelHeader.Class => "クラス",
                 PanelHeader.Concepts => "Concepts",

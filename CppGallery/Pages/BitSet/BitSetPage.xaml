@@ -12,51 +12,27 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="bitset/operatorAND" Icon="Operator">
-                    <local:ResultsPanel Loaded="OpeANDOut_Loaded" >
-                        <local:ControlGrid Message="bs1">
-                            <TextBox x:Name="OpeANDIn1" Text="1101" TextChanging="OpeANDIn1_TextChanging"/>
-                        </local:ControlGrid>
-                        <local:ControlGrid Message="bs2">
-                            <TextBox x:Name="OpeANDIn2" Text="1011001" TextChanging="OpeANDIn1_TextChanging" />
-                        </local:ControlGrid>
-                    </local:ResultsPanel>
+                    <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="bitset/operatorLL" Icon="Operator">
-                    <local:ControlGrid Message="整数を入力">
-                        <TextBox Text="76" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="整数を入力" Text="76" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="bitset/operatorRR" Icon="Operator">
-                    <local:ControlGrid Message="ビットを入力">
-                        <TextBox Text="1101" TextChanging="In_TextChanging" Loaded="Out_Loaded" />
-                    </local:ControlGrid>
+                    <local:TextBoxPane Message="ビットを入力" Text="1101" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="bitset/operatorXOR" Icon="Operator">
-                    <local:ResultsPanel Loaded="OpeXOROut_Loaded">
-                        <local:ControlGrid Message="bs1">
-                            <TextBox x:Name="OpeXORIn1" Text="1101" TextChanging="OpeXORIn1_TextChanging"/>
-                        </local:ControlGrid>
-                        <local:ControlGrid Message="bs2">
-                            <TextBox x:Name="OpeXORIn2" Text="1011001" TextChanging="OpeXORIn1_TextChanging" />
-                        </local:ControlGrid>
-                    </local:ResultsPanel>
+                    <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
                 </local:FunctionExpander>
 
                 <local:FunctionExpander Folder="bitset/operatorOR" Icon="Operator">
-                    <local:ResultsPanel Loaded="OpeOROut_Loaded">
-                        <local:ControlGrid Message="bs1">
-                            <TextBox x:Name="OpeORIn1" Text="1101" TextChanging="OpeORIn1_TextChanging"/>
-                        </local:ControlGrid>
-                        <local:ControlGrid Message="bs2">
-                            <TextBox x:Name="OpeORIn2" Text="1011001" TextChanging="OpeORIn1_TextChanging" />
-                        </local:ControlGrid>
-                    </local:ResultsPanel>
+                    <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
                 </local:FunctionExpander>
             </local:SymbolBlockPanel>
 

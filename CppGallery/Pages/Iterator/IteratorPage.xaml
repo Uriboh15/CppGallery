@@ -12,6 +12,61 @@
         <local:OuterPanel>
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
+            <local:SymbolBlockPanel Symbol="AliasTemplates" >
+                <local:CustomExpander Title="indirect_result_t" Icon="&#xEA86;" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="iterator/iter_common_reference_t" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/iter_const_reference_t" Icon="Object" TargetMinCppVersion="Cpp23" />
+                
+                <local:CustomExpander Title="iter_difference_t" Icon="&#xEA86;" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="iterator/iter_reference_t" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/iter_rvalue_reference_t" Icon="Object" SampleType="None" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/iter_value_t" Icon="Object" TargetMinCppVersion="Cpp20" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Concepts" >
+                <local:FunctionExpander Folder="iterator/bidirectional_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/contiguous_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="disable_sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="incrementable" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_binary_predicate" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_equivalence_relation" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_strict_weak_order" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirect_unary_predicate" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirectly_comparable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/indirectly_copyable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_copyable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_movable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_movable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="indirectly_regular_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="indirectly_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/indirectly_swappable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="mergeable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/permutable" Icon="Object" TargetMinCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="iterator/random_access_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:CustomExpander Title="sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="sortable" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="iterator/weakly_incrementable" Icon="Object" TargetMinCppVersion="Cpp20" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="iterator/advance" />
                 <local:FunctionExpander Folder="iterator/back_inserter" />
@@ -48,42 +103,7 @@
                 <local:FunctionExpander Folder="iterator/ranges__prev" Icon="Object" AutoFunc="False" TargetMinCppVersion="Cpp20" />
             </local:SymbolBlockPanel>
             
-            <local:SymbolBlockPanel Symbol="Concepts" >
-                <local:FunctionExpander Folder="iterator/bidirectional_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/contiguous_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                
-                <local:CustomExpander Title="disable_sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
-
-                <local:FunctionExpander Folder="iterator/forward_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-
-                <local:CustomExpander Title="incrementable" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirect_binary_predicate" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirect_equivalence_relation" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirect_strict_weak_order" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirect_unary_predicate" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirectly_comparable" Icon="&#xEA86;" IsEnabled="False" />
-
-                <local:FunctionExpander Folder="iterator/indirectly_copyable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/indirectly_copyable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/indirectly_movable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/indirectly_movable_storable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/indirectly_readable" Icon="Object" TargetMinCppVersion="Cpp20" />
-
-                <local:CustomExpander Title="indirectly_regular_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="indirectly_unary_invocable" Icon="&#xEA86;" IsEnabled="False" />
-
-                <local:FunctionExpander Folder="iterator/indirectly_swappable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/indirectly_writable" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/input_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/input_or_output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/output_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-                <local:FunctionExpander Folder="iterator/random_access_iterator" Icon="Object" TargetMinCppVersion="Cpp20" />
-
-                <local:CustomExpander Title="sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
-                <local:CustomExpander Title="sized_sentinel_for" Icon="&#xEA86;" IsEnabled="False" />
-
-                <local:FunctionExpander Folder="iterator/weakly_incrementable" Icon="Object" TargetMinCppVersion="Cpp20" />
-            </local:SymbolBlockPanel>
+            
 
             <local:SymbolBlockPanel Symbol="Class" >
                 

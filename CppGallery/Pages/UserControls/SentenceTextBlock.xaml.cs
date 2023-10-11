@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Documents;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
@@ -28,6 +29,8 @@ namespace CppGallery.Pages.UserControls
             get { return Te.Text; }
             set { Te.Text = value; }
         }
+
+        public InlineCollection Inlines => Te.Inlines;
 
         public SentenceTextBlock()
         {

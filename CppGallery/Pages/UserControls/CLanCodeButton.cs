@@ -25,6 +25,8 @@ namespace CppGallery.Pages.UserControls
         private SolidColorBrush local;
         private SolidColorBrush global;
 
+        private string Mae = string.Empty;
+
         private static List<SolidColorBrush> ColorsBlack { get; } = new List<SolidColorBrush>()
         {
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x56, 0x9C, 0xD6)),
@@ -66,6 +68,7 @@ namespace CppGallery.Pages.UserControls
         protected List<List<string>> KeyStatic { get; } = new List<List<string>>();
         protected List<List<string>> KeyClassTemplate { get; } = new List<List<string>>();
         protected List<List<string>> KeyEnum { get; } = new List<List<string>>();
+        protected List<List<string>> KeyConcept { get; } = new List<List<string>>();
 
         private List<string> AddedDefine { get; } = new List<string>();
         private List<string> AddedGreen { get; } = new List<string>();
@@ -84,7 +87,7 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(AutoFuncProperty, value); }
         }
 
-        public CLanCodeButton() : base()
+        public CLanCodeButton()
         {
             ChangeTheme(App.SourceCodeTheme);
             KeyDefine.Add(AddedDefine);
@@ -180,6 +183,16 @@ namespace CppGallery.Pages.UserControls
                 return true;
 
             }
+            if (Contains(KeyConcept, tmp))
+            {
+                if (Code.Inlines.Count > 2 && (Code.Inlines[^2] as Run).Text != "requires")
+                {
+                    Mae = "Concept";
+                }
+                run.Foreground = green;
+                return true;
+
+            }
             if (Contains(KeyClassTemplate, tmp))
             {
                 if(i + 1 < st.Length)
@@ -238,7 +251,7 @@ namespace CppGallery.Pages.UserControls
 
 
             StreamReader sr = new StreamReader(Path);
-            string mae = string.Empty;
+            
             while (sr.EndOfStream == false)
             {
                 int i = 0;
@@ -247,33 +260,33 @@ namespace CppGallery.Pages.UserControls
                 {
                     Run run = new Run();
                     string tmp = string.Empty;
-                    if (mae == "include")
+                    if (Mae == "include")
                     {
                         for (; i < st.Length; ++i)
                         {
                             tmp += st[i];
                         }
-                        mae = string.Empty;
+                        Mae = string.Empty;
                         run.Text = tmp;
                         run.Foreground = tyairo;
                         Code.Inlines.Add(run);
                         ++i;
                         continue;
                     }
-                    else if (mae == "define")
+                    else if (Mae == "define")
                     {
                         for (; i < st.Length && Alpha(st[i]); ++i)
                         {
                             tmp += st[i];
                         }
-                        mae = string.Empty;
+                        Mae = string.Empty;
                         AddedDefine.Add(tmp);
                         run.Text = tmp;
                         run.Foreground = defined;
                         Code.Inlines.Add(run);
                         continue;
                     }
-                    else if (mae == "ifdef")
+                    else if (Mae == "ifdef")
                     {
                         for (; i < st.Length && Alpha(st[i]); ++i)
                         {
@@ -284,24 +297,24 @@ namespace CppGallery.Pages.UserControls
                             run.Foreground = defined;
                         }
                         run.Text = tmp;
-                        mae = string.Empty;
+                        Mae = string.Empty;
                         Code.Inlines.Add(run);
                         continue;
                     }
-                    else if (mae == "pragma")
+                    else if (Mae == "pragma")
                     {
                         for (; i < st.Length; ++i)
                         {
                             tmp += st[i];
                         }
-                        mae = string.Empty;
+                        Mae = string.Empty;
                         run.Text = tmp;
                         run.Foreground = gray;
                         Code.Inlines.Add(run);
                         ++i;
                         continue;
                     }
-                    else if (mae == "comment")
+                    else if (Mae == "comment")
                     {
                         for (; !tmp.Contains("*/") && i < st.Length; ++i)
                         {
@@ -309,7 +322,7 @@ namespace CppGallery.Pages.UserControls
                         }
                         if (tmp.Contains("*/"))
                         {
-                            mae = string.Empty;
+                            Mae = string.Empty;
                         }
                         run.Foreground = comment;
                         run.Text = tmp;
@@ -332,26 +345,26 @@ namespace CppGallery.Pages.UserControls
                                 run.Foreground = gray;
                                 if (tmp == "#include ")
                                 {
-                                    mae = "include";
+                                    Mae = "include";
                                 }
                                 else if (tmp == "#pragma ")
                                 {
-                                    mae = "pragma";
+                                    Mae = "pragma";
                                 }
                                 else if (tmp == "#define ")
                                 {
-                                    mae = "define";
+                                    Mae = "define";
                                 }
                                 else if (tmp == "#ifdef " || tmp == "#ifndef ")
                                 {
-                                    mae = "ifdef";
+                                    Mae = "ifdef";
                                 }
 
                             }
                             else if (st[i] == '{')
                             {
                                 tmp += '{';
-                                mae = string.Empty;
+                                Mae = string.Empty;
                             }
                             else if (st[i] == '/')
                             {
@@ -378,7 +391,7 @@ namespace CppGallery.Pages.UserControls
                                         }
                                         else
                                         {
-                                            mae = "comment";
+                                            Mae = "comment";
                                         }
 
                                         run.Foreground = comment;
@@ -428,7 +441,7 @@ namespace CppGallery.Pages.UserControls
                                 {
                                     if (st[i + 1] == ':')
                                     {
-                                        mae = "::";
+                                        Mae = "::";
                                         tmp += "::";
                                         ++i;
                                         break;
@@ -446,14 +459,14 @@ namespace CppGallery.Pages.UserControls
                                     }
                                     else if (st[i + 1] == '>')
                                     {
-                                        mae = ".";
+                                        Mae = ".";
                                     }
                                 }
                                 tmp += '-';
                             }
                             else if (st[i] == ';')
                             {
-                                mae = string.Empty;
+                                Mae = string.Empty;
                                 tmp += ";";
                             }
                             else
@@ -469,16 +482,16 @@ namespace CppGallery.Pages.UserControls
                             if (Contains(KeyBlue, tmp))
                             {
                                 run.Foreground = blue;
-                                mae = string.Empty;
+                                Mae = string.Empty;
                                 break;
                             }
 
-                            if (mae == "." || mae == "::")
+                            if (Mae == "." || Mae == "::")
                             {
                                 if (i + 1 < st.Length)
                                 {
 
-                                    if (mae == "::")
+                                    if (Mae == "::")
                                     {
                                         if (Contains(KeyGreen, tmp))
                                         {
@@ -490,14 +503,14 @@ namespace CppGallery.Pages.UserControls
                                             {
                                                 run.Foreground = green;
                                             }
-                                            mae = string.Empty;
+                                            Mae = string.Empty;
                                             break;
                                         }
                                         else if ((Code.Inlines[^2] as Run).Foreground == green)
                                         {
                                             if (st[i + 1] == '(' || st[i + 1] == '<')
                                             {
-                                                mae = string.Empty;
+                                                Mae = string.Empty;
                                                 run.Foreground = yellow;
                                                 break;
                                             }
@@ -511,21 +524,21 @@ namespace CppGallery.Pages.UserControls
                                                 {
                                                     run.Foreground = local;
                                                 }
-                                                mae = string.Empty;
+                                                Mae = string.Empty;
                                                 
                                                 break;
                                             }
                                         }
                                         else
                                         {
-                                            mae = string.Empty;
+                                            Mae = string.Empty;
                                             if((Code.Inlines[^2] as Run).Foreground == global)
                                             {
                                                 if (SetColor(run, tmp, st, i)) break;
                                             }
                                             if (st[i + 1] == '(')
                                             {
-                                                mae = string.Empty;
+                                                Mae = string.Empty;
                                                 run.Foreground = this.AutoFunc ? yellow : local;
                                                 break;
                                             }
@@ -544,12 +557,12 @@ namespace CppGallery.Pages.UserControls
                                     }
                                     if (st[i + 1] == '(' || st[i + 1] == '<')
                                     {
-                                        mae = string.Empty;
+                                        Mae = string.Empty;
                                         run.Foreground = yellow;
                                         break;
                                     }
                                     run.Foreground = local;
-                                    mae = string.Empty;
+                                    Mae = string.Empty;
                                     break;
 
 
@@ -564,7 +577,7 @@ namespace CppGallery.Pages.UserControls
                                     {
                                         run.Foreground = local;
                                     }
-                                    mae = string.Empty;
+                                    Mae = string.Empty;
 
                                     break;
                                 }
@@ -572,27 +585,48 @@ namespace CppGallery.Pages.UserControls
 
                             if (SetColor(run, tmp, st, i)) break;
 
-                            if (Code.Inlines.Count > 2 && Code.Inlines[^2].Foreground == blue)
+                            if (Code.Inlines.Count >= 2)
                             {
-                                string tmp1 = (Code.Inlines[^2] as Run).Text;
+                                if(Code.Inlines[^2].Foreground == blue)
+                                {
+                                    string tmp1 = (Code.Inlines[^2] as Run).Text;
 
-                                if(tmp1 == "typename" || tmp1 == "class")
+                                    if (tmp1 == "typename" || tmp1 == "class" || tmp1 == "struct" || tmp1 == "using" || tmp == "enum" || tmp == "union")
+                                    {
+                                        AddedGreen.Add(tmp);
+
+                                        run.Foreground = green;
+                                        break;
+                                    }
+                                }
+                                if(Code.Inlines[^2].Foreground == green && Contains(KeyConcept,(Code.Inlines[^2] as Run).Text))
                                 {
                                     AddedGreen.Add(tmp);
 
                                     run.Foreground = green;
                                     break;
                                 }
+                            }
 
+                            if(Mae == "Concept")
+                            {
+                                run.Foreground = green;
+                                AddedGreen.Add(tmp);
+                                if ((Code.Inlines[^1] as Run).Text == " ")
+                                {
+                                    Mae = string.Empty;
+                                }
+                                
+                                break;
                             }
 
                             if (!AutoFunc)
                             {
                                 if (Contains(KeyFunc, tmp))
                                 {
-                                    if (mae == "::")
+                                    if (Mae == "::")
                                     {
-                                        mae = string.Empty;
+                                        Mae = string.Empty;
                                         if (Contains(KeyStatic, tmp))
                                         {
                                             break;
@@ -617,7 +651,7 @@ namespace CppGallery.Pages.UserControls
                                     if (st[i + 1] == '(' || st[i + 1] == '<')
                                     {
                                         run.Foreground = yellow;
-                                        mae = string.Empty;
+                                        Mae = string.Empty;
                                         break;
                                     }
                                 }
@@ -647,7 +681,7 @@ namespace CppGallery.Pages.UserControls
                                         break;
                                     }
                                 }
-                                mae = ".";
+                                Mae = ".";
                                 break;
                             }
                             if (i + 1 < st.Length)
@@ -664,7 +698,7 @@ namespace CppGallery.Pages.UserControls
                                     }
                                     if (!IsDigit(tmp[0]))
                                     {
-                                        if (mae == ".")
+                                        if (Mae == ".")
                                         {
                                             run.Foreground = local;
                                             break;

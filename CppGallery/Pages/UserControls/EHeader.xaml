@@ -19,7 +19,7 @@
         <FontIcon x:Name="FIcon" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}" HorizontalAlignment="Left" FontSize="24" />
         <StackPanel Grid.Column="1">
             <TextBlock x:Name="TitleTextBlock" />
-            <TextBlock Text="{x:Bind Sentence}" FontSize="12" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" />
+            <TextBlock x:Name="SentenceTextBlock" Text="{x:Bind Sentence}" FontSize="12" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" />
         </StackPanel>
     </Grid>
 </UserControl>

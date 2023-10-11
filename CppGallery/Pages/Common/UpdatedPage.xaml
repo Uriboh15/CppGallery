@@ -14,8 +14,50 @@
         <TextBlock x:Name="ErrorText" Text="更新された項目はありません" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
-                
-                
+
+                <local:BlockPanel Header="any クラス" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="any__any/operatorE" Icon="Operator" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;array>" >
+                    <local:FunctionExpander Folder="array/operatorEE" Icon="Operator"  />
+                    <local:FunctionExpander Folder="array/operatorNE" Icon="Operator"/>
+                    <local:FunctionExpander Folder="array/operatorL" Icon="Operator"/>
+                    <local:FunctionExpander Folder="array/operatorLE" Icon="Operator"/>
+                    <local:FunctionExpander Folder="array/operatorR" Icon="Operator" />
+                    <local:FunctionExpander Folder="array/operatorRE" Icon="Operator" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="array クラス" >
+                    <local:FunctionExpander Folder="array__array/operatorE" Icon="Operator" />
+                    <local:FunctionExpander Folder="array__array/operatorKAKKO" Icon="Operator" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;bitset>" >
+                    <local:FunctionExpander Folder="bitset/operatorAND" Icon="Operator">
+                        <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="bitset/operatorLL" Icon="Operator">
+                        <local:TextBoxPane Message="整数を入力" Text="76" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="bitset/operatorRR" Icon="Operator">
+                        <local:TextBoxPane Message="ビットを入力" Text="1101" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="bitset/operatorXOR" Icon="Operator">
+                        <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
+                    </local:FunctionExpander>
+
+                    <local:FunctionExpander Folder="bitset/operatorOR" Icon="Operator">
+                        <local:MultiTextBoxPane Message1="bs1" Text1="1101" Message2="bs2" Text2="1011001" />
+                    </local:FunctionExpander>
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="&lt;type_traits>" >
+                    <local:FunctionExpander Folder="type_traits/is_reference" Icon="Object" />
+                </local:BlockPanel>
 
             </local:OuterPanel>
         </ScrollViewer>

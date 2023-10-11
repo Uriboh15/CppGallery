@@ -131,6 +131,8 @@ namespace CppGallery.Pages.UserControls
         public CppVersion TargetMinCppVersion { get; set; } = UserAPI.MinCppVersion;
         public CVersion TargetMinCVersion { get; set; } = UserAPI.MinCVersion;
 
+        public CppVersion TargetDeletedCppVersion { get; set; } = UserAPI.MaxCppVersion + 1;
+        public CVersion TargetDeletedCVersion { get; set; } = UserAPI.MaxCVersion + 1;
 
         public string Text
         {
@@ -195,6 +197,19 @@ namespace CppGallery.Pages.UserControls
             return infoBar;
         }
 
+        private static InfoBar GetVersionErrorDeletedInfoBar(string language, int deleteVersion = -1)
+        {
+            var infoBar = new InfoBar
+            {
+                IsClosable = false,
+                IsOpen = true,
+                Severity = InfoBarSeverity.Error,
+                Message = $"この項目は {language}{deleteVersion} で削除されました",
+            };
+
+            return infoBar;
+        }
+
         private void FunctionExpander_Expanding(Expander sender, ExpanderExpandingEventArgs args)
         {
             if (!IsContentLoaded)
@@ -207,16 +222,19 @@ namespace CppGallery.Pages.UserControls
                         if (App.UseCppInCSample)
                         {
                             if ((int)App.CppVersion < (int)TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCVersion);
+                            else if((int)App.CppVersion >= (int)TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
                         }
                         else
                         {
                             if(App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
+                            else if(App.CVersion >= TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
                         }
 
                         break;
 
                     case CodeLanguage.Cpp:
                         if (App.CppVersion < TargetMinCppVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCppVersion);
+                        else if (App.CppVersion >= TargetDeletedCppVersion) infoBar = GetVersionErrorDeletedInfoBar("C++", (int)TargetDeletedCppVersion);
                         break;
                 }
 

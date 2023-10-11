@@ -27,29 +27,42 @@
                 <local:FunctionExpander Folder="type_traits/is_const" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_enum" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_floating_point" Icon="Object" />
+                
                 <local:CustomExpander Title="is_function 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                
                 <local:FunctionExpander Folder="type_traits/is_fundamental" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_integral" Icon="Object" />
-                <local:CustomExpander Title="is_lvalue_reference 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_lvalue_reference" Icon="Object" />
+                
                 <local:CustomExpander Title="is_member_function_pointer 構造体" Icon="&#xEA86;" IsEnabled="False" />
 
                 <local:CustomExpander Title="is_member_object_pointer 構造体" Icon="&#xEA86;" IsEnabled="False"  />
                 <local:CustomExpander Title="is_member_pointer 構造体" Icon="&#xEA86;" IsEnabled="False" />
+
+                <local:FunctionExpander Folder="type_traits/is_literal_type" Icon="Object" TargetDeletedCppVersion="Cpp20" />
+                <local:FunctionExpander Folder="type_traits/is_lvalue_reference" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_null_pointer" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_object" Icon="Object" />
-                
+
+                <local:CustomExpander Title="is_pod 構造体" Icon="&#xEA86;" IsEnabled="False" />
+
                 <local:FunctionExpander Folder="type_traits/is_pointer" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_reference" Icon="Object" />
-                <local:CustomExpander Title="is_rvalue_reference 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                <local:FunctionExpander Folder="type_traits/is_rvalue_reference" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_scalar" Icon="Object" />
+                
                 <local:CustomExpander Title="is_standard_layout 構造体" Icon="&#xEA86;" IsEnabled="False" />
+                
                 <local:FunctionExpander Folder="type_traits/is_trivial" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_trivially_copyable" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_union" Icon="Object" />
                 <local:FunctionExpander Folder="type_traits/is_void" Icon="Object" />
+                
                 <local:CustomExpander Title="is_volatile 構造体" Icon="&#xEA86;" IsEnabled="False" />
                 
             </local:BlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/type-traits?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/type_traits.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

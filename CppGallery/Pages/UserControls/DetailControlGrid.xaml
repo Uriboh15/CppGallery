@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="InPanel" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" >
             <TextBlock x:Name="MesText" Text="{x:Bind Message, Mode=OneWay}" />
-            <TextBlock Text="{x:Bind Detail}" FontSize="12" Foreground="#888888" />
+            <local:SentenceTextBlock Text="{x:Bind Detail}" />
         </StackPanel>
         
         <UserControl x:Name="ControlP" Content="{x:Bind Content, Mode=OneWay}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" />

@@ -168,7 +168,6 @@ namespace CppGallery.Pages.UserControls
             "coshf",
             "coshl",
             "cosl",
-            "count",
             "countl_one",
             "countl_zero",
             "countr_one",

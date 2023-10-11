@@ -12,6 +12,8 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
             <local:SymbolBlockPanel Symbol="Operator">
                 <local:FunctionExpander Folder="array/operatorEE" Icon="Operator"  />
                 <local:FunctionExpander Folder="array/operatorNE" Icon="Operator"/>
@@ -19,6 +21,7 @@
                 <local:FunctionExpander Folder="array/operatorLE" Icon="Operator"/>
                 <local:FunctionExpander Folder="array/operatorR" Icon="Operator" />
                 <local:FunctionExpander Folder="array/operatorRE" Icon="Operator" />
+                <local:FunctionExpander Folder="array/operatorThreeWay" Icon="Operator" TargetMinCppVersion="Cpp20" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Function">

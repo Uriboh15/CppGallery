@@ -12,6 +12,34 @@
         <local:OuterPanel TargetMinCppVersion="Cpp20" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
+            <local:SymbolBlockPanel Symbol="AliasTemplates" >
+                <local:FunctionExpander Folder="ranges/const_iterator_t" Icon="Object" TargetMinCppVersion="Cpp23" />
+                <local:FunctionExpander Folder="ranges/const_sentinel_t" Icon="Object" TargetMinCppVersion="Cpp23" />
+
+                <local:CustomExpander Title="ranges::range_difference_t" Icon="&#xEA86;" IsEnabled="False" />
+                
+                <local:FunctionExpander Folder="ranges/iterator_t" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/range_const_reference_t" Icon="Object" TargetMinCppVersion="Cpp23" />
+                <local:FunctionExpander Folder="ranges/range_reference_t" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/range_rvalue_reference_t" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/range_size_t" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/range_value_t" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/sentinel_t" Icon="Object" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Concepts" >
+                <local:FunctionExpander Folder="ranges/bidirectional_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/borrowed_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/contiguous_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/forward_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/input_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/output_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/random_access_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/sized_range" Icon="Object" />
+                <local:FunctionExpander Folder="ranges/view" Icon="Object" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="FunctionObject" >
                 <local:FunctionExpander Folder="ranges/begin" Icon="Object" AutoFunc="False" />
                 <local:FunctionExpander Folder="ranges/cbegin" Icon="Object" AutoFunc="False" />

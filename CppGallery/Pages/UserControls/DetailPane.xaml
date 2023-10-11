@@ -12,7 +12,7 @@
     <Grid x:Name="InPanel" Style="{StaticResource EGrid}">
         <StackPanel VerticalAlignment="Center" >
             <TextBlock Text="{x:Bind Title, Mode=OneWay}" />
-            <TextBlock Text="{x:Bind Detail, Mode=OneWay}"  FontSize="12" Foreground="#888888" />
+            <local:SentenceTextBlock Text="{x:Bind Detail, Mode=OneWay}" />
         </StackPanel>
     </Grid>
 </UserControl>

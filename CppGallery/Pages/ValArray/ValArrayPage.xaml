@@ -93,7 +93,8 @@
             <local:SymbolBlockPanel Symbol="Specialization" >
                 <local:ItemGrid Title="valarray&lt;bool> クラス" Sentence="valarray を bool に特殊化したクラス"/>
             </local:SymbolBlockPanel>
-            
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/valarray?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/valarray.html" />
 
         </local:OuterPanel>
     </ScrollViewer>
