@@ -1044,6 +1044,95 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
 
+            <NavigationViewItemSeparator/>
+            <NavigationViewItemHeader Content="C++/WinRT Library" FontSize="18"/>
+
+            <NavigationViewItem x:Name="Baseh" Content="&lt;winrt/base.h>" Tag="W02base">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE950;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="IInspectable" Tag="W02IInspectable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IUnknown" Tag="W02IUnknown0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUIText" Content="&lt;winrt/Windows.UI.Text.h>" Tag="W03WindowsUIText">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8E9;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="FontWeight" Tag="W03FontWeight0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="FontWeights" Tag="W03FontWeights0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUIXaml" Content="&lt;winrt/Windows.UI.Xaml.h>" Tag="W01WindowsUIXaml">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE89A;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="DependencyObject" Tag="W01DependencyObject0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="UIElement" Tag="W01UIElement0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUIXamlControls" Content="&lt;winrt/Windows.UI.Xaml.Controls.h>" Tag="W00WindowsUIXamlControls">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE90C;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="ContentDialog" Tag="W00ContentDialog0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
         </NavigationView.MenuItems>
 
         <NavigationView.AutoSuggestBox>

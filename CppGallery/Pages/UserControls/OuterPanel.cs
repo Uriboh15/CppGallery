@@ -70,6 +70,15 @@ namespace CppGallery.Pages.UserControls
                 }
             }
 
+            //C++/WInRTならC++17以降が必要
+            if(this.HeaderType == HeaderType.WinRT)
+            {
+                if(this.TargetMinCppVersion < CppVersion.Cpp17)
+                {
+                    this.TargetMinCppVersion = CppVersion.Cpp17;
+                }
+            }
+
             //言語バージョンの確認
             if (HeaderLanguage == CodeLanguage.C)
             {

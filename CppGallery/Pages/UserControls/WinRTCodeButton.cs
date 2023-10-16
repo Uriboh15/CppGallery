@@ -8,74 +8,83 @@ namespace CppGallery.Pages.UserControls
 {
     public class WinRTCodeButton : CodeButton
     {
-        public WinRTCodeButton() : base()
+        public WinRTCodeButton()
         {
             Lan = "C++/WinRT";
             KeyGreen.Add(KeywordsGreen);
             KeyFunc.Add(KeywordsYellow);
-            KeyDefine.Add(KeywordsDefine);
+            KeyPurple.Add(KeywordsPurple);
             KeyGlobal.Add(KeywordsGlobal);
+            KeyEnum.Add(KeywordsEnum);
         }
 
-        private static List<string> KeywordsGreen = new List<string>()
+        private static List<string> KeywordsGreen { get; } = new List<string>()
         {
-            "BOOL",
+            "Brush",
+            "ColorChangedEventArgs",
             "ColorHelper",
-            "DWORD",
-            "DwmSetWindowAttributePtr",
-            "ElementTheme",
+            "ColorPicker",
+            "ComboBox",
+            "ContentDialog",
+            "ContentDialogOpenedEventArgs",
+            "CoreDispatcher",
+            "DependencyObject",
+            "DependencyProperty",
+            "FlyoutBase",
+            "FontWeight",
+            "FontWeights",
             "FrameworkElement",
-            "HMODULE",
-            "HRESULT",
+            
             "hstring",
-            "HWND",
+            "IAsyncAction",
             "IInspectable",
-            "ItemGrid",
-            "ItemGridT",
+            "IUnknown",
             "IWindowNative",
-            "LPCVOID",
+            "MainPage",
             "MainWindow",
-            "NTSTATUS",
+            "RoutedEvent",
             "RoutedEventArgs",
             "SelectionChangedEventArgs",
+            "SolidColorBrush",
+            "StackPanel",
+            "TextBlock",
+        };
+
+        private static List<string> KeywordsEnum { get; } = new List<string>()
+        {
+            "ContentDialogButton",
+            "ElementTheme",
             "TitleBarHeightOption",
         };
 
-        private static List<string> KeywordsYellow = new List<string>()
+        private static List<string> KeywordsYellow { get; } = new List<string>()
         {
             "check_bool",
-                "ContentFrame",
-                "ContentFrame_ActualThemeChanged",
-                "ContentFrame_Loaded",
-                "GetProcAddress",
-                "get_WindowHandle",
-                "InitializeComponent",
-                "SetTitleBar",
-                "try_as",
-                "unbox_value",
-                "LPCVOID",
+            "GetProcAddress",
+            "get_WindowHandle",
+            "InitializeComponent",
+            "SetTitleBar",
+            "try_as",
+            "unbox_value",
         };
 
-        private static List<string> KeywordsDefine = new List<string>()
+        private static List<string> KeywordsPurple { get; } = new List<string>()
         {
-            "DWMWA_USE_IMMERSIVE_DARK_MODE",
-                "FALSE",
-                "LoadLibrary",
-                "TRUE",
-                "WINAPI",
-                "_In_reads_bytes_",
+            "co_await",
         };
 
-        private static List<string> KeywordsGlobal = new List<string>()
+        private static List<string> KeywordsGlobal { get; } = new List<string>()
         {
+            "Controls",
             "Foundation",
             "implementation",
-            "factory_implementation",
-                "Microsoft",
-                "UI",
-                "Windows",
-                "winrt",
-                "Xaml",
+            "Media",
+            "Microsoft",
+            "Text",
+            "UI",
+            "Windows",
+            "winrt",
+            "Xaml",
         };
     }
 }

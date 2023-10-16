@@ -15,8 +15,6 @@ using Windows.Services.Maps;
 
 namespace CppGallery.Pages.UserControls
 {
-    
-
     public enum CodeLanguage
     {
         C,
@@ -222,12 +220,12 @@ namespace CppGallery.Pages.UserControls
                         if (App.UseCppInCSample)
                         {
                             if ((int)App.CppVersion < (int)TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCVersion);
-                            else if((int)App.CppVersion >= (int)TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
+                            else if ((int)App.CppVersion >= (int)TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
                         }
                         else
                         {
-                            if(App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
-                            else if(App.CVersion >= TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
+                            if (App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
+                            else if (App.CVersion >= TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
                         }
 
                         break;
@@ -238,7 +236,7 @@ namespace CppGallery.Pages.UserControls
                         break;
                 }
 
-                if(infoBar != null)
+                if (infoBar != null)
                 {
                     base.Content = infoBar;
                     IsContentLoaded = true;
@@ -336,7 +334,7 @@ namespace CppGallery.Pages.UserControls
 
                             panel1.Children.Add(grid);
 
-                            
+
                             OutPut = new OutPuts { Text = this.Text };
                             if (this.Content == null)
                             {
@@ -386,7 +384,7 @@ namespace CppGallery.Pages.UserControls
             }
 
             //関数定義ファイルがあればそれを表示
-            if(File.Exists(Data.DefaultSamplePath + Folder + DeclName))
+            if (File.Exists(Data.DefaultSamplePath + Folder + DeclName))
             {
                 switch (this.CodeLanguage)
                 {
@@ -409,8 +407,8 @@ namespace CppGallery.Pages.UserControls
                 }
             }
 
-            
-            
+
+
             //空回し
             for (i = 2; i < Lines.Length; ++i)
             {
@@ -433,7 +431,7 @@ namespace CppGallery.Pages.UserControls
             title2.FontWeight = new Windows.UI.Text.FontWeight(700);
             title2.FontSize = TitleSize;
             title2.Text = Prm;
-            
+
 
             for (; i < Lines.Length; ++i)
             {
@@ -442,16 +440,16 @@ namespace CppGallery.Pages.UserControls
                     ++i;
                     break;
                 }
-                string[] line = Lines[i].Split(": "); 
+                string[] line = Lines[i].Split(": ");
 
-                if(line.Length == 2)
+                if (line.Length == 2)
                 {
                     resultPanel2.Children.Add(new DetailPane { Title = line[0], Detail = line[1] });
                 }
 
             }
 
-            if(resultPanel2.Children.Count == 1)
+            if (resultPanel2.Children.Count == 1)
             {
                 resultPanel2.Children.Add(new TextBlock { Text = NoPrm });
             }
@@ -488,7 +486,10 @@ namespace CppGallery.Pages.UserControls
 
         private void SetHeader()
         {
-
+            if (this.Sentence == "aaa")
+            {
+                this.IsEnabled = false;
+            }
             this.Header = new EHeader { Title = this.Title, Sentence = this.Sentence, Icon = UserAPI.GetIconSymbol(this.Icon) };
 
         }
@@ -548,9 +549,10 @@ namespace CppGallery.Pages.UserControls
 
             }
 
-            StreamReader sr = new StreamReader(Data.DefaultSamplePath + Folder + "/Def.txt");
-            Lines = sr.ReadToEnd().Split(Environment.NewLine);
-            sr.Close();
+            using (StreamReader sr = new StreamReader(Data.DefaultSamplePath + Folder + "/Def.txt"))
+            {
+                Lines = sr.ReadToEnd().Split(Environment.NewLine);
+            }
             Title = Lines[0];
             Sentence = Lines[1];
 
@@ -578,9 +580,9 @@ namespace CppGallery.Pages.UserControls
 
         private static string SplitByFront(string text, char separator)
         {
-            int i = 0;
+            int i = text.Length - 1;
 
-            for (; i < text.Length; ++i)
+            for (; i >= 0; --i)
             {
                 if (text[i] == separator)
                 {
@@ -593,7 +595,7 @@ namespace CppGallery.Pages.UserControls
 
         private void ExeButton_Click(object sender, RoutedEventArgs e)
         {
-            if(this.SampleType == SampleType.GUIApp)
+            if (this.SampleType == SampleType.GUIApp)
             {
                 ProcessHost.WinStart(GCCPath);
                 return;
@@ -619,7 +621,7 @@ namespace CppGallery.Pages.UserControls
 
             var result = error ? string.Empty : sr.ReadToEnd();
 
-            if(result.Length == 0)
+            if (result.Length == 0)
             {
                 sr?.Close();
                 functionExpander.Text = errorMessage;
@@ -731,5 +733,4 @@ namespace CppGallery.Pages.UserControls
             Working = false;
         }
     }
-
 }

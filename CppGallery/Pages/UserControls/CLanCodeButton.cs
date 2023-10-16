@@ -591,7 +591,7 @@ namespace CppGallery.Pages.UserControls
                                 {
                                     string tmp1 = (Code.Inlines[^2] as Run).Text;
 
-                                    if (tmp1 == "typename" || tmp1 == "class" || tmp1 == "struct" || tmp1 == "using" || tmp == "enum" || tmp == "union")
+                                    if (tmp1 == "typename" || tmp1 == "class" || tmp1 == "struct" || tmp1 == "using" || tmp1 == "enum" || tmp1 == "union")
                                     {
                                         AddedGreen.Add(tmp);
 

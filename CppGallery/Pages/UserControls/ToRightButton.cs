@@ -21,7 +21,7 @@ namespace CppGallery.Pages.UserControls
             "Title",　// Max という名前の……
             typeof(string),　// int 型の CLR プロパティを……
             typeof(ToRightButton), // クラスに登録するやで―
-            new PropertyMetadata("aaa"));
+            new PropertyMetadata("aaa", new PropertyChangedCallback(OnTitleChanged)));
 
         public static readonly DependencyProperty SentenceProperty = DependencyProperty.Register(
             "Sentence",　// Max という名前の……
@@ -99,6 +99,18 @@ namespace CppGallery.Pages.UserControls
         private static NavigationTransitionInfo ToRightNavigateInfo { get; } = new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight };
         private static NavigationTransitionInfo DrillInNavigateInfo { get; } = new DrillInNavigationTransitionInfo();
         private NavigationTransitionInfo CurrentNavigateInfo { get; set; }
+
+        //https://qiita.com/tricogimmick/items/62cd9f5deca365a83858
+        // 3. 依存プロパティが変更されたとき呼ばれるコールバック関数の定義
+        private static void OnTitleChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            // オブジェクトを取得して処理する
+            ToRightButton ctrl = obj as ToRightButton;
+            if (ctrl != null)
+            {
+                ctrl.Title = ctrl.Title.Replace("::", " : : ");
+            }
+        }
 
         public ToRightButton()
         {

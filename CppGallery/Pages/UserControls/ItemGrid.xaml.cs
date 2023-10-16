@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -28,7 +29,7 @@ namespace CppGallery.Pages.UserControls
             "Title",　// Max という名前の……
             typeof(string),　// int 型の CLR プロパティを……
             typeof(ItemGrid), // クラスに登録するやで―
-            new PropertyMetadata(string.Empty));
+            new PropertyMetadata(string.Empty, new PropertyChangedCallback(OnTitleChanged)));
 
         public static readonly DependencyProperty SentenceProperty = DependencyProperty.Register(
             "Sentence",　// Max という名前の……
@@ -93,6 +94,18 @@ namespace CppGallery.Pages.UserControls
             if (ctrl != null)
             {
                 ctrl.FIcon.Glyph = UserAPI.GetIconSymbol(ctrl.Icon);
+            }
+        }
+
+        //https://qiita.com/tricogimmick/items/62cd9f5deca365a83858
+        // 3. 依存プロパティが変更されたとき呼ばれるコールバック関数の定義
+        private static void OnTitleChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            // オブジェクトを取得して処理する
+            ItemGrid ctrl = obj as ItemGrid;
+            if (ctrl != null)
+            {
+                ctrl.Title = ctrl.Title.Replace("::", " : : ");
             }
         }
 

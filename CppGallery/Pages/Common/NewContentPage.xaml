@@ -15,60 +15,90 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                <local:BlockPanel Header="&lt;Algorithm>" >
-                    <local:FunctionExpander Folder="algorithm/ranges__count" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__count_if" TargetMinCppVersion="Cpp20" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__ends_with" TargetMinCppVersion="Cpp23" Icon="Object" AutoFunc="False" />
-                    <local:FunctionExpander Folder="algorithm/ranges__starts_with" TargetMinCppVersion="Cpp23" Icon="Object" AutoFunc="False" />
+                <local:BlockPanel Header="ヘッダー" >
+                    <local:ToRightButton Style="{StaticResource WinRTBase}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControls}" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;array>" >
-                    <local:FunctionExpander Folder="array/operatorThreeWay" Icon="Operator" TargetMinCppVersion="Cpp20" />
+                <local:SymbolBlockPanel Symbol="Class" >
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIUnknown}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontWeight}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontWeights}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDependencyObject}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlUIElement}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControlsContentDialog}" />
+                </local:SymbolBlockPanel>
+
+                <local:BlockPanel Header="ContentDialog" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ContentDialog" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualHeight" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualTheme" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualWidth" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/Background" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;ConsoleApi.h>" >
-                    <local:FunctionExpander Folder="ConsoleApi/FreeConsole" SampleType="GUIApp" CodeLanguage="CppWin32"  />
+                <local:BlockPanel Header="DependencyObject" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/DependencyObject" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/Dispatcher" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ClearValue" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetValue" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/SetValue" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;iterator>" >
-                    <local:FunctionExpander Folder="iterator/iter_common_reference_t" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/iter_const_reference_t" Icon="Object" TargetMinCppVersion="Cpp23" />
-                    <local:FunctionExpander Folder="iterator/iter_reference_t" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/iter_rvalue_reference_t" Icon="Object" SampleType="None" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/iter_value_t" Icon="Object" TargetMinCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="iterator/permutable" Icon="Object" TargetMinCppVersion="Cpp20" />
+
+                <local:BlockPanel Header="FontWeight" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeight/Weight" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;ranges>" TargetMinCppVersion="Cpp20" >
-                    <local:FunctionExpander Folder="ranges/const_iterator_t" Icon="Object" TargetMinCppVersion="Cpp23" />
-                    <local:FunctionExpander Folder="ranges/const_sentinel_t" Icon="Object" TargetMinCppVersion="Cpp23" />
-                    <local:FunctionExpander Folder="ranges/iterator_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/range_const_reference_t" Icon="Object" TargetMinCppVersion="Cpp23" />
-                    <local:FunctionExpander Folder="ranges/range_reference_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/range_rvalue_reference_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/range_size_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/range_value_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/sentinel_t" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/bidirectional_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/borrowed_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/contiguous_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/forward_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/input_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/output_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/random_access_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/sized_range" Icon="Object" />
-                    <local:FunctionExpander Folder="ranges/view" Icon="Object" />
+                <local:BlockPanel Header="FontWeights" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraBlack" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Black" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Bold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/SemiBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Medium" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Normal" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/SemiLight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Light" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraLight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Thin" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;type_traits>" >
-                    <local:FunctionExpander Folder="type_traits/is_literal_type" Icon="Object" TargetDeletedCppVersion="Cpp20" />
-                    <local:FunctionExpander Folder="type_traits/is_lvalue_reference" Icon="Object" />
-                    <local:FunctionExpander Folder="type_traits/is_rvalue_reference" Icon="Object" />
+                <local:BlockPanel Header="IUnknown" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/IUnknown" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/as" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/try_as" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="&lt;WinUser.h>" >
-                    <local:FunctionExpander Folder="WinUser/CharLowerBuff" CodeLanguage="CppWin32" Icon="Macro" />
+                <local:BlockPanel Header="UIElement" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanDrag" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ContextFlyout" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsDoubleTapEnabled" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabled" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabled" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/AllowDropProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CacheModeProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanBeScrollAnchorProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanDragProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ClipProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ContextFlyoutProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ExitDisplayModeOnAccessKeyInvokedProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/HighContrastAdjustmentProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsAccessKeyScopeProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsDoubleTapEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
                 </local:BlockPanel>
 
             </local:OuterPanel>

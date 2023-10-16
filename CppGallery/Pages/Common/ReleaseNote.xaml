@@ -24,6 +24,17 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.4" Sentence="2023年10月16日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに50項目追加<LineBreak/>
+                    ・ソースコードの enum 型と union 型の色が正しくならない不具合を修正<LineBreak />
+                    ・C++/WinRT のサンプルを追加
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.4.3" Sentence="2023年10月11日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>

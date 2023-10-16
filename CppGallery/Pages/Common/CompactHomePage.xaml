@@ -105,6 +105,14 @@
                     <local:ToRightButton Style="{StaticResource Windowsh}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinUserh}" InLibraryPage="True"/>
                 </local:ResultsPanel>
+
+                <local:ResultsPanel x:Name="WinRTLibraryList">
+                    <TextBlock Text="C++/WinRT ライブラリ"/>
+                    <local:ToRightButton Style="{StaticResource WinRTBase}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControls}" InLibraryPage="True"/>
+                </local:ResultsPanel>
             </local:OuterPanel>
 
             <StackPanel x:Name="BlockStylePanel" Visibility="Collapsed" >
@@ -118,6 +126,10 @@
 
                 <StackPanel x:Name="WindowsLibraryBlock" >
                     <TextBlock Text="Windows ライブラリ"/>
+                </StackPanel>
+
+                <StackPanel x:Name="WinRTLibraryBlock" >
+                    <TextBlock Text="C++/WinRT ライブラリ"/>
                 </StackPanel>
 
             </StackPanel>

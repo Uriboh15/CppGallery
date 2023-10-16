@@ -14,24 +14,24 @@
 
             <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="filesystem/absolute" />
-                
-                <local:CustomExpander Title="begin() 関数" IsEnabled="False" />
+
+                <local:CustomExpander Title="filesystem::begin() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/canonical" />
                 
-                <local:CustomExpander Title="copy() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="copy_file() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="copy_symlink() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="create_directories() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="create_directory() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="create_directory_symlink() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="create_hard_link() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="create_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::copy() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::copy_file() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::copy_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::create_directories() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::create_directory() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::create_directory_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::create_hard_link() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::create_symlink() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/current_path" SampleType="ConsoleOnly" />
 
-                <local:CustomExpander Title="end() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="equivalent() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::end() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::equivalent() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/exists" >
                     <local:ResultsPanel>
@@ -47,7 +47,7 @@
                     </local:ResultsPanel>
                 </local:FunctionExpander>
 
-                <local:CustomExpander Title="hard_link_count() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::hard_link_count() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/hash_value" >
                     <local:ResultsPanel>
@@ -92,10 +92,10 @@
                 <local:FunctionExpander Folder="filesystem/is_socket" />
                 <local:FunctionExpander Folder="filesystem/is_symlink" />
 
-                <local:CustomExpander Title="last_write_time() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="permissons() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="proximate() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="read_symlink() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::last_write_time() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::permissons() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::proximate() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::read_symlink() 関数" IsEnabled="False" />
                 
                 <local:FunctionExpander Folder="filesystem/relative" >
                     <local:ResultsPanel>
@@ -104,7 +104,7 @@
                     </local:ResultsPanel>
                 </local:FunctionExpander>
                 
-                <local:CustomExpander Title="remove() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::remove() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/remove_all" >
                     <local:ResultsPanel>
@@ -113,8 +113,8 @@
                     </local:ResultsPanel>
                 </local:FunctionExpander>
                 
-                <local:CustomExpander Title="rename() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="resize_file() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::rename() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::resize_file() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/space" />
 
@@ -134,25 +134,25 @@
 
                 <local:FunctionExpander Folder="filesystem/swap" />
                 
-                <local:CustomExpander Title="symlink_status() 関数" IsEnabled="False" />
-                <local:CustomExpander Title="system_complete() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::symlink_status() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::system_complete() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/temp_directory_path" />
 
-                <local:CustomExpander Title="u8path() 関数" IsEnabled="False" />
+                <local:CustomExpander Title="filesystem::u8path() 関数" IsEnabled="False" />
 
                 <local:FunctionExpander Folder="filesystem/weakly_canonical" />
             </local:SymbolBlockPanel>
             
             <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource DirectoryIteratorClass}" />
-                <local:ItemGrid Title="directory_error クラス" Sentence="フォルダ操作に失敗したときにスローされる例外クラス" />
+                
                 <local:ToRightButton Style="{StaticResource FileStatusClass}" />
                 <local:ToRightButton Style="{StaticResource PathClass}" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Struct">
-                <local:CustomExpander Title="space_info 構造体" Sentence="ボリュームの情報を格納します" Icon="&#xEA86;">
+                <local:CustomExpander Title="filesystem::space_info 構造体" Sentence="ボリュームの情報を格納します" Icon="&#xEA86;">
                     <local:EnumPanel>
                         <local:ItemGrid Title="uintmax_t capacity" Sentence="ボリュームの容量" />
                         <local:ItemGrid Title="uintmax_t free" Sentence="ボリュームの空き容量" />
@@ -162,6 +162,7 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Exception" >
+                <local:ItemGrid Title="filesystem::directory_error クラス" Sentence="フォルダ操作に失敗したときにスローされる例外クラス" />
                 <local:FunctionExpander Folder="filesystem/filesystem_error" Icon="Object" />
             </local:SymbolBlockPanel>
 

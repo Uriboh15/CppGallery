@@ -84,6 +84,7 @@
 		<None Remove="Pages\UserControls\ButtonGrid.xaml" />
 		<None Remove="Pages\UserControls\DetailControlGrid.xaml" />
 		<None Remove="Pages\UserControls\DetailPane.xaml" />
+		<None Remove="Pages\UserControls\FakeFunctionExpander.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi2Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi3Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApiPage.xaml" />
@@ -180,6 +181,17 @@
 		<None Remove="Pages\WindowsHeader\ProcessEnvPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WindowshPage.xaml" />
 		<None Remove="Pages\WindowsHeader\WinUserPage.xaml" />
+		<None Remove="Pages\WinRT\BasehPage.xaml" />
+		<None Remove="Pages\WinRT\IInspectablePage.xaml" />
+		<None Remove="Pages\WinRT\IUnknownPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\FontWeightPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXaml\DependencyObjectPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXaml\UIElementPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXaml\WindowsUIXamlPage.xaml" />
 		<None Remove="ReleaseNote.xaml" />
 		<None Remove="SettingsPage.xaml" />
 		<None Remove="UpdatedPage.xaml" />
@@ -206,7 +218,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
 		<Manifest Remove="app.manifest" />
 		<Page Remove="Pages\UserControls\HomeButtonGrid.xaml" />
 		<Manifest Include="$(ApplicationManifest)" />
@@ -240,6 +252,42 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsUIText\FontWeightPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\UserControls\FakeFunctionExpander.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXaml\DependencyObjectPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\IInspectablePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\IUnknownPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\BasehPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXaml\UIElementPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXaml\WindowsUIXamlPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WindowsHeader\MinWinDefPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

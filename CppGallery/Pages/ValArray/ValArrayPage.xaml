@@ -40,12 +40,7 @@
                 <local:FunctionExpander Folder="valarray/asin" AutoFunc="False" />
                 <local:FunctionExpander Folder="valarray/atan" AutoFunc="False" />
 
-
-                <local:CustomExpander IsEnabled="False">
-                    <Expander.Header>
-                        <local:EHeader Title="atan2() 関数" Sentence="aaa"/>
-                    </Expander.Header>
-                </local:CustomExpander>
+                <local:CustomExpander Title="atan2() 関数" Sentence="aaa" IsEnabled="False"/>
 
                 <local:FunctionExpander Folder="valarray/begin" />
                 <local:FunctionExpander Folder="valarray/cos" AutoFunc="False" />

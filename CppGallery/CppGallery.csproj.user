@@ -17,6 +17,42 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsUIText\FontWeightPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserControls\FakeFunctionExpander.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXaml\DependencyObjectPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\IInspectablePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\IUnknownPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\BasehPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXaml\UIElementPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXaml\WindowsUIXamlPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\WindowsHeader\MinWinDefPage.xaml">
       <SubType>Designer</SubType>
     </Page>

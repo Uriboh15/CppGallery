@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.BasehPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+
+            <local:SymbolBlockPanel Symbol="Interfase" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIUnknown}" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/cpp-ref-for-winrt/winrt" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

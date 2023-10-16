@@ -64,7 +64,7 @@ namespace CppGallery.Pages.UserControls
         private static void OnTitleChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
         {
             // オブジェクトを取得して処理する
-            EHeader ctrl = obj as EHeader;
+            var ctrl = obj as EHeader;
             if (ctrl != null)
             {
                 ctrl.TitleTextBlock.Text = ctrl.Title.Replace("::", " : : ").Replace("[]", "[ ]");

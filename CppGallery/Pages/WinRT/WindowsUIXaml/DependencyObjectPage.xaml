@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsUIXaml.DependencyObjectPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/DependencyObject" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/Dispatcher" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Method" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ClearValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetAnimationBaseValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ReadLocalValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/RegisterPropertyChangedCallback" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/SetValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/UnregisterPropertyChangedCallback" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/attach_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_from_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_to_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/detach_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_unknown" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/put_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/swap" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="DerivedClass" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlUIElement}" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.xaml.dependencyobject?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

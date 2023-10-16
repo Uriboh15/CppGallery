@@ -27,6 +27,7 @@ namespace CppGallery.Pages
                 MoveChildren(CppLibraryList, CppLibraryBlock);
                 MoveChildren(CLibraryList, CLibraryBlock);
                 MoveChildren(WindowsLibraryList, WindowsLibraryBlock);
+                MoveChildren(WinRTLibraryList, WinRTLibraryBlock);
                 ListStylePanel.Visibility = Visibility.Collapsed;
                 BlockStylePanel.Visibility = Visibility.Visible;
 

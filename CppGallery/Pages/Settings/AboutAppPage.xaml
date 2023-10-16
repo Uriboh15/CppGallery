@@ -15,7 +15,7 @@
                     <Image Source="../Assets/Square150x150Logo.scale-200.png" Height="23" Margin="21,0,0,0"/>
                     <StackPanel Margin="20,0,0,0" VerticalAlignment="Center" >
                         <TextBlock Text="C++ Library Gallery" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock Text="Version 2.4.3  2023年10月11日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
+                        <TextBlock Text="Version 2.4.4  2023年10月16日" Foreground="{ThemeResource AppBarToggleButtonCheckedPointerOverBackgroundThemeBrush}" FontSize="12"/>
                     </StackPanel>
                 </StackPanel>
 
@@ -29,9 +29,13 @@
                                 <TextBlock Text="Windows SDK" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                 <TextBlock Text="Windows 11 SDK (22621.0)" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                             </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
                                 <TextBlock Text="ターゲット最小バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                                 <TextBlock Text="Windows 10 2004 (10.0.19041.0)" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
+                                <TextBlock Text="C++/WinRT バージョン" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <TextBlock Text="2.0.230706.1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                             </Grid>
                         </StackPanel>
                     </Expander.Content>

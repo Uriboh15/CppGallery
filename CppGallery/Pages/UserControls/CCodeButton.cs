@@ -69,6 +69,7 @@ namespace CppGallery.Pages.UserControls
             "size_t",
             "time_t",
             "tm",
+            "uint16_t",
             "uintmax_t",
             "va_list",
             "valarray",

@@ -27,6 +27,7 @@ namespace CppGallery.Pages.UserControls
         FunctionObject,
         GlobalstreamOjbect,
         Literal,
+        Interfase,
         Macro,
         Manipulator,
         Method,
@@ -38,6 +39,12 @@ namespace CppGallery.Pages.UserControls
         StaticMethod,
         Struct,
         Typedefs,
+        WinRTDependencyProperty,
+        WinRTEventHandler,
+        WinRTEventIdentifier,
+        WinRTField,
+        WinRTMethod,
+        WinRTProperty,
     }
 
     public class SymbolBlockPanel : BasicBlockPanel
@@ -119,6 +126,7 @@ namespace CppGallery.Pages.UserControls
                 PanelHeader.FunctionAndMacro => "関数 ・ 関数マクロ",
                 PanelHeader.FunctionObject => "関数オブジェクト",
                 PanelHeader.GlobalstreamOjbect => "グローバルストリームオブジェクト",
+                PanelHeader.Interfase => "インターフェース",
                 PanelHeader.Literal => "リテラル",
                 PanelHeader.Macro => "マクロ",
                 PanelHeader.Manipulator => "マニピュレーター",
@@ -131,6 +139,12 @@ namespace CppGallery.Pages.UserControls
                 PanelHeader.StaticMethod => "static メンバー関数",
                 PanelHeader.Struct => "構造体",
                 PanelHeader.Typedefs => "型名",
+                PanelHeader.WinRTDependencyProperty => "依存関係プロパティ",
+                PanelHeader.WinRTEventHandler => "イベントハンドラー",
+                PanelHeader.WinRTEventIdentifier => "イベント識別子",
+                PanelHeader.WinRTField => "フィールド",
+                PanelHeader.WinRTMethod => "メソッド",
+                PanelHeader.WinRTProperty => "プロパティ",
                 _ => throw new NotImplementedException(),
             };
 

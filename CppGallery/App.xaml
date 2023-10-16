@@ -18,10 +18,6 @@
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
 
-            
-
-            
-
             <Style TargetType="TextBox" BasedOn="{StaticResource DefaultTextBoxStyle}">
                 <Setter Property="IsSpellCheckEnabled" Value="False"/>
             </Style>
@@ -76,9 +72,7 @@
                 <Setter Property="Icon" Value="Function" />
                 <Setter Property="Sentence" Value="この関数は効果がありません" />
             </Style>
-            
-            
-            
+
 
         </ResourceDictionary>
 

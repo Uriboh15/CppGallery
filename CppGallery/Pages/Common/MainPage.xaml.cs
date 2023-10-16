@@ -21,6 +21,7 @@ using Microsoft.UI.Windowing;
 using System.Threading.Tasks;
 using CppGallery.Pages.Common;
 using CppGallery.Pages.UserControls;
+using System.Reflection;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -183,6 +184,18 @@ namespace CppGallery.Pages
             {typeof(Compare.ComparePage), "Ncompare" },
             {typeof(Compare.StrongOrderingClassPage), "Nstrong_ordering0" },
             {typeof(Iterator.IteratorPage), "Oiterator" },
+
+            {typeof(WinRT.WindowsUIXamlControls.WindowsUIXamlControlsPage), "W00WindowsUIXamlControls" },
+            {typeof(WinRT.WindowsUIXamlControls.ContentDialogPage), "W00ContentDialog0" },
+            {typeof(WinRT.WindowsUIXaml.WindowsUIXamlPage), "W01WindowsUIXaml" },
+            {typeof(WinRT.WindowsUIXaml.DependencyObjectPage), "W01DependencyObject0" },
+            {typeof(WinRT.WindowsUIXaml.UIElementPage), "W01UIElement0" },
+            {typeof(WinRT.BasehPage), "W02base" },
+            {typeof(WinRT.IInspectablePage), "W02IInspectable0" },
+            {typeof(WinRT.IUnknownPage), "W02IUnknown0" },
+            {typeof(WinRT.WindowsUIText.WindowsUITextPage), "W03WindowsUIText" },
+             {typeof(WinRT.WindowsUIText.FontWeightPage), "W03FontWeight0" },
+            {typeof(WinRT.WindowsUIText.FontWeightsPage), "W03FontWeights0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -426,6 +439,13 @@ namespace CppGallery.Pages
             
         }
 
+        private void SetItem(NavigationViewItem item, ref string folder, string tag)
+        {
+            item.IsExpanded = true;
+            folder = AMD[item.Tag as string];
+            NavView.SelectedItem = GetItem(item.MenuItems, tag);
+        }
+
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
         {
             var tag = PageDictionary[ContentFrame.SourcePageType];
@@ -641,6 +661,42 @@ namespace CppGallery.Pages
                         compare.IsExpanded = true;
                         folder = AMD["Ncompare"];
                         NavView.SelectedItem = GetItem(compare.MenuItems, tag);
+                        break;
+
+                    case 'W':
+                        switch (tag[1])
+                        {
+
+                            case '0':
+                                switch (tag[2])
+                                {
+                                    case '0':
+                                        WindowsUIXamlControls.IsExpanded = true;
+                                        folder = AMD["W00WindowsUIXamlControls"];
+                                        NavView.SelectedItem = GetItem(WindowsUIXamlControls.MenuItems, tag);
+
+                                        break;
+
+                                    case '1':
+                                        WindowsUIXaml.IsExpanded = true;
+                                        folder = AMD["W01WindowsUIXaml"];
+                                        NavView.SelectedItem = GetItem(WindowsUIXaml.MenuItems, tag);
+
+                                        break;
+
+                                    case '2':
+                                        SetItem(Baseh, ref folder, tag);
+
+                                        break;
+
+                                    case '3':
+                                        SetItem(WindowsUIText, ref folder, tag);
+                                        break;
+                                }
+
+                                break;
+                        }
+
                         break;
 
                 }

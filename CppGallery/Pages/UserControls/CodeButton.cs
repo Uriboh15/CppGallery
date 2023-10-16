@@ -288,20 +288,7 @@ namespace CppGallery.Pages.UserControls
             "numbers",
             "ranges",
             "this_thread",
-        };
-
-        private static List<string> KeywordsStatic { get; } = new List<string>
-        {
-#if false
-            "binary",
-            "end",
-            "eofbit",
-            "first",
-            "in",
-            "out",
-            "second",
-            "trunc",
-#endif
+            "nodiscard",
         };
 
         private static List<string> KeywordsYellow { get; } = new List<string>
@@ -364,7 +351,6 @@ namespace CppGallery.Pages.UserControls
             KeyUserFunction.Add(KeywordsUserFunction);
             KeyYellow.Add(KeywordsYellow);
             KeyGlobal.Add(KeywordsGlobal);
-            KeyStatic.Add(KeywordsStatic);
             KeyDefine.Add(KeywordsDefine);
             KeyClassTemplate.Add(KeywordClassTemplate);
             KeyEnum.Add(KeywordsEnum);
