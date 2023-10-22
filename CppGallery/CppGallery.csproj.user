@@ -17,6 +17,54 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\PickerLocationIdPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\FolderPickerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsDevicesPower\BatteryReportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsDevicesPower\BatteryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsDevicesPower\WindowsDevicesPowerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStoragePickers\WindowsStoragePickersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlMarkup\ContentPropertyAttributePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlMarkup\XamlReaderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlMarkup\WindowsUIXamlMarkupPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUI\ColorsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUI\ColorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUI\ColorHelperPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUI\WindowsUIPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\WinRT\WindowsUIText\FontWeightPage.xaml">
       <SubType>Designer</SubType>
     </Page>

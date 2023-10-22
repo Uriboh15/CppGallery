@@ -1070,6 +1070,99 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="WindowsDevicesPower" Content="&lt;winrt/Windows.Devices.Power.h>" Tag="W07WindowsDevicesPower">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE861;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="Battery" Tag="W07Battery0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="BatteryReport" Tag="W07BatteryReport0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsStoragePickers" Content="&lt;winrt/Windows.Storage.Pickers.h>" Tag="W06WindowsStoragePickers">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8B7;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="FileExtensionVector" Tag="W06FileExtensionVector0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="FileOpenPicker" Tag="W06FileOpenPicker0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="FolderPicker" Tag="W06FolderPicker0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="PickerLocationId" Tag="W06PickerLocationId0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="PickerViewMode" Tag="W06PickerViewMode0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUI" Content="&lt;winrt/Windows.UI.h>" Tag="W04WindowsUI">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE790;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="Color" Tag="W04Color0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="ColorHelper" Tag="W04ColorHelper0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="Colors" Tag="W04Colors0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="WindowsUIText" Content="&lt;winrt/Windows.UI.Text.h>" Tag="W03WindowsUIText">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE8E9;"/>
@@ -1124,6 +1217,29 @@
                 <NavigationViewItem.MenuItems>
 
                     <NavigationViewItem Content="ContentDialog" Tag="W00ContentDialog0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUIXamlMarkup" Content="&lt;winrt/Windows.UI.Xaml.Markup.h>" Tag="W05WindowsUIXamlMarkup">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF000;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="ContentPropertyAttribute" Tag="W05ContentPropertyAttribute0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="XamlReader" Tag="W05XamlReader0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>

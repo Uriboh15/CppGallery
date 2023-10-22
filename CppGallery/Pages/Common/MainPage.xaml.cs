@@ -196,6 +196,22 @@ namespace CppGallery.Pages
             {typeof(WinRT.WindowsUIText.WindowsUITextPage), "W03WindowsUIText" },
              {typeof(WinRT.WindowsUIText.FontWeightPage), "W03FontWeight0" },
             {typeof(WinRT.WindowsUIText.FontWeightsPage), "W03FontWeights0" },
+            {typeof(WinRT.WindowsUI.WindowsUIPage), "W04WindowsUI" },
+            {typeof(WinRT.WindowsUI.ColorPage), "W04Color0" },
+            {typeof(WinRT.WindowsUI.ColorHelperPage), "W04ColorHelper0" },
+            {typeof(WinRT.WindowsUI.ColorsPage), "W04Colors0" },
+            {typeof(WinRT.WindowsUIXamlMarkup.WindowsUIXamlMarkupPage), "W05WindowsUIXamlMarkup" },
+            {typeof(WinRT.WindowsUIXamlMarkup.ContentPropertyAttributePage), "W05ContentPropertyAttribute0" },
+            {typeof(WinRT.WindowsUIXamlMarkup.XamlReaderPage), "W05XamlReader0" },
+            {typeof(WinRT.WindowsStoragePickers.WindowsStoragePickersPage), "W06WindowsStoragePickers" },
+            {typeof(WinRT.WindowsStoragePickers.FileExtensionVectorPage), "W06FileExtensionVector0" },
+            {typeof(WinRT.WindowsStoragePickers.FileOpenPickerPage), "W06FileOpenPicker0" },
+            {typeof(WinRT.WindowsStoragePickers.FolderPickerPage), "W06FolderPicker0" },
+            {typeof(WinRT.WindowsStoragePickers.PickerLocationIdPage), "W06PickerLocationId0" },
+            {typeof(WinRT.WindowsStoragePickers.PickerViewModePage), "W06PickerViewMode0" },
+            {typeof(WinRT.WindowsDevicesPower.WindowsDevicesPowerPage), "W07WindowsDevicesPower" },
+            {typeof(WinRT.WindowsDevicesPower.BatteryPage), "W07Battery0" },
+            {typeof(WinRT.WindowsDevicesPower.BatteryReportPage), "W07BatteryReport0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -663,6 +679,7 @@ namespace CppGallery.Pages
                         NavView.SelectedItem = GetItem(compare.MenuItems, tag);
                         break;
 
+                    //C++/WinRT
                     case 'W':
                         switch (tag[1])
                         {
@@ -691,6 +708,22 @@ namespace CppGallery.Pages
 
                                     case '3':
                                         SetItem(WindowsUIText, ref folder, tag);
+                                        break;
+
+                                    case '4':
+                                        SetItem(WindowsUI, ref folder, tag);
+                                        break;
+
+                                    case '5':
+                                        SetItem(WindowsUIXamlMarkup, ref folder, tag);
+                                        break;
+
+                                    case '6':
+                                        SetItem(WindowsStoragePickers, ref folder, tag);
+                                        break;
+
+                                    case '7':
+                                        SetItem(WindowsDevicesPower, ref folder, tag);
                                         break;
                                 }
 

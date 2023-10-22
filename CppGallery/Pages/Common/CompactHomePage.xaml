@@ -109,9 +109,13 @@
                 <local:ResultsPanel x:Name="WinRTLibraryList">
                     <TextBlock Text="C++/WinRT ライブラリ"/>
                     <local:ToRightButton Style="{StaticResource WinRTBase}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPower}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickers}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUI}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControls}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlMarkup}" InLibraryPage="True"/>
                 </local:ResultsPanel>
             </local:OuterPanel>
 

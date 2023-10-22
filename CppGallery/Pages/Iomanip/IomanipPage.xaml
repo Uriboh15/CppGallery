@@ -33,7 +33,7 @@
                         </Expander.Header>
                     </local:CustomExpander>
 
-                    <local:FunctionExpander Folder="iomanip/put_time" IsEnabled="False" />
+                    <local:FunctionExpander Folder="iomanip/put_time" Expanding="FunctionExpander_Expanding" Unloaded="FunctionExpander_Unloaded" />
 
                     <local:CustomExpander IsEnabled="False">
                         <Expander.Header>

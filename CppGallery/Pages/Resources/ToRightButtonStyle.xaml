@@ -1190,6 +1190,31 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsDevicesPower" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Devices.Power.h>" />
+        <Setter Property="Sentence" Value="バッテリー情報" />
+        <Setter Property="PageTag" Value="W07WindowsDevicesPower"/>
+        <Setter Property="Icon" Value="&#xE861;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsDevicesPowerBattery" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="Battery" />
+        <Setter Property="Sentence" Value="バッテリーコントローラー情報" />
+        <Setter Property="PageTag" Value="W07Battery0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsDevicesPowerBatteryReport" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="BatteryReport" />
+        <Setter Property="Sentence" Value="バッテリー情報" />
+        <Setter Property="PageTag" Value="W07BatteryReport0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationIInspectable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="Windows::Foundation::IInspectable" />
         <Setter Property="Sentence" Value="WinRT クラスの基底クラス" />
@@ -1202,6 +1227,106 @@
         <Setter Property="Title" Value="Windows::Foundation::IUnknown" />
         <Setter Property="Sentence" Value="WinRT クラスの基底クラス" />
         <Setter Property="PageTag" Value="W02IUnknown0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIIterable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IIterable" />
+        <Setter Property="Sentence" Value="範囲 for 文によるループが可能であることを示すインターフェース" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIVector" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IVector" />
+        <Setter Property="Sentence" Value="WinRT のランダムアクセスコレクション" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickers" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Storage.Pickers.h>" />
+        <Setter Property="Sentence" Value="UWP のファイルとフォルダの選択ダイアログ" />
+        <Setter Property="PageTag" Value="W06WindowsStoragePickers"/>
+        <Setter Property="Icon" Value="&#xE8B7;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickersFileExtensionVector" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="FileExtensionVector" />
+        <Setter Property="Sentence" Value="ファイル名拡張子を格納するコレクション" />
+        <Setter Property="PageTag" Value="W06FileExtensionVector0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickersFileOpenPicker" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="FileOpenPicker" />
+        <Setter Property="Sentence" Value="ファイル選択ダイアログ" />
+        <Setter Property="PageTag" Value="W06FileOpenPicker0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickersFolderPicker" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="FolderPicker" />
+        <Setter Property="Sentence" Value="フォルダー選択ダイアログ" />
+        <Setter Property="PageTag" Value="W06FolderPicker0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickersPickerLocationId" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="PickerLocationId" />
+        <Setter Property="Sentence" Value="ピッカーが初めに参照するフォルダを指定する列挙型" />
+        <Setter Property="PageTag" Value="W06PickerLocationId0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStoragePickersPickerViewMode" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="PickerViewMode" />
+        <Setter Property="Sentence" Value="ピッカーの表示形式を指定する列挙型" />
+        <Setter Property="PageTag" Value="W06PickerViewMode0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUI" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.UI.h>" />
+        <Setter Property="Sentence" Value="UWP の UI 情報と色" />
+        <Setter Property="PageTag" Value="W04WindowsUI"/>
+        <Setter Property="Icon" Value="&#xE790;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIColor" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="Color" />
+        <Setter Property="Sentence" Value="色情報" />
+        <Setter Property="PageTag" Value="W04Color0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIColors" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="Colors" />
+        <Setter Property="Sentence" Value="定義済みの Color" />
+        <Setter Property="PageTag" Value="W04Colors0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIColorHelper" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="ColorHelper" />
+        <Setter Property="Sentence" Value="Color を処理する静的メソッド" />
+        <Setter Property="PageTag" Value="W04ColorHelper0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1269,6 +1394,31 @@
         <Setter Property="Title" Value="ContentDialog" />
         <Setter Property="Sentence" Value="ダイアログボックス" />
         <Setter Property="PageTag" Value="W00ContentDialog0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIXamlMarkup" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.UI.Xaml.Markup.h>" />
+        <Setter Property="Sentence" Value="UWP の XAML 機能" />
+        <Setter Property="PageTag" Value="W05WindowsUIXamlMarkup"/>
+        <Setter Property="Icon" Value="&#xF000;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIXamlMarkupContentPropertyAttribute" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="ContentPropertyAttribute" />
+        <Setter Property="Sentence" Value="XAML コンテンツプロパティの初期値設定" />
+        <Setter Property="PageTag" Value="W05ContentPropertyAttribute0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUIXamlMarkupXamlReader" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="XamlReader" />
+        <Setter Property="Sentence" Value="XAML エンジン" />
+        <Setter Property="PageTag" Value="W05XamlReader0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

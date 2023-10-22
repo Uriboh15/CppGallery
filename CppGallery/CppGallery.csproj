@@ -184,14 +184,30 @@
 		<None Remove="Pages\WinRT\BasehPage.xaml" />
 		<None Remove="Pages\WinRT\IInspectablePage.xaml" />
 		<None Remove="Pages\WinRT\IUnknownPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryReportPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsDevicesPower\WindowsDevicesPowerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\FolderPickerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerLocationIdPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStoragePickers\WindowsStoragePickersPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\ContentPropertyAttributePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\WindowsUIXamlMarkupPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\XamlReaderPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXaml\DependencyObjectPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXaml\UIElementPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXaml\WindowsUIXamlPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUI\ColorHelperPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUI\ColorPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUI\ColorsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUI\WindowsUIPage.xaml" />
 		<None Remove="ReleaseNote.xaml" />
 		<None Remove="SettingsPage.xaml" />
 		<None Remove="UpdatedPage.xaml" />
@@ -252,6 +268,54 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\PickerLocationIdPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\FolderPickerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsDevicesPower\BatteryReportPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsDevicesPower\BatteryPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsDevicesPower\WindowsDevicesPowerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStoragePickers\WindowsStoragePickersPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlMarkup\ContentPropertyAttributePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlMarkup\XamlReaderPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlMarkup\WindowsUIXamlMarkupPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUI\ColorsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUI\ColorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUI\ColorHelperPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUI\WindowsUIPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WinRT\WindowsUIText\FontWeightPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

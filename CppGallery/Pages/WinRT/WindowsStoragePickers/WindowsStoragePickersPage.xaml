@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsStoragePickers.WindowsStoragePickersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFileExtensionVector}" />
+                <local:ToRightButton Title="FilePickerFileTypesOrderedMap" Sentence="aaa" IsEnabled="False" />
+                <local:ToRightButton Title="FilePickerSelectedFilesArray" Sentence="aaa" IsEnabled="False" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFileOpenPicker}" />
+                <local:ToRightButton Title="FileSavePicker" Sentence="ファイル保存ダイアログ" IsEnabled="False" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFolderPicker}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Enum" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersPickerLocationId}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersPickerViewMode}" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.storage.pickers?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -10,6 +10,10 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="WinRTProperty" >
                 <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraBlack" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Black" SampleType="GUIApp" CodeLanguage="CppWinRT" />

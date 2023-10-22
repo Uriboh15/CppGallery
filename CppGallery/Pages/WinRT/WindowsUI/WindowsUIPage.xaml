@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsUI.WindowsUIPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUIColorHelper}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUIColors}" />
+                <local:ToRightButton Title="UIContentRoot" Sentence="aaa" IsEnabled="False" />
+                <local:ToRightButton Title="UIContext" Sentence="aaa" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Struct" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUIColor}" />
+                <local:ToRightButton Title="WindowId" Sentence="aaa" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

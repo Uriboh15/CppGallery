@@ -457,6 +457,7 @@ namespace CppGallery.Pages.UserControls
                                     {
                                         run.Foreground = math;
                                     }
+                                    // (ObjectPointer)->(FieldName)
                                     else if (st[i + 1] == '>')
                                     {
                                         Mae = ".";
@@ -681,7 +682,7 @@ namespace CppGallery.Pages.UserControls
                                         break;
                                     }
                                 }
-                                Mae = ".";
+                                Mae = cLanguage ? "." : "::";
                                 break;
                             }
                             if (i + 1 < st.Length)

@@ -21,6 +21,7 @@ namespace CppGallery.Pages.UserControls
         Cpp,
         CppWin32,
         CppWinRT,
+        MIDL,
     }
 
     public enum SampleType
@@ -295,6 +296,10 @@ namespace CppGallery.Pages.UserControls
                         case CodeLanguage.CppWinRT:
                             panel1.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc, FileName = string.Empty });
                             break;
+
+                        case CodeLanguage.MIDL:
+                            panel1.Children.Add(new IdlCodeButton { Path = Data.DefaultSamplePath + Folder + CodeName, AutoFunc = this.AutoFunc, FileName = string.Empty });
+                            break;
                     }
 
                     var consoleAndGUI = () =>
@@ -404,6 +409,7 @@ namespace CppGallery.Pages.UserControls
                     case CodeLanguage.Cpp: panel.Children.Add(new CodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
                     case CodeLanguage.CppWin32: panel.Children.Add(new Win32CodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
                     case CodeLanguage.CppWinRT: panel.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
+                    case CodeLanguage.MIDL: panel.Children.Add(new WinRTCodeButton { Path = Data.DefaultSamplePath + Folder + DeclName, FileName = string.Empty }); break;
                 }
             }
 
@@ -498,12 +504,18 @@ namespace CppGallery.Pages.UserControls
         {
 
             SampleName = UserAPI.GetExeName(CodeLanguage == CodeLanguage.C);
+
+            //後できれいに書き直す
             CodeName = App.UseCppInCSample && this.CodeLanguage == CodeLanguage.C ? "/CodeCpp.txt" : "/Code" + ((int)App.CVersion).ToString() + ".txt";
 
             if (CodeLanguage == CodeLanguage.C)
             {
                 if (App.UseCppInCSample) CodeName = "/CodeCpp" + ((int)App.CppVersion).ToString() + ".txt";
                 else CodeName = "/Code" + ((int)App.CVersion).ToString() + ".txt";
+            }
+            else if (CodeLanguage == CodeLanguage.MIDL)
+            {
+                CodeName = "/Code.txt";
             }
             else
             {

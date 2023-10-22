@@ -16,56 +16,81 @@ namespace CppGallery.Pages.UserControls
             KeyPurple.Add(KeywordsPurple);
             KeyGlobal.Add(KeywordsGlobal);
             KeyEnum.Add(KeywordsEnum);
+            KeyClassTemplate.Add(KeywordsClassTemplate);
         }
 
         private static List<string> KeywordsGreen { get; } = new List<string>()
         {
+            "auto_revoke_t",
+            "Battery",
+            "BatteryReport",
             "Brush",
+            "Color",
             "ColorChangedEventArgs",
             "ColorHelper",
             "ColorPicker",
+            "Colors",
             "ComboBox",
             "ContentDialog",
             "ContentDialogOpenedEventArgs",
             "CoreDispatcher",
             "DependencyObject",
             "DependencyProperty",
+            "DeviceInformation",
+            "DeviceInformationCollection",
+            "event_token",
             "FlyoutBase",
+            "FileOpenPicker",
+            "FolderPicker",
             "FontWeight",
             "FontWeights",
             "FrameworkElement",
-            
+            "Grid",
             "hstring",
             "IAsyncAction",
+            "IInitializeWithWindow",
             "IInspectable",
             "IUnknown",
             "IWindowNative",
             "MainPage",
             "MainWindow",
+            "Rectangle",
+            "ReportUpdated_revoker",
             "RoutedEvent",
             "RoutedEventArgs",
             "SelectionChangedEventArgs",
             "SolidColorBrush",
             "StackPanel",
+            "StorageFile",
+            "StorageFolder",
             "TextBlock",
+            "XamlReader",
+        };
+
+        private static List<string> KeywordsClassTemplate { get; } = new List<string>()
+        {
+            "IAsyncOperation",
+            "IReference",
+            "IVector",
+            "IVectorView",
+            "TypedEventHandler",
         };
 
         private static List<string> KeywordsEnum { get; } = new List<string>()
         {
+            "BatteryStatus",
             "ContentDialogButton",
             "ElementTheme",
+            "HorizontalAlignment",
+            "PickerLocationId",
+            "PickerViewMode",
             "TitleBarHeightOption",
+            "VerticalAlignment",
         };
 
         private static List<string> KeywordsYellow { get; } = new List<string>()
         {
-            "check_bool",
-            "GetProcAddress",
-            "get_WindowHandle",
-            "InitializeComponent",
-            "SetTitleBar",
-            "try_as",
-            "unbox_value",
+            "Battery_ReportUpdated",
         };
 
         private static List<string> KeywordsPurple { get; } = new List<string>()
@@ -75,11 +100,20 @@ namespace CppGallery.Pages.UserControls
 
         private static List<string> KeywordsGlobal { get; } = new List<string>()
         {
+            "Collections",
             "Controls",
+            "Devices",
+            "Enumeration",
             "Foundation",
             "implementation",
+            "Markup",
             "Media",
             "Microsoft",
+            "Pickers",
+            "Power",
+            "Shapes",
+            "Storage",
+            "System",
             "Text",
             "UI",
             "Windows",

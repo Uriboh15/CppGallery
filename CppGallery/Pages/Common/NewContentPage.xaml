@@ -16,91 +16,139 @@
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
                 <local:BlockPanel Header="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource WinRTBase}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControls}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPower}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickers}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUI}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlMarkup}" />
                 </local:BlockPanel>
 
                 <local:SymbolBlockPanel Symbol="Class" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIUnknown}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontWeight}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontWeights}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDependencyObject}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlUIElement}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControlsContentDialog}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPowerBattery}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPowerBatteryReport}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFileExtensionVector}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFileOpenPicker}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersFolderPicker}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIColor}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIColorHelper}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIColors}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlMarkupContentPropertyAttribute}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlMarkupXamlReader}" />
                 </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="ContentDialog" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ContentDialog" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualHeight" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualTheme" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/ActualWidth" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Controls.ContentDialog/Background" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                <local:SymbolBlockPanel Symbol="Enum" >
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersPickerLocationId}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickersPickerViewMode}" />
+                </local:SymbolBlockPanel>
+
+                <local:BlockPanel Header="Battery" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/AggregateBattery" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/DeviceId" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/FromIdAsync" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/GetDeviceSelector" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/GetReport" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.Battery/ReportUpdated" SampleType="None" CodeLanguage="CppWinRT" Icon="Event" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="DependencyObject" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/DependencyObject" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/Dispatcher" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ClearValue" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetValue" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/SetValue" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="BatteryReport" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.BatteryReport/ChargeRateInMilliwatts" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.BatteryReport/DesignCapacityInMilliwattHours" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.BatteryReport/FullChargeCapacityInMilliwattHours" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.BatteryReport/RemainingCapacityInMilliwattHours" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Devices.Power.BatteryReport/Status" SampleType="None" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-
-                <local:BlockPanel Header="FontWeight" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeight/Weight" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                <local:BlockPanel Header="Color" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Color/A" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Color/R" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Color/G" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Color/B" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Object" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="FontWeights" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraBlack" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Black" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Bold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/SemiBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Medium" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Normal" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/SemiLight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Light" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/ExtraLight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Text.FontWeights/Thin" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="ColorHelper" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.ColorHelper/FromArgb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.ColorHelper/ToDisplayName" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="IUnknown" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/IUnknown" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/as" SampleType="None" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/try_as" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:BlockPanel Header="Colors" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/AliceBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/AntiqueWhite" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Aqua" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Aquamarine" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Azure" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Beige" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Bisque" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Black" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/BlanchedAlmond" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Blue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/BlueViolet" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Brown" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/BurlyWood" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/CadetBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Chartreuse" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Chocolate" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Coral" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/CornflowerBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Cornsilk" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Crimson" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Cyan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkCyan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkGoldenrod" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkKhaki" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkMagenta" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkOliveGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkOrange" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkOrchid" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkRed" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkSalmon" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkSeaGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkSlateBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkSlateGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkTurquoise" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DarkViolet" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DeepPink" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DeepSkyBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DimGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/DodgerBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Firebrick" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/FloralWhite" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/ForestGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Fuchsia" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Gainsboro" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/GhostWhite" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Gold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Goldenrod" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="UIElement" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanDrag" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ContextFlyout" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsDoubleTapEnabled" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabled" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabled" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/AllowDropProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CacheModeProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanBeScrollAnchorProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/CanDragProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ClipProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ContextFlyoutProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ExitDisplayModeOnAccessKeyInvokedProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/HighContrastAdjustmentProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsAccessKeyScopeProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsDoubleTapEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabledProperty" CodeLanguage="CppWinRT" Icon="Object" />
+                <local:BlockPanel Header="ContentPropertyAttribute" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Markup.ContentPropertyAttribute/ContentPropertyAttribute" SampleType="None" CodeLanguage="MIDL" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Markup.ContentPropertyAttribute/Name" SampleType="None" CodeLanguage="MIDL" Icon="Object" />
                 </local:BlockPanel>
 
+                <local:BlockPanel Header="FileOpenPicker" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/FileOpenPicker" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/CommitButtonText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/SettingsIdentifier" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/SuggestedStartLocation" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/ViewMode" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/PickMultipleFilesAsync" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FileOpenPicker/PickSingleFileAsync" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="FolderPicker" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/FolderPicker" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/CommitButtonText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/SettingsIdentifier" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/SuggestedStartLocation" SampleType="None" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/ViewMode" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Storage.Pickers.FolderPicker/PickSingleFolderAsync" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                </local:BlockPanel>
+
+                <local:BlockPanel Header="XamlReader" TargetMinCppVersion="Cpp17" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Markup.XamlReader/Load" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                </local:BlockPanel>
             </local:OuterPanel>
         </ScrollViewer>
     </Grid>

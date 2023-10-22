@@ -10,32 +10,40 @@ namespace CppGallery.Pages.UserControls
 {
     public class IdlCodeButton : CLanCodeButton
     {
-        private static List<string> KeyWordsBlue = new List<string>()
+        private static List<string> KeyWordsBlue { get; } = new List<string>()
         {
+            
             "default_interface",
-            "Int32",
             "namespace",
             "runtimeclass",
-            "String",
+            
         };
 
-        private static List<string> KeyWordsGreen = new List<string>()
+        private static List<string> KeyWordsGreen { get; } = new List<string>()
         {
+            "contentproperty",
+            "Control",
+            "IInspectable",
+            "Int32",
             "ItemGrid",
+            "String",
             "UserControl",
         };
 
-        private static List<string> KeyWordsGlobal = new List<string>()
+        private static List<string> KeyWordsGlobal { get; } = new List<string>()
         {
             "Controls",
+            
             "Microsoft",
             "UI",
-            "WinUI3App",
+            "Windows",
+            "WindowsSample",
             "Xaml",
         };
 
-        public IdlCodeButton() : base()
+        public IdlCodeButton()
         {
+            cLanguage = false;
             Lan = "MIDL";
             KeyBlue.Add(KeyWordsBlue);
             KeyGreen.Add(KeyWordsGreen);
