@@ -1223,6 +1223,15 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsFoundationIStringable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IStringable" />
+        <Setter Property="Sentence" Value="hstring に変換可能であることを表すインターフェース" />
+        <Setter Property="PageTag" Value=""/>
+        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationIUnknown" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="Windows::Foundation::IUnknown" />
         <Setter Property="Sentence" Value="WinRT クラスの基底クラス" />
@@ -1231,20 +1240,59 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsFoundationCollections" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Foundation.Collections.h>" />
+        <Setter Property="Sentence" Value="WinRT のコレクション型" />
+        <Setter Property="PageTag" Value="W0AWindowsFoundationCollections"/>
+        <Setter Property="Icon" Value="&#xE76F;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationCollectionsIIterable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
-        <Setter Property="Title" Value="IIterable" />
-        <Setter Property="Sentence" Value="範囲 for 文によるループが可能であることを示すインターフェース" />
-        <Setter Property="PageTag" Value=""/>
-        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="Title" Value="IIterable&lt;T>" />
+        <Setter Property="Sentence" Value="範囲 for 文によるループが可能であることを表すインターフェース" />
+        <Setter Property="PageTag" Value="W0AIIterable0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIKeyValuePair" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IKeyValuePair&lt;K,V>" />
+        <Setter Property="Sentence" Value="WinRT のペアオブジェクト" />
+        <Setter Property="PageTag" Value="W0AIKeyValuePair0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIMap" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IMap&lt;K,V>" />
+        <Setter Property="Sentence" Value="WinRT の辞書型" />
+        <Setter Property="PageTag" Value="W0AIMap0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIMapView" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IMapView&lt;K,V>" />
+        <Setter Property="Sentence" Value="WinRT の読み取り専用辞書型" />
+        <Setter Property="PageTag" Value="W0AIMapView0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
     <Style x:Key="WinRTWindowsFoundationCollectionsIVector" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
-        <Setter Property="Title" Value="IVector" />
+        <Setter Property="Title" Value="IVector&lt;T>" />
         <Setter Property="Sentence" Value="WinRT のランダムアクセスコレクション" />
-        <Setter Property="PageTag" Value=""/>
-        <Setter Property="IsEnabled" Value="False" />
+        <Setter Property="PageTag" Value="W0AIVector0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationCollectionsIVectorView" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IVectorView&lt;T>" />
+        <Setter Property="Sentence" Value="WinRT の読み取り専用ランダムアクセスコレクション" />
+        <Setter Property="PageTag" Value="W0AIVectorView0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1253,7 +1301,7 @@
         <Setter Property="Title" Value="&lt;winrt/Windows.Storage.Pickers.h>" />
         <Setter Property="Sentence" Value="UWP のファイルとフォルダの選択ダイアログ" />
         <Setter Property="PageTag" Value="W06WindowsStoragePickers"/>
-        <Setter Property="Icon" Value="&#xE8B7;"/>
+        <Setter Property="Icon" Value="&#xF89A;"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1294,6 +1342,40 @@
         <Setter Property="Title" Value="PickerViewMode" />
         <Setter Property="Sentence" Value="ピッカーの表示形式を指定する列挙型" />
         <Setter Property="PageTag" Value="W06PickerViewMode0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsSystemDisplay" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.System.Display.h>" />
+        <Setter Property="Sentence" Value="ユーザーの操作がないときのディスプレイ表示設定" />
+        <Setter Property="PageTag" Value="W08WindowsSystemDisplay"/>
+        <Setter Property="Icon" Value="&#xE7F4;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsSystemDisplayDisplayRequest" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="DisplayRequest" />
+        <Setter Property="Sentence" Value="ユーザーの操作がないときのディスプレイ表示設定" />
+        <Setter Property="PageTag" Value="W08DisplayRequest0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsSystemInventory" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.System.Inventory.h>" />
+        <Setter Property="Sentence" Value="インストールされているアプリ" />
+        <Setter Property="PageTag" Value="W09WindowsSystemInventory"/>
+        <Setter Property="Icon" Value="&#xED35;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsSystemInventoryInstalledDesktopApp" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="InstalledDesktopApp" />
+        <Setter Property="Sentence" Value="インストールされているアプリ" />
+        <Setter Property="PageTag" Value="W09InstalledDesktopApp0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

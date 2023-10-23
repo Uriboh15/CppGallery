@@ -67,6 +67,47 @@
                 <local:FunctionExpander Folder="winrt/Windows.UI.Colors/GhostWhite" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Gold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Goldenrod" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Gray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Green" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/GreenYellow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Honeydew" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/HotPink" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/IndianRed" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Indigo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Ivory" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Khaki" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Lavender" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LavenderBlush" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LawnGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LemonChiffon" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightCoral" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightCyan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightGoldenrodYellow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightPink" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightSalmon" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightSeaGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightSkyBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightSlateGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightSteelBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LightYellow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Lime" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/LimeGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Linen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Magenta" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Maroon" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumAquamarine" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumOrchid" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumPurple" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumSeaGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumSlateBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumSpringGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumTurquoise" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MediumVioletRed" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MidnightBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.colors?view=winrt-22621" />

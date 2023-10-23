@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundationCollections.IVectorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IVector" CodeLanguage="CppWinRT" />
+
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/Size" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTMethod" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/Append" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterable/begin" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/Clear" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterable/end" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterable/First" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/GetAt" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/GetMany" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/GetView" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/IndexOf" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/InsertAt" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/RemoveAt" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/RemoveAtEnd" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/ReplaceAll" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVector/SetAt" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.collections.ivector-1?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

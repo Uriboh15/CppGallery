@@ -110,7 +110,10 @@
                     <TextBlock Text="C++/WinRT ライブラリ"/>
                     <local:ToRightButton Style="{StaticResource WinRTBase}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPower}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollections}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickers}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemDisplay}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemInventory}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUI}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" InLibraryPage="True"/>

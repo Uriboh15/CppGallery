@@ -184,7 +184,6 @@ namespace CppGallery.Pages
             {typeof(Compare.ComparePage), "Ncompare" },
             {typeof(Compare.StrongOrderingClassPage), "Nstrong_ordering0" },
             {typeof(Iterator.IteratorPage), "Oiterator" },
-
             {typeof(WinRT.WindowsUIXamlControls.WindowsUIXamlControlsPage), "W00WindowsUIXamlControls" },
             {typeof(WinRT.WindowsUIXamlControls.ContentDialogPage), "W00ContentDialog0" },
             {typeof(WinRT.WindowsUIXaml.WindowsUIXamlPage), "W01WindowsUIXaml" },
@@ -212,6 +211,17 @@ namespace CppGallery.Pages
             {typeof(WinRT.WindowsDevicesPower.WindowsDevicesPowerPage), "W07WindowsDevicesPower" },
             {typeof(WinRT.WindowsDevicesPower.BatteryPage), "W07Battery0" },
             {typeof(WinRT.WindowsDevicesPower.BatteryReportPage), "W07BatteryReport0" },
+            {typeof(WinRT.WindowsSystemDisplay.WindowsSystemDisplayPage), "W08WindowsSystemDisplay" },
+            {typeof(WinRT.WindowsSystemDisplay.DisplayRequestPage), "W08DisplayRequest0" },
+            { typeof(WinRT.WindowsSystemInventory.WindowsSystemInventoryPage), "W09WindowsSystemInventory" },
+            { typeof(WinRT.WindowsSystemInventory.InstalledDesktopAppPage), "W09InstalledDesktopApp0" },
+            { typeof(WinRT.WindowsFoundationCollections.WindowsFoundationCollectionsPage), "W0AWindowsFoundationCollections" },
+            { typeof(WinRT.WindowsFoundationCollections.IIterablePage), "W0AIIterable0" },
+            { typeof(WinRT.WindowsFoundationCollections.IKeyValuePairPage), "W0AIKeyValuePair0" },
+            { typeof(WinRT.WindowsFoundationCollections.IMapPage), "W0AIMap0" },
+            { typeof(WinRT.WindowsFoundationCollections.IMapViewPage), "W0AIMapView0" },
+            { typeof(WinRT.WindowsFoundationCollections.IVectorPage), "W0AIVector0" },
+            { typeof(WinRT.WindowsFoundationCollections.IVectorViewPage), "W0AIVectorView0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -725,6 +735,10 @@ namespace CppGallery.Pages
                                     case '7':
                                         SetItem(WindowsDevicesPower, ref folder, tag);
                                         break;
+
+                                    case '8': SetItem(WindowsSystemDisplay, ref folder, tag); break;
+                                    case '9': SetItem(WindowsSystemInventory, ref folder, tag); break;
+                                    case 'A': SetItem(WindowsFoundationCollections, ref folder, tag); break;
                                 }
 
                                 break;

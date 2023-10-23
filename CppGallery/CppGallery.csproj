@@ -187,12 +187,24 @@
 		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryReportPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsDevicesPower\WindowsDevicesPowerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IIterablePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IKeyValuePairPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IMapViewPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IVectorPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IVectorViewPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FolderPickerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerLocationIdPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\WindowsStoragePickersPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemDisplay\DisplayRequestPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemDisplay\WindowsSystemDisplayPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemInventory\InstalledDesktopAppPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemInventory\WindowsSystemInventoryPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml" />
@@ -268,6 +280,42 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IMapViewPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IKeyValuePairPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorViewPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IIterablePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemInventory\InstalledDesktopAppPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemInventory\WindowsSystemInventoryPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemDisplay\DisplayRequestPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemDisplay\WindowsSystemDisplayPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

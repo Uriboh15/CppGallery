@@ -89,7 +89,6 @@ namespace CppGallery.Pages.UserControls
             "istringstream",
             "istream",
             "iterator",
-            "Key",
             "locale",
             "minstd_rand",
             

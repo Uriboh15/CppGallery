@@ -17,6 +17,42 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IMapViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IKeyValuePairPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IIterablePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemInventory\InstalledDesktopAppPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemInventory\WindowsSystemInventoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemDisplay\DisplayRequestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemDisplay\WindowsSystemDisplayPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -16,6 +16,7 @@ namespace CppGallery
 {
     public enum HeaderIcon
     {
+        Definition,
         Error,
         Event,
         Function,
@@ -176,6 +177,7 @@ namespace CppGallery
         {
             return symbol switch
             {
+                HeaderIcon.Definition => "\uF000",
                 HeaderIcon.Error => "\uEB90",
                 HeaderIcon.Event => "\uEA86",
                 HeaderIcon.Function => "\uF158",

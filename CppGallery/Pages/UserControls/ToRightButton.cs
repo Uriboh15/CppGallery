@@ -108,7 +108,8 @@ namespace CppGallery.Pages.UserControls
             ToRightButton ctrl = obj as ToRightButton;
             if (ctrl != null)
             {
-                ctrl.Title = ctrl.Title.Replace("::", " : : ");
+                if (ctrl.Title.Contains(", ")) return;
+                ctrl.Title = ctrl.Title.Replace("::", " : : ").Replace(",", ", ");
             }
         }
 

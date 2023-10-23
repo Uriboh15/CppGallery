@@ -1093,9 +1093,56 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="WindowsFoundationCollections" Content="&lt;winrt/Windows.Foundation.Collections.h>" Tag="W0AWindowsFoundationCollections">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE76F;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="IIterable" Tag="W0AIIterable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IKeyValuePair" Tag="W0AIKeyValuePair0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IMap" Tag="W0AIMap0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IMapView" Tag="W0AIMapView0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IVector" Tag="W0AIVector0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IVectorView" Tag="W0AIVectorView0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="WindowsStoragePickers" Content="&lt;winrt/Windows.Storage.Pickers.h>" Tag="W06WindowsStoragePickers">
                 <NavigationViewItem.Icon>
-                    <FontIcon Glyph="&#xE8B7;"/>
+                    <FontIcon Glyph="&#xF89A;"/>
                 </NavigationViewItem.Icon>
 
                 <NavigationViewItem.MenuItems>
@@ -1131,7 +1178,38 @@
                     </NavigationViewItem>
 
                 </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
 
+            <NavigationViewItem x:Name="WindowsSystemDisplay" Content="&lt;winrt/Windows.System.Display.h>" Tag="W08WindowsSystemDisplay">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7F4;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="DisplayRequest" Tag="W08DisplayRequest0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsSystemInventory" Content="&lt;winrt/Windows.System.Inventory.h>" Tag="W09WindowsSystemInventory">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xED35;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="InstalledDesktopApp" Tag="W09InstalledDesktopApp0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="WindowsUI" Content="&lt;winrt/Windows.UI.h>" Tag="W04WindowsUI">
