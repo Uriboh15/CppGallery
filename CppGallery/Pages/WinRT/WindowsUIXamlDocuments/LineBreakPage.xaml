@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsUIXamlDocuments.LineBreakPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocumentsInline}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.LineBreak/LineBreak" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKey" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyScopeOwner" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AllowFocusOnInteraction" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/CharacterSpacing" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ContentEnd" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ContentStart" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/Dispatcher" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ElementEnd" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ElementStart" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ExitDisplayModeOnAccessKeyInvoked" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontFamily" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontSize" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStretch" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStyle" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontWeight" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Foreground" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsAccessKeyScope" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsTextScaleFactorEnabled" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipHorizontalOffset" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipPlacementMode" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipVerticalOffset" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Language" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Name" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/TextDecorations" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/XamlRoot" CodeLanguage="CppWinRT" />
+
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTDependencyProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyScopeOwnerProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AllowFocusOnInteractionProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ExitDisplayModeOnAccessKeyInvokedProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontFamilyProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontSizeProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStretchProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStyleProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontWeightProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ForegroundProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsAccessKeyScopeProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsTextScaleFactorEnabledProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipHorizontalOffsetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipPlacementModeProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipVerticalOffsetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/LanguageProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/TextDecorationsProperty" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTMethod" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ClearValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FindName" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetAnimationBaseValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/GetValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/OnDisconnectVisualChildren" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/ReadLocalValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/RegisterPropertyChangedCallback" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/SetValue" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/UnregisterPropertyChangedCallback" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTEvent" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyDisplayDismissed" CodeLanguage="CppWinRT" Icon="Event" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyDisplayRequested" CodeLanguage="CppWinRT" Icon="Event" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyInvoked" CodeLanguage="CppWinRT" Icon="Event" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.xaml.documents.linebreak?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -14,6 +14,7 @@ namespace CppGallery.Pages.UserControls
             KeyYellow.Add(KeywordsYellow);
             KeyDefine.Add(KeywordsDefine);
             KeyEnum.Add(KeywordsEnum);
+            KeyFunctionMacro.Add(KeywordsFunctionMacro);
         }
 
         private static List<string> KeywordsGreen { get; } = new List<string>()
@@ -63,7 +64,6 @@ namespace CppGallery.Pages.UserControls
 
         private static List<string> KeywordsEnum { get; } = new List<string>()
         {
-            
             "DWMWINDOWATTRIBUTE",
             "DWM_WINDOW_CORNER_PREFERENCE",
             "DWM_SYSTEMBACKDROP_TYPE",
@@ -121,7 +121,6 @@ namespace CppGallery.Pages.UserControls
             "IsCharLower",
             "IsCharUpper",
             "LoadLibrary",
-            "max",
             "MB_ICONERROR",
             "MB_ICONINFORMATION",
             "MB_ICONQUESTION",
@@ -129,7 +128,6 @@ namespace CppGallery.Pages.UserControls
             "MB_OK",
             "MessageBox",
             "MF_STRING",
-            "min",
             "ReadConsole",
             "RegisterClassEx",
             "SearchPath",
@@ -154,6 +152,12 @@ namespace CppGallery.Pages.UserControls
             "_In_",
             "_In_opt_",
             "_In_reads_bytes_",
+        };
+
+        private static List<string> KeywordsFunctionMacro { get; } = new List<string>
+        {
+            "max",
+            "min",
         };
     }
 }

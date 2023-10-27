@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundationCollections.IIteratorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IIterator" CodeLanguage="CppWinRT" />
+
+            <local:SymbolBlockPanel Symbol="Typedefs" >
+                <local:ItemGrid Title="difference_type" Sentence="要素のイテレータの差を表す型" Value="ptrdiff_t" />
+                <local:ItemGrid Title="iterator_concept" Sentence="イテレータの性質を表す型" Value="std::input_iterator_tag" />
+                <local:ItemGrid Title="iterator_category" Sentence="イテレータの分類を表す型" Value="std::input_iterator_tag" />
+                <local:ItemGrid Title="pointer" Sentence="要素へのポインターを表す型" Value="void" />
+                <local:ItemGrid Title="reference" Sentence="要素の型" />
+                <local:ItemGrid Title="value_type" Sentence="要素の型" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/Current" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/HasCurrent" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorPlus" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorKAKERU" CodeLanguage="CppWinRT" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTMethod" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/GetMany" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/MoveNext" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.collections.iiterator-1?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

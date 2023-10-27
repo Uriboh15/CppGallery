@@ -24,6 +24,15 @@
 
             <Expander>
                 <Expander.Header>
+                    <local:EHeader Title="Ver 2.4.7" Sentence="2023年10月27日" Icon="&#xE7C3;"/>
+                </Expander.Header>
+                <TextBlock>
+                    ・新たに85項目追加
+                </TextBlock>
+            </Expander>
+
+            <Expander>
+                <Expander.Header>
                     <local:EHeader Title="Ver 2.4.6" Sentence="2023年10月23日" Icon="&#xE7C3;"/>
                 </Expander.Header>
                 <TextBlock>

@@ -11,48 +11,9 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
-    <Style x:Key="ColumnTitle" TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="24"/>
-        <Setter Property="IsTextSelectionEnabled" Value="True"/>
-    </Style>
-
     <Style x:Key="CodeText" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="Consolas"/>
         <Setter Property="IsTextSelectionEnabled" Value="True"/>
     </Style>
-
-    <Style x:Key="Extend" TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Text" Value="基底クラス"/>
-    </Style>
-
-    <Style x:Key="Included" TargetType="TextBlock" BasedOn="{StaticResource Title}">
-        <Setter Property="Text" Value="このヘッダーを include しているライブラリ"/>
-    </Style>
-
-    <Style x:Key="Including" TargetType="TextBlock" BasedOn="{StaticResource Title}">
-        <Setter Property="Text" Value="このヘッダーに含まれるライブラリ"/>
-    </Style>
-
-    
-
-    <Style x:Key="SubClass" TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Text" Value="派生クラス"/>
-    </Style>
-
-    <Style x:Key="Title" TargetType="TextBlock">
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="20"/>
-    </Style>
-
-    
-
-    
-
-    
 
 </ResourceDictionary>

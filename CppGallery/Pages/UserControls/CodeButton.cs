@@ -104,6 +104,7 @@ namespace CppGallery.Pages.UserControls
             "partial_ordering",
             "path",
             "reference",
+            "rep",
             "result_type",
             "reverse_iterator",
             "set",
@@ -118,7 +119,7 @@ namespace CppGallery.Pages.UserControls
             "string_type",
             "string_view",
             "strong_ordering",
-            
+            "system_clock",
             "to_chars_result",
             "Traits",
             "true_type",
@@ -271,17 +272,9 @@ namespace CppGallery.Pages.UserControls
             "weakly_incrementable",
         };
 
-        private static List<string> KeywordsUserFunction { get; } = new List<string>
-        {
-            "GetCppString",
-            "GetRand",
-            "Print",
-            "print",
-            "split",
-        };
-
         private static List<string> KeywordsGlobal { get; } = new List<string>
         {
+            "chrono",
             "filesystem",
             "std",
             "numbers",
@@ -347,7 +340,6 @@ namespace CppGallery.Pages.UserControls
             KeyBlue.Add(KeywordsBlue);
             KeyPurple.Add(KeywordsPurple);
             KeyGreen.Add(KeywordsGreen);
-            KeyUserFunction.Add(KeywordsUserFunction);
             KeyYellow.Add(KeywordsYellow);
             KeyGlobal.Add(KeywordsGlobal);
             KeyDefine.Add(KeywordsDefine);
@@ -355,6 +347,11 @@ namespace CppGallery.Pages.UserControls
             KeyEnum.Add(KeywordsEnum);
             KeyConcept.Add(KeywordsConcept);
             KeyFunc.Add(KeywordsFunction);
+
+            //<cstdbool>のマクロを削除
+            DeletedMacro.Add("bool");
+            DeletedMacro.Add("true");
+            DeletedMacro.Add("false");
         }
     }
 }

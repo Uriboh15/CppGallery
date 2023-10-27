@@ -17,6 +17,72 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhoneticAnalyzerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalization\WindowsGlobalizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlDocuments\LineBreakPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlDocuments\RunPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlDocuments\InlinePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlDocuments\TextElementPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIXamlDocuments\WindowsUIXamlDocumentsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemPower\PowerSupplyStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemPower\EnergySaverStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemPower\PowerManagerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemPower\BatteryStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsSystemPower\WindowsSystemPowerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\VectorChangedEventHandlerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\MapChangedEventHandlerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IPropertySetPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IObservableMapPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IObservableVectorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IIteratorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorChangedEventArgsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\CollectionChangePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundationCollections\IMapChangedEventArgsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml">
       <SubType>Designer</SubType>
     </Page>

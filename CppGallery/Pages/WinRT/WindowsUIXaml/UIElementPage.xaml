@@ -36,6 +36,15 @@
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHitTestVisible" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabled" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabled" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsTapEnabled" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyboardAcceleratorPlacementMode" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyboardAcceleratorPlacementTarget" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyboardAccelerators" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipHorizontalOffset" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipPlacementMode" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipTarget" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipVerticalOffset" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/Lights" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="WinRTDependencyProperty" >
@@ -53,9 +62,15 @@
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHitTestVisibleProperty" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsHoldingEnabledProperty" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsRightTapEnabledProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/IsTapEnabledProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyboardAcceleratorPlacementModeProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyboardAcceleratorPlacementTargetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipHorizontalOffsetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipPlacementModeProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipTargetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyTipVerticalOffsetProperty" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/LightsProperty" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
-
-            
 
             <local:SymbolBlockPanel Symbol="Operator" >
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
@@ -74,7 +89,7 @@
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/UnregisterPropertyChangedCallback" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
-            <local:SymbolBlockPanel Symbol="WinRTEventHandler" >
+            <local:SymbolBlockPanel Symbol="WinRTEvent" >
                 
             </local:SymbolBlockPanel>
 
@@ -89,6 +104,12 @@
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/DropEvent" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/GettingFocusEvent" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/HoldingEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyDownEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/KeyUpEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/LosingFocusEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ManipulationCompletedEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ManipulationDeltaEvent" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.UIElement/ManipulationInertiaStartingEvent" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="NonMemberFunction" >
@@ -98,14 +119,6 @@
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/attach_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_from_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_to_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/detach_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_unknown" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/put_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/swap" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="DerivedClass" >

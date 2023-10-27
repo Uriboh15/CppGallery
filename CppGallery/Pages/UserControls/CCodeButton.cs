@@ -81,7 +81,6 @@ namespace CppGallery.Pages.UserControls
 
         private static List<string> KeywordsDefine { get; } = new List<string>
         {
-            "assert",
             "bool",
             "EOF",
             "errno",
@@ -112,6 +111,11 @@ namespace CppGallery.Pages.UserControls
             "_IOLBF",
             "_IONBF",
             
+        };
+
+        private static List<string> KeywordsFunctionMacro { get; } = new List<string>()
+        {
+            "assert",
         };
 
         private static List<string> KeywordsFunc { get; } = new List<string>
@@ -602,6 +606,7 @@ namespace CppGallery.Pages.UserControls
             KeyDefine.Add(KeywordsDefine);
             KeyFunc.Add(KeywordsFunc);
             KeyUserFunction.Add(KeywordsUserFunction);
+            KeyFunctionMacro.Add(KeywordsFunctionMacro);
         }
     }
 }

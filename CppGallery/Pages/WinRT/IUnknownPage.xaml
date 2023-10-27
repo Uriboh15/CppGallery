@@ -31,14 +31,7 @@
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/attach_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_from_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/copy_to_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/detach_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/get_unknown" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/put_abi" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/swap" CodeLanguage="CppWinRT" />
+                
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="DerivedClass" >

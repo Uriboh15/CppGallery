@@ -69,9 +69,11 @@ namespace CppGallery.Pages.UserControls
         protected List<List<string>> KeyClassTemplate { get; } = new List<List<string>>();
         protected List<List<string>> KeyEnum { get; } = new List<List<string>>();
         protected List<List<string>> KeyConcept { get; } = new List<List<string>>();
+        protected List<List<string>> KeyFunctionMacro { get; } = new List<List<string>>();
 
         private List<string> AddedDefine { get; } = new List<string>();
         private List<string> AddedGreen { get; } = new List<string>();
+        protected List<string> DeletedMacro { get; } = new List<string>();
 
         protected bool cLanguage = true;
 
@@ -94,8 +96,13 @@ namespace CppGallery.Pages.UserControls
             KeyGreen.Add(AddedGreen);
         }
 
-        private static bool Contains(List<List<string>> lists, string str)
+        private bool Contains(List<List<string>> lists, string str, bool isMacro = false)
         {
+            //#undefで削除されたマクロ
+            if (isMacro && DeletedMacro.Contains(str))
+            {
+                return false;
+            }
             foreach (var list in lists)
             {
                 if (list.Contains(str)) return true;
@@ -158,6 +165,12 @@ namespace CppGallery.Pages.UserControls
 
         private bool SetColor(Run run, string tmp, string st, int i)
         {
+            if (Contains(KeyDefine, tmp, true))
+            {
+                run.Foreground = defined;
+                return true;
+            }
+
             if (Contains(KeyBlue, tmp))
             {
                 run.Foreground = blue;
@@ -214,17 +227,8 @@ namespace CppGallery.Pages.UserControls
             }
             if (Contains(KeyPurple, tmp))
             {
-
                 run.Foreground = purple;
                 return true;
-
-            }
-            if (Contains(KeyDefine, tmp))
-            {
-
-                run.Foreground = defined;
-                return true;
-
             }
             if (Contains(KeyYellow, tmp))
             {
@@ -292,7 +296,7 @@ namespace CppGallery.Pages.UserControls
                         {
                             tmp += st[i];
                         }
-                        if (Contains(KeyDefine, tmp))
+                        if (Contains(KeyDefine, tmp, true))
                         {
                             run.Foreground = defined;
                         }
@@ -310,6 +314,21 @@ namespace CppGallery.Pages.UserControls
                         Mae = string.Empty;
                         run.Text = tmp;
                         run.Foreground = gray;
+                        Code.Inlines.Add(run);
+                        ++i;
+                        continue;
+                    }
+                    else if(Mae == "undef")
+                    {
+                        for (; i < st.Length; ++i)
+                        {
+                            tmp += st[i];
+                        }
+
+                        DeletedMacro.Add(tmp);
+
+                        Mae = string.Empty;
+                        run.Text = tmp;
                         Code.Inlines.Add(run);
                         ++i;
                         continue;
@@ -358,6 +377,10 @@ namespace CppGallery.Pages.UserControls
                                 else if (tmp == "#ifdef " || tmp == "#ifndef ")
                                 {
                                     Mae = "ifdef";
+                                }
+                                else if(tmp == "#undef ")
+                                {
+                                    Mae = "undef";
                                 }
 
                             }
@@ -479,7 +502,23 @@ namespace CppGallery.Pages.UserControls
                         tmp += st[i];
                         if (StKey(st, i))
                         {
-                            //キーワードが最優先
+                            //マクロが最優先
+                            if (Contains(KeyDefine, tmp, true))
+                            {
+                                run.Foreground = defined;
+                                Mae = string.Empty;
+                                break;
+                            }
+
+                            //関数マクロ
+                            if (i + 1 < st.Length && st[i + 1] == '(' && Contains(KeyFunctionMacro, tmp, true))
+                            {
+                                run.Foreground = defined;
+                                Mae = string.Empty;
+                                break;
+                            }
+
+                            //次にキーワード
                             if (Contains(KeyBlue, tmp))
                             {
                                 run.Foreground = blue;

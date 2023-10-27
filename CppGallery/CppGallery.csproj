@@ -187,14 +187,26 @@
 		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsDevicesPower\BatteryReportPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsDevicesPower\WindowsDevicesPowerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\CollectionChangePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IIterablePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IIteratorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IKeyValuePairPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IMapChangedEventArgsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IMapViewPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IObservableMapPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IObservableVectorPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IPropertySetPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\IVectorChangedEventArgsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IVectorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\IVectorViewPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\MapChangedEventHandlerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundationCollections\VectorChangedEventHandlerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhoneticAnalyzerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\WindowsGlobalizationPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FolderPickerPage.xaml" />
@@ -205,11 +217,21 @@
 		<None Remove="Pages\WinRT\WindowsSystemDisplay\WindowsSystemDisplayPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemInventory\InstalledDesktopAppPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemInventory\WindowsSystemInventoryPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemPower\BatteryStatusPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemPower\EnergySaverStatusPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemPower\PowerManagerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemPower\PowerSupplyStatusPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsSystemPower\WindowsSystemPowerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlDocuments\InlinePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlDocuments\LineBreakPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlDocuments\RunPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlDocuments\TextElementPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIXamlDocuments\WindowsUIXamlDocumentsPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\ContentPropertyAttributePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\WindowsUIXamlMarkupPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlMarkup\XamlReaderPage.xaml" />
@@ -280,6 +302,72 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhoneticAnalyzerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalization\WindowsGlobalizationPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlDocuments\LineBreakPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlDocuments\RunPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlDocuments\InlinePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlDocuments\TextElementPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIXamlDocuments\WindowsUIXamlDocumentsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemPower\PowerSupplyStatusPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemPower\EnergySaverStatusPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemPower\PowerManagerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemPower\BatteryStatusPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsSystemPower\WindowsSystemPowerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\VectorChangedEventHandlerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\MapChangedEventHandlerPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IPropertySetPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IObservableMapPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IObservableVectorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IIteratorPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IVectorChangedEventArgsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\CollectionChangePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundationCollections\IMapChangedEventArgsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WinRT\WindowsFoundationCollections\IMapPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

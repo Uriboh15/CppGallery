@@ -216,12 +216,34 @@ namespace CppGallery.Pages
             { typeof(WinRT.WindowsSystemInventory.WindowsSystemInventoryPage), "W09WindowsSystemInventory" },
             { typeof(WinRT.WindowsSystemInventory.InstalledDesktopAppPage), "W09InstalledDesktopApp0" },
             { typeof(WinRT.WindowsFoundationCollections.WindowsFoundationCollectionsPage), "W0AWindowsFoundationCollections" },
+            { typeof(WinRT.WindowsFoundationCollections.CollectionChangePage), "W0ACollectionChange0" },
             { typeof(WinRT.WindowsFoundationCollections.IIterablePage), "W0AIIterable0" },
+            { typeof(WinRT.WindowsFoundationCollections.IIteratorPage), "W0AIIterator0" },
             { typeof(WinRT.WindowsFoundationCollections.IKeyValuePairPage), "W0AIKeyValuePair0" },
             { typeof(WinRT.WindowsFoundationCollections.IMapPage), "W0AIMap0" },
+            { typeof(WinRT.WindowsFoundationCollections.IMapChangedEventArgsPage), "W0AIMapChangedEventArgs0" },
             { typeof(WinRT.WindowsFoundationCollections.IMapViewPage), "W0AIMapView0" },
+            { typeof(WinRT.WindowsFoundationCollections.IObservableMapPage), "W0AIObservableMap0" },
+            { typeof(WinRT.WindowsFoundationCollections.IObservableVectorPage), "W0AIObservableVector0" },
+            { typeof(WinRT.WindowsFoundationCollections.IPropertySetPage), "W0AIPropertySet0" },
             { typeof(WinRT.WindowsFoundationCollections.IVectorPage), "W0AIVector0" },
+            { typeof(WinRT.WindowsFoundationCollections.IVectorChangedEventArgsPage), "W0AIVectorChangedEventArgs0" },
             { typeof(WinRT.WindowsFoundationCollections.IVectorViewPage), "W0AIVectorView0" },
+            { typeof(WinRT.WindowsFoundationCollections.MapChangedEventHandlerPage), "W0AMapChangedEventHandler0" },
+            { typeof(WinRT.WindowsFoundationCollections.VectorChangedEventHandlerPage), "W0AVectorChangedEventHandler0" },
+            { typeof(WinRT.WindowsSystemPower.WindowsSystemPowerPage), "W0BWindowsSystemPower" },
+            { typeof(WinRT.WindowsSystemPower.BatteryStatusPage), "W0BBatteryStatus0" },
+            { typeof(WinRT.WindowsSystemPower.EnergySaverStatusPage), "W0BEnergySaverStatus0" },
+            { typeof(WinRT.WindowsSystemPower.PowerManagerPage), "W0BPowerManager0" },
+            { typeof(WinRT.WindowsSystemPower.PowerSupplyStatusPage), "W0BPowerSupplyStatus0" },
+            { typeof(WinRT.WindowsUIXamlDocuments.WindowsUIXamlDocumentsPage), "W0CWindowsUIXamlDocuments" },
+            { typeof(WinRT.WindowsUIXamlDocuments.InlinePage), "W0CInline0" },
+            { typeof(WinRT.WindowsUIXamlDocuments.LineBreakPage), "W0CLineBreak0" },
+            { typeof(WinRT.WindowsUIXamlDocuments.RunPage), "W0CRun0" },
+            { typeof(WinRT.WindowsUIXamlDocuments.TextElementPage), "W0CTextElement0" },
+            { typeof(WinRT.WindowsGlobalization.WindowsGlobalizationPage), "W0DWindowsGlobalization" },
+            { typeof(WinRT.WindowsGlobalization.JapanesePhonemePage), "W0DJapanesePhoneme0" },
+            { typeof(WinRT.WindowsGlobalization.JapanesePhoneticAnalyzerPage), "W0DJapanesePhoneticAnalyzer0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -739,6 +761,9 @@ namespace CppGallery.Pages
                                     case '8': SetItem(WindowsSystemDisplay, ref folder, tag); break;
                                     case '9': SetItem(WindowsSystemInventory, ref folder, tag); break;
                                     case 'A': SetItem(WindowsFoundationCollections, ref folder, tag); break;
+                                    case 'B': SetItem(WindowsSystemPower, ref folder, tag); break;
+                                    case 'C': SetItem(WindowsUIXamlDocuments, ref folder, tag); break;
+                                    case 'D': SetItem(WindowsGlobalization, ref folder, tag); break;
                                 }
 
                                 break;

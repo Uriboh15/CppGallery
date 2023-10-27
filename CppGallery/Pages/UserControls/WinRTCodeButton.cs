@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CppGallery.Pages.UserControls
 {
-    public class WinRTCodeButton : CodeButton
+    public class WinRTCodeButton : Win32CodeButton
     {
         public WinRTCodeButton()
         {
@@ -24,6 +24,7 @@ namespace CppGallery.Pages.UserControls
             "auto_revoke_t",
             "Battery",
             "BatteryReport",
+            "BatteryStatusChanged_revoker",
             "Brush",
             "Color",
             "ColorChangedEventArgs",
@@ -39,10 +40,12 @@ namespace CppGallery.Pages.UserControls
             "DeviceInformation",
             "DeviceInformationCollection",
             "DisplayRequest",
+            "EnergySaverStatusChanged_revoker",
             "event_token",
             "FlyoutBase",
             "FileOpenPicker",
             "FolderPicker",
+            "FontFamily",
             "FontWeight",
             "FontWeights",
             "FrameworkElement",
@@ -51,47 +54,74 @@ namespace CppGallery.Pages.UserControls
             "IAsyncAction",
             "IInitializeWithWindow",
             "IInspectable",
+            "Inline",
             "InstalledDesktopApp",
+            "IVectorChangedEventArgs",
             "IUnknown",
             "IWindowNative",
+            "JapanesePhoneme",
+            "JapanesePhoneticAnalyzer",
+            "LineBreak",
             "MainPage",
             "MainWindow",
+            "MapChanged_revoker",
+            "MulticastDelegate",
+            "PowerManager",
+            "PowerSupplyStatusChanged_revoker",
             "Rectangle",
+            "RemainingChargePercentChanged_revoker",
+            "RemainingDischargeTimeChanged_revoker",
             "ReportUpdated_revoker",
             "RoutedEvent",
             "RoutedEventArgs",
+            "Run",
             "SelectionChangedEventArgs",
             "SolidColorBrush",
             "StackPanel",
             "StorageFile",
             "StorageFolder",
             "TextBlock",
+            "TextPointer",
+            "TimeSpan",
+            "VectorChanged_revoker",
             "XamlReader",
+            "XamlRoot",
         };
 
         private static List<string> KeywordsClassTemplate { get; } = new List<string>()
         {
             "array_view",
+            "EventHandler",
             "IAsyncOperation",
             "IIterable",
             "IIterator",
             "IKeyValuePair",
             "IMap",
+            "IMapChangedEventArgs",
             "IMapView",
+            "IObservableMap",
+            "IObservableVector",
             "IReference",
             "IVector",
+            
             "IVectorView",
+            "MapChangedEventHandler",
             "TypedEventHandler",
+            "VectorChangedEventHandler",
         };
 
         private static List<string> KeywordsEnum { get; } = new List<string>()
         {
             "BatteryStatus",
+            "CollectionChange",
             "ContentDialogButton",
+            "CoreDispatcherPriority",
             "ElementTheme",
+            "EnergySaverStatus",
             "HorizontalAlignment",
             "PickerLocationId",
             "PickerViewMode",
+            "PowerSupplyStatus",
             "TitleBarHeightOption",
             "VerticalAlignment",
         };
@@ -110,10 +140,13 @@ namespace CppGallery.Pages.UserControls
         {
             "Collections",
             "Controls",
+            "Core",
             "Devices",
             "Display",
+            "Documents",
             "Enumeration",
             "Foundation",
+            "Globalization",
             "implementation",
             "Inventory",
             "Markup",

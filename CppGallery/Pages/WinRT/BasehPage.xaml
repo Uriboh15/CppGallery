@@ -17,6 +17,17 @@
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIUnknown}" />
             </local:SymbolBlockPanel>
 
+            <local:SymbolBlockPanel Symbol="Function" >
+                <local:FunctionExpander Folder="winrt/base/attach_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/copy_from_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/copy_to_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/detach_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/get_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/get_unknown" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/put_abi" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/base/swap" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/cpp-ref-for-winrt/winrt" />
         </local:OuterPanel>
     </ScrollViewer>

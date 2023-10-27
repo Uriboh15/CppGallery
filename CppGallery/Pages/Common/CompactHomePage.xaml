@@ -111,13 +111,16 @@
                     <local:ToRightButton Style="{StaticResource WinRTBase}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsDevicesPower}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollections}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalization}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickers}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsSystemDisplay}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsSystemInventory}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPower}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUI}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIText}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXaml}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlControls}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocuments}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlMarkup}" InLibraryPage="True"/>
                 </local:ResultsPanel>
             </local:OuterPanel>

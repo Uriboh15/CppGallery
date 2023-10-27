@@ -10,15 +10,34 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
+            <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Title="PropertySet" Sentence="aaa" IsEnabled="False" />
+                <local:ToRightButton Title="StringMap" Sentence="aaa" IsEnabled="False" />
+                <local:ToRightButton Title="ValueSet" Sentence="aaa" IsEnabled="False" />
+            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Interfase" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterator}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIKeyValuePair}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMap}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMapChangedEventArgs}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMapView}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableMap}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableVector}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIPropertySet}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVector}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVectorChangedEventArgs}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVectorView}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Enum" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsCollectionChange}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTEventHandler" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsMapChangedEventHandler}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsVectorChangedEventHandler}" />
             </local:SymbolBlockPanel>
             
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.collections?view=winrt-22621" />

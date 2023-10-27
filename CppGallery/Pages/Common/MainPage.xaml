@@ -1100,7 +1100,19 @@
 
                 <NavigationViewItem.MenuItems>
 
+                    <NavigationViewItem Content="CollectionChange" Tag="W0ACollectionChange0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="IIterable" Tag="W0AIIterable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IIterator" Tag="W0AIIterator0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1118,7 +1130,31 @@
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
+                    <NavigationViewItem Content="IMapChangedEventArgs" Tag="W0AIMapChangedEventArgs0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="IMapView" Tag="W0AIMapView0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IObservableMap" Tag="W0AIObservableMap0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IObservableVector" Tag="W0AIObservableVector0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IPropertySet" Tag="W0AIPropertySet0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1130,7 +1166,25 @@
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
+                    <NavigationViewItem Content="IVectorChangedEventArgs" Tag="W0AIVectorChangedEventArgs0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="IVectorView" Tag="W0AIVectorView0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="MapChangedEventHandler" Tag="W0AMapChangedEventHandler0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="VectorChangedEventHandler" Tag="W0AVectorChangedEventHandler0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1138,6 +1192,22 @@
 
                 </NavigationViewItem.MenuItems>
 
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsGlobalization" Content="&lt;winrt/Windows.Globalization.h>" Tag="W0DWindowsGlobalization">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE774;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="JapanesePhoneticAnalyzer" Tag="W0DJapanesePhoneticAnalyzer0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="WindowsStoragePickers" Content="&lt;winrt/Windows.Storage.Pickers.h>" Tag="W06WindowsStoragePickers">
@@ -1204,6 +1274,40 @@
                 <NavigationViewItem.MenuItems>
 
                     <NavigationViewItem Content="InstalledDesktopApp" Tag="W09InstalledDesktopApp0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsSystemPower" Content="&lt;winrt/Windows.System.Power.h>" Tag="W0BWindowsSystemPower">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE861;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="BatteryStatus" Tag="W0BBatteryStatus0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="EnergySaverStatus" Tag="W0BEnergySaverStatus0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="PowerManager" Tag="W0BPowerManager0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="PowerSupplyStatus" Tag="W0BPowerSupplyStatus0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1295,6 +1399,41 @@
                 <NavigationViewItem.MenuItems>
 
                     <NavigationViewItem Content="ContentDialog" Tag="W00ContentDialog0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsUIXamlDocuments" Content="&lt;winrt/Windows.UI.Xaml.Document.h>" Tag="W0CWindowsUIXamlDocuments">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8D2;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="Inline" Tag="W0CInline0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="LineBreak" Tag="W0CLineBreak0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="Run" Tag="W0CRun0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="TextElement" Tag="W0CTextElement0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>

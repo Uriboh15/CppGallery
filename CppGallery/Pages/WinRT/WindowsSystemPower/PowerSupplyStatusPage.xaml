@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsSystemPower.PowerSupplyStatusPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="WinRTField" >
+                <local:ItemGrid Title="NotPresent" Sentence="電源未接続" Value="0" />
+                <local:ItemGrid Title="Inadequate" Sentence="電源不足" Value="1" />
+                <local:ItemGrid Title="Adequate" Sentence="十分な電源" Value="2" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.system.power.powersupplystatus?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>
