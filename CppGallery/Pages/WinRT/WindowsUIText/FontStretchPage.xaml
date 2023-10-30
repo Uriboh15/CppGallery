@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsUIText.FontStretchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="WinRTField" >
+                <local:ItemGrid Title="Undefined" Sentence="拡大率未定義" Value="0" />
+                <local:ItemGrid Title="UltraCondensed" Sentence="拡大率 50%" Value="1" />
+                <local:ItemGrid Title="ExtraCondensed" Sentence="拡大率 62.5%" Value="2" />
+                <local:ItemGrid Title="Condensed" Sentence="拡大率 75%" Value="3" />
+                <local:ItemGrid Title="SemiCondensed" Sentence="拡大率 87.5%" Value="4" />
+                <local:ItemGrid Title="Normal" Sentence="拡大率 100%" Value="5" />
+                <local:ItemGrid Title="SemiExpanded" Sentence="拡大率 112.5%" Value="6" />
+                <local:ItemGrid Title="Expanded" Sentence="拡大率 125%" Value="7" />
+                <local:ItemGrid Title="ExtraExpanded" Sentence="拡大率 150%" Value="8" />
+                <local:ItemGrid Title="UltraExpanded" Sentence="拡大率 200%" Value="9" />
+            </local:SymbolBlockPanel>
+            
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.text.fontstretch?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

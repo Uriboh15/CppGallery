@@ -13,7 +13,13 @@
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneme}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneticAnalyzer}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="Enum" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationDayOfWeek}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationLanguageLayoutDirection}" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.globalization?view=winrt-22621" />

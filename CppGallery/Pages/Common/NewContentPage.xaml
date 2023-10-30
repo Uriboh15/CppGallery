@@ -16,156 +16,87 @@
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
                 <local:BlockPanel Header="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalization}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPower}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocuments}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundation}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFonts}" />
                 </local:BlockPanel>
 
                 <local:SymbolBlockPanel Symbol="Class" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneticAnalyzer}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPowerPowerManager}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocumentsInline}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocumentsLineBreak}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocumentsRun}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUIXamlDocumentsTextElement}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneme}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFontsLanguageFont}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFontsLanguageFontGroup}" />
                 </local:SymbolBlockPanel>
 
                 <local:SymbolBlockPanel Symbol="Enum" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsCollectionChange}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPowerBatteryStatus}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPowerEnergySaverStatus}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPowerPowerSupplyStatus}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationDayOfWeek}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationLanguageLayoutDirection}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStretch}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStyle}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextLetterCase}" />
                 </local:SymbolBlockPanel>
 
                 <local:SymbolBlockPanel Symbol="Interfase" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterator}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMapChangedEventArgs}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableMap}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableVector}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIPropertySet}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVectorChangedEventArgs}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsMapChangedEventHandler}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsVectorChangedEventHandler}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIClosable}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIStringable}" />
                 </local:SymbolBlockPanel>
 
-                <local:BlockPanel Header="Colors" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MintCream" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/MistyRose" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Moccasin" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/NavajoWhite" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Navy" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/OldLace" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Olive" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/OliveDrab" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Orange" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/OrangeRed" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Orchid" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PaleGoldenrod" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PaleGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PaleTurquoise" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PaleVioletRed" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PapayaWhip" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PeachPuff" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Peru" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Pink" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Plum" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/PowderBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Purple" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Red" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/RosyBrown" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/RoyalBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SaddleBrown" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Salmon" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SandyBrown" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SeaGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SeaShell" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="Colors" >
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Sienna" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Silver" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SkyBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SlateBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SlateGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Snow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SpringGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SteelBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Tan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Teal" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Thistle" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Tomato" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Transparent" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Turquoise" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Violet" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Wheat" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/White" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/WhiteSmoke" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Yellow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/YellowGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="IIterator" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/Current" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/HasCurrent" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorPlus" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorKAKERU" CodeLanguage="CppWinRT" Icon="Operator" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/GetMany" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/MoveNext" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="IClosable" >
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IClosable/Close" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="IMapChangedEventArgs" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMapChangedEventArgs/CollectionChange" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMapChangedEventArgs/Key" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="IStringable" >
+                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IStringable/ToString" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="Inline" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.Inline/Inline" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="JapanesePhoneme" >
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/DisplayText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/IsPhraseStart" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/YomiText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="IObservableMap" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IObservableMap/MapChanged" CodeLanguage="CppWinRT" Icon="Event" />
+                <local:BlockPanel Header="LanguageFont" >
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontFamily" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontStretch" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontStyle" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontWeight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/ScaleFactor" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
 
-                <local:BlockPanel Header="IObservableVector" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IObservableVector/VectorChanged" CodeLanguage="CppWinRT" Icon="Event" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="IVectorChangedEventArgs" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVectorChangedEventArgs/CollectionChange" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVectorChangedEventArgs/Index" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="JapanesePhoneticAnalyzer" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneticAnalyzer/GetWords" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="PowerManager" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/BatteryStatus" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/EnergySaverStatus" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/PowerSupplyStatus" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/RemainingChargePercent" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/RemainingDischargeTime" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/BatteryStatusChanged" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Event" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/EnergySaverStatusChanged" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Event" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/PowerSupplyStatusChanged" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Event" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/RemainingChargePercentChanged" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Event" />
-                    <local:FunctionExpander Folder="winrt/Windows.System.Power.PowerManager/RemainingDischargeTimeChanged" SampleType="GUIApp" CodeLanguage="CppWinRT" Icon="Event" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="Run" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.Run/Run" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.Run/Text" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.Run/FlowDirectionProperty" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="TextElement" TargetMinCppVersion="Cpp17" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/CharacterSpacing" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ContentEnd" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ContentStart" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ElementEnd" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ElementStart" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontFamily" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontSize" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontWeight" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Foreground" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Language" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/Name" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/XamlRoot" CodeLanguage="CppWinRT" />
-
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AccessKeyScopeOwnerProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/AllowFocusOnInteractionProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ExitDisplayModeOnAccessKeyInvokedProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontFamilyProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontSizeProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStretchProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontStyleProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FontWeightProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/ForegroundProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsAccessKeyScopeProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/IsTextScaleFactorEnabledProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/KeyTipHorizontalOffsetProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/LanguageProperty" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/TextDecorationsProperty" CodeLanguage="CppWinRT" />
-
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.Documents.TextElement/FindName" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="LanguageFontGroup" >
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/LanguageFontGroup" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate1Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate2Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/FixedWidthTextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/ModernDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/TraditionalDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UICaptionFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UIHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UINotificationHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITitleFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
             </local:OuterPanel>
         </ScrollViewer>

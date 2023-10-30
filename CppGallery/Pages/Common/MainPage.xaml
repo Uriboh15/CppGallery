@@ -1093,6 +1093,29 @@
 
             </NavigationViewItem>
 
+            <NavigationViewItem x:Name="WindowsFoundation" Content="&lt;winrt/Windows.Foundation..h>" Tag="W0FWindowsFoundation">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE950;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="IClosable" Tag="W0FIClosable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IStringable" Tag="W0FIStringable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
+            </NavigationViewItem>
+
             <NavigationViewItem x:Name="WindowsFoundationCollections" Content="&lt;winrt/Windows.Foundation.Collections.h>" Tag="W0AWindowsFoundationCollections">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE76F;"/>
@@ -1201,7 +1224,47 @@
 
                 <NavigationViewItem.MenuItems>
 
+                    <NavigationViewItem Content="DayOfWeek" Tag="W0DDayOfWeek0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="JapanesePhoneme" Tag="W0DJapanesePhoneme0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="JapanesePhoneticAnalyzer" Tag="W0DJapanesePhoneticAnalyzer0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="LanguageLayoutDirection" Tag="W0DLanguageLayoutDirection0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsGlobalizationFonts" Content="&lt;winrt/Windows.Globalization.Fonts.h>" Tag="W0EWindowsGlobalizationFonts">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE8D2;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="LanguageFont" Tag="W0ELanguageFont0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="LanguageFontGroup" Tag="W0ELanguageFontGroup0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1351,6 +1414,17 @@
                 </NavigationViewItem.Icon>
 
                 <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="FontStretch" Tag="W03FontStretch0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="FontStyle" Tag="W03FontStyle0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
 
                     <NavigationViewItem Content="FontWeight" Tag="W03FontWeight0">
                         <NavigationViewItem.Icon>
@@ -1359,6 +1433,12 @@
                     </NavigationViewItem>
 
                     <NavigationViewItem Content="FontWeights" Tag="W03FontWeights0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="LetterCase" Tag="W03LetterCase0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>

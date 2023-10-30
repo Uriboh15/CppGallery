@@ -17,6 +17,36 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsFoundation\IClosablePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\IStringablePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIText\LetterCasePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIText\FontStylePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsUIText\FontStretchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontGroupPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalizationFonts\WindowsGlobalizationFontsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalization\LanguageLayoutDirectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsGlobalization\DayOfWeekPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml">
       <SubType>Designer</SubType>
     </Page>

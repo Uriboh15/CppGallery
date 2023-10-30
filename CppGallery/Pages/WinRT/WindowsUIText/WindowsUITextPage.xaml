@@ -13,7 +13,12 @@
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
             <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Title="ContentLinkInfo" IsEnabled="False" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontWeights}" />
+                <local:ToRightButton Title="RichEditTextDocument" IsEnabled="False" />
+                <local:ToRightButton Title="RichEditTextRange" IsEnabled="False" />
+                <local:ToRightButton Title="TextConstants" IsEnabled="False" />
+                
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Struct" >
@@ -25,7 +30,9 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Enum" >
-                
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStretch}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStyle}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsUITextLetterCase}" />
             </local:SymbolBlockPanel>
             
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.text?view=winrt-22621" />

@@ -1215,6 +1215,23 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsFoundation" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Foundation.h>" />
+        <Setter Property="Sentence" Value="WinRT の基本プロパティ" />
+        <Setter Property="PageTag" Value="W0FWindowsFoundation"/>
+        <Setter Property="Icon" Value="&#xE950;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationIClosable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IClosable" />
+        <Setter Property="Sentence" Value="システムリソースの開放機能を定義するインターフェース" />
+        <Setter Property="PageTag" Value="W0FIClosable0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationIInspectable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="Windows::Foundation::IInspectable" />
         <Setter Property="Sentence" Value="WinRT クラスの基底クラス" />
@@ -1226,8 +1243,7 @@
     <Style x:Key="WinRTWindowsFoundationIStringable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="IStringable" />
         <Setter Property="Sentence" Value="hstring に変換可能であることを表すインターフェース" />
-        <Setter Property="PageTag" Value=""/>
-        <Setter Property="IsEnabled" Value="False"/>
+        <Setter Property="PageTag" Value="W0FIStringable0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1378,6 +1394,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsGlobalizationDayOfWeek" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="DayOfWeek" />
+        <Setter Property="Sentence" Value="曜日" />
+        <Setter Property="PageTag" Value="W0DDayOfWeek0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsGlobalizationJapanesePhoneme" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="JapanesePhoneme" />
         <Setter Property="Sentence" Value="日本語文の単語" />
@@ -1390,6 +1414,39 @@
         <Setter Property="Title" Value="JapanesePhoneticAnalyzer" />
         <Setter Property="Sentence" Value="日本語文の単語区切り機能" />
         <Setter Property="PageTag" Value="W0DJapanesePhoneticAnalyzer0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsGlobalizationLanguageLayoutDirection" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="LanguageLayoutDirection" />
+        <Setter Property="Sentence" Value="文章のレイアウト" />
+        <Setter Property="PageTag" Value="W0DLanguageLayoutDirection0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsGlobalizationFonts" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Globalization.Fonts.h>" />
+        <Setter Property="Sentence" Value="特定の言語のフォント情報" />
+        <Setter Property="PageTag" Value="W0EWindowsGlobalizationFonts"/>
+        <Setter Property="Icon" Value="&#xE8D2;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsGlobalizationFontsLanguageFont" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="LanguageFont" />
+        <Setter Property="Sentence" Value="特定の言語の特定のフォント情報" />
+        <Setter Property="PageTag" Value="W0ELanguageFont0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsGlobalizationFontsLanguageFontGroup" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="LanguageFontGroup" />
+        <Setter Property="Sentence" Value="特定の言語のフォント情報" />
+        <Setter Property="PageTag" Value="W0ELanguageFontGroup0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1560,6 +1617,22 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsUITextFontStretch" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="FontStretch" />
+        <Setter Property="Sentence" Value="テキストの拡大率" />
+        <Setter Property="PageTag" Value="W03FontStretch0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUITextFontStyle" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="FontStyle" />
+        <Setter Property="Sentence" Value="テキストのスタイル" />
+        <Setter Property="PageTag" Value="W03FontStyle0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsUITextFontWeight" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="FontWeight" />
         <Setter Property="Sentence" Value="テキストの太さ" />
@@ -1572,6 +1645,14 @@
         <Setter Property="Title" Value="FontWeights" />
         <Setter Property="Sentence" Value="テキストの太さを指定する静的プロパティを提供するクラス" />
         <Setter Property="PageTag" Value="W03FontWeights0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsUITextLetterCase" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="LetterCase" />
+        <Setter Property="Sentence" Value="英字の大文字小文字" />
+        <Setter Property="PageTag" Value="W03LetterCase0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

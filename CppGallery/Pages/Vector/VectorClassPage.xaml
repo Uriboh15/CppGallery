@@ -10,14 +10,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <ScrollViewer >
         <local:OuterPanel>
             <local:SymbolBlockPanel Symbol="Constructor" >
-                <local:CustomExpander IsEnabled="False">
-                    <Expander.Header>
-                        <local:EHeader Title="vector()" Sentence="vector を構築します"/>
-                    </Expander.Header>
-                </local:CustomExpander>
+                <local:CustomExpander Title="vector()" Sentence="vector を構築します" IsEnabled="False" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Typedefs" >
@@ -122,8 +118,8 @@
                 <local:FunctionExpander Folder="vector__vector/size" />
                 <local:FunctionExpander Folder="vector__vector/swap" />
             </local:SymbolBlockPanel>
-            
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/vector-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/vector/vector.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

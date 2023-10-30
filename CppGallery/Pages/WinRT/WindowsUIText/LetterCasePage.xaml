@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="CppGallery.Pages.WinRT.WindowsFoundation.WindowsFoundationPage"
+    x:Class="CppGallery.Pages.WinRT.WindowsUIText.LetterCasePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CppGallery.Pages.UserControls"
@@ -10,14 +10,12 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
-
-            <local:SymbolBlockPanel Symbol="Interfase" >
-                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIClosable}" />
-                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIStringable}" />
+            <local:SymbolBlockPanel Symbol="WinRTField" >
+                <local:ItemGrid Title="Lower" Sentence="小文字" Value="0" />
+                <local:ItemGrid Title="Upper" Sentence="大文字" Value="1" />
             </local:SymbolBlockPanel>
 
-            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation?view=winrt-22621" />
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.ui.text.lettercase?view=winrt-22621" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

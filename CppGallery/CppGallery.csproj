@@ -203,9 +203,16 @@
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\MapChangedEventHandlerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\VectorChangedEventHandlerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IClosablePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IStringablePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontGroupPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalizationFonts\WindowsGlobalizationFontsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\DayOfWeekPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhoneticAnalyzerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\LanguageLayoutDirectionPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\WindowsGlobalizationPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml" />
@@ -222,8 +229,11 @@
 		<None Remove="Pages\WinRT\WindowsSystemPower\PowerManagerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemPower\PowerSupplyStatusPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemPower\WindowsSystemPowerPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\FontStretchPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\FontStylePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\FontWeightsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsUIText\LetterCasePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIText\WindowsUITextPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\ContentDialogPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsUIXamlControls\WindowsUIXamlControlsPage.xaml" />
@@ -302,6 +312,36 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsFoundation\IClosablePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\IStringablePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIText\LetterCasePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIText\FontStylePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsUIText\FontStretchPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontGroupPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalizationFonts\WindowsGlobalizationFontsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalization\LanguageLayoutDirectionPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalization\DayOfWeekPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

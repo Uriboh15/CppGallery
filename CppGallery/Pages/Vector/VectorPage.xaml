@@ -22,7 +22,6 @@
                 <local:FunctionExpander Folder="vector/operatorRE" Icon="Operator" />
             </local:SymbolBlockPanel>
             
-
             <local:SymbolBlockPanel Symbol="Function" >
                 <local:FunctionExpander Folder="vector/swap" />
             </local:SymbolBlockPanel>
@@ -34,8 +33,8 @@
             <local:SymbolBlockPanel Symbol="Specialization" >
                 <local:ItemGrid Title="vector&lt;bool> クラス" Sentence="vector を bool に特殊化したクラス"/>
             </local:SymbolBlockPanel>
-            
 
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/vector?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/vector.html" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

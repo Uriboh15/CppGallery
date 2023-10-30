@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Page
-    x:Class="CppGallery.Pages.WinRT.WindowsGlobalization.JapanesePhonemePage"
+    x:Class="CppGallery.Pages.WinRT.WindowsGlobalizationFonts.LanguageFontGroupPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CppGallery.Pages.UserControls"
@@ -14,10 +14,8 @@
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
             </local:SymbolBlockPanel>
 
-            <local:SymbolBlockPanel Symbol="WinRTProperty" >
-                <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/DisplayText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/IsPhraseStart" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/YomiText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+            <local:SymbolBlockPanel Symbol="Constructor" >
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/LanguageFontGroup" SampleType="GUIApp" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Operator" >
@@ -27,7 +25,18 @@
 
             <local:SymbolBlockPanel Symbol="WinRTMethod" >
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate1Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate2Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/FixedWidthTextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/ModernDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/TraditionalDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UICaptionFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UIHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UINotificationHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITitleFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="NonMemberFunction" >
@@ -39,7 +48,7 @@
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
             </local:SymbolBlockPanel>
 
-            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.globalization.japanesephoneme?view=winrt-22621" />
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.globalization.fonts.languagefontgroup?view=winrt-22621" />
         </local:OuterPanel>
     </ScrollViewer>
 </Page>

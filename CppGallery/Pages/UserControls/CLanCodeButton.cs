@@ -537,7 +537,8 @@ namespace CppGallery.Pages.UserControls
                                         {
                                             if (st[i + 1] == '(')
                                             {
-                                                run.Foreground = ((Code.Inlines[^2] as Run).Foreground == global) ? green : yellow;
+                                                //run.Foreground = ((Code.Inlines[^2] as Run).Foreground == global) ? green : yellow;
+                                                run.Foreground = green;
                                             }
                                             else
                                             {
