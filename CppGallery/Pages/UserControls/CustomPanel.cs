@@ -18,7 +18,6 @@ namespace CppGallery.Pages.UserControls
         {
             this.Padding = new Thickness(Data.OuterPanelPadding, 0, Data.OuterPanelPadding, Data.OuterPanelPadding);
             this.Spacing = Data.ResultPanelSpacing;
-
         }
     }
 
@@ -87,59 +86,6 @@ namespace CppGallery.Pages.UserControls
         public InnerPanel()
         {
             this.Padding = new Thickness(Data.ControlGridPadding);
-        }
-    }
-
-    public class InnerGrid : Grid
-    {
-        public InnerGrid()
-        {
-            this.Loaded += Grid_Loaded;
-        }
-
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-            Loaded -= Grid_Loaded;
-
-            if (App.IsCompact)
-            {
-                this.Padding = new Thickness(Data.ControlGridPadding, Data.ControlGridPadding - 2.0, Data.ControlGridPadding, Data.ControlGridPadding - 2.0);
-                this.MaxHeight = Data.OutputsMaxHeight;
-
-            }
-            else
-            {
-                this.Padding = new Thickness(Data.ControlGridPadding, Data.ControlGridPadding - 5.0, Data.ControlGridPadding, Data.ControlGridPadding - 5.0);
-                this.MaxHeight = Data.OutputsMaxHeight;
-            }
-            this.MinHeight = Data.OutPutsMinHeight;
-
-            if (App.ResultTheme != ElementTheme.Default)
-            {
-                var panel = sender as Grid;
-                if (App.ResultTheme != ActualTheme)
-                {
-                    
-                    panel.RequestedTheme = App.ResultTheme;
-                    if (App.ResultTheme == ElementTheme.Dark)
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X0C, 0x0C, 0x0C));
-                    }
-                    else
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XFD, 0xFD, 0xFD));
-                    }
-                }
-                else
-                {
-                    if (panel.ActualTheme == ElementTheme.Dark)
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0xC0, 0x00, 0x00, 0x00));
-                        panel.BorderBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(0xA0, 0x0D, 0x0D, 0x0D));
-                    }
-                }
-                
-            }
         }
     }
 }

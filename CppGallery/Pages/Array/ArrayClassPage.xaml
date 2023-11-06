@@ -12,6 +12,13 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <local:GrammarPane Folder="array__array" >
+                <local:GrammarPane.Children>
+                    <local:ItemGrid Title="_Ty" Sentence="配列の要素の型" />
+                    <local:ItemGrid Title="_Size" Sentence="要素数" />
+                </local:GrammarPane.Children>
+            </local:GrammarPane>
+
             <local:SymbolBlockPanel Symbol="Constructor">
                 <local:FunctionExpander Folder="array__array/array" />
             </local:SymbolBlockPanel>

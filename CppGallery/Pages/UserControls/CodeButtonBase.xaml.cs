@@ -17,6 +17,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Windows.ApplicationModel.DataTransfer;
 using System.Xml.Linq;
+using Windows.Devices.Enumeration;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -80,11 +81,19 @@ namespace CppGallery.Pages.UserControls
 
         protected TextBlock Code => CodeText;
 
-        private static DataPackage dataPackage = new DataPackage();
+        private static DataPackage dataPackage { get; } = new DataPackage();
+
+        //PanelÇÃêF
+        private static SolidColorBrush DarkThemeBackground { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0x60, 0x05, 0x05, 0x05));
+        private static SolidColorBrush LightThemeBackground { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X20, 0x20, 0x20));        
+        private static SolidColorBrush BorderColor { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0xA0, 0x0D, 0x0D, 0x0D));
 
         public CodeButtonBase()
         {
             this.InitializeComponent();
+
+            Panel.BorderBrush = BorderColor;
+
             if (App.IsCompact)
             {
                 Code.FontFamily = new FontFamily("MS Gothic");
@@ -103,49 +112,38 @@ namespace CppGallery.Pages.UserControls
 
         protected abstract void LoadFile();
 
-        private void Panel_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (App.SourceCodeTheme != ElementTheme.Default)
-            {
-                var panel = sender as StackPanel;
-                panel.RequestedTheme = App.SourceCodeTheme;
-                if (App.SourceCodeTheme != MainWindow.GetParentMainWindow(this).GetTheme())
-                {
-                    
-                    if (App.SourceCodeTheme == ElementTheme.Dark)
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X20, 0x20, 0x20));
-                    }
-                    else
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XFD, 0xFD, 0xFD));
-                    }
-                }
-                else
-                {
-                    if(panel.ActualTheme == ElementTheme.Dark)
-                    {
-                        panel.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(0x60, 0x05, 0x05, 0x05));
-                        panel.BorderBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(0xA0, 0x0D, 0x0D, 0x0D));
-                    }
-                    
-                }
-            }
-        }
-
         private void TitleText_Loaded(object sender, RoutedEventArgs e)
         {
             if (TitleText.Text == string.Empty)
             {
-                (TitleText.Parent as Panel).Children.Remove(TitleText);
+                (TitleText.Parent as StackPanel).Children.Remove(TitleText);
             }
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            SetThemeColor();
             LoadFile();
 
             Loaded -= UserControl_Loaded;
+        }
+
+        private void SetThemeColor()
+        {
+            if (this.ActualTheme == ElementTheme.Dark)
+            {
+                Panel.Background = DarkThemeBackground;
+                
+            }
+            else
+            {
+                Panel.Background = LightThemeBackground;
+            }
+        }
+
+        private void UserControl_ActualThemeChanged(FrameworkElement sender, object args)
+        {
+            SetThemeColor();
         }
     }
 }

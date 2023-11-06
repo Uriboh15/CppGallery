@@ -80,7 +80,14 @@ namespace CppGallery
         {
             if (!isCSample || App.UseCppInCSample) exeName += "-Cpp" + ((int)App.CppVersion).ToString();
             else exeName += "-C" + ((int)App.CVersion).ToString();
-            if (App.Compiler == Compiler.GCC) exeName += "-GCC";
+
+            exeName += App.Compiler switch
+            {
+                Compiler.Clang => "-Clang",
+                Compiler.GCC => "-GCC",
+                _ => "",
+            };
+
             if (App.ProcesserType == ProcesserType.x86) exeName += "-x86";
 
             return exeName;

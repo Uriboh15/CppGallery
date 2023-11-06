@@ -28,8 +28,6 @@ namespace CppGallery.Pages.Settings
     {
         private bool BackCLoaded = false;
         private bool LibraryCLoaded = false;
-        private bool SourceThemeLoaded = false;
-        private bool ResultThemeLoaded = false;
         private bool PlatCLoaded = false;
         private bool CompilerLoaded = false;
         private bool UseCppLoaded = false;
@@ -54,10 +52,10 @@ namespace CppGallery.Pages.Settings
             this.InitializeComponent();
         }
 
-        //GCC
-        private async void CheckGCCVersion()
+        //GCC, Clang
+        private async void CheckCppVersion()
         {
-            if(App.Compiler == Compiler.GCC && App.CppVersion == CppVersion.Cpp23)
+            if (App.Compiler == Compiler.GCC && App.CppVersion >= CppVersion.Cpp23)
             {
                 ContentDialog dialog = new ContentDialog
                 {
@@ -71,6 +69,24 @@ namespace CppGallery.Pages.Settings
                 await dialog.ShowAsync();
 
                 CppVersionComboBox.SelectedItem = "C++20";
+                return;
+            }
+
+            if (App.Compiler == Compiler.Clang && App.CppVersion >= CppVersion.Cpp23)
+            {
+                ContentDialog dialog = new ContentDialog
+                {
+                    Title = "C++23 非対応",
+                    Content = "Clang 17.0.2 時点ではまだ C++23 の機能に十分に対応していません",
+                    DefaultButton = ContentDialogButton.Primary,
+                    PrimaryButtonText = "OK",
+                    XamlRoot = this.XamlRoot,
+                };
+
+                await dialog.ShowAsync();
+
+                CppVersionComboBox.SelectedItem = "C++20";
+                return;
             }
         }
 
@@ -162,19 +178,15 @@ namespace CppGallery.Pages.Settings
 
         private void CompactT_Toggled(object sender, RoutedEventArgs e)
         {
-            if (SText != null)
-            {
                 if (CompactT.IsOn)
                 {
-                    SText.Text = "オン";
                     IsCompact = true;
                 }
                 else
                 {
-                    SText.Text = "オフ";
                     IsCompact = false;
                 }
-            }
+            
         }
 
         private void CompactT_Loaded(object sender, RoutedEventArgs e)
@@ -182,12 +194,10 @@ namespace CppGallery.Pages.Settings
             if (IsCompact)
             {
                 CompactT.IsOn = true;
-                SText.Text = "オン";
             }
             else
             {
                 CompactT.IsOn = false;
-                SText.Text = "オフ";
             }
 
             CompactT.Loaded -= CompactT_Loaded;
@@ -207,6 +217,10 @@ namespace CppGallery.Pages.Settings
                         App.Compiler = Compiler.ClangOnVC;
                         break;
 
+                    case "Clang":
+                        App.Compiler = Compiler.Clang;
+                        break;
+
                     case "GCC":
                         App.Compiler = Compiler.GCC;
                         break;
@@ -217,7 +231,7 @@ namespace CppGallery.Pages.Settings
                 }
 
                 UpdateOtherPage();
-                CheckGCCVersion();
+                CheckCppVersion();
             }
 
             CompilerLoaded = true;
@@ -235,6 +249,10 @@ namespace CppGallery.Pages.Settings
                     ComC.SelectedItem = "Clang (Visual C++ 互換)";
                     break;
 
+                case Compiler.Clang:
+                    ComC.SelectedItem = "Clang";
+                    break;
+
                 case Compiler.GCC:
                     ComC.SelectedItem = "GCC";
                     break;
@@ -244,16 +262,6 @@ namespace CppGallery.Pages.Settings
                     break;
             }
             ComC.Loaded -= ComC_Loaded;
-        }
-
-        private void Beta1_Loaded(object sender, RoutedEventArgs e)
-        {
-#if !DEBUG
-            var grid = sender as FrameworkElement;
-            (grid.Parent as Panel).Children.Remove(grid);
-#endif
-
-
         }
 
         private void LibraryC_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -285,76 +293,6 @@ namespace CppGallery.Pages.Settings
             }
 
             LibraryC.Loaded -= LibraryC_Loaded;
-        }
-
-        private void ThemeSC_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (SourceThemeLoaded)
-            {
-                string AddedItem = e.AddedItems[0].ToString();
-                switch (AddedItem)
-                {
-                    case "アプリのテーマと同期": App.SourceCodeTheme = ElementTheme.Default; break;
-                    case "ライト": App.SourceCodeTheme = ElementTheme.Light; break;
-                    case "ダーク": App.SourceCodeTheme = ElementTheme.Dark; break;
-                }
-            }
-            SourceThemeLoaded = true;
-        }
-
-        private void ThemeSC_Loaded(object sender, RoutedEventArgs e)
-        {
-            switch (App.SourceCodeTheme)
-            {
-                case ElementTheme.Default:
-                    ThemeSC.SelectedItem = "アプリのテーマと同期";
-                    break;
-
-                case ElementTheme.Light:
-                    ThemeSC.SelectedItem = "ライト";
-                    break;
-
-                case ElementTheme.Dark:
-                    ThemeSC.SelectedItem = "ダーク";
-                    break;
-            }
-
-            ThemeSC.Loaded -= ThemeSC_Loaded;
-        }
-
-        private void ThemeRC_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (ResultThemeLoaded)
-            {
-                string AddedItem = e.AddedItems[0].ToString();
-                switch (AddedItem)
-                {
-                    case "アプリのテーマと同期": App.ResultTheme = ElementTheme.Default; break;
-                    case "ライト": App.ResultTheme = ElementTheme.Light; break;
-                    case "ダーク": App.ResultTheme = ElementTheme.Dark; break;
-                }
-            }
-            ResultThemeLoaded = true;
-        }
-
-        private void ThemeRC_Loaded(object sender, RoutedEventArgs e)
-        {
-            switch (App.ResultTheme)
-            {
-                case ElementTheme.Default:
-                    ThemeRC.SelectedItem = "アプリのテーマと同期";
-                    break;
-
-                case ElementTheme.Light:
-                    ThemeRC.SelectedItem = "ライト";
-                    break;
-
-                case ElementTheme.Dark:
-                    ThemeRC.SelectedItem = "ダーク";
-                    break;
-            }
-
-            ThemeRC.Loaded -= ThemeRC_Loaded;
         }
 
         private void PlatC_Loaded(object sender, RoutedEventArgs e)
@@ -406,12 +344,10 @@ namespace CppGallery.Pages.Settings
         {
             if (UseCppT.IsOn)
             {
-                UseCppText.Text = "オン";
                 App.UseCppInCSample = true;
             }
             else
             {
-                UseCppText.Text = "オフ";
                 App.UseCppInCSample = false;
                 App.IsFirstCSampleOpened = false;
             }
@@ -432,12 +368,10 @@ namespace CppGallery.Pages.Settings
             if(IsShowReturnCodeT.IsOn)
             {
                 App.IsShowReturnCode = true;
-                IsShowReturnCodeText.Text = "オン";
             }
             else
             {
                 App.IsShowReturnCode = false;
-                IsShowReturnCodeText.Text = "オフ";
             }
             if (IsShowReturnCodeTLoaded) UpdateOtherPage();
         }
@@ -447,17 +381,6 @@ namespace CppGallery.Pages.Settings
             IsShowReturnCodeT.IsOn = App.IsShowReturnCode;
             IsShowReturnCodeTLoaded = true;
             IsShowReturnCodeT.Loaded -= IsShowReturnCodeT_Loaded;
-        }
-
-        private void ControlGrid_Loaded(object sender, RoutedEventArgs e)
-        {
-#if !DEBUG
-            var grid = sender as ControlGrid;
-
-            (grid.Parent as Panel).Children.Remove(grid);
-
-#endif
-
         }
 
         private void Expander_Loaded(object sender, RoutedEventArgs e)
@@ -485,7 +408,7 @@ namespace CppGallery.Pages.Settings
             }
 
             if (CppVersionComboBoxLoaded) UpdateOtherPage();
-            CheckGCCVersion();
+            CheckCppVersion();
         }
 
         private void CppVersionComboBox_Loaded(object sender, RoutedEventArgs e)
@@ -534,6 +457,20 @@ namespace CppGallery.Pages.Settings
         private void WaitForNumberBox_ValueChanged(NumberBox sender, NumberBoxValueChangedEventArgs args)
         {
             App.WaitFor = (uint)WaitForNumberBox.Value;
+        }
+
+        private void IsHitToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            App.IsSearchClassMemberEnabled = IsHitToggleSwitch.IsOn;
+        }
+
+        private void IsHitToggleSwitch_Loaded(object sender, RoutedEventArgs e)
+        {
+            IsHitToggleSwitch.Loaded -= IsHitToggleSwitch_Loaded;
+
+            IsHitToggleSwitch.IsOn = App.IsSearchClassMemberEnabled;
+
+            IsHitToggleSwitch.Toggled += IsHitToggleSwitch_Toggled;
         }
     }
 }

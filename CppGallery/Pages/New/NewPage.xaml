@@ -53,9 +53,9 @@
             <local:SymbolBlockPanel Symbol="Enum" >
                 <local:CustomExpander Title="class enum align_val_t" Icon="&#xEA86;">
                     <local:EnumPanel>
-                        <local:InnerGrid Style="{StaticResource EGrid}">
+                        <Grid Height="60" Style="{StaticResource EGrid}">
                             <TextBlock Text="定義されていません" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </local:InnerGrid>
+                        </Grid>
                     </local:EnumPanel>
                 </local:CustomExpander>
             </local:SymbolBlockPanel>

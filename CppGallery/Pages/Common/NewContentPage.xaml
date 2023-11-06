@@ -15,88 +15,62 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                <local:BlockPanel Header="ヘッダー" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundation}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFonts}" />
-                </local:BlockPanel>
+                
 
                 <local:SymbolBlockPanel Symbol="Class" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneme}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFontsLanguageFont}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFontsLanguageFontGroup}" />
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationNumeralSystemIdentifiers}" />
                 </local:SymbolBlockPanel>
+                
 
-                <local:SymbolBlockPanel Symbol="Enum" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationDayOfWeek}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationLanguageLayoutDirection}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStretch}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextFontStyle}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsUITextLetterCase}" />
-                </local:SymbolBlockPanel>
-
-                <local:SymbolBlockPanel Symbol="Interfase" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIClosable}" />
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIStringable}" />
-                </local:SymbolBlockPanel>
-
-                <local:BlockPanel Header="Colors" >
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Sienna" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Silver" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SkyBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SlateBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SlateGray" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Snow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SpringGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/SteelBlue" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Tan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Teal" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Thistle" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Tomato" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Transparent" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Turquoise" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Violet" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Wheat" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/White" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/WhiteSmoke" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/Yellow" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.UI.Colors/YellowGreen" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="IClosable" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IClosable/Close" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="IStringable" >
-                    <local:FunctionExpander Folder="winrt/Windows.Foundation.IStringable/ToString" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="JapanesePhoneme" >
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/DisplayText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/IsPhraseStart" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.JapanesePhoneme/YomiText" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="LanguageFont" >
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontFamily" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontStretch" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontStyle" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/FontWeight" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFont/ScaleFactor" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                </local:BlockPanel>
-
-                <local:BlockPanel Header="LanguageFontGroup" >
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/LanguageFontGroup" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate1Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentAlternate2Font" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/DocumentHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/FixedWidthTextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/ModernDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/TraditionalDocumentFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UICaptionFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UIHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UINotificationHeadingFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITextFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.Fonts.LanguageFontGroup/UITitleFont" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="NumeralSystemIdentifiers" >
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Arab" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ArabExt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Bali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Beng" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Brah" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Cham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Deva" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/FullWide" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Gujr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Guru" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/HaniDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Java" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Kali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Khmr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Knda" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lana" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/LanaTham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Laoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Latn" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lepc" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Limb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mlym" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mong" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mtei" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mymr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MymrShan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Nkoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Olck" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Orya" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Osma" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Saur" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Sund" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Talu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/TamlDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Telu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Thai" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Tibt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Vaii" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
                 </local:BlockPanel>
             </local:OuterPanel>
         </ScrollViewer>

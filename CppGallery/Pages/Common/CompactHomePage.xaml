@@ -91,7 +91,6 @@
                     <local:ToRightButton Style="{StaticResource Wctypeh}" InLibraryPage="True"/>
                 </local:ResultsPanel>
 
-
                 <local:ResultsPanel x:Name="WindowsLibraryList">
                     <TextBlock Text="Windows ライブラリ"/>
                     <local:ToRightButton Style="{StaticResource ConIoh}" InLibraryPage="True"/>

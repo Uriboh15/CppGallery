@@ -13,36 +13,15 @@ namespace CppGallery.Pages.UserControls
 {
     public class PowerShellCommandButton : CodeButtonBase
     {
-        private static SolidColorBrush blue;
-        private static SolidColorBrush green;
-        private static SolidColorBrush gray;
-        private static SolidColorBrush yellow;
+        private static SolidColorBrush blue = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x3A, 0x96, 0xDD));
+        private static SolidColorBrush green = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x16, 0xC6, 0x0C));
+        private static SolidColorBrush gray = new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0x76, 0x76, 0x76));
+        private static SolidColorBrush yellow = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XF9, 0xF1, 0xA5));
 
         public PowerShellCommandButton() : base()
         {
             Lan = "PowerShell";
             FileName = string.Empty;
-            ChangeTheme(App.SourceCodeTheme);
-        }
-
-        public void ChangeTheme(ElementTheme theme)
-        {
-            if (theme == ElementTheme.Default) theme = ActualTheme;
-
-            if (theme == ElementTheme.Dark)
-            {
-                blue = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x3A, 0x96, 0xDD));
-                green = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x16, 0xC6, 0x0C));
-                gray = new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0x76, 0x76, 0x76));
-                yellow = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XF9, 0xF1, 0xA5));
-            }
-            else
-            {
-                blue = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x00, 0x37, 0xDA));
-                green = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x13, 0xA1, 0x0E));
-                gray = new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0x76, 0x76, 0x76));
-                yellow = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XC1, 0x9C, 0x00));
-            }
         }
 
         public static bool IsDigit(char c)

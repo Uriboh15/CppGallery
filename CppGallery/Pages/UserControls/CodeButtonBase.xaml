@@ -9,18 +9,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Loaded="UserControl_Loaded">
+    Loaded="UserControl_Loaded"
+    ActualThemeChanged="UserControl_ActualThemeChanged">
 
     <local:ResultsPanel>
         <TextBlock x:Name="TitleText" Text="{x:Bind FileName}" Loaded="TitleText_Loaded"/>
-        <StackPanel x:Name="Panel" Style="{StaticResource EPanel}" Loaded="Panel_Loaded" Padding="25,15,25,20" >
+        <StackPanel x:Name="Panel" CornerRadius="4" Padding="25,15,25,20" >
             <Grid>
-                <TextBlock Text="{x:Bind Lan}" FontSize="16" VerticalAlignment="Top"/>
-                <Button x:Name="ButtonCopy" Click="ButtonCopy_Click" HorizontalAlignment="Right" Margin="0,8,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBlock Text="{x:Bind Lan}" FontSize="16" VerticalAlignment="Top" Foreground="#FFFFFF"/>
+                <Button x:Name="ButtonCopy" Click="ButtonCopy_Click" HorizontalAlignment="Right" Margin="0,8,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RequestedTheme="Dark">
                     <FontIcon x:Name="CopyIcon" Glyph="&#xE8C8;"/>
                 </Button>
             </Grid>
-            <TextBlock x:Name="CodeText" Style="{StaticResource CodeText}" TextWrapping="Wrap"/>
+            <TextBlock x:Name="CodeText" Style="{StaticResource CodeText}" TextWrapping="Wrap" />
         </StackPanel>
     </local:ResultsPanel>
 </UserControl>

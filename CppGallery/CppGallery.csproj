@@ -78,6 +78,8 @@
 		<None Remove="Pages\Print\PrintPage.xaml" />
 		<None Remove="Pages\Random\MersenneTwisterEngineClassPage.xaml" />
 		<None Remove="Pages\Ranges\RangesPage.xaml" />
+		<None Remove="Pages\Resources\FunctionExpanderStyle.xaml" />
+		<None Remove="Pages\Resources\ToggleSwitchStyle.xaml" />
 		<None Remove="Pages\Set\MultiSetClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeIndexClassPage.xaml" />
 		<None Remove="Pages\TypeIndex\TypeIndexPage.xaml" />
@@ -85,6 +87,7 @@
 		<None Remove="Pages\UserControls\DetailControlGrid.xaml" />
 		<None Remove="Pages\UserControls\DetailPane.xaml" />
 		<None Remove="Pages\UserControls\FakeFunctionExpander.xaml" />
+		<None Remove="Pages\UserControls\TextPane.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi2Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApi3Page.xaml" />
 		<None Remove="Pages\WindowsHeader\ConsoleApiPage.xaml" />
@@ -213,6 +216,7 @@
 		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhonemePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\JapanesePhoneticAnalyzerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\LanguageLayoutDirectionPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsGlobalization\NumeralSystemIdentifiersPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalization\WindowsGlobalizationPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileExtensionVectorPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\FileOpenPickerPage.xaml" />
@@ -277,7 +281,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.2428" />
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
 		<Manifest Remove="app.manifest" />
 		<Page Remove="Pages\UserControls\HomeButtonGrid.xaml" />
@@ -312,6 +316,18 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\UserControls\TextPane.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsGlobalization\NumeralSystemIdentifiersPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Resources\ToggleSwitchStyle.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\Resources\FunctionExpanderStyle.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\WinRT\WindowsFoundation\IClosablePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

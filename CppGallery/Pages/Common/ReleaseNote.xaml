@@ -20,772 +20,796 @@
     </Page.Resources>
 
     <ScrollViewer>
-        <local:CustomPanel x:Name="OutPanel" Loaded="CustomPanel_Loaded">
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.8" Sentence="2023年10月30日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに42項目追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.7" Sentence="2023年10月27日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに85項目追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.6" Sentence="2023年10月23日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに80項目追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.5" Sentence="2023年10月22日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに83項目追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.4" Sentence="2023年10月16日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに50項目追加<LineBreak/>
-                    ・ソースコードの enum 型と union 型の色が正しくならない不具合を修正<LineBreak />
-                    ・C++/WinRT のサンプルを追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.3" Sentence="2023年10月11日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに35項目追加<LineBreak />
-                    ・15項目更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.2" Sentence="2023年10月6日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに21項目追加<LineBreak />
-                    ・GCC のバージョンを 13.2.0 に更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.1" Sentence="2023年9月29日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに37項目追加<LineBreak />
-                    ・1項目更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.0" Sentence="2023年9月25日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに36項目追加<LineBreak />
-                    ・別のウィンドウで変更した設定が適用されない不具合を修正
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.4.0  Preview" Sentence="2023年9月22日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに27項目追加<LineBreak />
-                    ・19項目更新<LineBreak />
-                    ・タブの分離、結合機能を追加<LineBreak/>
-                    ・サンプルの表示スタイルを変更<LineBreak />
-                    ・ページ遷移ボタンに右クリックメニューに「新しいウィンドウで開く」アクションを追加<LineBreak />
-                    ・サンプル待機時間の設定を追加<LineBreak />
-                    ・ページ遷移ボタンを中クリックしたときに新しいタブでページを開く機能を追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.3.2" Sentence="2023年9月14日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに34項目追加<LineBreak />
-                    ・3項目更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.3.1" Sentence="2023年9月10日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに36項目追加<LineBreak />
-                    ・任意の C/C++ 言語バージョンで実行する機能を追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.3.0" Sentence="2023年9月7日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに36項目追加<LineBreak />
-                    ・1項目更新<LineBreak />
-                    ・大文字を含む項目が検索でヒットしない不具合を修正
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.3.0  Preview" Sentence="2023年8月28日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに15項目追加<LineBreak />
-                    ・94項目更新<LineBreak />
-                    ・おふざけ要素を削除<LineBreak/>
-                    ・コラムを廃止<LineBreak />
-                    ・C 言語のサンプルを C++ で実行する機能を追加
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.2.3" Sentence="2023年8月25日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに29項目追加<LineBreak />
-                    ・51項目更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.2.2" Sentence="2023年8月19日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに39項目追加<LineBreak />
-                    ・23項目更新
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.2.1" Sentence="2023年8月13日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに39項目追加<LineBreak />
-                    ・40項目更新<LineBreak/>
-                    ・基本演算子欄を追加<LineBreak/>
-                    ・タブ操作時のパフォーマンスが向上<LineBreak />
-                    ・&lt;concepts> のサンプルコードの色付けを間違える不具合を修正
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.2.0" Sentence="2023年8月7日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに34項目追加<LineBreak />
-                    ・14項目更新<LineBreak/>
-                    ・プログラムの終了コードを取得する機能を追加<LineBreak/>
-                    ・ページ遷移ボタンに右クリックメニュー「新しいタブで開く」アクションを追加<LineBreak />
-                    ・構成設定を変更したときの動作を変更
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.1.2" Sentence="2023年8月3日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <TextBlock>
-                    ・新たに39項目追加<LineBreak />
-                    ・43項目更新<LineBreak/>
-                    ・Windows 10 で設定を 2 回開くとアプリがクラッシュする問題を修正<LineBreak/>
-                    ・Windows 10 でフォルダーを選択できない問題を修正<LineBreak />
-                    ・サンプル内でハンドルされない例外が発生したときに、その例外の詳細を表示するように改良
-                </TextBlock>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.1.1" Sentence="2023年7月28日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+        <local:OuterPanel >
+            <local:BlockPanel Header="既知の不具合" >
+                <Grid x:Name="KnownIssueGrid" Style="{StaticResource EGrid}" >
                     <TextBlock>
-                        ・新たに36項目追加<LineBreak />
-                        ・5項目更新<LineBreak/>
-                        ・マクロの展開先が表示されない不具合を修正<LineBreak />
-                        ・GCC のサンプルが動作しない不具合を修正
+                        ・Clang の日本語が文字化けする<LineBreak />
+                        ・GCC の wcout で日本語が出力されない
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Grid>
+            </local:BlockPanel>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.1.0" Sentence="2023年7月25日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+            <local:BlockPanel Header="リリースノート" x:Name="OutPanel" Loaded="CustomPanel_Loaded" >
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.5.0  Preview" Sentence="2023年11月6日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・バイナリサイズを大幅に削減<LineBreak />
-                        ・設定の位置を移動
+                        ・新たに48項目追加<LineBreak />
+                        ・設定から「ソースコードのテーマ」と「実行結果のテーマ」を削除<LineBreak />
+                        ・ページ移動時のパフォーマンスが向上<LineBreak />
+                        ・アプリのメモリ使用量が減少<LineBreak />
+                        ・Clang に対応<LineBreak />
+                        ・検索の設定を追加<LineBreak />
+                        ・アプリ内に「既知の不具合」を追加
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.6" Sentence="2023年7月22日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.8" Sentence="2023年10月30日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに42項目追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.7" Sentence="2023年10月27日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに85項目追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.6" Sentence="2023年10月23日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに80項目追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.5" Sentence="2023年10月22日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに83項目追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.4" Sentence="2023年10月16日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに50項目追加<LineBreak/>
+                        ・ソースコードの enum 型と union 型の色が正しくならない不具合を修正<LineBreak />
+                        ・C++/WinRT のサンプルを追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.3" Sentence="2023年10月11日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
                         ・新たに35項目追加<LineBreak />
-                        ・21項目更新
+                        ・15項目更新
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.5" Sentence="2023年7月21日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.2" Sentence="2023年10月6日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに39項目追加
+                        ・新たに21項目追加<LineBreak />
+                        ・GCC のバージョンを 13.2.0 に更新
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.4" Sentence="2023年7月16日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.1" Sentence="2023年9月29日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに39項目追加
+                        ・新たに37項目追加<LineBreak />
+                        ・1項目更新
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.3" Sentence="2023年7月13日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.0" Sentence="2023年9月25日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに40項目追加<LineBreak />
-                        ・パフォーマンスが向上<LineBreak />
-                        ・構成を Visual C++, x64 にしたときに ostrstream クラス の実行結果が表示されない問題を修正
+                        ・新たに36項目追加<LineBreak />
+                        ・別のウィンドウで変更した設定が適用されない不具合を修正
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.2" Sentence="2023年7月10日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.4.0  Preview" Sentence="2023年9月22日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに39項目追加
+                        ・新たに27項目追加<LineBreak />
+                        ・19項目更新<LineBreak />
+                        ・タブの分離、結合機能を追加<LineBreak/>
+                        ・サンプルの表示スタイルを変更<LineBreak />
+                        ・ページ遷移ボタンに右クリックメニューに「新しいウィンドウで開く」アクションを追加<LineBreak />
+                        ・サンプル待機時間の設定を追加<LineBreak />
+                        ・ページ遷移ボタンを中クリックしたときに新しいタブでページを開く機能を追加
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.1" Sentence="2023年7月5日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.3.2" Sentence="2023年9月14日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに34項目追加<LineBreak />
+                        ・3項目更新
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.3.1" Sentence="2023年9月10日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに36項目追加<LineBreak />
+                        ・任意の C/C++ 言語バージョンで実行する機能を追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.3.0" Sentence="2023年9月7日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに36項目追加<LineBreak />
+                        ・1項目更新<LineBreak />
+                        ・大文字を含む項目が検索でヒットしない不具合を修正
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.3.0  Preview" Sentence="2023年8月28日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに15項目追加<LineBreak />
+                        ・94項目更新<LineBreak />
+                        ・おふざけ要素を削除<LineBreak/>
+                        ・コラムを廃止<LineBreak />
+                        ・C 言語のサンプルを C++ で実行する機能を追加
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.2.3" Sentence="2023年8月25日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに29項目追加<LineBreak />
+                        ・51項目更新
+                    </TextBlock>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.2.2" Sentence="2023年8月19日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
                         ・新たに39項目追加<LineBreak />
-                        ・コンパイラを GCC にしたときに &lt;string> の実行結果が文字化けする問題を修正
+                        ・23項目更新
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.0" Sentence="2023年7月2日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.2.1" Sentence="2023年8月13日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに14項目追加<LineBreak/>
-                        ・77項目更新
+                        ・新たに39項目追加<LineBreak />
+                        ・40項目更新<LineBreak/>
+                        ・基本演算子欄を追加<LineBreak/>
+                        ・タブ操作時のパフォーマンスが向上<LineBreak />
+                        ・&lt;concepts> のサンプルコードの色付けを間違える不具合を修正
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.0  Preview 3" Sentence="2023年7月2日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.2.0" Sentence="2023年8月7日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・71項目更新<LineBreak/>
-                        ・GCCコマンド生成欄を追加
+                        ・新たに34項目追加<LineBreak />
+                        ・14項目更新<LineBreak/>
+                        ・プログラムの終了コードを取得する機能を追加<LineBreak/>
+                        ・ページ遷移ボタンに右クリックメニュー「新しいタブで開く」アクションを追加<LineBreak />
+                        ・構成設定を変更したときの動作を変更
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.0  Preview 2" Sentence="2023年6月27日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.1.2" Sentence="2023年8月3日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
                     <TextBlock>
-                        ・新たに2項目追加<LineBreak/>
-                        ・109項目更新<LineBreak/>
-                        ・基本型と演算子欄を追加<LineBreak />
-                        ・未完成の項目を表示しない設定を削除<LineBreak />
-                        ・出力表示のパフォーマンスが向上
+                        ・新たに39項目追加<LineBreak />
+                        ・43項目更新<LineBreak/>
+                        ・Windows 10 で設定を 2 回開くとアプリがクラッシュする問題を修正<LineBreak/>
+                        ・Windows 10 でフォルダーを選択できない問題を修正<LineBreak />
+                        ・サンプル内でハンドルされない例外が発生したときに、その例外の詳細を表示するように改良
                     </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 2.0.0  Preview 1" Sentence="2023年6月25日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに25項目追加<LineBreak/>
-                        ・95項目更新<LineBreak/>
-                        ・アプリをタブ化<LineBreak />
-                        ・既定のタイトルバーを使用する設定を削除<LineBreak/>
-                        ・実行結果をコンソールで表示する機能を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.5" Sentence="2023年6月22日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・129項目更新
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.4" Sentence="2023年6月21日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・153項目更新
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.3" Sentence="2023年6月19日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに18項目追加<LineBreak/>
-                        ・13項目更新
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.2" Sentence="2023年6月10日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・XAML ソースコードを色付けする機能を追加<LineBreak/>
-                        ・初回起動時にディスプレイ解像度が低い場合は自動でコンパクトモードにする機能を追加<LineBreak/>
-                        ・C/C++/C# ソースの色付け機能を強化
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.1" Sentence="2023年5月24日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに2項目追加<LineBreak/>
-                        ・30項目更新<LineBreak/>
-                        ・C++/WinRT コラムを追加<LineBreak/>
-                        ・Win32 コラムを追加<LineBreak/>
-                        ・コラムの視認性が向上<LineBreak/>
-                        ・既定のタイトルバーを使用する設定を追加<LineBreak/>
-                        ・パフォーマンスが向上
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-            
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.1.0" Sentence="2023年5月11日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに1項目追加<LineBreak/>
-                        ・67項目更新<LineBreak/>
-                        ・検索機能を改善<LineBreak/>
-                        ・Windows 10, 11 間のタイトルバーを共通化<LineBreak/>
-                        ・透明効果の種類を追加<LineBreak/>
-                        ・ライブラリ 一覧の表示設定を追加<LineBreak/>
-                        ・設定に参考欄を追加<LineBreak/>
-                        ・ソースコードと実行結果のテーマの設定を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.2" Sentence="2023年5月5日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに7項目追加<LineBreak/>
-                        ・51項目更新<LineBreak/>
-                        ・ソースコードがレイヤーの端で折り返されない問題を修正
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.1.1" Sentence="2023年7月28日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに36項目追加<LineBreak />
+                            ・5項目更新<LineBreak/>
+                            ・マクロの展開先が表示されない不具合を修正<LineBreak />
+                            ・GCC のサンプルが動作しない不具合を修正
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.1" Sentence="2023年4月28日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに1項目追加<LineBreak/>
-                        ・16項目更新<LineBreak/>
-                        ・設定のレイアウトを変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.1.0" Sentence="2023年7月25日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・バイナリサイズを大幅に削減<LineBreak />
+                            ・設定の位置を移動
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.0" Sentence="2023年4月21日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに32項目追加<LineBreak/>
-                        ・37項目更新<LineBreak/>
-                        ・検索の挙動を改善
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.6" Sentence="2023年7月22日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに35項目追加<LineBreak />
+                            ・21項目更新
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.0  Preview 4" Sentence="2023年4月16日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに16項目追加<LineBreak/>
-                        ・33項目更新<LineBreak/>
-                        ・リリースノートの改善
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.5" Sentence="2023年7月21日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに39項目追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.0  Preview 3" Sentence="2023年4月7日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに49項目追加<LineBreak/>
-                        ・3項目更新<LineBreak/>
-                        ・検索機能を改善<LineBreak/>
-                        ・マウスのサイドボタンでページを戻る機能を追加<LineBreak/>
-                        ・Windows 11 環境でのタイトルバーを改善<LineBreak/>
-                        ・コラムでソースコードが常にシステムのテーマと同期する不具合を修正<LineBreak/>
-                        ・コンパクトモードを改善
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.4" Sentence="2023年7月16日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに39項目追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.0  Preview 2" Sentence="2023年4月2日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに42項目追加<LineBreak/>
-                        ・2項目更新<LineBreak/>
-                        ・非標準ヘッダーを追加<LineBreak/>
-                        ・更新した項目の表示欄を追加<LineBreak/>
-                        ・リリースノートの改善<LineBreak/>
-                        ・テキストの入力部分がメッセージにかぶさらないように改善<LineBreak/>
-                        ・検索機能の大幅な改善<LineBreak/>
-                        ・コンパクトモードの強化
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.3" Sentence="2023年7月13日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに40項目追加<LineBreak />
+                            ・パフォーマンスが向上<LineBreak />
+                            ・構成を Visual C++, x64 にしたときに ostrstream クラス の実行結果が表示されない問題を修正
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 1.0.0  Preview 1" Sentence="2023年3月26日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに43項目追加<LineBreak/>
-                        ・コラムの欄を追加<LineBreak/>
-                        ・追加項目の表示欄を追加<LineBreak/>
-                        ・ソースコードの色付きを大幅に改善<LineBreak/>
-                        ・リリースノートを追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.2" Sentence="2023年7月10日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに39項目追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.9.3" Sentence="2023年3月20日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに58項目追加<LineBreak/>
-                        ・コンパクトモードの大幅な強化<LineBreak/>
-                        ・未完成の項目を表示しない設定を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.1" Sentence="2023年7月5日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに39項目追加<LineBreak />
+                            ・コンパイラを GCC にしたときに &lt;string> の実行結果が文字化けする問題を修正
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.9.2" Sentence="2023年3月10日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに106項目追加<LineBreak/>
-                        ・設定画面のレイアウトを変更<LineBreak/>
-                        ・設定にアプリの OneDrive へのリンクを追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.0" Sentence="2023年7月2日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに14項目追加<LineBreak/>
+                            ・77項目更新
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.9.1" Sentence="2023年2月27日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・Windows 10 でのダークモードをサポート
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.0  Preview 3" Sentence="2023年7月2日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・71項目更新<LineBreak/>
+                            ・GCCコマンド生成欄を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.9.0" Sentence="2023年2月15日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに60項目追加<LineBreak/>
-                        ・C++ クラスのページに基底・派生クラスのリンクを追加<LineBreak/>
-                        ・ヘッダーのスタイルを変更<LineBreak/>
-                        ・コンパクトモードを追加<LineBreak/>
-                        ・Mica, Acrylic をサポート<LineBreak/>
-                        ・設定画面のレイアウトを変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.8.0" Sentence="2023年2月9日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・ソースコードのキーワードを色付けする機能を追加<LineBreak/>
-                        ・ライブラリの検索機能を追加<LineBreak/>
-                        ・Cライブラリのレイアウトを変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.7.1" Sentence="2023年2月2日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・ソースコードのコピーボタンの外観を変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.7.0" Sentence="2023年1月25日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・タイトルバーのアイコンを変更<LineBreak/>
-                        ・ダークモードに対応(Windows 11 のみ)
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.0  Preview 2" Sentence="2023年6月27日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに2項目追加<LineBreak/>
+                            ・109項目更新<LineBreak/>
+                            ・基本型と演算子欄を追加<LineBreak />
+                            ・未完成の項目を表示しない設定を削除<LineBreak />
+                            ・出力表示のパフォーマンスが向上
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.6.3" Sentence="2023年1月14日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.0.0  Preview 1" Sentence="2023年6月25日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに25項目追加<LineBreak/>
+                            ・95項目更新<LineBreak/>
+                            ・アプリをタブ化<LineBreak />
+                            ・既定のタイトルバーを使用する設定を削除<LineBreak/>
+                            ・実行結果をコンソールで表示する機能を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.5" Sentence="2023年6月22日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・129項目更新
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.4" Sentence="2023年6月21日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・153項目更新
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.3" Sentence="2023年6月19日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに18項目追加<LineBreak/>
+                            ・13項目更新
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.2" Sentence="2023年6月10日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・XAML ソースコードを色付けする機能を追加<LineBreak/>
+                            ・初回起動時にディスプレイ解像度が低い場合は自動でコンパクトモードにする機能を追加<LineBreak/>
+                            ・C/C++/C# ソースの色付け機能を強化
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.1" Sentence="2023年5月24日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに2項目追加<LineBreak/>
+                            ・30項目更新<LineBreak/>
+                            ・C++/WinRT コラムを追加<LineBreak/>
+                            ・Win32 コラムを追加<LineBreak/>
+                            ・コラムの視認性が向上<LineBreak/>
+                            ・既定のタイトルバーを使用する設定を追加<LineBreak/>
+                            ・パフォーマンスが向上
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.1.0" Sentence="2023年5月11日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに1項目追加<LineBreak/>
+                            ・67項目更新<LineBreak/>
+                            ・検索機能を改善<LineBreak/>
+                            ・Windows 10, 11 間のタイトルバーを共通化<LineBreak/>
+                            ・透明効果の種類を追加<LineBreak/>
+                            ・ライブラリ 一覧の表示設定を追加<LineBreak/>
+                            ・設定に参考欄を追加<LineBreak/>
+                            ・ソースコードと実行結果のテーマの設定を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.2" Sentence="2023年5月5日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに7項目追加<LineBreak/>
+                            ・51項目更新<LineBreak/>
+                            ・ソースコードがレイヤーの端で折り返されない問題を修正
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.1" Sentence="2023年4月28日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに1項目追加<LineBreak/>
+                            ・16項目更新<LineBreak/>
+                            ・設定のレイアウトを変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.0" Sentence="2023年4月21日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに32項目追加<LineBreak/>
+                            ・37項目更新<LineBreak/>
+                            ・検索の挙動を改善
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.0  Preview 4" Sentence="2023年4月16日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに16項目追加<LineBreak/>
+                            ・33項目更新<LineBreak/>
+                            ・リリースノートの改善
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.0  Preview 3" Sentence="2023年4月7日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに49項目追加<LineBreak/>
+                            ・3項目更新<LineBreak/>
+                            ・検索機能を改善<LineBreak/>
+                            ・マウスのサイドボタンでページを戻る機能を追加<LineBreak/>
+                            ・Windows 11 環境でのタイトルバーを改善<LineBreak/>
+                            ・コラムでソースコードが常にシステムのテーマと同期する不具合を修正<LineBreak/>
+                            ・コンパクトモードを改善
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.0  Preview 2" Sentence="2023年4月2日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに42項目追加<LineBreak/>
+                            ・2項目更新<LineBreak/>
+                            ・非標準ヘッダーを追加<LineBreak/>
+                            ・更新した項目の表示欄を追加<LineBreak/>
+                            ・リリースノートの改善<LineBreak/>
+                            ・テキストの入力部分がメッセージにかぶさらないように改善<LineBreak/>
+                            ・検索機能の大幅な改善<LineBreak/>
+                            ・コンパクトモードの強化
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 1.0.0  Preview 1" Sentence="2023年3月26日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに43項目追加<LineBreak/>
+                            ・コラムの欄を追加<LineBreak/>
+                            ・追加項目の表示欄を追加<LineBreak/>
+                            ・ソースコードの色付きを大幅に改善<LineBreak/>
+                            ・リリースノートを追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.9.3" Sentence="2023年3月20日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに58項目追加<LineBreak/>
+                            ・コンパクトモードの大幅な強化<LineBreak/>
+                            ・未完成の項目を表示しない設定を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.9.2" Sentence="2023年3月10日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに106項目追加<LineBreak/>
+                            ・設定画面のレイアウトを変更<LineBreak/>
+                            ・設定にアプリの OneDrive へのリンクを追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.9.1" Sentence="2023年2月27日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・Windows 10 でのダークモードをサポート
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.9.0" Sentence="2023年2月15日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに60項目追加<LineBreak/>
+                            ・C++ クラスのページに基底・派生クラスのリンクを追加<LineBreak/>
+                            ・ヘッダーのスタイルを変更<LineBreak/>
+                            ・コンパクトモードを追加<LineBreak/>
+                            ・Mica, Acrylic をサポート<LineBreak/>
+                            ・設定画面のレイアウトを変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.8.0" Sentence="2023年2月9日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・ソースコードのキーワードを色付けする機能を追加<LineBreak/>
+                            ・ライブラリの検索機能を追加<LineBreak/>
+                            ・Cライブラリのレイアウトを変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.7.1" Sentence="2023年2月2日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・ソースコードのコピーボタンの外観を変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.7.0" Sentence="2023年1月25日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・タイトルバーのアイコンを変更<LineBreak/>
+                            ・ダークモードに対応(Windows 11 のみ)
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.6.3" Sentence="2023年1月14日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
 
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.6.2" Sentence="2023年1月6日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.6.2" Sentence="2023年1月6日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.6.1" Sentence="2023年1月5日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.6.1" Sentence="2023年1月5日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.6.0" Sentence="2023年1月3日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・ソースコードをクリップボードにコピーする機能を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.6.0" Sentence="2023年1月3日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・ソースコードをクリップボードにコピーする機能を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.5.2" Sentence="2023年1月2日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.5.2" Sentence="2023年1月2日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.5.1" Sentence="2023年1月1日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.5.1" Sentence="2023年1月1日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.5.0" Sentence="2022年12月31日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・UI画面はC#で構成するように変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.5.0" Sentence="2022年12月31日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・UI画面はC#で構成するように変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.4.0" Sentence="2022年12月28日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・Cライブラリのレイアウトを変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.3.0" Sentence="2022年12月27日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・C++ライブラリの外観を変更
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
-
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.2.0" Sentence="2022年12月26日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・新たに項目を追加<LineBreak/>
-                        ・C++ライブラリを追加
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.4.0" Sentence="2022年12月28日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・Cライブラリのレイアウトを変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
 
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.3.0" Sentence="2022年12月27日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・C++ライブラリの外観を変更
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-            <Expander>
-                <Expander.Header>
-                    <local:EHeader Title="Ver 0.1.0" Sentence="2022年12月23日" Icon="&#xE7C3;"/>
-                </Expander.Header>
-                <Expander.Content>
-                    <TextBlock>
-                        ・初めのバージョン
-                    </TextBlock>
-                </Expander.Content>
-            </Expander>
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.2.0" Sentence="2022年12月26日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・新たに項目を追加<LineBreak/>
+                            ・C++ライブラリを追加
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
 
-        </local:CustomPanel>
+
+
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 0.1.0" Sentence="2022年12月23日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <TextBlock>
+                            ・初めのバージョン
+                        </TextBlock>
+                    </Expander.Content>
+                </Expander>
+            </local:BlockPanel>
+        </local:OuterPanel>
     </ScrollViewer>
 </Page>

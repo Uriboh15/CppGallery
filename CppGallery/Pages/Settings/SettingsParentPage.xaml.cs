@@ -60,7 +60,7 @@ namespace CppGallery.Pages.Settings
             {
                 case "設定": SettingFrame.Content = SettingPage.GetHandle(); break;
                 case "アプリについて": SettingFrame.Content = AboutAppPage.GetHandle(); break;
-                case "リリースノート": SettingFrame.Content = ReleaseNote.GetHandle(); break;
+                case "更新履歴": SettingFrame.Content = ReleaseNote.GetHandle(); break;
             }
 
             HeadText.Text = content;

@@ -10,7 +10,12 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.MapChangedEventHandler" CodeLanguage="CppWinRT" />
+            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.MapChangedEventHandler" CodeLanguage="CppWinRT" >
+                <local:GrammarPane.Children>
+                    <local:ItemGrid Title="K" Sentence="キーの型" />
+                    <local:ItemGrid Title="V" Sentence="要素の型" />
+                </local:GrammarPane.Children>
+            </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="Parameter" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableMap}" />

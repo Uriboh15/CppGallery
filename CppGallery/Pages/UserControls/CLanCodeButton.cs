@@ -27,7 +27,7 @@ namespace CppGallery.Pages.UserControls
 
         private string Mae = string.Empty;
 
-        private static List<SolidColorBrush> ColorsBlack { get; } = new List<SolidColorBrush>()
+        private static List<SolidColorBrush> ColorsDarkTheme { get; } = new List<SolidColorBrush>()
         {
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x56, 0x9C, 0xD6)),
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x4E, 0xC9, 0xB0)),
@@ -40,21 +40,6 @@ namespace CppGallery.Pages.UserControls
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XBE, 0xB7, 0xFF)),
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X9C, 0xDC, 0xFE)),
             new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XB8, 0xD7, 0xA3)),
-        };
-
-        private static List<SolidColorBrush> ColorsWhite { get; } = new List<SolidColorBrush>()
-        {
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x00, 0x00, 0xFF)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x2B, 0x91, 0xAF)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x8F, 0x08, 0xC4)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XA3, 0x15, 0x15)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0x80, 0x80, 0x80)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X00, 0x80, 0x00)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X00, 0x00, 0x00)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X74, 0x53, 0x1F)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X8A, 0x1B, 0xFF)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X1F, 0x37, 0x7F)),
-            new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X2F, 0x4F, 0x4F))
         };
 
         protected List<List<string>> KeyBlue { get; } = new List<List<string>>();
@@ -91,7 +76,7 @@ namespace CppGallery.Pages.UserControls
 
         public CLanCodeButton()
         {
-            ChangeTheme(App.SourceCodeTheme);
+            ChangeTheme();
             KeyDefine.Add(AddedDefine);
             KeyGreen.Add(AddedGreen);
         }
@@ -110,38 +95,20 @@ namespace CppGallery.Pages.UserControls
             return false;
         }
 
-        public void ChangeTheme(ElementTheme theme)
+        public void ChangeTheme()
         {
-            if (theme == ElementTheme.Default) theme = MainWindow.GetParentMainWindow(this).GetTheme();
+            blue = ColorsDarkTheme[0];
+            green = ColorsDarkTheme[1];
+            purple = ColorsDarkTheme[2];
+            tyairo = ColorsDarkTheme[3];
+            gray = ColorsDarkTheme[4];
+            comment = ColorsDarkTheme[5];
+            math = ColorsDarkTheme[6];
+            yellow = ColorsDarkTheme[7];
+            defined = ColorsDarkTheme[8];
+            local = ColorsDarkTheme[9];
+            global = ColorsDarkTheme[10];
 
-            if (theme == ElementTheme.Dark)
-            {
-                blue = ColorsBlack[0];
-                green = ColorsBlack[1];
-                purple = ColorsBlack[2];
-                tyairo = ColorsBlack[3];
-                gray = ColorsBlack[4];
-                comment = ColorsBlack[5];
-                math = ColorsBlack[6];
-                yellow = ColorsBlack[7];
-                defined = ColorsBlack[8];
-                local = ColorsBlack[9];
-                global = ColorsBlack[10];
-            }
-            else
-            {
-                blue = ColorsWhite[0];
-                green = ColorsWhite[1];
-                purple = ColorsWhite[2];
-                tyairo = ColorsWhite[3];
-                gray = ColorsWhite[4];
-                comment = ColorsWhite[5];
-                math = ColorsWhite[6];
-                yellow = ColorsWhite[7];
-                defined = ColorsWhite[8];
-                local = ColorsWhite[9];
-                global = ColorsWhite[10];
-            }
         }
 
         private static bool StKey(string str, int i)

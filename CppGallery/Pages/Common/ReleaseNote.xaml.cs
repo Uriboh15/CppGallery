@@ -40,6 +40,20 @@ namespace CppGallery.Pages
         private ReleaseNote()
         {
             this.InitializeComponent();
+
+            if (App.IsCompact)
+            {
+                KnownIssueGrid.Padding = new Thickness(Data.ControlGridPadding, Data.ControlGridPadding - 2.0, Data.ControlGridPadding, Data.ControlGridPadding - 2.0);
+                KnownIssueGrid.MaxHeight = Data.OutputsMaxHeight;
+
+            }
+            else
+            {
+                KnownIssueGrid.Padding = new Thickness(Data.ControlGridPadding, Data.ControlGridPadding - 5.0, Data.ControlGridPadding, Data.ControlGridPadding - 5.0);
+                KnownIssueGrid.MaxHeight = Data.OutputsMaxHeight;
+            }
+
+            KnownIssueGrid.MinHeight = Data.OutPutsMinHeight;
         }
 
         private void CustomPanel_Loaded(object sender, RoutedEventArgs e)

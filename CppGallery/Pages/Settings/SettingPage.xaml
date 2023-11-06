@@ -14,6 +14,7 @@
                 <TextBlock Text="構成"/>
                 <local:ControlGrid Message="コンパイラ">
                     <ComboBox x:Name="ComC" SelectionChanged="ComC_SelectionChanged" Loaded="ComC_Loaded" Width="119">
+                        <x:String>Clang</x:String>
                         <x:String>GCC</x:String>
                         <x:String>Visual C++</x:String>
                     </ComboBox>
@@ -43,70 +44,37 @@
                 </local:ControlGrid>
 
                 <local:ControlGrid Message="C言語の項目を C++ で実行する" >
-                    <Grid>
-                        <ToggleSwitch x:Name="UseCppT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="UseCppT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="UseCppT_Loaded"/>
-                        <TextBlock x:Name="UseCppText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
-                    </Grid>
+                    <ToggleSwitch x:Name="UseCppT" Toggled="UseCppT_Toggled" MinWidth="0" MinHeight="0" Loaded="UseCppT_Loaded"/>
                 </local:ControlGrid>
 
                 <local:ControlGrid Message="プログラムの終了コードを表示する" >
-                    <Grid>
-                        <ToggleSwitch x:Name="IsShowReturnCodeT" HorizontalAlignment="Right"  OffContent="" OnContent="" Margin="0,0,-10,0" Toggled="IsShowReturnCodeT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="IsShowReturnCodeT_Loaded"/>
-                        <TextBlock x:Name="IsShowReturnCodeText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
-                    </Grid>
+                    <ToggleSwitch x:Name="IsShowReturnCodeT" Toggled="IsShowReturnCodeT_Toggled" MinWidth="0" MinHeight="0" Loaded="IsShowReturnCodeT_Loaded"/>
                 </local:ControlGrid>
 
                 <local:DetailControlGrid Message="サンプルタイムアウト時間 (ミリ秒)" Detail="サンプルプログラムの終了を待機する時間を設定します" >
                     <NumberBox x:Name="WaitForNumberBox" Loaded="WaitForNumberBox_Loaded" Maximum="5200" Minimum="0" SpinButtonPlacementMode="Inline" SmallChange="10" LargeChange="100" />
                 </local:DetailControlGrid>
-                
-            </local:ResultsPanel>
 
+                <local:ControlGrid Message="クラス型のメンバーを検索でヒットさせる" >
+                    <ToggleSwitch x:Name="IsHitToggleSwitch" MinWidth="0" MinHeight="0" Loaded="IsHitToggleSwitch_Loaded" />
+                </local:ControlGrid>
+
+            </local:ResultsPanel>
 
             <local:ResultsPanel>
                 <TextBlock Text="外観" />
 
                 <local:DetailControlGrid Message="コンパクトモード (再起動が必要)" Detail="アプリのレイアウトを小さいウィンドウサイズに最適化します" >
-                    <Grid>
-                        <ToggleSwitch x:Name="CompactT" HorizontalAlignment="Right" Margin="0,0,-10,0" OffContent="" OnContent="" Toggled="CompactT_Toggled" HorizontalContentAlignment="Left" MinWidth="0" MinHeight="0" Loaded="CompactT_Loaded"/>
-                        <TextBlock x:Name="SText" Text="オフ" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,62,0"/>
-                    </Grid>
-                    
+                    <ToggleSwitch x:Name="CompactT" Toggled="CompactT_Toggled" MinWidth="0" MinHeight="0" Loaded="CompactT_Loaded"/>
                 </local:DetailControlGrid>
 
-                <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" Padding="0" Loaded="Expander_Loaded">
-                    <Expander.Header>
-                        <TextBlock Text="テーマ" Padding="9,0,0,0" />
-                    </Expander.Header>
-                    <Expander.Content>
-                        <StackPanel BorderThickness="1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" >
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="アプリのテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <ComboBox x:Name="ThemeC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeC_SelectionChanged" Loaded="ThemeC_Loaded" Width="133">
-                                    <x:String>システムの既定</x:String>
-                                    <x:String>ライト</x:String>
-                                    <x:String>ダーク</x:String>
-                                </ComboBox>
-                            </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource ExpanderHeaderBorderBrush}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="ソースコードのテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <ComboBox x:Name="ThemeSC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeSC_SelectionChanged" Loaded="ThemeSC_Loaded" Width="161">
-                                    <x:String>アプリのテーマと同期</x:String>
-                                    <x:String>ライト</x:String>
-                                    <x:String>ダーク</x:String>
-                                </ComboBox>
-                            </Grid>
-                            <Grid Background="{ThemeResource ExpanderHeaderBackground}" Height="60" Padding="23,0,23,0">
-                                <TextBlock Text="実行結果のテーマ" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                <ComboBox x:Name="ThemeRC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeRC_SelectionChanged" Loaded="ThemeRC_Loaded" Width="161">
-                                    <x:String>アプリのテーマと同期</x:String>
-                                    <x:String>ライト</x:String>
-                                    <x:String>ダーク</x:String>
-                                </ComboBox>
-                            </Grid>
-                        </StackPanel>
-                    </Expander.Content>
-                </Expander>
+                <local:ControlGrid Message="アプリのテーマ" >
+                    <ComboBox x:Name="ThemeC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="ThemeC_SelectionChanged" Loaded="ThemeC_Loaded" Width="133">
+                        <x:String>システムの既定</x:String>
+                        <x:String>ライト</x:String>
+                        <x:String>ダーク</x:String>
+                    </ComboBox>
+                </local:ControlGrid>
 
                 <local:ControlGrid Message="透明効果">
                     <ComboBox x:Name="BackC" HorizontalAlignment="Right" VerticalAlignment="Center" SelectionChanged="BackC_SelectionChanged" Loaded="BackC_Loaded" Width="148">

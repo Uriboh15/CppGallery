@@ -10,7 +10,12 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IMap" CodeLanguage="CppWinRT" />
+            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IMap" CodeLanguage="CppWinRT" >
+                <local:GrammarPane.Children>
+                    <local:ItemGrid Title="K" Sentence="キーの型" />
+                    <local:ItemGrid Title="V" Sentence="要素の型" />
+                </local:GrammarPane.Children>
+            </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />

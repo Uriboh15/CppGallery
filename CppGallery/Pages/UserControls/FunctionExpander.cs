@@ -203,7 +203,7 @@ namespace CppGallery.Pages.UserControls
                 IsClosable = false,
                 IsOpen = true,
                 Severity = InfoBarSeverity.Error,
-                Message = $"この項目は {language}{deleteVersion} で削除されました",
+                Message = string.Format("この項目は {0}{1} で削除されました", language, deleteVersion),
             };
 
             return infoBar;
@@ -213,29 +213,49 @@ namespace CppGallery.Pages.UserControls
         {
             if (!IsContentLoaded)
             {
+                //Styleを置き換え
+                this.Template = (ControlTemplate)App.Current.Resources["FuntionExpanderTemplate"];
+
                 InfoBar infoBar = null;
-                switch (CodeLanguage)
+
+                if(App.Compiler != Compiler.VC && this.CodeLanguage >= CodeLanguage.CppWin32)
                 {
-                    //言語バージョン確認
-                    case CodeLanguage.C:
-                        if (App.UseCppInCSample)
-                        {
-                            if ((int)App.CppVersion < (int)TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCVersion);
-                            else if ((int)App.CppVersion >= (int)TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
-                        }
-                        else
-                        {
-                            if (App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
-                            else if (App.CVersion >= TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
-                        }
-
-                        break;
-
-                    case CodeLanguage.Cpp:
-                        if (App.CppVersion < TargetMinCppVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCppVersion);
-                        else if (App.CppVersion >= TargetDeletedCppVersion) infoBar = GetVersionErrorDeletedInfoBar("C++", (int)TargetDeletedCppVersion);
-                        break;
+                    infoBar = new InfoBar
+                    {
+                        IsClosable = false,
+                        IsOpen = true,
+                        Severity = InfoBarSeverity.Error,
+                        Message = "この項目は Windows 専用です\nVisual C++ をお使いください",
+                    };
                 }
+
+                if(infoBar == null)
+                {
+                    switch (CodeLanguage)
+                    {
+                        //言語バージョン確認
+                        case CodeLanguage.C:
+                            if (App.UseCppInCSample)
+                            {
+                                if ((int)App.CppVersion < (int)TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCVersion);
+                                else if ((int)App.CppVersion >= (int)TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
+                            }
+                            else
+                            {
+                                if (App.CVersion < TargetMinCVersion) infoBar = GetVersionErrorInfoBar("C", (int)TargetMinCVersion);
+                                else if (App.CVersion >= TargetDeletedCVersion) infoBar = GetVersionErrorDeletedInfoBar("C", (int)TargetDeletedCVersion);
+                            }
+
+                            break;
+
+                        case CodeLanguage.Cpp:
+                            if (App.CppVersion < TargetMinCppVersion) infoBar = GetVersionErrorInfoBar("C++", (int)TargetMinCppVersion);
+                            else if (App.CppVersion >= TargetDeletedCppVersion) infoBar = GetVersionErrorDeletedInfoBar("C++", (int)TargetDeletedCppVersion);
+                            break;
+                    }
+                }
+
+                
 
                 if (infoBar != null)
                 {
@@ -457,7 +477,7 @@ namespace CppGallery.Pages.UserControls
 
             if (resultPanel2.Children.Count == 1)
             {
-                resultPanel2.Children.Add(new TextBlock { Text = NoPrm });
+                resultPanel2.Children.Add(new TextPane { Text = NoPrm });
             }
 
             var resultPanel3 = new ResultsPanel();
@@ -467,7 +487,7 @@ namespace CppGallery.Pages.UserControls
             title3.Text = Returns;
             title3.FontSize = TitleSize;
             title3.FontWeight = new Windows.UI.Text.FontWeight(700);
-            TextBlock sentence3 = new TextBlock();
+            TextPane sentence3 = new();
             resultPanel3.Children.Add(sentence3);
 
             for (; i < Lines.Length; ++i)
@@ -557,8 +577,6 @@ namespace CppGallery.Pages.UserControls
                     --version;
                     CodeName = "/Code" + ((int)version).ToString() + ".txt";
                 }
-
-
             }
 
             using (StreamReader sr = new StreamReader(Data.DefaultSamplePath + Folder + "/Def.txt"))

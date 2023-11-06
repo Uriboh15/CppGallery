@@ -320,19 +320,19 @@ namespace CppGallery
                 buf[2] = (byte)(Pages.Settings.SettingPage.IsCompact ? 1 : 0);
                 buf[3] = (byte)App.Compiler;
                 buf[4] = (byte)App.LibraryPageStyle;
-                buf[5] = (byte)App.SourceCodeTheme;
-                buf[6] = (byte)App.ResultTheme;
-                buf[7] = (byte)App.ProcesserType;
-                buf[8] = (byte)(App.UseCppInCSample ? 1 : 0);
-                buf[9] = (byte)(App.IsShowReturnCode ? 1 : 0);
-                buf[10] = (byte)App.CppVersion;
-                buf[11] = (byte)App.CVersion;
+                buf[5] = (byte)App.ProcesserType;
+                buf[6] = (byte)(App.UseCppInCSample ? 1 : 0);
+                buf[7] = (byte)(App.IsShowReturnCode ? 1 : 0);
+                buf[8] = (byte)App.CppVersion;
+                buf[9] = (byte)App.CVersion;
 
                 var tmp = BitConverter.GetBytes(App.WaitFor);
                 for (int i = 0; i < tmp.Length; i++)
                 {
-                    buf[i + 12] = tmp[i];
+                    buf[i + 10] = tmp[i];
                 }
+
+                buf[14] = (byte)(App.IsSearchClassMemberEnabled ? 1 : 0);
 
                 fs.Write(buf, 0, App.SettingsLen);
                 fs.Close();

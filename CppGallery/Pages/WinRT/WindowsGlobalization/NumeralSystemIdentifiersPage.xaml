@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsGlobalization.NumeralSystemIdentifiersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="BaseClass" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WinRTProperty" >
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Arab" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ArabExt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Bali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Beng" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Brah" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Cham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Deva" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/FullWide" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Gujr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Guru" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/HaniDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Java" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Kali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Khmr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Knda" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lana" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/LanaTham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Laoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Latn" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lepc" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Limb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mlym" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mong" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mtei" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mymr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MymrShan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Nkoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Olck" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Orya" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Osma" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Saur" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Sund" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Talu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/TamlDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Telu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Thai" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Tibt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Vaii" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.globalization.numeralsystemidentifiers?view=winrt-22621" />
+        </local:OuterPanel>
+    </ScrollViewer>
+</Page>

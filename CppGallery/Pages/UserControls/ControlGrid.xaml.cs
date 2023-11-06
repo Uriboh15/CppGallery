@@ -35,12 +35,45 @@ namespace CppGallery.Pages.UserControls
             set { SetValue(MessageProperty, value); }
         }
 
+        private bool _isCardStyle { get; set; }
+
+        private static CornerRadius Curve { get; } = new CornerRadius(4);
+        private static CornerRadius Kakukaku { get; } = new CornerRadius(0);
+        private static Thickness CurveT { get; } = new Thickness(1);
+        private static Thickness KakukakuT { get; } = new Thickness(0);
+
+        public bool IsCardStyle
+        {
+            get => _isCardStyle;
+            set
+            {
+                if (value)
+                {
+                    Panel.CornerRadius = Kakukaku;
+                    Panel.BorderThickness = KakukakuT;
+                }
+                else
+                {
+                    Panel.CornerRadius = Curve;
+                    Panel.BorderThickness = CurveT;
+                }
+            }
+        }
+
         public new UIElement Content { get; set; }
 
         public ControlGrid()
         {
-            this.InitializeComponent();
+            this.Loaded += ControlGrid_Loaded;
+            
             Height = Data.ControlGridHeight;
+            
+        }
+
+        private void ControlGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Loaded -= ControlGrid_Loaded;
+            this.InitializeComponent();
             Panel.Padding = new Thickness(Data.ControlGridPadding, 0.0, Data.ControlGridPadding, 0.0);
             MesText.Margin = new Thickness(0, 0, Data.ControlGridPadding, 0.0);
         }

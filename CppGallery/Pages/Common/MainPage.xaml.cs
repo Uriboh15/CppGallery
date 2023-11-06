@@ -249,6 +249,7 @@ namespace CppGallery.Pages
             { typeof(WinRT.WindowsGlobalization.JapanesePhonemePage), "W0DJapanesePhoneme0" },
             { typeof(WinRT.WindowsGlobalization.JapanesePhoneticAnalyzerPage), "W0DJapanesePhoneticAnalyzer0" },
             { typeof(WinRT.WindowsGlobalization.LanguageLayoutDirectionPage), "W0DLanguageLayoutDirection0" },
+            { typeof(WinRT.WindowsGlobalization.NumeralSystemIdentifiersPage), "W0DNumeralSystemIdentifiers0" },
             { typeof(WinRT.WindowsGlobalizationFonts.WindowsGlobalizationFontsPage), "W0EWindowsGlobalizationFonts" },
             { typeof(WinRT.WindowsGlobalizationFonts.LanguageFontPage), "W0ELanguageFont0" },
             { typeof(WinRT.WindowsGlobalizationFonts.LanguageFontGroupPage), "W0ELanguageFontGroup0" },
@@ -271,7 +272,22 @@ namespace CppGallery.Pages
 
         private static SortedDictionary<string, string> SuggestDictionary { get; } = new SortedDictionary<string, string>();
         private static SortedDictionary<string, string> UseCppSuggestDictionary { get; } = new SortedDictionary<string, string>();
-        private static SortedDictionary<string, string> CurrentSuggestDictionary => App.UseCppInCSample ? UseCppSuggestDictionary : SuggestDictionary;
+        private static SortedDictionary<string, string> SuggestMemberDisabledDictionary { get; } = new SortedDictionary<string, string>();
+        private static SortedDictionary<string, string> UseCppSuggestMemberDisabledDictionary { get; } = new SortedDictionary<string, string>();
+        private static SortedDictionary<string, string> CurrentSuggestDictionary
+        {
+            get
+            {
+                if (App.UseCppInCSample)
+                {
+                    return App.IsSearchClassMemberEnabled ? UseCppSuggestDictionary : UseCppSuggestMemberDisabledDictionary;
+                }
+                else
+                {
+                    return App.IsSearchClassMemberEnabled ? SuggestDictionary : SuggestMemberDisabledDictionary;
+                }
+            }
+        }
 
         public MainPage()
         {
@@ -310,7 +326,9 @@ namespace CppGallery.Pages
 
                     SuggestDictionary.Add(name, fileName);
                     UseCppSuggestDictionary.Add(useCppName, fileName);
-                        AMD.Add(fileName, name);
+                    SuggestMemberDisabledDictionary.Add(name, fileName);
+                    UseCppSuggestMemberDisabledDictionary.Add(useCppName, fileName);
+                    AMD.Add(fileName, name);
                     
 
                     if (!name.StartsWith('<'))
@@ -319,9 +337,32 @@ namespace CppGallery.Pages
                         useCppName = '(' + useCppName + ')';
                     }
 
+
+                    bool IsClassMember = false;
                     while (!streamReader.EndOfStream)
                     {
                         string readed = streamReader.ReadLine();
+
+                        if(readed == "?")
+                        {
+                            IsClassMember = true;
+                        }
+
+                        if (!IsClassMember)
+                        {
+                            if (!fileName.EndsWith("0"))
+                            {
+                                SuggestMemberDisabledDictionary.Add(readed + "  " + name, fileName);
+                                UseCppSuggestMemberDisabledDictionary.Add(readed + "  " + useCppName, fileName);
+                            }
+                            else
+                            {
+                                SuggestMemberDisabledDictionary.Add(readed, fileName);
+                                UseCppSuggestMemberDisabledDictionary.Add(readed, fileName);
+                            }
+                            
+                        }
+
                         SuggestDictionary.Add(readed + "  " + name, fileName);
                         UseCppSuggestDictionary.Add(readed + "  " + useCppName, fileName);
                     }

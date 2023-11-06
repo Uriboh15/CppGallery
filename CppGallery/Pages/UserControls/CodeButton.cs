@@ -94,7 +94,7 @@ namespace CppGallery.Pages.UserControls
             
             "mt19937",
             "mt19937_64",
-            "multiplies",
+            
             "nullptr_t",
             "ofstream",
             "ostream",
@@ -192,6 +192,7 @@ namespace CppGallery.Pages.UserControls
             "list",
             "map",
             "multimap",
+            "multiplies",
             "multiset",
             "numeric_limits",
             "pair",

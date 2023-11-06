@@ -41,7 +41,7 @@
                     <FontIcon Glyph="&#xE74C;"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
-            <NavigationViewItem Content="リリースノート" >
+            <NavigationViewItem Content="更新履歴" >
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE7C3;"/>
                 </NavigationViewItem.Icon>

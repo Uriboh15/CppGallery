@@ -1248,6 +1248,12 @@
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
+                    <NavigationViewItem Content="NumeralSystemIdentifiers" Tag="W0DNumeralSystemIdentifiers0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                 </NavigationViewItem.MenuItems>
             </NavigationViewItem>
 

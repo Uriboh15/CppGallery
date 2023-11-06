@@ -12,6 +12,11 @@
 
     <ScrollViewer>
         <local:OuterPanel>
+            <local:GrammarPane Folder="bitset__bitset" >
+                <local:GrammarPane.Children>
+                    <local:ItemGrid Title="_Bits" Sentence="ビット数" />
+                </local:GrammarPane.Children>
+            </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="Constructor">
                 <local:CustomExpander Title="bitset()" Sentence="bitset オブジェクトを構築します" IsEnabled="False" />

@@ -10,7 +10,11 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IObservableVector" CodeLanguage="CppWinRT" />
+            <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IObservableVector" CodeLanguage="CppWinRT" >
+                <local:GrammarPane.Children>
+                    <local:ItemGrid Title="T" Sentence="要素の型" />
+                </local:GrammarPane.Children>
+            </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVector}" />

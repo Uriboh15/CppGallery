@@ -36,6 +36,7 @@ namespace CppGallery
 
     public enum Compiler
     {
+        Clang,
         GCC,
         VC,
         ClangOnGCC,
@@ -93,14 +94,13 @@ namespace CppGallery
         public static bool IsCompact { get; set; }       //buf[2]
         public static Compiler Compiler { get; set; }                       //buf[3]
         public static LibraryPageStyle LibraryPageStyle { get; set; }       //buf[4]
-        public static ElementTheme SourceCodeTheme { get; set; }            //buf[5]
-        public static ElementTheme ResultTheme { get; set; }                //buf[6]
-        public static ProcesserType ProcesserType { get; set; }             //buf[7]
-        public static bool UseCppInCSample { get; set; }                    //buf[8]
-        public static bool IsShowReturnCode { get; set; }                   //buf[9]
-        public static CppVersion CppVersion { get; set; }                   //buf[10]
-        public static CVersion CVersion { get; set; }                       //buf[11]
-        public static uint WaitFor { get; set; }                            //buf[12, 13, 14, 15]
+        public static ProcesserType ProcesserType { get; set; }             //buf[5]
+        public static bool UseCppInCSample { get; set; }                    //buf[6]
+        public static bool IsShowReturnCode { get; set; }                   //buf[7]
+        public static CppVersion CppVersion { get; set; }                   //buf[8]
+        public static CVersion CVersion { get; set; }                       //buf[9]
+        public static uint WaitFor { get; set; }                            //buf[10, 11, 12, 13]
+        public static bool IsSearchClassMemberEnabled { get; set; }         //buf[14]
 
 
         public static bool IsFirstCSampleOpened { get; set; }       //log[0]
@@ -110,7 +110,7 @@ namespace CppGallery
         public static string UserLogPath => @"Pages/log.bin";
         private static bool _isFirstLaunch = false;
 
-        public static int SettingsLen => 16;
+        public static int SettingsLen => 15;
         public static int LogLen => 1;
         public static bool Win10 => _winver == WinVer.Win10;
         public static WinVer WinVer => _winver;
@@ -133,6 +133,7 @@ namespace CppGallery
         {
             //StreamReaderでShift-Jisを読み込めるようにする
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             MainPage.Initialize();
         }
 
@@ -175,16 +176,6 @@ namespace CppGallery
             LibraryPageStyle = (LibraryPageStyle)x;
         }
 
-        private static void ApplySourceTheme(byte x)
-        {
-            SourceCodeTheme = (ElementTheme)x;
-        }
-
-        private static void ApplyResultTheme(byte x)
-        {
-            ResultTheme = (ElementTheme)x;
-        }
-
         private static void ApplyProcesserType(byte x)
         {
             ProcesserType = (ProcesserType)x;
@@ -212,7 +203,12 @@ namespace CppGallery
 
         private static void ApplyWaitFor(byte[] arr)
         {
-            WaitFor = BitConverter.ToUInt32(arr, 12);
+            WaitFor = BitConverter.ToUInt32(arr, 10);
+        }
+
+        private static void ApplyIsSearchClassMemberEnabled(byte x)
+        {
+            IsSearchClassMemberEnabled = x == 1;
         }
 
         private static void ApplySettings()
@@ -234,19 +230,18 @@ namespace CppGallery
                 buf[1] = (byte)BackDrop.FrostedGlass;
                 buf[3] = (byte)Compiler.VC;
                 buf[4] = (byte)LibraryPageStyle.Block;
-                buf[5] = (byte)ElementTheme.Dark;
-                buf[6] = (byte)ElementTheme.Dark;
-                buf[7] = (byte)ProcesserType.x64;
-                buf[8] = 1;
-                buf[9] = 0;
-                buf[10] = 17;
-                buf[11] = 17;
+                buf[5] = (byte)ProcesserType.x64;
+                buf[6] = 1;
+                buf[7] = 0;
+                buf[8] = 17;
+                buf[9] = 17;
 
                 var tmp = BitConverter.GetBytes(400u);
-                buf[12] = tmp[0];
-                buf[13] = tmp[1];
-                buf[14] = tmp[2];
-                buf[15] = tmp[3];
+                buf[10] = tmp[0];
+                buf[11] = tmp[1];
+                buf[12] = tmp[2];
+                buf[13] = tmp[3];
+                buf[14] = 0;
                 _isFirstLaunch = true;
             }
             else
@@ -260,14 +255,13 @@ namespace CppGallery
             ApplyIsCompact(buf[2]);
             ApplyCompiler(buf[3]);
             ApplyLibraryPageStyle(buf[4]);
-            ApplySourceTheme(buf[5]);
-            ApplyResultTheme(buf[6]);
-            ApplyProcesserType(buf[7]);
-            ApplyUseCppInCSample(buf[8]);
-            ApplyIsShowReturnCode(buf[9]);
-            ApplyCppVersion(buf[10]);
-            ApplyCVersion(buf[11]);
+            ApplyProcesserType(buf[5]);
+            ApplyUseCppInCSample(buf[6]);
+            ApplyIsShowReturnCode(buf[7]);
+            ApplyCppVersion(buf[8]);
+            ApplyCVersion(buf[9]);
             ApplyWaitFor(buf);
+            ApplyIsSearchClassMemberEnabled(buf[14]);
 
             fs.Close();
         }

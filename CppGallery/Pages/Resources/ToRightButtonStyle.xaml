@@ -1426,6 +1426,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+
+    <Style x:Key="WinRTWindowsGlobalizationNumeralSystemIdentifiers" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="NumeralSystemIdentifiers" />
+        <Setter Property="Sentence" Value="各言語での数字の書き方の識別子" />
+        <Setter Property="PageTag" Value="W0DNumeralSystemIdentifiers0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
     <Style x:Key="WinRTWindowsGlobalizationFonts" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;winrt/Windows.Globalization.Fonts.h>" />
         <Setter Property="Sentence" Value="特定の言語のフォント情報" />

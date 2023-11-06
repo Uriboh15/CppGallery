@@ -15,6 +15,7 @@
             <local:SymbolBlockPanel Symbol="Class" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneme}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationJapanesePhoneticAnalyzer}" />
+                <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationNumeralSystemIdentifiers}" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Enum" >

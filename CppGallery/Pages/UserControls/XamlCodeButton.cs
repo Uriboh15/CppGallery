@@ -13,32 +13,13 @@ namespace CppGallery.Pages.UserControls
 {
     public class XamlCodeButton : CodeButtonBase
     {
-        private static SolidColorBrush TypeName;
-        private static SolidColorBrush Value;
-        private static SolidColorBrush Property;
+        private static SolidColorBrush TypeName { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x56, 0x9C, 0xD6));
+        private static SolidColorBrush Value { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0xD6, 0x9D, 0x85));
+        private static SolidColorBrush Property { get; } = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X9C, 0xDC, 0xFE));
 
         public XamlCodeButton() : base()
         {
             Lan = "XAML";
-            ChangeTheme(App.SourceCodeTheme);
-        }
-
-        public void ChangeTheme(ElementTheme theme)
-        {
-            if (theme == ElementTheme.Default) theme = ActualTheme;
-
-            if (theme == ElementTheme.Dark)
-            {
-                TypeName = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x56, 0x9C, 0xD6));
-                Value = new SolidColorBrush(Windows.UI.Color.FromArgb(0xFF, 0xD6, 0x9D, 0x85));
-                Property = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X9C, 0xDC, 0xFE));
-            }
-            else
-            {
-                TypeName = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0x00, 0x00, 0xFF));
-                Value = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0XA3, 0x15, 0x15));
-                Property = new SolidColorBrush(Windows.UI.Color.FromArgb(0XFF, 0X1F, 0x37, 0x7F));
-            }
         }
 
         static bool CanUseName(char ch)
