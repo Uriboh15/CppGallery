@@ -10,6 +10,10 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+            
             <local:SymbolBlockPanel Symbol="WinRTProperty" >
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVectorChangedEventArgs/CollectionChange" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IVectorChangedEventArgs/Index" CodeLanguage="CppWinRT" />

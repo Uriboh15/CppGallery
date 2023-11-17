@@ -6,6 +6,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -15,63 +16,95 @@
         <ScrollViewer>
             <local:OuterPanel x:Name="Panel" Loaded="Panel_Loaded">
 
-                
-
-                <local:SymbolBlockPanel Symbol="Class" >
-                    <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationNumeralSystemIdentifiers}" />
-                </local:SymbolBlockPanel>
-                
-
-                <local:BlockPanel Header="NumeralSystemIdentifiers" >
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Arab" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ArabExt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Bali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Beng" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Brah" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Cham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Deva" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/FullWide" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Gujr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Guru" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/HaniDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Java" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Kali" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Khmr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Knda" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lana" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/LanaTham" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Laoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Latn" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Lepc" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Limb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MathSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mlym" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mong" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mtei" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Mymr" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/MymrShan" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Nkoo" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Olck" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Orya" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Osma" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Saur" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Sund" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Talu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/TamlDec" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Telu" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Thai" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Tibt" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/Vaii" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthBold" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthDbl" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthMono" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSanb" SampleType="GUIApp" CodeLanguage="CppWinRT" />
-                    <local:FunctionExpander Folder="winrt/Windows.Globalization.NumeralSystemIdentifiers/ZmthSans" SampleType="GUIApp" CodeLanguage="CppWinRT" />
+                <local:BlockPanel Header="ヘッダー" >
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStorageStreams}" />
                 </local:BlockPanel>
+
+                <local:SymbolBlockPanel Symbol="Enum" >
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationAsyncStatus}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationPropertyType}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsStorageStreamsByteOrder}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsStorageStreamsUnicodeEncoding}" />
+                </local:SymbolBlockPanel>
+
+                <local:SymbolBlockPanel Symbol="Interfase" >
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIAsyncInfo}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIPropertyValue}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIReference}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIReferenceArray}" />
+                    <controls:ToRightButton Style="{StaticResource WinRTWindowsStorageStreamsIBuffer}" />
+                </local:SymbolBlockPanel>
+
+                <controls:BlockPanel Header="bitset" >
+                    <local:FunctionExpander Folder="bitset__bitset/bitset" >
+                        <local:TextBoxPane Message="整数を入力" Text="1025" />
+                    </local:FunctionExpander>
+                </controls:BlockPanel>
+
+                <controls:BlockPanel Header="IAsyncInfo" >
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/ErrorCode" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Id" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Status" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Cancel" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Close" CodeLanguage="CppWinRT" />
+                </controls:BlockPanel>
+
+                <controls:BlockPanel Header="IBuffer" >
+                    <controls:FunctionExpander Folder="winrt/Windows.Storage.Streams.IBuffer/Capacity" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Storage.Streams.IBuffer/data" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Storage.Streams.IBuffer/Length" CodeLanguage="CppWinRT" />
+                </controls:BlockPanel>
+
+                <controls:BlockPanel Header="IPropertyValue" >
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/IsNumericScalar" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/Type" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetBoolean" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetBooleanArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetChar16" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetChar16Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDateTime" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDateTimeArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDouble" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDoubleArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetGuid" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetGuidArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInspectableArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt16" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt16Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt32" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt32Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt64" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt64Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetPoint" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetPointArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetRect" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetRectArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSingle" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSingleArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSize" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSizeArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetString" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetStringArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetTimeSpan" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetTimeSpanArray" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt8" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt8Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt16" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt16Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt32" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt32Array" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt64" CodeLanguage="CppWinRT" />
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt64Array" CodeLanguage="CppWinRT" />
+                </controls:BlockPanel>
+
+                <controls:BlockPanel Header="IReference" >
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IReference/Value" CodeLanguage="CppWinRT" />
+                </controls:BlockPanel>
+
+                <controls:BlockPanel Header="IReferenceArray" >
+                    <controls:FunctionExpander Folder="winrt/Windows.Foundation.IReferenceArray/Value" CodeLanguage="CppWinRT" />
+                </controls:BlockPanel>
+
             </local:OuterPanel>
         </ScrollViewer>
     </Grid>

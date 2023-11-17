@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundation.PropertyTypePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.WinRT.WindowsFoundation"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel HeaderType="WinRT" >
+            <controls:SymbolBlockPanel Symbol="WinRTField" >
+                <controls:ItemGrid Title="Empty" Sentence="void 型" Value="0" />
+                <controls:ItemGrid Title="UInt8" Sentence="uint8_t 型" Value="1" />
+                <controls:ItemGrid Title="Int16" Sentence="int16_t 型" Value="2" />
+                <controls:ItemGrid Title="UInt16" Sentence="uint16_t 型" Value="3" />
+                <controls:ItemGrid Title="Int32" Sentence="int32_t 型" Value="4" />
+                <controls:ItemGrid Title="UInt32" Sentence="uint32_t 型" Value="5" />
+                <controls:ItemGrid Title="Int64" Sentence="int64_t 型" Value="6" />
+                <controls:ItemGrid Title="UInt64" Sentence="uint64_t 型" Value="7" />
+                <controls:ItemGrid Title="Single" Sentence="float 型" Value="8" />
+                <controls:ItemGrid Title="Double" Sentence="double 型" Value="9" />
+                <controls:ItemGrid Title="Char16" Sentence="char16_t 型" Value="10" />
+                <controls:ItemGrid Title="Boolean" Sentence="bool 型" Value="11" />
+                <controls:ItemGrid Title="String" Sentence="hstring 型" Value="12" />
+                <controls:ItemGrid Title="Inspectable" Sentence="IInspectable 型" Value="13" />
+                <controls:ItemGrid Title="DateTime" Sentence="DateTime 型" Value="14" />
+                <controls:ItemGrid Title="TimeSpan" Sentence="TimeSpan 型" Value="15" />
+                <controls:ItemGrid Title="Guid" Sentence="Guid 型" Value="16" />
+                <controls:ItemGrid Title="Point" Sentence="Point 型" Value="17" />
+                <controls:ItemGrid Title="Size" Sentence="Size 型" Value="18" />
+                <controls:ItemGrid Title="Rect" Sentence="Rect 型" Value="19" />
+                <controls:ItemGrid Title="OtherType" Sentence="その他の型" Value="20" />
+                <controls:ItemGrid Title="UInt8Array" Sentence="uint8_t 型の配列" Value="1025" />
+                <controls:ItemGrid Title="Int16Array" Sentence="int16_t 型の配列" Value="1026" />
+                <controls:ItemGrid Title="UInt16Array" Sentence="uint16_t 型の配列" Value="1027" />
+                <controls:ItemGrid Title="Int32Array" Sentence="int32_t 型の配列" Value="1028" />
+                <controls:ItemGrid Title="UInt32Array" Sentence="uint32_t 型の配列" Value="1029" />
+                <controls:ItemGrid Title="Int64Array" Sentence="int64_t 型の配列" Value="1030" />
+                <controls:ItemGrid Title="UInt64Array" Sentence="uint64_t 型の配列" Value="1031" />
+                <controls:ItemGrid Title="SingleArray" Sentence="float 型の配列" Value="1032" />
+                <controls:ItemGrid Title="DoubleArray" Sentence="double 型の配列" Value="1033" />
+                <controls:ItemGrid Title="Char16Array" Sentence="char16_t 型の配列" Value="1034" />
+                <controls:ItemGrid Title="BooleanArray" Sentence="bool 型の配列" Value="1035" />
+                <controls:ItemGrid Title="StringArray" Sentence="hstring 型の配列" Value="1036" />
+                <controls:ItemGrid Title="InspectableArray" Sentence="IInspectable 型の配列" Value="1037" />
+                <controls:ItemGrid Title="DateTimeArray" Sentence="DateTime 型の配列" Value="1038" />
+                <controls:ItemGrid Title="TimeSpanArray" Sentence="TimeSpan 型の配列" Value="1039" />
+                <controls:ItemGrid Title="GuidArray" Sentence="Guid 型の配列" Value="1040" />
+                <controls:ItemGrid Title="PointArray" Sentence="Point 型の配列" Value="1041" />
+                <controls:ItemGrid Title="SizeArray" Sentence="Size 型の配列" Value="1042" />
+                <controls:ItemGrid Title="RectArray" Sentence="Rect 型の配列" Value="1043" />
+                <controls:ItemGrid Title="OtherTypeArray" Sentence="その他の型の配列" Value="1044" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.propertytype?view=winrt-22621" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

@@ -64,30 +64,12 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Enum" >
-                <local:CustomExpander Title="enum chars_format" Sentence="浮動小数点数の表記フォーマット" Icon="&#xEA86;" >
-                    <local:EnumPanel>
-                        <local:ItemGrid Title="scientific" Sentence="指数表記" />
-                        <local:ItemGrid Title="fixed" Sentence="10進数表記" />
-                        <local:ItemGrid Title="hex" Sentence="16進数表記" />
-                        <local:ItemGrid Title="general" Sentence="scientific と fixed を自動で切り替え" />
-                    </local:EnumPanel>
-                </local:CustomExpander>
+                <local:ToRightButton Style="{StaticResource CharsFormatEnum}" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Struct" >
-                <local:CustomExpander Title="from_chars_result 構造体" Sentence="from_chars() で返される構造体" Icon="&#xEA86;" >
-                    <local:EnumPanel>
-                        <local:ItemGrid Title="char* ptr" Sentence="読み取った文字列の数値を表さない初めの位置へのポインター" />
-                        <local:ItemGrid Title="errc ec" Sentence="エラーコード" />
-                    </local:EnumPanel>
-                </local:CustomExpander>
-                
-                <local:CustomExpander Title="to_chars_result 構造体" Sentence="to_chars() で返される構造体" Icon="&#xEA86;" >
-                    <local:EnumPanel>
-                        <local:ItemGrid Title="char* ptr" Sentence="書き込んだ文字配列の末尾の次を指すポインター" />
-                        <local:ItemGrid Title="errc ec" Sentence="エラーコード" />
-                    </local:EnumPanel>
-                </local:CustomExpander>
+                <local:ToRightButton Style="{StaticResource FromCharsResultStruct}" />
+                <local:ToRightButton Style="{StaticResource ToCharsResultStruct}" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/charconv?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/charconv.html" />

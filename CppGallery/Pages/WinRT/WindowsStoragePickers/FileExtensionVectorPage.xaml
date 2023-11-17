@@ -12,11 +12,8 @@
         <local:OuterPanel HeaderType="WinRT" >
             <InfoBar Style="{StaticResource IncompleteClassPageInfoBar}" />
 
-            <local:SymbolBlockPanel Symbol="BaseClass" >
-                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
-            </local:SymbolBlockPanel>
-
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIVector}" />
             </local:SymbolBlockPanel>

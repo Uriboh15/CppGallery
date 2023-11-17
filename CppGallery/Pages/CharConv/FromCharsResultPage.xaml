@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CharConv.FromCharsResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.CharConv"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel TargetMinCppVersion="Cpp17" >
+            <controls:SymbolBlockPanel Symbol="Field" >
+                <controls:FunctionExpander Folder="charconv__from_chars_result/ec" Icon="Object" />
+                <controls:FunctionExpander Folder="charconv__from_chars_result/ptr" Icon="Object" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/from-chars-result-structure?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/charconv/from_chars_result.html" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

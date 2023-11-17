@@ -160,6 +160,9 @@ namespace CppGallery.Pages
             { typeof(Deque.DequePage), "ydeque" },
             { typeof(Deque.DequeClassPage), "ydeque0" },
             { typeof(CharConv.CharConvPage), "zcharconv" },
+            { typeof(CharConv.CharsFormatPage), "zchars_format0" },
+            { typeof(CharConv.FromCharsResultPage), "zfrom_chars_result0" },
+            { typeof(CharConv.ToCharsResultPage), "zto_chars_result0" },
             { typeof(Set.SetPage), "Aset" },
             { typeof(Set.SetClassPage), "Aset0" },
             { typeof(Set.MultiSetClassPage), "Amultiset0" },
@@ -254,8 +257,18 @@ namespace CppGallery.Pages
             { typeof(WinRT.WindowsGlobalizationFonts.LanguageFontPage), "W0ELanguageFont0" },
             { typeof(WinRT.WindowsGlobalizationFonts.LanguageFontGroupPage), "W0ELanguageFontGroup0" },
             { typeof(WinRT.WindowsFoundation.WindowsFoundationPage), "W0FWindowsFoundation" },
+            { typeof(WinRT.WindowsFoundation.AsyncStatusPage), "W0FAsyncStatus0" },
+            { typeof(WinRT.WindowsFoundation.IAsyncInfoPage), "W0FIAsyncInfo0" },
             { typeof(WinRT.WindowsFoundation.IClosablePage), "W0FIClosable0" },
+            { typeof(WinRT.WindowsFoundation.IPropertyValuePage), "W0FIPropertyValue0" },
+            { typeof(WinRT.WindowsFoundation.IReferencePage), "W0FIReference0" },
+            { typeof(WinRT.WindowsFoundation.IReferenceArrayPage), "W0FIReferenceArray0" },
             { typeof(WinRT.WindowsFoundation.IStringablePage), "W0FIStringable0" },
+            { typeof(WinRT.WindowsFoundation.PropertyTypePage), "W0FPropertyType0" },
+            { typeof(WinRT.WindowsStorageStreams.WindowsStorageStreamsPage), "W0HWindowsStorageStreams" },
+            { typeof(WinRT.WindowsStorageStreams.ByteOrderPage), "W0HByteOrder0" },
+            { typeof(WinRT.WindowsStorageStreams.IBufferPage), "W0HIBuffer0" },
+            { typeof(WinRT.WindowsStorageStreams.UnicodeEncodingPage), "W0HUnicodeEncoding0" },
         };
 
         private static Dictionary<string, string> AMD { get; } = new Dictionary<string, string>()
@@ -716,6 +729,8 @@ namespace CppGallery.Pages
                         folder = AMD["ydeque"];
                         break;
 
+                    case 'z': SetItem(charconv, ref folder, tag); break;
+
                     case 'A':
                         set.IsExpanded = true;
                         NavView.SelectedItem = GetItem(set.MenuItems, tag);
@@ -818,6 +833,7 @@ namespace CppGallery.Pages
                                     case 'D': SetItem(WindowsGlobalization, ref folder, tag); break;
                                     case 'E': SetItem(WindowsGlobalizationFonts, ref folder, tag); break;
                                     case 'F': SetItem(WindowsFoundation, ref folder, tag); break;
+                                    case 'H': SetItem(WindowsStorageStreams, ref folder, tag); break;
                                 }
 
                                 break;

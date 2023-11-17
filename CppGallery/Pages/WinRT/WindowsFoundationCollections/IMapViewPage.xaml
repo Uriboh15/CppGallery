@@ -18,6 +18,7 @@
             </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
             </local:SymbolBlockPanel>
 

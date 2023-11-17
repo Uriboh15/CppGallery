@@ -94,7 +94,6 @@
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE7C2;"/>
                 </NavigationViewItem.Icon>
-
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="any" Content="&lt;any>" Tag="rany">
@@ -157,6 +156,29 @@
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xF093;"/>
                 </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="chars_format" Tag="zchars_format0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="from_chars_result" Tag="zfrom_chars_result0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="to_chars_result" Tag="zto_chars_result0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="compare" Content="&lt;compare>" Tag="Ncompare">
@@ -1100,13 +1122,49 @@
 
                 <NavigationViewItem.MenuItems>
 
+                    <NavigationViewItem Content="AsyncStatus" Tag="W0FAsyncStatus0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IAsyncInfo" Tag="W0FIAsyncInfo0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="IClosable" Tag="W0FIClosable0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
 
+                    <NavigationViewItem Content="IPropertyValue" Tag="W0FIPropertyValue0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IReference" Tag="W0FIReference0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IReferenceArray" Tag="W0FIReferenceArray0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
                     <NavigationViewItem Content="IStringable" Tag="W0FIStringable0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="PropertyType" Tag="W0FPropertyType0">
                         <NavigationViewItem.Icon>
                             <FontIcon Glyph="&#xEA86;"/>
                         </NavigationViewItem.Icon>
@@ -1317,6 +1375,35 @@
                     </NavigationViewItem>
 
                 </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem x:Name="WindowsStorageStreams" Content="&lt;winrt/Windows.Storage.Streams.h>" Tag="W0HWindowsStorageStreams">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE93E;"/>
+                </NavigationViewItem.Icon>
+
+                <NavigationViewItem.MenuItems>
+
+                    <NavigationViewItem Content="ByteOrder" Tag="W0HByteOrder0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="IBuffer" Tag="W0HIBuffer0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                    <NavigationViewItem Content="UnicodeEncoding" Tag="W0HUnicodeEncoding0">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEA86;"/>
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </NavigationViewItem.MenuItems>
+
             </NavigationViewItem>
 
             <NavigationViewItem x:Name="WindowsSystemDisplay" Content="&lt;winrt/Windows.System.Display.h>" Tag="W08WindowsSystemDisplay">

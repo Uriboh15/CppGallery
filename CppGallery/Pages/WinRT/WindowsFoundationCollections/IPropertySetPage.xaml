@@ -13,6 +13,7 @@
             <local:GrammarPane Folder="winrt/Windows.Foundation.Collections.IPropertySet" CodeLanguage="CppWinRT" />
 
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMap}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableMap}" />

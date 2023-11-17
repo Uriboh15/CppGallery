@@ -51,6 +51,8 @@ namespace CppGallery.Pages.UserControls
             "FontWeights",
             "FrameworkElement",
             "Grid",
+            "guid",
+            "HResult",
             "hstring",
             "IAsyncAction",
             "IInitializeWithWindow",
@@ -71,8 +73,10 @@ namespace CppGallery.Pages.UserControls
             "MulticastDelegate",
             "NumeralSystemIdentifiers",
             "NumeralSystemTranslator",
+            "Point",
             "PowerManager",
             "PowerSupplyStatusChanged_revoker",
+            "Rect",
             "Rectangle",
             "RemainingChargePercentChanged_revoker",
             "RemainingDischargeTimeChanged_revoker",
@@ -96,6 +100,7 @@ namespace CppGallery.Pages.UserControls
         private static List<string> KeywordsClassTemplate { get; } = new List<string>()
         {
             "array_view",
+            "com_array",
             "EventHandler",
             "IAsyncOperation",
             "IIterable",
@@ -106,6 +111,7 @@ namespace CppGallery.Pages.UserControls
             "IMapView",
             "IObservableMap",
             "IObservableVector",
+            "IPropertyValue",
             "IReference",
             "IVector",
             
@@ -117,6 +123,7 @@ namespace CppGallery.Pages.UserControls
 
         private static List<string> KeywordsEnum { get; } = new List<string>()
         {
+            "AsyncStatus",
             "BatteryStatus",
             "CollectionChange",
             "ContentDialogButton",
@@ -127,6 +134,7 @@ namespace CppGallery.Pages.UserControls
             "PickerLocationId",
             "PickerViewMode",
             "PowerSupplyStatus",
+            "PropertyType",
             "TitleBarHeightOption",
             "VerticalAlignment",
         };

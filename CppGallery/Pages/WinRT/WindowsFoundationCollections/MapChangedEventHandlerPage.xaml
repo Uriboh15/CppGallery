@@ -17,6 +17,10 @@
                 </local:GrammarPane.Children>
             </local:GrammarPane>
 
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="Parameter" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableMap}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIMapChangedEventArgs}" />

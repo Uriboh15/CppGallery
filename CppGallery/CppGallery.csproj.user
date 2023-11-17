@@ -17,6 +17,48 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Pages\WinRT\WindowsFoundation\IAsyncInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\AsyncStatusPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\IReferenceArrayPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CharConv\ToCharsResultPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CharConv\CharsFormatPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CharConv\FromCharsResultPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\IReferencePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\IPropertyValuePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsFoundation\PropertyTypePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStorageStreams\IBufferPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStorageStreams\UnicodeEncodingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStorageStreams\ByteOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStorageStreams\WindowsStorageStreamsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\WinRT\WindowsStorage\WindowsStoragePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\UserControls\TextPane.xaml">
       <SubType>Designer</SubType>
     </Page>

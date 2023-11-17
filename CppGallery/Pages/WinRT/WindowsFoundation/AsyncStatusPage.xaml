@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundation.AsyncStatusPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.WinRT.WindowsFoundation"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel HeaderType="WinRT" >
+            <controls:SymbolBlockPanel Symbol="WinRTField" >
+                <controls:ItemGrid Title="Started" Sentence="操作実行中" Value="0" />
+                <controls:ItemGrid Title="Completed" Sentence="操作完了" Value="1" />
+                <controls:ItemGrid Title="Canceled" Sentence="操作取り消し済み" Value="2" />
+                <controls:ItemGrid Title="Error" Sentence="エラー発生" Value="3" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.asyncstatus?view=winrt-22621" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

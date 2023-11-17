@@ -59,6 +59,7 @@ namespace CppGallery.Pages.UserControls
             "FILE",
             "fpos_t",
             "imaxdiv_t",
+            "int16_t",
             "int32_t",
             "int64_t",
             "intmax_t",

@@ -16,6 +16,10 @@
                 </local:GrammarPane.Children>
             </local:GrammarPane>
 
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="Typedefs" >
                 <local:ItemGrid Title="difference_type" Sentence="要素のイテレータの差を表す型" Value="ptrdiff_t" />
                 <local:ItemGrid Title="iterator_concept" Sentence="イテレータの性質を表す型" Value="std::input_iterator_tag" />
@@ -31,13 +35,26 @@
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorPlus" CodeLanguage="CppWinRT" Icon="Operator" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/operatorKAKERU" CodeLanguage="CppWinRT" Icon="Operator" />
             </local:SymbolBlockPanel>
 
-            <local:SymbolBlockPanel Symbol="WinRTMethod" >
+            <local:SymbolBlockPanel Symbol="WInRTMethod" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" SampleType="None" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/GetMany" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterator/MoveNext" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.collections.iiterator-1?view=winrt-22621" />

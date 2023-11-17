@@ -38,13 +38,25 @@
                 </local:FunctionExpander>
             </local:SymbolBlockPanel>
 
+            <local:SymbolBlockPanel Symbol="FunctionObject" >
+                <local:CustomExpander Title="compare_partial_order_fallback()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="compare_strong_order_fallback()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="compare_three_way()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="compare_weak_order_fallback()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="partial_order()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="strong_order()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+                <local:CustomExpander Title="weak_order()" Sentence="aaa" Icon="&#xEA86;" IsEnabled="False" />
+            </local:SymbolBlockPanel>
+
             <local:SymbolBlockPanel Symbol="Concepts" >
                 <local:FunctionExpander Folder="compare/three_way_comparable" Icon="Object" />
                 <local:FunctionExpander Folder="compare/three_way_comparable_with" Icon="Object" />
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Class" >
+                <local:ToRightButton Title="partial_ordering" Sentence="aaa" IsEnabled="False" />
                 <local:ToRightButton Style="{StaticResource StronOrderingClass}" />
+                <local:ToRightButton Title="weak_ordering" Sentence="aaa" IsEnabled="False" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons CppJPURL="https://cpprefjp.github.io/reference/compare.html" />

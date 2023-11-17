@@ -15,6 +15,10 @@
                     <local:ItemGrid Title="T" Sentence="要素の型" />
                 </local:GrammarPane.Children>
             </local:GrammarPane>
+            
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Parameter" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIObservableVector}" />

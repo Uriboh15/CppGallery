@@ -45,6 +45,9 @@
 		<None Remove="Pages\BitSet\BitSetPage.xaml" />
 		<None Remove="Pages\Bit\BitPage.xaml" />
 		<None Remove="Pages\CharConv\CharConvPage.xaml" />
+		<None Remove="Pages\CharConv\CharsFormatPage.xaml" />
+		<None Remove="Pages\CharConv\FromCharsResultPage.xaml" />
+		<None Remove="Pages\CharConv\ToCharsResultPage.xaml" />
 		<None Remove="Pages\CHeader\AsserthPage.xaml" />
 		<None Remove="Pages\CHeader\ComplexhPage.xaml" />
 		<None Remove="Pages\CHeader\FEnvhPage.xaml" />
@@ -206,8 +209,14 @@
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\MapChangedEventHandlerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\VectorChangedEventHandlerPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundationCollections\WindowsFoundationCollectionsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\AsyncStatusPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IAsyncInfoPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundation\IClosablePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IPropertyValuePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IReferenceArrayPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\IReferencePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundation\IStringablePage.xaml" />
+		<None Remove="Pages\WinRT\WindowsFoundation\PropertyTypePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsFoundation\WindowsFoundationPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontGroupPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsGlobalizationFonts\LanguageFontPage.xaml" />
@@ -224,6 +233,11 @@
 		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerLocationIdPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\PickerViewModePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsStoragePickers\WindowsStoragePickersPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStorageStreams\ByteOrderPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStorageStreams\IBufferPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStorageStreams\UnicodeEncodingPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStorageStreams\WindowsStorageStreamsPage.xaml" />
+		<None Remove="Pages\WinRT\WindowsStorage\WindowsStoragePage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemDisplay\DisplayRequestPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemDisplay\WindowsSystemDisplayPage.xaml" />
 		<None Remove="Pages\WinRT\WindowsSystemInventory\InstalledDesktopAppPage.xaml" />
@@ -282,7 +296,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.2428" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231115000" />
 		<Manifest Remove="app.manifest" />
 		<Page Remove="Pages\UserControls\HomeButtonGrid.xaml" />
 		<Manifest Include="$(ApplicationManifest)" />
@@ -316,6 +330,48 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<Page Update="Pages\WinRT\WindowsFoundation\IAsyncInfoPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\AsyncStatusPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\IReferenceArrayPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CharConv\ToCharsResultPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CharConv\CharsFormatPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\CharConv\FromCharsResultPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\IReferencePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\IPropertyValuePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsFoundation\PropertyTypePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStorageStreams\IBufferPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStorageStreams\UnicodeEncodingPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStorageStreams\ByteOrderPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStorageStreams\WindowsStorageStreamsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
+		<Page Update="Pages\WinRT\WindowsStorage\WindowsStoragePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</Page>
 		<Page Update="Pages\UserControls\TextPane.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</Page>

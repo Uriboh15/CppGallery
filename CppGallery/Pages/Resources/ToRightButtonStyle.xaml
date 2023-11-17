@@ -225,6 +225,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="CharsFormatEnum" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="chars_format" />
+        <Setter Property="Sentence" Value="浮動小数点数の表記フォーマット" />
+        <Setter Property="PageTag" Value="zchars_format0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="CharTraitsClass" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="char_traits 構造体" />
         <Setter Property="Sentence" Value="CharType 型の文字に関連付けられている属性を記述するクラステンプレート" />
@@ -241,8 +249,6 @@
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
-
-    
 
     <Style x:Key="Complex" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;complex>" />
@@ -451,6 +457,14 @@
         <Setter Property="Title" Value="forward_list クラス" />
         <Setter Property="Sentence" Value="単方向リストクラス" />
         <Setter Property="PageTag" Value="xforward_list0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="FromCharsResultStruct" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="from_chars_result" />
+        <Setter Property="Sentence" Value="from_chars() で返される構造体" />
+        <Setter Property="PageTag" Value="zfrom_chars_result0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1040,6 +1054,14 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="ToCharsResultStruct" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="to_chars_result" />
+        <Setter Property="Sentence" Value="to_chars() で返される構造体" />
+        <Setter Property="PageTag" Value="zto_chars_result0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="Tuple" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="&lt;tuple>" />
         <Setter Property="Sentence" Value="aaa" />
@@ -1224,6 +1246,22 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsFoundationAsyncStatus" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="AsyncStatus" />
+        <Setter Property="Sentence" Value="非同期操作の状態" />
+        <Setter Property="PageTag" Value="W0FAsyncStatus0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationIAsyncInfo" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IAsyncInfo" />
+        <Setter Property="Sentence" Value="非同期操作のサポート" />
+        <Setter Property="PageTag" Value="W0FIAsyncInfo0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationIClosable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="IClosable" />
         <Setter Property="Sentence" Value="システムリソースの開放機能を定義するインターフェース" />
@@ -1240,6 +1278,30 @@
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
 
+    <Style x:Key="WinRTWindowsFoundationIPropertyValue" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IPropertyValue" />
+        <Setter Property="Sentence" Value="プロパティストア内の値" />
+        <Setter Property="PageTag" Value="W0FIPropertyValue0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationIReference" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IReference&lt;T>" />
+        <Setter Property="Sentence" Value="null 許容型" />
+        <Setter Property="PageTag" Value="W0FIReference0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationIReferenceArray" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IReferenceArray&lt;T>" />
+        <Setter Property="Sentence" Value="null 許容配列型" />
+        <Setter Property="PageTag" Value="W0FIReferenceArray0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
     <Style x:Key="WinRTWindowsFoundationIStringable" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Title" Value="IStringable" />
         <Setter Property="Sentence" Value="hstring に変換可能であることを表すインターフェース" />
@@ -1252,6 +1314,14 @@
         <Setter Property="Title" Value="Windows::Foundation::IUnknown" />
         <Setter Property="Sentence" Value="WinRT クラスの基底クラス" />
         <Setter Property="PageTag" Value="W02IUnknown0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsFoundationPropertyType" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="PropertyType" />
+        <Setter Property="Sentence" Value="プロパティの型" />
+        <Setter Property="PageTag" Value="W0FPropertyType0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>
@@ -1504,6 +1574,39 @@
         <Setter Property="Title" Value="PickerViewMode" />
         <Setter Property="Sentence" Value="ピッカーの表示形式を指定する列挙型" />
         <Setter Property="PageTag" Value="W06PickerViewMode0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStorageStreams" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="&lt;winrt/Windows.Storage.Streams.h>" />
+        <Setter Property="Sentence" Value="UWP の入出力ストリーム" />
+        <Setter Property="PageTag" Value="W0HWindowsStorageStreams"/>
+        <Setter Property="Icon" Value="&#xE93E;"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStorageStreamsByteOrder" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="ByteOrder" />
+        <Setter Property="Sentence" Value="ストリームのバイトの配置" />
+        <Setter Property="PageTag" Value="W0HByteOrder0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStorageStreamsIBuffer" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="IBuffer" />
+        <Setter Property="Sentence" Value="ストリームバッファーインターフェース" />
+        <Setter Property="PageTag" Value="W0HIBuffer0"/>
+        <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
+    </Style>
+
+    <Style x:Key="WinRTWindowsStorageStreamsUnicodeEncoding" TargetType="local:ToRightButton" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Title" Value="UnicodeEncoding" />
+        <Setter Property="Sentence" Value="ストリームの文字コード" />
+        <Setter Property="PageTag" Value="W0HUnicodeEncoding0"/>
         <Setter Property="Background" Value="{ThemeResource ExpanderHeaderBackground}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource ExpanderHeaderBorderBrush}"/>
     </Style>

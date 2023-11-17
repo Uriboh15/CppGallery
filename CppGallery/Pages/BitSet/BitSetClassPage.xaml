@@ -19,7 +19,9 @@
             </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="Constructor">
-                <local:CustomExpander Title="bitset()" Sentence="bitset オブジェクトを構築します" IsEnabled="False" />
+                <local:FunctionExpander Folder="bitset__bitset/bitset" >
+                    <local:TextBoxPane Message="整数を入力" Text="1025" />
+                </local:FunctionExpander>
             </local:SymbolBlockPanel>
 
             <local:SymbolBlockPanel Symbol="Typedefs">

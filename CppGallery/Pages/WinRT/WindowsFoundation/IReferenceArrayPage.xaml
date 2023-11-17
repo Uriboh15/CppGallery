@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundation.IReferenceArrayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.WinRT.WindowsFoundation"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel HeaderType="WinRT" >
+            <controls:GrammarPane Folder="winrt/Windows.Foundation.IReferenceArray" CodeLanguage="CppWinRT" >
+                <controls:GrammarPane.Children>
+                    <controls:ItemGrid Title="T" Sentence="配列の要素の型" />
+                </controls:GrammarPane.Children>
+            </controls:GrammarPane>
+
+            <controls:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIPropertyValue}" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="WinRTProperty" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/IsNumericScalar" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/Type" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IReferenceArray/Value" CodeLanguage="CppWinRT" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="Operator" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="WInRTMethod" >
+                <controls:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetBoolean" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetBooleanArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetChar16" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetChar16Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDateTime" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDateTimeArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDouble" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetDoubleArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetGuid" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetGuidArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInspectableArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt16" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt16Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt32" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt32Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt64" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetInt64Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetPoint" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetPointArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetRect" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetRectArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSingle" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSingleArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSize" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetSizeArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetString" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetStringArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetTimeSpan" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetTimeSpanArray" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt8" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt8Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt16" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt16Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt32" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt32Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt64" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IPropertyValue/GetUInt64Array" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.ireferencearray-1?view=winrt-22621" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

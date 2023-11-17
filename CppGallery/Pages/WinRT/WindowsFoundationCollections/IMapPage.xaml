@@ -18,6 +18,7 @@
             </local:GrammarPane>
 
             <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationCollectionsIIterable}" />
             </local:SymbolBlockPanel>
 
@@ -25,7 +26,13 @@
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMap/Size" CodeLanguage="CppWinRT" />
             </local:SymbolBlockPanel>
 
-            <local:SymbolBlockPanel Symbol="WinRTMethod" >
+            <local:SymbolBlockPanel Symbol="Operator" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="WInRTMethod" >
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" SampleType="None" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterable/begin" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMap/Clear" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IIterable/end" CodeLanguage="CppWinRT" />
@@ -35,6 +42,16 @@
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMap/Insert" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMap/Lookup" CodeLanguage="CppWinRT" />
                 <local:FunctionExpander Folder="winrt/Windows.Foundation.Collections.IMap/Remove" CodeLanguage="CppWinRT" />
+                <local:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+            </local:SymbolBlockPanel>
+
+            <local:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <local:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
             </local:SymbolBlockPanel>
 
             <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.collections.imap-2?view=winrt-22621" />

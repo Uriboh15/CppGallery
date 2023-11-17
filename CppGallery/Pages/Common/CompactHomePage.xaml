@@ -114,6 +114,7 @@
                     <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalization}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsGlobalizationFonts}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsStoragePickers}" InLibraryPage="True"/>
+                    <local:ToRightButton Style="{StaticResource WinRTWindowsStorageStreams}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsSystemDisplay}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsSystemInventory}" InLibraryPage="True"/>
                     <local:ToRightButton Style="{StaticResource WinRTWindowsSystemPower}" InLibraryPage="True"/>

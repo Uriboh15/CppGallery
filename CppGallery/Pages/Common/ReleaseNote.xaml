@@ -24,13 +24,23 @@
             <local:BlockPanel Header="既知の不具合" >
                 <Grid x:Name="KnownIssueGrid" Style="{StaticResource EGrid}" >
                     <TextBlock>
-                        ・Clang の日本語が文字化けする<LineBreak />
+                        ・Clang のアプリ内実行結果の日本語が文字化けする<LineBreak />
                         ・GCC の wcout で日本語が出力されない
                     </TextBlock>
                 </Grid>
             </local:BlockPanel>
 
             <local:BlockPanel Header="リリースノート" x:Name="OutPanel" Loaded="CustomPanel_Loaded" >
+                <Expander>
+                    <Expander.Header>
+                        <local:EHeader Title="Ver 2.5.0" Sentence="2023年11月18日" Icon="&#xE7C3;"/>
+                    </Expander.Header>
+                    <TextBlock>
+                        ・新たに50項目追加<LineBreak />
+                        ・Clang の日本語が文字化けする問題を解決 (コンソール版のみ)
+                    </TextBlock>
+                </Expander>
+
                 <Expander>
                     <Expander.Header>
                         <local:EHeader Title="Ver 2.5.0  Preview" Sentence="2023年11月6日" Icon="&#xE7C3;"/>

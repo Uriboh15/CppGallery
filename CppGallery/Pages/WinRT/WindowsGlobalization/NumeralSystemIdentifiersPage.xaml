@@ -10,7 +10,7 @@
 
     <ScrollViewer >
         <local:OuterPanel HeaderType="WinRT" >
-            <local:SymbolBlockPanel Symbol="BaseClass" >
+            <local:SymbolBlockPanel Symbol="WinRTImplementInterface" >
                 <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
             </local:SymbolBlockPanel>
 

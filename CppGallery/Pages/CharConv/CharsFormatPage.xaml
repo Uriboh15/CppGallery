@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.CharConv.CharsFormatPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.CharConv"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel TargetMinCppVersion="Cpp17" >
+            <controls:SymbolBlockPanel Symbol="EnumField" >
+                <controls:ItemGrid Title="scientific" Sentence="指数表記" />
+                <controls:ItemGrid Title="fixed" Sentence="10進数表記" />
+                <controls:ItemGrid Title="hex" Sentence="16進数表記" />
+                <controls:ItemGrid Title="general" Sentence="scientific と fixed を自動で切り替え" Value="fixed | scientific" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/cpp/standard-library/chars-format-class?view=msvc-170" CppJPURL="https://cpprefjp.github.io/reference/charconv/chars_format.html" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

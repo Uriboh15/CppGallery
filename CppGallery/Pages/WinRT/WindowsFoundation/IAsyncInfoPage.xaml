@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="CppGallery.Pages.WinRT.WindowsFoundation.IAsyncInfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CppGallery.Pages.WinRT.WindowsFoundation"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer >
+        <controls:OuterPanel HeaderType="WinRT" >
+            <controls:SymbolBlockPanel Symbol="WinRTImplementInterface" >
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIInspectable}" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="WinRTField" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/ErrorCode" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Id" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Status" CodeLanguage="CppWinRT" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="Operator" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorbool" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="WInRTMethod" >
+                <controls:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/as" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Cancel" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IAsyncInfo/Close" CodeLanguage="CppWinRT" />
+                <controls:FunctionExpander Folder="winrt/Windows.UI.Xaml.DependencyObject/try_as" CodeLanguage="CppWinRT" />
+            </controls:SymbolBlockPanel>
+
+            <controls:SymbolBlockPanel Symbol="NonMemberFunction" >
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorEE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorNE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorL" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorLE" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorR" CodeLanguage="CppWinRT" Icon="Operator" />
+                <controls:FunctionExpander Folder="winrt/Windows.Foundation.IUnknown/operatorRE" CodeLanguage="CppWinRT" Icon="Operator" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation.iasyncinfo?view=winrt-22621" />
+        </controls:OuterPanel>
+    </ScrollViewer>
+</Page>

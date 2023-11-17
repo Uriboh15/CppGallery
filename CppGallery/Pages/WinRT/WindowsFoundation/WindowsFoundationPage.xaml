@@ -4,20 +4,30 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CppGallery.Pages.UserControls"
+    xmlns:controls="using:CppGallery.Pages.UserControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <ScrollViewer >
-        <local:OuterPanel HeaderType="WinRT" >
+        <controls:OuterPanel HeaderType="WinRT" >
             <InfoBar Style="{StaticResource IncompleteHeaderPageInfoBar}" />
 
-            <local:SymbolBlockPanel Symbol="Interfase" >
-                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIClosable}" />
-                <local:ToRightButton Style="{StaticResource WinRTWindowsFoundationIStringable}" />
-            </local:SymbolBlockPanel>
+            <controls:SymbolBlockPanel Symbol="Interfase" >
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIAsyncInfo}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIClosable}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIPropertyValue}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIReference}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIReferenceArray}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationIStringable}" />
+            </controls:SymbolBlockPanel>
 
-            <local:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation?view=winrt-22621" />
-        </local:OuterPanel>
+            <controls:SymbolBlockPanel Symbol="Enum" >
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationAsyncStatus}" />
+                <controls:ToRightButton Style="{StaticResource WinRTWindowsFoundationPropertyType}" />
+            </controls:SymbolBlockPanel>
+
+            <controls:LinkButtons MSURL="https://learn.microsoft.com/ja-jp/uwp/api/windows.foundation?view=winrt-22621" />
+        </controls:OuterPanel>
     </ScrollViewer>
 </Page>
